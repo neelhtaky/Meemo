@@ -40,8 +40,8 @@ $include-xl-html-grid-classes: true;
 
 // We use these to control various global styles
 // $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+ $body-font-color: #222;
+ $body-font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -118,7 +118,7 @@ $include-xl-html-grid-classes: true;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+$header-font-family: "font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif";
 // $header-font-weight: normal;
 // $header-font-style: normal;
 // $header-font-color: #222;

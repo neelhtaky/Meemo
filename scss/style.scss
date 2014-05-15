@@ -9,37 +9,103 @@ License: Attribution-NonCommercial-NoDerivs. CC BY-NC-ND.
 License URI: http://creativecommons.org/licenses/
 Tags: white, two-columns, custom-header
 */
+/******************************************************************
+IMPORT STYLES
+******************************************************************/
+@import "mixins";
+@import "app.scss";
+
+body{
+	background: white;
+}
+a[href]:after {
+	content: '\f442';
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Genericons';
+	vertical-align: top;
+}
+a[href*="quickneed"],
+a[href^="/"], a[href^="#"],
+a[href^="mailto:"],
+a[href^="javascript:"] {
+	display: inline;
+}
+a[href*="quickneed"]:after,
+a[href^="/"]:after, a[href^="#"]:after,
+a[href^="mailto:"]:after,
+a[href^="javascript:"]:after {
+	content: none;
+}
+
+
+.author, .course-author a{
+	display: inline;
+	font-weight: normal;
+	font-style: italic;
+	&:before{
+		content: '\f304';
+		-webkit-font-smoothing: antialiased;
+		font: normal 16px/1 'Genericons';
+		vertical-align:text-bottom;
+	}
+}
+a[rel="category tag"], .course-category a{
+	&::before{
+		color: $body-font-color;
+		content: '\f301';
+		display: inline-block;
+		-webkit-font-smoothing: antialiased;
+		font: normal 16px/1 'Genericons';
+		vertical-align:text-bottom;
+	}
+}
+a[rel="category tag"]
+.tags{
+	display: inline;
+}
+.tags:before{
+	color: $body-font-color;
+	content: '\f302';
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Genericons';
+	vertical-align:text-bottom;
+}
+a.comments-link{
+	text-decoration: none;
+	color: $body-font-color;
+	&:before{
+		color: $body-font-color;
+		content: '\f300';
+		display: inline-block;
+		-webkit-font-smoothing: antialiased;
+		font: normal 16px/1 'Genericons';
+		vertical-align: top;
+	}
+}
+
+
+/******************************************************************
+MEDIA QUERIES
+******************************************************************/
 // Small screens max-width 640px
 @media only screen and (max-width: 40em) {
 	html{font-size: 0.9rem;}
-	body{background:#E8E8E8;}
 }
 
 // Medium screens min-width 641px,  max-width 1024px
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-	body{background:#CCCCFF;}
 	html{font-size: 0.95rem;}
 }
 
 // Large screens min-width 1025px, max-width 1440px
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
-	body{
-		background:#FFCCCC;
-	}
 }
 
 // XLarge screens
-@media only screen and (min-width: 90.063em) {
-	html{
-		font-size: 1rem;
-	}
-	body{		background:#FF9999;}
-}
-
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
-	body{
-		background:#99FF99;
-	}
+	html{font-size: 1rem;}
 }
 
 // XXLarge screens min-width 1921px
