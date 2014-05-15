@@ -9,48 +9,125 @@ License: Attribution-NonCommercial-NoDerivs. CC BY-NC-ND.
 License URI: http://creativecommons.org/licenses/
 Tags: white, two-columns, custom-header
 */
-@media only screen and (max-width: 40em) {
-  /* line 14, scss/style.scss */
-  html {
-    font-size: 0.9rem;
-  }
+/* line 12, scss/style.scss */
+body {
+  background: white;
+}
 
-  /* line 15, scss/style.scss */
-  body {
-    background: #E8E8E8;
-  }
+/**** IMPORTANT THESE ARE NEEDED ****/
+/* line 17, scss/style.scss */
+#container {
+  float: none;
+  background: #ffffff;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  /* optional */
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  /* content-box is NEEDED. if border-box is enabled
+     then it when Masonry calculates the height and width
+	 of the container it counts incorrectly and the result
+	 images running to the edge of the container on the right
+	 and bottom sides. Only apply content-box to the container. */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 20, scss/style.scss */
-  body {
-    background: #CCCCFF;
-  }
 
-  /* line 21, scss/style.scss */
-  html {
-    font-size: 0.95rem;
-  }
+/* line 37, scss/style.scss */
+.box {
+  margin: 5px;
+  float: left;
+  /* optional */
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
-  /* line 26, scss/style.scss */
-  body {
-    background: #FFCCCC;
-  }
-}
-@media only screen and (min-width: 90.063em) {
-  /* line 33, scss/style.scss */
-  html {
-    font-size: 1rem;
-  }
 
-  /* line 36, scss/style.scss */
-  body {
-    background: #FF9999;
-  }
+/* line 45, scss/style.scss */
+.box img {
+  display: block;
+  width: 100%;
 }
-@media only screen and (min-width: 90.063em) and (max-width: 120em) {
-  /* line 40, scss/style.scss */
-  body {
-    background: #99FF99;
-  }
+
+/* unfortunately masonry needs hard pxs for images */
+/* line 48, scss/style.scss */
+.col1 {
+  width: 80px;
+}
+
+/* line 49, scss/style.scss */
+.col2 {
+  width: 180px;
+}
+
+/* line 50, scss/style.scss */
+.col3 {
+  width: 280px;
+}
+
+/* line 51, scss/style.scss */
+.col4 {
+  width: 380px;
+}
+
+/* line 52, scss/style.scss */
+.col5 {
+  width: 480px;
+}
+
+/* line 53, scss/style.scss */
+.col1 img {
+  max-width: 80px;
+}
+
+/* line 54, scss/style.scss */
+.col2 img {
+  max-width: 180px;
+}
+
+/* line 55, scss/style.scss */
+.col3 img {
+  max-width: 280px;
+}
+
+/* line 56, scss/style.scss */
+.col4 img {
+  max-width: 380px;
+}
+
+/* line 57, scss/style.scss */
+.col5 img {
+  max-width: 480px;
+}
+
+/* animations for the transition/reordering */
+/* line 61, scss/style.scss */
+.transitions-enabled.masonry,
+.transitions-enabled.masonry .masonry-brick {
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -ms-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+}
+
+/* line 68, scss/style.scss */
+.transitions-enabled.masonry {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+
+/* line 75, scss/style.scss */
+.transitions-enabled.masonry .masonry-brick {
+  -webkit-transition-property: left, right, top;
+  -moz-transition-property: left, right, top;
+  -ms-transition-property: left, right, top;
+  -o-transition-property: left, right, top;
+  transition-property: left, right, top;
 }

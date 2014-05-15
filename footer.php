@@ -38,6 +38,29 @@
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/app.js"></script>
+
+
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
 	<?php wp_footer(); ?>
+	<script>
+	  $(document).foundation();
+	</script>
+	<script src="js/jquery.masonry.js"></script>
+	<script>
+	    var $containter = $('#container');
+	    $containter.imagesLoaded( function(){
+	        $containter.masonry({
+	          itemSelector: '.box',
+	          isAnimated: !Modernizr.csstransitions,
+	          isFitWidth: true
+	     });
+	});
+	</script>
+
 </body>
 </html>
+
+
+

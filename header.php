@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="<?php bloginfo('charset'); ?>">
@@ -30,6 +30,7 @@
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
 </head>
+
 <body <?php body_class(''); ?>>
 	<div id="page" class="hfeed site">
 		<header id="header" role="banner">
@@ -51,7 +52,7 @@
 					</aside>
 
 						<!-- content goes in here -->
-						<div class="contain-to-grid sticky hide-for-small">
+						<div class="contain-to-grid hide-for-small">
 							<nav class="top-bar" data-topbar data-options="mobile_show_parent_link: true">
 								<ul class="title-area">
 									<li class="name">

@@ -8471,14 +8471,21 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 42, scss/app.scss */
-.masonry-brick {
-  width: 220px;
-  margin: 10px;
-  float: left;
+@media only screen and (max-width: 40em) {
+  /* line 44, scss/app.scss */
+  html {
+    font-size: 0.9rem;
+  }
 }
-
-/* line 43, scss/app.scss */
-#masonryContainer {
-  width: 0 auto;
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 49, scss/app.scss */
+  html {
+    font-size: 0.95rem;
+  }
+}
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+  /* line 57, scss/app.scss */
+  html {
+    font-size: 1rem;
+  }
 }

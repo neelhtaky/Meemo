@@ -1,19 +1,39 @@
-/*
-Theme Name: Simply Meemo
-Theme URI: www.quickneed.com
-Author: Kat Skinner
-Author URI: http://katskinner.com
-Description: A theme with a focus on content.
-Version: 0.1
-License: Attribution-NonCommercial-NoDerivs. CC BY-NC-ND.
-License URI: http://creativecommons.org/licenses/
-Tags: white, two-columns, custom-header
-*/
-body{
-	background:white;
-}
+/*** These are not needed */
+	html {
+		width:100%;
+		height:100%;
+		overflow-y:scroll;
+	}
+	body {
+		position:relative;
+		width:100%;
+		height:100%;
+		padding:0;
+		margin:0;
+		background:#ededed;
+		font-family:"Trebuchet MS","Arial", Helvetica, sans-serif;
+		font-weight:normal;
+		font-style:normal;
+		line-height:1;
+	}
+	div { position:relative; }
+	
+	hr { display:block;float:none;clear:both;margin:1em auto;color:#ccc;border:solid #ccc;border-width:1px 0 0;height:0;padding:0; }
+	h2 {
+		text-rendering: optimizeLegibility;
+		font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-style: normal;
+		font-size: 1.6875em;
+		color: #222222;
+		margin-top: 0.2em;
+		margin-bottom: 0.5em;
+		line-height: 1.2125em;}	
 
-/**** IMPORTANT THESE ARE NEEDED ****/
+
+	
+	
+/**** IMPORTANT THESE ARE NEEDED ****/	
 	#container {
 	  float:none;
 	  background: #ffffff;
@@ -33,7 +53,7 @@ body{
 	  -moz-box-sizing:content-box;
 	  box-sizing:content-box;
 	}
-
+	
 	.box {
 	  margin: 5px;
 	  float: left;
@@ -43,7 +63,7 @@ body{
 	  border-radius: 5px;
 	}
 	.box img, { display: block; width: 100%; }
-
+	
 	/* unfortunately masonry needs hard pxs for images */
 	.col1 { width: 80px; }
 	.col2 { width: 180px; }
@@ -55,7 +75,7 @@ body{
 	.col3 img { max-width: 280px; }
 	.col4 img { max-width: 380px; }
 	.col5 img { max-width: 480px; }
-
+	
 	/* animations for the transition/reordering */
 	.transitions-enabled.masonry,
 	.transitions-enabled.masonry .masonry-brick {
@@ -79,3 +99,10 @@ body{
 	  -o-transition-property: left, right, top;
 	  transition-property: left, right, top;
 	}
+
+
+
+/**** Clearfix ****/
+	.clearfix:before, .clearfix:after { content: ""; display: table; }
+	.clearfix:after { clear: both; }
+	.clearfix { zoom: 1; }

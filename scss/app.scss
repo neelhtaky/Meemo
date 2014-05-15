@@ -39,5 +39,23 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
-.masonry-brick { width: 220px; margin: 10px; float: left;  }
-#masonryContainer { width: 0 auto; }
+// Small screens max-width 640px
+@media only screen and (max-width: 40em) {
+	html{font-size: 0.9rem;}
+}
+
+// Medium screens min-width 641px,  max-width 1024px
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	html{font-size: 0.95rem;}
+}
+
+// Large screens min-width 1025px, max-width 1440px
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {}
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+	html{font-size: 1rem;}
+}
+
+// XXLarge screens min-width 1921px
+@media only screen and (min-width: 120.063em) {}
