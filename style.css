@@ -8581,23 +8581,51 @@ a.comments-link:before {
   vertical-align: top;
 }
 
+/* line 87, scss/style.scss */
+time {
+  display: inline;
+  font-weight: normal;
+  font-style: italic;
+}
+/* line 91, scss/style.scss */
+time:before {
+  content: '\f303';
+  -webkit-font-smoothing: antialiased;
+  font: normal 16px/1 'Genericons';
+  vertical-align: text-bottom;
+}
+
+/* line 98, scss/style.scss */
+.written_by {
+  display: inline;
+  font-weight: normal;
+  font-style: italic;
+}
+/* line 102, scss/style.scss */
+.written_by:before {
+  content: '\f304';
+  -webkit-font-smoothing: antialiased;
+  font: normal 16px/1 'Genericons';
+  vertical-align: text-bottom;
+}
+
 /******************************************************************
 MEDIA QUERIES
 ******************************************************************/
 @media only screen and (max-width: 40em) {
-  /* line 94, scss/style.scss */
+  /* line 115, scss/style.scss */
   html {
     font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 99, scss/style.scss */
+  /* line 120, scss/style.scss */
   html {
     font-size: 0.95rem;
   }
 }
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
-  /* line 108, scss/style.scss */
+  /* line 129, scss/style.scss */
   html {
     font-size: 1rem;
   }

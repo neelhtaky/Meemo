@@ -84,7 +84,28 @@ a.comments-link{
 		vertical-align: top;
 	}
 }
-
+time{
+	display: inline;
+	font-weight: normal;
+	font-style: italic;
+	&:before{
+		content: '\f303';
+		-webkit-font-smoothing: antialiased;
+		font: normal 16px/1 'Genericons';
+		vertical-align:text-bottom;
+	}
+}
+.written_by{
+	display: inline;
+	font-weight: normal;
+	font-style: italic;
+	&:before{
+		content: '\f304';
+		-webkit-font-smoothing: antialiased;
+		font: normal 16px/1 'Genericons';
+		vertical-align:text-bottom;
+	}
+}
 
 /******************************************************************
 MEDIA QUERIES

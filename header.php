@@ -29,6 +29,7 @@
 	</title>
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
+	<script src="<?php bloginfo('template_directory'); ?>/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
 </head>
 <body <?php body_class(''); ?>>
 	<div id="page" class="hfeed site">
