@@ -1,0 +1,56 @@
+/*
+Theme Name: Simply Meemo
+Theme URI: www.quickneed.com
+Author: Kat Skinner
+Author URI: http://katskinner.com
+Description: A theme with a focus on content.
+Version: 0.1
+License: Attribution-NonCommercial-NoDerivs. CC BY-NC-ND.
+License URI: http://creativecommons.org/licenses/
+Tags: white, two-columns, custom-header
+*/
+@media only screen and (max-width: 40em) {
+  /* line 14, scss/style.scss */
+  html {
+    font-size: 0.9rem;
+  }
+
+  /* line 15, scss/style.scss */
+  body {
+    background: #E8E8E8;
+  }
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 20, scss/style.scss */
+  body {
+    background: #CCCCFF;
+  }
+
+  /* line 21, scss/style.scss */
+  html {
+    font-size: 0.95rem;
+  }
+}
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  /* line 26, scss/style.scss */
+  body {
+    background: #FFCCCC;
+  }
+}
+@media only screen and (min-width: 90.063em) {
+  /* line 33, scss/style.scss */
+  html {
+    font-size: 1rem;
+  }
+
+  /* line 36, scss/style.scss */
+  body {
+    background: #FF9999;
+  }
+}
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+  /* line 40, scss/style.scss */
+  body {
+    background: #99FF99;
+  }
+}
