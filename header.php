@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/stylesheets/app.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/modernizr/modernizr.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
 	<title>
 		<?php if (function_exists('is_tag') && is_tag()) {
 			single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
@@ -27,9 +28,8 @@
 				echo ' - page '. $paged; }
 		?>
 	</title>
-	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-	<?php wp_head(); ?>
-	<script src="<?php bloginfo('template_directory'); ?>/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+		<?php wp_head(); ?>
 </head>
 <body <?php body_class(''); ?>>
 	<div id="page" class="hfeed site">
@@ -51,43 +51,50 @@
 						<?php wp_nav_menu(array('theme_location' => 'nav_primary', 'container' => false, 'menu_class' => 'off-canvas-list', 'depth' => 1)); ?>
 					</aside>
 
-						<!-- content goes in here -->
-						<div class="contain-to-grid sticky hide-for-small">
-							<nav class="top-bar" data-topbar data-options="mobile_show_parent_link: true">
-								<ul class="title-area">
-									<li class="name">
-										<h1><a href="#"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></a></h1>
+					<!-- content goes in here -->
+					<div class="contain-to-grid sticky hide-for-small">
+						<nav class="top-bar" data-topbar data-options="mobile_show_parent_link: true">
+							<ul class="title-area">
+								<li class="name">
+									<h1><a href="#"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></a></h1>
+								</li>
+								<li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+							</ul>
+
+							<section class="top-bar-section">
+
+								<!-- Right Nav Section -->
+								<ul class="right">
+									<li class="has-form">
+									<a href="http://foundation.zurb.com/docs" class="button">Register Account</a>
 									</li>
-									<li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-								</ul>
-
-								<section class="top-bar-section">
-									<!-- Right Nav Section -->
-									<ul class="right">
-										<li class="has-form">
-											<a href="http://foundation.zurb.com/docs" class="button">Register Account</a>
-										</li>
-										<li class="has-form show-for-large-up">
-											<div class="row collapse">
-												<div class="large-8 small-9 columns">
-													<input type="text" placeholder="Find Stuff">
-												</div>
-												<div class="large-4 small-3 columns">
-													<a href="#" class="alert button expand">Search</a>
-												</div>
-											</div>
-										</li>
-									</ul><!-- .right -->
-
-
-									<!-- Left Nav Section -->
 									<?php
-									$options = array(
-									  'theme_location' => 'nav_primary',
-									  'container' => false,
-									  'depth' => 2,
-									  'items_wrap' => '<ul id="%1$s" class="left %2$s">%3$s</ul>',
-									  'walker' => new GC_walker_nav_menu()
+									if ( is_user_logged_in() ) {
+									} else { ?>
+									 <?php } ?>
+
+
+									<li class="has-form show-for-large-up">
+										<div class="row collapse">
+											<div class="large-8 small-9 columns">
+												<input type="text" placeholder="Find Stuff">
+											</div>
+											<div class="large-4 small-3 columns">
+												<a href="#" class="alert button expand">Search</a>
+											</div>
+										</div>
+									</li>
+								</ul><!-- .right -->
+
+
+								<!-- Left Nav Section -->
+								<?php
+								$options = array(
+									'theme_location' => 'nav_primary',
+									'container' => false,
+									'depth' => 2,
+									'items_wrap' => '<ul id="%1$s" class="left %2$s">%3$s</ul>',
+									'walker' => new GC_walker_nav_menu()
 									);
 									wp_nav_menu($options); ?>
 

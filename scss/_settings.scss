@@ -122,7 +122,7 @@ $header-font-family: "font-family: Garamond, Baskerville, "Baskerville Old Face"
 // $header-font-weight: normal;
 // $header-font-style: normal;
 // $header-font-color: #222;
-// $header-line-height: 1.4;
+ $header-line-height: 1.2;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
 // $header-text-rendering: optimizeLegibility;
@@ -136,7 +136,7 @@ $header-font-family: "font-family: Garamond, Baskerville, "Baskerville Old Face"
 // $h6-font-size: 1rem;
 
 // These control how subheaders are styled.
-// $subheader-line-height: 1.4;
+ $subheader-line-height: 1;
 // $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
 // $subheader-font-weight: normal;
 // $subheader-top-margin: .2rem;
@@ -150,7 +150,7 @@ $header-font-family: "font-family: Garamond, Baskerville, "Baskerville Old Face"
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
  $paragraph-font-size: 1rem;
-// $paragraph-line-height: 1.6;
+ $paragraph-line-height: 1.5;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
