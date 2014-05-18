@@ -108,11 +108,97 @@ time{
 }
 
 /******************************************************************
+Post to Post Navigation
+******************************************************************/
+.cn-nav a span{
+	/* size of circle button */
+	width: 46px;
+	height: 46px;
+	-moz-border-radius: 23px;
+	-webkit-border-radius: 23px;
+	border-radius: 23px;
+	cursor: pointer;
+	transform-origin:center center;
+	background-position: center center;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	/* hide placeholder text */
+	text-indent: -9000px;
+	/* just for a nice effect */
+	opacity:0.9;
+	background-size: 17px 25px;
+	position: absolute;
+	}
+.cn-nav a:hover span{
+	/* increase circle button in size */
+	width: 100px;
+    height: 100px;
+    /* retain shape of circle at larger size */
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    /* just for a nice effect */
+	opacity:0.6;
+	background-color:#a8872d;
+	background-size: 22px 32px;
+	margin: 12px 0px;
+}
+.cn-nav a:hover div{
+		width: 90px;
+	    height: 90px;
+	    margin-top: 16px;
+	    -moz-border-radius: 45px;
+	    -webkit-border-radius: 45px;
+	    border-radius: 45px;
+}
+.cn-nav a div{
+	/* initially make thumbnail invisible */
+	width: 0px;
+	height: 0px;
+	/* make the background circular */
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	overflow:hidden;
+    -webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+/* FOR NEXT */
+
+.cn-nav a.cn-nav-next span{background: #666 url(library/images/next.png) no-repeat center center;}
+
+/* FOR PREVIOUS */
+.cn-nav a.cn-nav-prev span{background: #666 url(library/images/prev.png) no-repeat center center;}
+/******************************************************************
 MEDIA QUERIES
 ******************************************************************/
 // Small screens max-width 640px
 @media only screen and (max-width: 40em) {
 	html{font-size: 0.9rem;}
+	.cn-nav a.cn-nav-prev span{margin: 23px 0px;
+		z-index: 200;}
+	.cn-nav a.cn-nav-prev div{margin: 45px 0px 0px 20px;}
+	.cn-nav a.cn-nav-prev:hover div{margin: 28px 0px 0px 5px;z-index: 300;}
+	.cn-nav a.cn-nav-prev p{margin: 0px 0px 0px 60px;}
+
+	.cn-nav a.cn-nav-next span{margin: 23px 0px 0px -10px;}
+	.cn-nav a.cn-nav-next:hover span{margin:23px 0px 0px -35px;z-index: 200;}
+	.cn-nav a.cn-nav-next div{margin: 45px 0px 0px 20px;}
+	.cn-nav a.cn-nav-next:hover div{
+		transform-origin: right top;
+		/*margin:28px 0px 0px 85px;*/
+		margin:28px 0px 0px 45%;
+		z-index: 300;
+	}
 }
 
 // Medium screens min-width 641px,  max-width 1024px
@@ -135,75 +221,10 @@ MEDIA QUERIES
 /******************************************************************
 TEST CODE
 ******************************************************************/
-.cn-nav a.cn-nav-prev span{background: #666 url(library/images/prev.png) no-repeat center center;}
-.cn-nav a.cn-nav-next span{background: #666 url(library/images/next.png) no-repeat center center;}
 
-.cn-nav a span{
-	/* size of circle button */
-	width: 46px;
-	height: 46px;
-	-moz-border-radius: 23px;
-	-webkit-border-radius: 23px;
-	border-radius: 23px;
-	cursor: pointer;
-	margin: 23px 0px;
-	transform-origin:center center;
-	background-position: center center;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	-ms-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-	/* hide placeholder text */
-	text-indent: -9000px;
-	/* just for a nice effect */
-	opacity:0.9;
-	background-size: 17px 25px;
-	position: absolute;
-	display: block;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-	}
 
-.cn-nav a:hover span{
-	/* increase circle button in size */
-	width: 100px;
-    height: 100px;
-    /* retain shape of circle at larger size */
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-    /* just for a nice effect */
-	opacity:0.6;
-	background-color:#a8872d;
-	background-size: 22px 32px;
-	margin: 12px 0px;
-}
 
-.cn-nav a div{
-	/* initially make thumbnail invisible */
-	width: 0px;
-	height: 0px;
-	/* make the background circular */
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	border-radius: 0px;
-	overflow:hidden;
-    -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
-	position: absolute;
-	margin: 0px;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
 
-.cn-nav a:hover div{
-	width: 90px;
-    height: 90px;
-    margin: 16px 0px 0px 5px;
-    -moz-border-radius: 45px;
-    -webkit-border-radius: 45px;
-    border-radius: 45px;
-}
+
+
+

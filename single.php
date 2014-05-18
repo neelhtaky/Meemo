@@ -26,18 +26,18 @@
 				<a href="<?php echo $prev_post_url ?>" class="<?php echo $className ?> ">
 					<?php
 					if ($className == 'cn-nav-next small-6 columns'){?>
-						<p class="small-8 columns"><?php echo get_the_title($post_id_prev);?> </p>
+						<p class="small-8 columns "><?php echo get_the_title($post_id_prev);?> </p>
 					<?php } /* Display */ ?>
 
 					<!-- Fallback text is not displayed by css -->
-					<span class="small-4 columns">Previous</span>
+					<span class="small-3 columns">Previous</span>
 
 					<!-- display background image on css hover -->
 					<div class=""style="background-image:url('<?php  echo $thumb_url['0'];?>');"></div>
 					<!-- display title -->
 					<?php
 					if ($className=="cn-nav-prev small-6 columns"){?>
-								<p class="small-8 columns"><?php echo get_the_title($post_id_prev);?> </p>
+								<p class="small-8 columns push-4"><?php echo get_the_title($post_id_prev);?> </p>
 					<?php } ?>
 				</a>
 		<?php } } ?>
