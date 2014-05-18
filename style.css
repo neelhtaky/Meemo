@@ -8643,7 +8643,7 @@ TEST CODE
   background: #666666 url(library/images/next.png) no-repeat center center;
 }
 
-/* line 143, scss/style.scss */
+/* line 141, scss/style.scss */
 .cn-nav a span {
   /* size of circle button */
   width: 46px;
@@ -8670,7 +8670,7 @@ TEST CODE
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 169, scss/style.scss */
+/* line 167, scss/style.scss */
 .cn-nav a:hover span {
   /* increase circle button in size */
   width: 100px;
@@ -8686,7 +8686,7 @@ TEST CODE
   margin: 12px 0px;
 }
 
-/* line 184, scss/style.scss */
+/* line 182, scss/style.scss */
 .cn-nav a div {
   /* initially make thumbnail invisible */
   width: 0px;
@@ -8707,7 +8707,7 @@ TEST CODE
   background-size: 100% 100%;
 }
 
-/* line 204, scss/style.scss */
+/* line 202, scss/style.scss */
 .cn-nav a:hover div {
   width: 90px;
   height: 90px;
