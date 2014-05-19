@@ -35,7 +35,7 @@
 
 			        <aside class="byline meta postmetadata">
 						<p class="post_details">
-							This post was written by <address class="author vcard"><?php the_author_posts_link(); ?></address>.
+							This post was written by <address class="author"><?php the_author_posts_link(); ?></address>.
 							It was published on a <?php the_time('l'); ?>, which is the <?php the_time('jS'); ?> day in <?php the_time('F, Y'); ?>.
 							It was posted under the topic <?php the_category(', ') ?>.
 							It is tagged with <span class="tags"><?php the_tags('', ', ', '. '); ?></span>
