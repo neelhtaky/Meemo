@@ -1,12 +1,7 @@
 <?php get_header(); ?>
-
 <!-- MAIN CONTENT WRAPPER -->
 <section id="entries wrap" class="small-12 medium-8  large-6 xlarge-7  xxlarge-7 columns ">
-
-
 <?php get_template_part( 'loop', 'single' ); ?>
-
-
 <div class="cn-bar">
 	<div class="cn-nav row">
 		<?php
