@@ -40,6 +40,7 @@ if ( function_exists('register_sidebar') ) {
 	));
     register_nav_menus( array(
 		'nav_primary' => ( 'Primary Navigation'),
+    'nav_sidebar' => ( 'Sidebar Navigation'),
     'nav_footer' => ('Footer Navigation')
 	) );
 }

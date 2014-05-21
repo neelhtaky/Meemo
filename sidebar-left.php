@@ -12,7 +12,7 @@
 			<div id="description">
 				<p><?php bloginfo('description'); ?></p>
 			</div><!-- #description END -->
-			<?php wp_nav_menu(array('theme_location' => 'nav_primary', 'container' => false, 'menu_class' => 'side-nav', 'depth' => 1)); ?>
+			<?php wp_nav_menu(array('theme_location' => 'nav_sidebar', 'container' => false, 'menu_class' => 'side-nav', 'depth' => 1)); ?>
 
 			<?php if ( is_active_sidebar( 'secondary' ) ) : ?>
 

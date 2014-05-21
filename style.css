@@ -8622,6 +8622,11 @@ time:before {
   display: inline;
 }
 
+/* line 115, scss/style.scss */
+.postmetadata {
+  margin-top: 5px;
+}
+
 /* line 117, scss/style.scss */
 .postauthor .th {
   float: left;

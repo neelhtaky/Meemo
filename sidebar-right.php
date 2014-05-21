@@ -26,7 +26,7 @@
 			<?php if(!is_woocommerce()) { ?>
 
 				<?php if (is_single())  { ?>
-
+				<h3>About This Post</h3>
 					<?php if ( has_post_thumbnail() ) { ?>
 				        <aside class="thumbnail th">
 				        	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
@@ -35,6 +35,7 @@
 
 			        <aside class="byline meta postmetadata">
 						<div class="post_details">
+
 							This post was written by <address class="author"><?php the_author_posts_link(); ?></address>.
 							It was published on a <?php the_time('l'); ?>, which is the <?php the_time('jS'); ?> day in <?php the_time('F, Y'); ?>.
 							It was posted under the topic <span class="course-category"><?php the_category(', ') ?></span>.
