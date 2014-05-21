@@ -54,7 +54,7 @@
 					<!-- content goes in here -->
 					<div class="contain-to-grid sticky hide-for-small">
 						<nav class="top-bar" data-topbar data-options="mobile_show_parent_link: true">
-							<ul class="title-area">
+							<ul class="title-area hide-for-large-up">
 								<li class="name">
 									<h1><a href="#"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></a></h1>
 								</li>
@@ -63,7 +63,7 @@
 							<section class="top-bar-section">
 
 								<!-- Left Nav Section -->
-								<div id="left-nav" class="hide-for-large-up">
+								<div id="left-nav" >
 									<?php
 									$options = array(
 										'theme_location' => 'nav_primary',
@@ -81,7 +81,8 @@
 									<?php
 									if ( is_user_logged_in() ) {
 										global $current_user; get_currentuserinfo();?>
-										<li>Welcome <?php echo $current_user->user_firstname ?></li>
+										<li id="welcome_user">Welcome <?php echo $current_user->user_firstname ?>!</p></li>
+										<li><a class="button" href="/wp-admin/profile.php">Your Profile</a></li>
 										<?php } else { ?>
 
 										<!-- if user is not logged in give option for login or register -->
@@ -128,31 +129,10 @@
 														<h2>Register</h2>
 														<p>Register to get access to some wonderful goodies. It's fast and <em>free!</em></p>
 														<?php $register = $_GET['register']; if($register == true) { echo '<p class="alert-box warning">Check your email for the password!</p>'; } ?>
+
+
 														<form method="post" action="<?php echo site_url('wp-login.php?action=register', 'login_post') ?>" class="wp-user-form">
-															<div class="row">
-																<div class="username small-12 large-6 columns">
-																	<label for="user_login">Username</label>
-																	<input type="text" name="user_login" id="user_login" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" tabindex="14" />
-																</div><!-- username -->
-																<div class="user_email small-12 large-6 columns">
-																	<label for="user_email">Your Email<span class="label alert">Required</span></label>
-																	<input type="email" id="user_email" name="user_email" value="<?php echo wp_specialchars(stripslashes($user_email), 1) ?>" tabindex="15" required/>
-																</div><!-- user_email -->
-															</div><!-- row -->
-															<div class="row">
-																<div class="login_fields small-12 large-6 columns">
-																	<?php do_action('register_form'); ?>
-																	<input type="submit" name="user-submit" value="<?php _e('Sign up!'); ?>" class="user-submit button" tabindex="16" />
 
-																	<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>?register=true" />
-																	<input type="hidden" name="user-cookie" value="1" />
-																</div><!-- login_fields -->
-															</div><!-- row -->
-
-
-
-
-															<h2>Ideal Registery Form</h2>
 															<div class="form small-12 large-6 columns">
 																<div class="row">
 
@@ -167,12 +147,12 @@
 																</div>
 																<div class="row">
 																	<div class="username small-12 columns">
-																		<label for="user_login">Username<span class="label alert">Required</span></label>
+																		<label for="user_login">Username <small>Required</small>
 																		<input type="text" name="user_login" id="user_login" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" tabindex="17" />
 																	</div><!-- username -->
 																	<div class="user_email small-12 columns">
-																		<label for="user_email">Your Email<span class="label alert">Required</span></label>
-																		<input type="email" id="user_email" name="user_email" value="<?php echo wp_specialchars(stripslashes($user_email), 1) ?>" tabindex="18" required />
+																		<label for="user_email">Your Email <small>Required</small><input type="email" id="user_email" name="user_email" value="<?php echo wp_specialchars(stripslashes($user_email), 1) ?>" tabindex="18" required /></label>
+
 																		<small class="error">An email address is required.</small>
 																	</div><!-- user_email -->
 																</div>
@@ -208,21 +188,6 @@
 																	<input type="hidden" name="user-cookie" value="1" />
 																</div><!-- login_fields -->
 															</div><!-- row -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 														</form><!-- register form -->
 													</div><!-- panel2-2 register -->
 
@@ -260,48 +225,5 @@
 							</section><!-- .top-bar-section -->
 						</nav><!-- .top-bar -->
 					</div><!-- .contain-to-grid sticky hide-for-small -->
-
 					<div id="container">
-
-
-<div id="user_logreglost_alert">
-	<!-- check for and return message on success -->
-	<?php $register = $_GET['register']; $reset = $_GET['reset']; if ($register == true) { ?>
-
-<span class="alert-box success">
-	<h3>Success!</h3>
-	<p>Check your email for the password and then return to log in.</p>
-</span>
-
-	<?php } elseif ($reset == true) { ?>
-	<span class="alert-box warning">
-		<h3>Success!</h3>
-		<p>Check your email to reset your password.</p>
-	</span>
-
-	<?php } else { ?>
-	<?php } ?>
-</div>
-
-
-
-
-
-
-
-
-					<!-- SIDEBAR NAVIGATION = 1 COLUMN -->
-					<div id="main" class="site-main row">
-						<div id="sidebar-nav" class="hide-for-medium-down large-2 xlarge-2 xxlarge-2 columns">
-							<div id="site_title">
-								<?php if(is_home()){ ?>
-								<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-								<?php } else { ?>
-								<h4><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h4>
-								<?php } ?>
-							</div><!-- #site_title END -->
-							<div id="description">
-								<p><?php bloginfo('description'); ?></p>
-							</div><!-- #description END -->
-							<?php wp_nav_menu(array('theme_location' => 'nav_primary', 'container' => false, 'menu_class' => 'side-nav ', 'depth' => 1)); ?>
-						</div>
+						<div id="main" class="site-main row">

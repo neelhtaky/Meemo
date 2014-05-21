@@ -33,7 +33,7 @@
 // $include-html-grid-classes: $include-html-classes;
 $include-xl-html-grid-classes: true;
 
- $row-width: rem-calc(1600);
+$row-width: rem-calc(1600);
 // $total-columns: 12;
 
 // Global
@@ -244,7 +244,7 @@ $header-font-family: "font-family: Garamond, Baskerville, "Baskerville Old Face"
 
 // We use these to control text style.
 // $alert-font-weight: normal;
-// $alert-font-size: rem-calc(13);
+ $alert-font-size: rem-calc(13);
 // $alert-font-color: #fff;
 // $alert-font-color-alt: scale-color($secondary-color, $lightness: -66%);
 

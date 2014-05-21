@@ -14,14 +14,25 @@ if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
 		'name' => 'Primary Sidebar',
 		'id' => 'primary',
+    'description' => __('The main sidebar available on all devices. Sits on the right side of the screen.'),
 		'before_widget' => '<li id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	));
+  register_sidebar(array(
+    'name' => 'Secondary Sidebar',
+    'id' => 'secondary',
+    'description' => __('The secondary sidebar. Available for large devices and up. Sits on the left side of the screen.'),
+    'before_widget' => '<li id="%1$s" class="widget %2$s clearfix">',
+    'after_widget' => '</li>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+  ));
 	register_sidebar(array(
 		'name' => 'Footer Sidebar',
 		'id' => 'footer',
+    'description' => __('To add extra widgets to the footer, such as contact information.'),
 		'before_widget' => '<li id="%1$s" class="large-3 small-6 columns widget %2$s clearfix">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
@@ -163,5 +174,40 @@ if (!function_exists('loop_columns')) {
   function loop_columns() {
     return 2; // 3 products per row
   }
+}
+/******************************************************************
+PAGINATION PAGE SUPPORT
+******************************************************************/
+function kriesi_pagination($pages = '', $range = 2)
+{
+     $showitems = ($range * 2)+1;
+     global $paged;
+     if(empty($paged)) $paged = 1;
+     if($pages == '')
+     {
+         global $wp_query;
+         $pages = $wp_query->max_num_pages;
+         if(!$pages)
+         {
+             $pages = 1;
+         }
+     }
+     if(1 != $pages)
+     {
+         echo "<ul class='pagination'>";
+         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link(1)."'>&laquo;</a></li>";
+         if($paged > 1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged - 1)."'>&lsaquo;</a></li>";
+
+         for ($i=1; $i <= $pages; $i++)
+         {
+             if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+             {
+                 echo ($paged == $i)? "<li class='current'><a href='".get_pagenum_link($i)."'>".$i."</a></li>":"<li><a href='".get_pagenum_link($i)."' class='inactive' >".$i."</a></li>";
+             }
+         }
+         if ($paged < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a></li>";
+         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($pages)."'>&raquo;</a></li>";
+         echo "</ul>\n";
+     }
 }
 ?>

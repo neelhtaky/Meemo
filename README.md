@@ -1,5 +1,7 @@
 Meemo
 =====
+First and foremost, it is important to note that the Meemo Theme is built upon Zurb Foundation's framework. It not only speeds up coding - for us developers - but includes many features that would otherwise be difficult to include such as modals.
+
 #Features
 ##Responsive Theme (Breakpoints)
 Features five different breakpoings, which are easily referred to as "small", "medium", "large", "xlarge" and "xxlarge".
@@ -16,12 +18,15 @@ For example, the small breakpoint consists of a singular navigation found at the
 Medium breakpoint features a different styled header navigation, that is designed to contain a certain number of links. This navigation can handle drop down menus.
 For large, and above, breakpoints a secondary navigation menu is enabled as a "left sidebar". This sidebar *cannot* support drop downs. The header navigation is by default hidden for large and above.
 ###Pagination
+Pagination has been enabled, using the famous "kriesi" pagination code. It allows you to adjust how many page numbers can seen, whether to include arrows representing more and less pages, and so on.
 
 ##User Management
+###Login, Register and Lost Password
 
 ##Search Form
 
 ##Masonry Support For Posts
+This theme utilizes the famous Masonry code to maximise "readibility" of the post pages. It removes any wasted "white" space between the posts, lining them up to display as many as possible in a visually appealing and effective manner.
 
 #WooThemes Integration
 ##WooCommerce

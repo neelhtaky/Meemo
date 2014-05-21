@@ -11,7 +11,7 @@
 					<div class="author">Written by <?php the_author(); ?>.</div>
 					<a href="<?php comments_link(); ?>" class="comments-link">
 						<?php comments_number( 'No Responses Yet. Leave a response?','1 Response.', '% Responses.', 'comments-link', 'Sorry, Comments are closed.'); ?></a>
-						<?php the_category(', ') ?>.
+						<span class="course-category"><?php the_category(', ') ?></span>.
 					<span class="tags"><?php the_tags('Tags: ', ', ', '. '); ?></span>
 				</footer>
 				<p><?php the_excerpt(); ?></p>

@@ -8496,12 +8496,17 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 18, scss/style.scss */
+/* line 17, scss/style.scss */
+.screen-reader-text {
+  display: none;
+}
+
+/* line 20, scss/style.scss */
 body {
   background: white;
 }
 
-/* line 21, scss/style.scss */
+/* line 23, scss/style.scss */
 a[href]:after {
   content: '\f442';
   display: inline-block;
@@ -8510,7 +8515,7 @@ a[href]:after {
   vertical-align: top;
 }
 
-/* line 31, scss/style.scss */
+/* line 33, scss/style.scss */
 a[href*="quickneed"],
 a[href^="/"], a[href^="#"],
 a[href^="mailto:"],
@@ -8518,7 +8523,7 @@ a[href^="javascript:"] {
   display: inline;
 }
 
-/* line 37, scss/style.scss */
+/* line 39, scss/style.scss */
 a[href*="quickneed"]:after,
 a[href^="/"]:after, a[href^="#"]:after,
 a[href^="mailto:"]:after,
@@ -8541,7 +8546,7 @@ a[href^="javascript:"]:after {
 }
 
 /* line 54, scss/style.scss */
-a[rel="category tag"]::before, .course-category a::before {
+.course-category::before {
   color: #222222;
   content: '\f301';
   display: inline-block;
@@ -8550,14 +8555,12 @@ a[rel="category tag"]::before, .course-category a::before {
   vertical-align: text-bottom;
 }
 
-/* line 64, scss/style.scss */
-a[rel="category tag"]
-.tags {
+/* line 63, scss/style.scss */
+a[rel="category tag"].tags {
   display: inline;
 }
-
-/* line 67, scss/style.scss */
-.tags:before {
+/* line 66, scss/style.scss */
+a[rel="category tag"].tags::before {
   color: #222222;
   content: '\f302';
   display: inline-block;
@@ -8609,10 +8612,26 @@ time:before {
   vertical-align: text-bottom;
 }
 
+/* line 109, scss/style.scss */
+#main {
+  padding-top: 10px;
+}
+
+/* line 113, scss/style.scss */
+#postauthordesc {
+  display: inline;
+}
+
+/* line 117, scss/style.scss */
+.postauthor .th {
+  float: left;
+  margin: 5px 10px 0px 0px;
+}
+
 /******************************************************************
 Post to Post Navigation
 ******************************************************************/
-/* line 113, scss/style.scss */
+/* line 126, scss/style.scss */
 .cn-nav a span {
   /* size of circle button */
   width: 46px;
@@ -8636,7 +8655,7 @@ Post to Post Navigation
   position: absolute;
 }
 
-/* line 135, scss/style.scss */
+/* line 148, scss/style.scss */
 .cn-nav a:hover span {
   /* increase circle button in size */
   width: 100px;
@@ -8652,7 +8671,7 @@ Post to Post Navigation
   margin: 12px 0px;
 }
 
-/* line 149, scss/style.scss */
+/* line 162, scss/style.scss */
 .cn-nav a:hover div {
   width: 90px;
   height: 90px;
@@ -8662,7 +8681,7 @@ Post to Post Navigation
   border-radius: 45px;
 }
 
-/* line 157, scss/style.scss */
+/* line 170, scss/style.scss */
 .cn-nav a div {
   /* initially make thumbnail invisible */
   width: 0px;
@@ -8683,70 +8702,89 @@ Post to Post Navigation
 }
 
 /* FOR NEXT */
-/* line 177, scss/style.scss */
+/* line 189, scss/style.scss */
 .cn-nav a.cn-nav-next span {
   background: #666666 url(library/images/next.png) no-repeat center center;
 }
 
 /* FOR PREVIOUS */
-/* line 180, scss/style.scss */
+/* line 192, scss/style.scss */
 .cn-nav a.cn-nav-prev span {
   background: #666666 url(library/images/prev.png) no-repeat center center;
 }
 
-/* line 181, scss/style.scss */
+/* line 193, scss/style.scss */
 .post .byline {
   line-height: 1.5rem;
+}
+
+/* line 196, scss/style.scss */
+#welcome_user {
+  margin: 13px 10px -10px 0px;
+  color: white;
+  font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: normal;
+}
+
+/* line 204, scss/style.scss */
+#user_logreglost_alert h1, #user_logreglost_alert h2, #user_logreglost_alert h3, #user_logreglost_alert h4, #user_logreglost_alert h5, #user_logreglost_alert h6, #user_logreglost_alert p, #user_logreglost_alert span {
+  color: white;
+}
+
+/* line 206, scss/style.scss */
+.widget-title {
+  padding-top: 1rem;
 }
 
 /******************************************************************
 MEDIA QUERIES
 ******************************************************************/
 @media only screen and (max-width: 40em) {
-  /* line 189, scss/style.scss */
+  /* line 214, scss/style.scss */
   html {
     font-size: 0.9rem;
   }
 
-  /* line 190, scss/style.scss */
+  /* line 215, scss/style.scss */
   .cn-nav a.cn-nav-prev span {
     margin: 23px 0px;
     z-index: 200;
   }
 
-  /* line 192, scss/style.scss */
+  /* line 217, scss/style.scss */
   .cn-nav a.cn-nav-prev div {
     margin: 45px 0px 0px 20px;
   }
 
-  /* line 193, scss/style.scss */
+  /* line 218, scss/style.scss */
   .cn-nav a.cn-nav-prev:hover div {
     margin: 28px 0px 0px 5px;
     z-index: 300;
   }
 
-  /* line 194, scss/style.scss */
+  /* line 219, scss/style.scss */
   .cn-nav a.cn-nav-prev p {
     margin: 0px 0px 0px 60px;
   }
 
-  /* line 196, scss/style.scss */
+  /* line 221, scss/style.scss */
   .cn-nav a.cn-nav-next span {
     margin: 23px 0px 0px -10px;
   }
 
-  /* line 197, scss/style.scss */
+  /* line 222, scss/style.scss */
   .cn-nav a.cn-nav-next:hover span {
     margin: 23px 0px 0px -35px;
     z-index: 200;
   }
 
-  /* line 198, scss/style.scss */
+  /* line 223, scss/style.scss */
   .cn-nav a.cn-nav-next div {
     margin: 45px 0px 0px 20px;
   }
 
-  /* line 199, scss/style.scss */
+  /* line 224, scss/style.scss */
   .cn-nav a.cn-nav-next:hover div {
     transform-origin: right top;
     /*margin:28px 0px 0px 85px;*/
@@ -8755,13 +8793,13 @@ MEDIA QUERIES
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 209, scss/style.scss */
+  /* line 234, scss/style.scss */
   html {
     font-size: 0.95rem;
   }
 }
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
-  /* line 218, scss/style.scss */
+  /* line 243, scss/style.scss */
   html {
     font-size: 1rem;
   }
@@ -8769,7 +8807,3 @@ MEDIA QUERIES
 /******************************************************************
 TEST CODE
 ******************************************************************/
-/* line 227, scss/style.scss */
-.screen-reader-text {
-  display: none;
-}

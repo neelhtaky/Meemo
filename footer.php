@@ -1,6 +1,5 @@
 	</div><!-- #main .site-main row -->
 </div><!-- #container -->
-
 <footer class="row">
 	<ul class="no-bullet">
 		<?php if ( is_active_sidebar( 'footer' ) ) : ?>
@@ -11,10 +10,8 @@
 			</div>
 		<?php endif; ?>
 	</ul>
-
-	<hr />
-
-	<div class="row">
+</footer>
+<footer class="row">
 		<div class="large-6 columns">
 			<p>Copyright &copy; <?php echo date("Y") ?> <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved.
 			</br>
@@ -26,7 +23,6 @@
 		</div>
 		</br>
 		<?php wp_nav_menu(array('theme_location' => 'nav_footer', 'container_class' => 'large-6 columns', 'menu_class' => 'inline-list right', 'depth' => 1)); ?>
-	</div><!-- .row -->
 </footer>
 					<!-- close the off-canvas menu -->
 					<a class="exit-off-canvas"></a>
@@ -37,7 +33,11 @@
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation/foundation.abide.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/app.js"></script>
+	<script>
+	   $(document).foundation();
+	 </script>
 	<?php wp_footer(); ?>
 </body>
 </html>
