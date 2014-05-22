@@ -27,13 +27,13 @@ a[href]:after {
 	font: normal 16px/1 'Genericons';
 	vertical-align: top;
 }
-a[href*="quickneed"],
+a[href*="skinnyprojects"],
 a[href^="/"], a[href^="#"],
 a[href^="mailto:"],
 a[href^="javascript:"] {
 	display: inline;
 }
-a[href*="quickneed"]:after,
+a[href*="skinnyprojects"]:after,
 a[href^="/"]:after, a[href^="#"]:after,
 a[href^="mailto:"]:after,
 a[href^="javascript:"]:after {
@@ -43,7 +43,7 @@ a[href^="javascript:"]:after {
 	display: inline;
 	font-weight: normal;
 	font-style: italic;
-	&:before{
+	&::before{
 		content: '\f304';
 		-webkit-font-smoothing: antialiased;
 		font: normal 16px/1 'Genericons';
@@ -62,14 +62,13 @@ a[href^="javascript:"]:after {
 }
 a[rel="category tag"].tags{
 	display: inline;
-
 	&::before{
-	color: $body-font-color;
-	content: '\f302';
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 16px/1 'Genericons';
-	vertical-align:text-bottom;}
+		color: $body-font-color;
+		content: '\f302';
+		display: inline-block;
+		-webkit-font-smoothing: antialiased;
+		font: normal 16px/1 'Genericons';
+		vertical-align:text-bottom;}
 }
 
 a.comments-link{
@@ -109,17 +108,18 @@ time{
 #main{
 	padding-top: 10px;
 }
-#sidebar address{}
 #postauthordesc{display:inline; }
 
 .postmetadata{margin-top: 5px;}
 .postauthor{
 	.th{
 		float: left;
-		margin: 5px 10px 0px 0px;
+		margin: 5px 10px 0 0;
 	}
 }
-
+.read_more a{
+	margin: 0 auto;
+}
 /******************************************************************
 Post to Post Navigation
 ******************************************************************/
@@ -157,7 +157,7 @@ Post to Post Navigation
 	opacity:0.6;
 	background-color:#a8872d;
 	background-size: 22px 32px;
-	margin: 12px 0px;
+	margin: 12px 0;
 }
 .cn-nav a:hover div{
 		width: 90px;
@@ -169,12 +169,12 @@ Post to Post Navigation
 }
 .cn-nav a div{
 	/* initially make thumbnail invisible */
-	width: 0px;
-	height: 0px;
+	width: 0;
+	height: 0;
 	/* make the background circular */
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	border-radius: 0px;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
 	overflow:hidden;
     -webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
@@ -193,8 +193,11 @@ Post to Post Navigation
 .post .byline{
 	line-height: 1.5rem;
 }
+/******************************************************************
+
+******************************************************************/
 #welcome_user{
-	margin:13px 10px -10px 0px;
+	margin:13px 10px -10px 0;
 	color:white;
 	font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 0.8125rem;
@@ -203,8 +206,48 @@ Post to Post Navigation
 #user_logreglost_alert{
 	h1, h2, h3, h4, h5, h6, p, span{color:white;}
 }
+/******************************************************************
+Sidebar
+******************************************************************/
 .widget-title{
 	padding-top: 1rem;
+}
+.widgets-list-layout .widgets-list-layout-blavatar{
+	max-width:94px;
+	width:100%;
+	margin:10px 10px 0 0;}
+.widgets-list-layout .widgets-list-layout-links{width:70%;padding-top:5px;
+}
+/* jetpack subscribe via email widget */
+.jetpack_subscription_widget h3 label{
+	font-size: inherit;
+	line-height: inherit;
+	color:inherit;
+}
+.jetpack_subscription_widget input[type="text"]{
+	@include form-element;
+	&::-webkit-input-placeholder{opacity: 0.75;}
+	&::hover{
+		@include form-select;
+		opacity: 1;
+	}
+
+}
+.jetpack_subscription_widget #subscribe-email input[type="text"]{
+	@include form-element;
+		&::-webkit-input-placeholder{opacity: 0.75;}
+		&::hover{
+			@include form-select;
+			opacity: 1;
+		}
+}
+.jetpack_subscription_widget input[type="submit"], .widget_product_search input[type="submit"] {
+	@include button;
+}
+#sidebar .woocommerce ul.product_list_widget li img{
+	width:94px;
+	float: left;
+	margin-right: 10px;
 }
 /******************************************************************
 MEDIA QUERIES
@@ -212,19 +255,19 @@ MEDIA QUERIES
 // Small screens max-width 640px
 @media only screen and (max-width: 40em) {
 	html{font-size: 0.9rem;}
-	.cn-nav a.cn-nav-prev span{margin: 23px 0px;
+	.cn-nav a.cn-nav-prev span{margin: 23px 0;
 		z-index: 200;}
-	.cn-nav a.cn-nav-prev div{margin: 45px 0px 0px 20px;}
-	.cn-nav a.cn-nav-prev:hover div{margin: 28px 0px 0px 5px;z-index: 300;}
-	.cn-nav a.cn-nav-prev p{margin: 0px 0px 0px 60px;}
+	.cn-nav a.cn-nav-prev div{margin: 45px 0 0 20px;}
+	.cn-nav a.cn-nav-prev:hover div{margin: 28px 0 0 5px;z-index: 300;}
+	.cn-nav a.cn-nav-prev p{margin: 0 0 0 60px;}
 
-	.cn-nav a.cn-nav-next span{margin: 23px 0px 0px -10px;}
-	.cn-nav a.cn-nav-next:hover span{margin:23px 0px 0px -35px;z-index: 200;}
-	.cn-nav a.cn-nav-next div{margin: 45px 0px 0px 20px;}
+	.cn-nav a.cn-nav-next span{margin: 23px 0 0 -10px;}
+	.cn-nav a.cn-nav-next:hover span{margin:23px 0 0 -35px;z-index: 200;}
+	.cn-nav a.cn-nav-next div{margin: 45px 0 0 20px;}
 	.cn-nav a.cn-nav-next:hover div{
 		transform-origin: right top;
 		/*margin:28px 0px 0px 85px;*/
-		margin:28px 0px 0px 45%;
+		margin:28px 0 0 45%;
 		z-index: 300;
 	}
 }

@@ -1,4 +1,4 @@
-Meemo
+SkinnerBase2.0 - Code Name "Meemo"
 =====
 First and foremost, it is important to note that the Meemo Theme is built upon Zurb Foundation's framework. It not only speeds up coding - for us developers - but includes many features that would otherwise be difficult to include such as modals.
 
@@ -19,14 +19,25 @@ Medium breakpoint features a different styled header navigation, that is designe
 For large, and above, breakpoints a secondary navigation menu is enabled as a "left sidebar". This sidebar *cannot* support drop downs. The header navigation is by default hidden for large and above.
 ###Pagination
 Pagination has been enabled, using the famous "kriesi" pagination code. It allows you to adjust how many page numbers can seen, whether to include arrows representing more and less pages, and so on.
+###Similar Posts
+By default, wordpress does not have Jetpack plugin installed. I highly suggest it. One feature that is useful is the simliar posts navigation section found at the bottom of the post.
+If you do not wish to install Jetpack, you can enable a home grown version by adding the following code to single.php and page.php:
+
+<?php get_template_part( 'loop', 'related' ); ?>
 
 ##User Management
 ###Login, Register and Lost Password
 
-##Search Form
+##Search Form and Results
+This theme has a fully functional search form.
+If results are found, they are counted and then listed with excerpts.
+If results are not found, a serarch fail page is returned which gives the user the option to research, as well as lists the most common and latest posts/pages.
 
 ##Masonry Support For Posts
 This theme utilizes the famous Masonry code to maximise "readibility" of the post pages. It removes any wasted "white" space between the posts, lining them up to display as many as possible in a visually appealing and effective manner.
+
+##Jetpack Support
+If you choose to use the plugin Jetpack, the theme has been tested with all the widgets to make sure that pleasing visual style and funcationality are 100% working.
 
 #WooThemes Integration
 ##WooCommerce

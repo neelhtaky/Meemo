@@ -8516,7 +8516,7 @@ a[href]:after {
 }
 
 /* line 33, scss/style.scss */
-a[href*="quickneed"],
+a[href*="skinnyprojects"],
 a[href^="/"], a[href^="#"],
 a[href^="mailto:"],
 a[href^="javascript:"] {
@@ -8524,7 +8524,7 @@ a[href^="javascript:"] {
 }
 
 /* line 39, scss/style.scss */
-a[href*="quickneed"]:after,
+a[href*="skinnyprojects"]:after,
 a[href^="/"]:after, a[href^="#"]:after,
 a[href^="mailto:"]:after,
 a[href^="javascript:"]:after {
@@ -8538,7 +8538,7 @@ a[href^="javascript:"]:after {
   font-style: italic;
 }
 /* line 46, scss/style.scss */
-.author:before, .course-author a:before {
+.author::before, .course-author a::before {
   content: '\f304';
   -webkit-font-smoothing: antialiased;
   font: normal 16px/1 'Genericons';
@@ -8559,7 +8559,7 @@ a[href^="javascript:"]:after {
 a[rel="category tag"].tags {
   display: inline;
 }
-/* line 66, scss/style.scss */
+/* line 65, scss/style.scss */
 a[rel="category tag"].tags::before {
   color: #222222;
   content: '\f302';
@@ -8569,12 +8569,12 @@ a[rel="category tag"].tags::before {
   vertical-align: text-bottom;
 }
 
-/* line 75, scss/style.scss */
+/* line 74, scss/style.scss */
 a.comments-link {
   text-decoration: none;
   color: #222222;
 }
-/* line 78, scss/style.scss */
+/* line 77, scss/style.scss */
 a.comments-link:before {
   color: #222222;
   content: '\f300';
@@ -8584,13 +8584,13 @@ a.comments-link:before {
   vertical-align: top;
 }
 
-/* line 87, scss/style.scss */
+/* line 86, scss/style.scss */
 time {
   display: inline;
   font-weight: normal;
   font-style: italic;
 }
-/* line 91, scss/style.scss */
+/* line 90, scss/style.scss */
 time:before {
   content: '\f303';
   -webkit-font-smoothing: antialiased;
@@ -8598,13 +8598,13 @@ time:before {
   vertical-align: text-bottom;
 }
 
-/* line 98, scss/style.scss */
+/* line 97, scss/style.scss */
 .written_by {
   display: inline;
   font-weight: normal;
   font-style: italic;
 }
-/* line 102, scss/style.scss */
+/* line 101, scss/style.scss */
 .written_by:before {
   content: '\f304';
   -webkit-font-smoothing: antialiased;
@@ -8612,25 +8612,30 @@ time:before {
   vertical-align: text-bottom;
 }
 
-/* line 109, scss/style.scss */
+/* line 108, scss/style.scss */
 #main {
   padding-top: 10px;
 }
 
-/* line 113, scss/style.scss */
+/* line 111, scss/style.scss */
 #postauthordesc {
   display: inline;
 }
 
-/* line 115, scss/style.scss */
+/* line 113, scss/style.scss */
 .postmetadata {
   margin-top: 5px;
 }
 
-/* line 117, scss/style.scss */
+/* line 115, scss/style.scss */
 .postauthor .th {
   float: left;
-  margin: 5px 10px 0px 0px;
+  margin: 5px 10px 0 0;
+}
+
+/* line 120, scss/style.scss */
+.read_more a {
+  margin: 0 auto;
 }
 
 /******************************************************************
@@ -8673,7 +8678,7 @@ Post to Post Navigation
   opacity: 0.6;
   background-color: #a8872d;
   background-size: 22px 32px;
-  margin: 12px 0px;
+  margin: 12px 0;
 }
 
 /* line 162, scss/style.scss */
@@ -8689,12 +8694,12 @@ Post to Post Navigation
 /* line 170, scss/style.scss */
 .cn-nav a div {
   /* initially make thumbnail invisible */
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   /* make the background circular */
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  border-radius: 0px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   overflow: hidden;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -8723,88 +8728,275 @@ Post to Post Navigation
   line-height: 1.5rem;
 }
 
-/* line 196, scss/style.scss */
+/******************************************************************
+
+******************************************************************/
+/* line 199, scss/style.scss */
 #welcome_user {
-  margin: 13px 10px -10px 0px;
+  margin: 13px 10px -10px 0;
   color: white;
   font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: normal;
 }
 
-/* line 204, scss/style.scss */
+/* line 207, scss/style.scss */
 #user_logreglost_alert h1, #user_logreglost_alert h2, #user_logreglost_alert h3, #user_logreglost_alert h4, #user_logreglost_alert h5, #user_logreglost_alert h6, #user_logreglost_alert p, #user_logreglost_alert span {
   color: white;
 }
 
-/* line 206, scss/style.scss */
+/******************************************************************
+Sidebar
+******************************************************************/
+/* line 212, scss/style.scss */
 .widget-title {
   padding-top: 1rem;
+}
+
+/* line 215, scss/style.scss */
+.widgets-list-layout .widgets-list-layout-blavatar {
+  max-width: 94px;
+  width: 100%;
+  margin: 10px 10px 0 0;
+}
+
+/* line 219, scss/style.scss */
+.widgets-list-layout .widgets-list-layout-links {
+  width: 70%;
+  padding-top: 5px;
+}
+
+/* jetpack subscribe via email widget */
+/* line 222, scss/style.scss */
+.jetpack_subscription_widget h3 label {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+/* line 227, scss/style.scss */
+.jetpack_subscription_widget input[type="text"] {
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875rem;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  height: 2.3125rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+/* line 129, bower_components/foundation/scss/foundation/components/_global.scss */
+.jetpack_subscription_widget input[type="text"]:focus {
+  box-shadow: 0 0 5px #999999;
+  border-color: #999999;
+}
+/* line 124, bower_components/foundation/scss/foundation/components/_forms.scss */
+.jetpack_subscription_widget input[type="text"]:focus {
+  background: #fafafa;
+  border-color: #999999;
+  outline: none;
+}
+/* line 131, bower_components/foundation/scss/foundation/components/_forms.scss */
+.jetpack_subscription_widget input[type="text"][disabled], fieldset[disabled] .jetpack_subscription_widget input[type="text"] {
+  background-color: #dddddd;
+}
+/* line 229, scss/style.scss */
+.jetpack_subscription_widget input[type="text"]::-webkit-input-placeholder {
+  opacity: 0.75;
+}
+/* line 230, scss/style.scss */
+.jetpack_subscription_widget input[type="text"]::hover {
+  -webkit-appearance: none !important;
+  background-color: #fafafa;
+  background-image: url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==");
+  background-repeat: no-repeat;
+  background-position: 97% center;
+  border: 1px solid #cccccc;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0;
+  opacity: 1;
+}
+/* line 316, bower_components/foundation/scss/foundation/components/_forms.scss */
+.jetpack_subscription_widget input[type="text"]::hover.radius {
+  border-radius: 3px;
+}
+/* line 317, bower_components/foundation/scss/foundation/components/_forms.scss */
+.jetpack_subscription_widget input[type="text"]::hover:hover {
+  background-color: #f3f3f3;
+  border-color: #999999;
+}
+
+/* line 236, scss/style.scss */
+.jetpack_subscription_widget #subscribe-email input[type="text"] {
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875rem;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  height: 2.3125rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+/* line 129, bower_components/foundation/scss/foundation/components/_global.scss */
+.jetpack_subscription_widget #subscribe-email input[type="text"]:focus {
+  box-shadow: 0 0 5px #999999;
+  border-color: #999999;
+}
+/* line 124, bower_components/foundation/scss/foundation/components/_forms.scss */
+.jetpack_subscription_widget #subscribe-email input[type="text"]:focus {
+  background: #fafafa;
+  border-color: #999999;
+  outline: none;
+}
+/* line 131, bower_components/foundation/scss/foundation/components/_forms.scss */
+.jetpack_subscription_widget #subscribe-email input[type="text"][disabled], fieldset[disabled] .jetpack_subscription_widget #subscribe-email input[type="text"] {
+  background-color: #dddddd;
+}
+/* line 238, scss/style.scss */
+.jetpack_subscription_widget #subscribe-email input[type="text"]::-webkit-input-placeholder {
+  opacity: 0.75;
+}
+/* line 239, scss/style.scss */
+.jetpack_subscription_widget #subscribe-email input[type="text"]::hover {
+  -webkit-appearance: none !important;
+  background-color: #fafafa;
+  background-image: url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==");
+  background-repeat: no-repeat;
+  background-position: 97% center;
+  border: 1px solid #cccccc;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0;
+  opacity: 1;
+}
+/* line 316, bower_components/foundation/scss/foundation/components/_forms.scss */
+.jetpack_subscription_widget #subscribe-email input[type="text"]::hover.radius {
+  border-radius: 3px;
+}
+/* line 317, bower_components/foundation/scss/foundation/components/_forms.scss */
+.jetpack_subscription_widget #subscribe-email input[type="text"]::hover:hover {
+  background-color: #f3f3f3;
+  border-color: #999999;
+}
+
+/* line 244, scss/style.scss */
+.jetpack_subscription_widget input[type="submit"], .widget_product_search input[type="submit"] {
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  background-color: #008cba;
+  border-color: #007095;
+  color: white;
+}
+/* line 134, bower_components/foundation/scss/foundation/components/_buttons.scss */
+.jetpack_subscription_widget input[type="submit"]:hover, .jetpack_subscription_widget input[type="submit"]:focus, .widget_product_search input[type="submit"]:hover, .widget_product_search input[type="submit"]:focus {
+  background-color: #007095;
+}
+/* line 145, bower_components/foundation/scss/foundation/components/_buttons.scss */
+.jetpack_subscription_widget input[type="submit"]:hover, .jetpack_subscription_widget input[type="submit"]:focus, .widget_product_search input[type="submit"]:hover, .widget_product_search input[type="submit"]:focus {
+  color: white;
+}
+
+/* line 247, scss/style.scss */
+#sidebar .woocommerce ul.product_list_widget li img {
+  width: 94px;
+  float: left;
+  margin-right: 10px;
 }
 
 /******************************************************************
 MEDIA QUERIES
 ******************************************************************/
 @media only screen and (max-width: 40em) {
-  /* line 214, scss/style.scss */
+  /* line 257, scss/style.scss */
   html {
     font-size: 0.9rem;
   }
 
-  /* line 215, scss/style.scss */
+  /* line 258, scss/style.scss */
   .cn-nav a.cn-nav-prev span {
-    margin: 23px 0px;
+    margin: 23px 0;
     z-index: 200;
   }
 
-  /* line 217, scss/style.scss */
+  /* line 260, scss/style.scss */
   .cn-nav a.cn-nav-prev div {
-    margin: 45px 0px 0px 20px;
+    margin: 45px 0 0 20px;
   }
 
-  /* line 218, scss/style.scss */
+  /* line 261, scss/style.scss */
   .cn-nav a.cn-nav-prev:hover div {
-    margin: 28px 0px 0px 5px;
+    margin: 28px 0 0 5px;
     z-index: 300;
   }
 
-  /* line 219, scss/style.scss */
+  /* line 262, scss/style.scss */
   .cn-nav a.cn-nav-prev p {
-    margin: 0px 0px 0px 60px;
+    margin: 0 0 0 60px;
   }
 
-  /* line 221, scss/style.scss */
+  /* line 264, scss/style.scss */
   .cn-nav a.cn-nav-next span {
-    margin: 23px 0px 0px -10px;
+    margin: 23px 0 0 -10px;
   }
 
-  /* line 222, scss/style.scss */
+  /* line 265, scss/style.scss */
   .cn-nav a.cn-nav-next:hover span {
-    margin: 23px 0px 0px -35px;
+    margin: 23px 0 0 -35px;
     z-index: 200;
   }
 
-  /* line 223, scss/style.scss */
+  /* line 266, scss/style.scss */
   .cn-nav a.cn-nav-next div {
-    margin: 45px 0px 0px 20px;
+    margin: 45px 0 0 20px;
   }
 
-  /* line 224, scss/style.scss */
+  /* line 267, scss/style.scss */
   .cn-nav a.cn-nav-next:hover div {
     transform-origin: right top;
     /*margin:28px 0px 0px 85px;*/
-    margin: 28px 0px 0px 45%;
+    margin: 28px 0 0 45%;
     z-index: 300;
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 234, scss/style.scss */
+  /* line 277, scss/style.scss */
   html {
     font-size: 0.95rem;
   }
 }
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
-  /* line 243, scss/style.scss */
+  /* line 286, scss/style.scss */
   html {
     font-size: 1rem;
   }

@@ -50,7 +50,7 @@ Excerpt Read More Button
 //Puts link in excerpts more tag
 function new_excerpt_more($more) {
   global $post;
-  return '... <div class="button"><a href="'. get_permalink($post->ID) . '" class="read_more" rel="bookmark">Read More</a></div>';
+  return '... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 /******************************************************************

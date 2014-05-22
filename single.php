@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <?php get_sidebar('left'); ?>
-
 <section id="entries wrap" class="small-12 medium-8  large-6 xlarge-7  xxlarge-7 columns ">
 <?php get_template_part( 'loop', 'single' ); ?>
 <div class="cn-bar">
@@ -18,7 +17,6 @@
 				 $prev_post_url = get_permalink($the_post->ID);
 
 		?>
-
 				<a href="<?php echo $prev_post_url ?>" class="<?php echo $className ?> ">
 					<?php
 					if ($className == 'cn-nav-next small-6 columns'){?>
@@ -44,31 +42,11 @@
 	$nxt_post = get_next_post(true);
 	generateNavButton($nxt_post,"cn-nav-next small-6 columns");
 	?>
-
-
-
-
 	</div><!-- .cn-nav .row -->
 </div><!-- cn-bar -->
-<?php get_template_part( 'loop', 'related' ); ?>
-
-
-
-
-
-
-
-
-
-
-
-	<div id="comments_wrap" class="row small-12 medium-12 xlarge-12 xxlarge-12 columns">
 		<?php if( is_single() || is_page() ){ ?>
 			<?php comments_template(); ?>
 		<?php } ?>
-	</div>
-
-
 </section>
 <?php get_sidebar('right'); ?>
 <?php get_footer(); ?>

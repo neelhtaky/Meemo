@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<!-- MAIN CONTENT WRAPPER -->
+<?php get_sidebar('left'); ?>
 <section id="entries wrap" class="small-12 medium-8  large-6 xlarge-7  xxlarge-7 columns ">
 
     <?php if ( have_posts() ) : ?>
@@ -27,5 +27,5 @@ echo 'By the way, we found ' . $wp_query->found_posts.' results.'; ?></p>
     <!-- here's where we'll put a search form if there're no posts -->
     <?php endif; ?>
 </section>
-<?php get_sidebar(); ?>
+<?php get_sidebar('right'); ?>
 <?php get_footer(); ?>

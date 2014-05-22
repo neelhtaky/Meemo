@@ -1,3 +1,5 @@
+<div id="comments_wrap" class="row small-12 medium-12 xlarge-12 xxlarge-12 columns">
+
 <?php
 // Do not delete these lines
 if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
@@ -59,3 +61,4 @@ die ('Please do not load this page directly. Thanks!'); ?>
 
 <?php endif; // if you delete this the sky will fall on your head ?>
 </div><!-- #comments -->
+</div>
