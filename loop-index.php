@@ -11,8 +11,15 @@
 					<div class="author">Written by <?php the_author(); ?>.</div>
 					<a href="<?php comments_link(); ?>" class="comments-link">
 						<?php comments_number( 'No Responses Yet. Leave a response?','1 Response.', '% Responses.', 'comments-link', 'Sorry, Comments are closed.'); ?></a>
-						<span class="course-category"><?php the_category(', ') ?></span>.
-					<span class="tags"><?php the_tags('Tags: ', ', ', '. '); ?></span>
+						<?php if (has_category()) { ?>
+							<span class="course-category"><?php the_category(', ') ?></span>.
+						<?php } ?>
+						<?php if (has_tag()) { ?>
+							<span class="tags"><?php the_tags('Tags: ', ', ', '. '); ?></span>
+						<?php } ?>
+
+
+
 				</footer>
 				<p><?php the_excerpt(); ?></p>
 			</article>

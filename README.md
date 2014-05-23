@@ -27,6 +27,9 @@ If you do not wish to install Jetpack, you can enable a home grown version by ad
 
 ##User Management
 ###Login, Register and Lost Password
+Located in the header navigation bar.
+When user logs into website, a small "Welcome *user*" message is displayed. This message checks if the user has defined a first name in their profile, else it refers to their username. For example, if a first name is displayed it might display "Welcome Kat". Else, it will refer to a username such as "Welcome Kat Skinner".
+When logged in, users will have access to a button that allows them to update their profile on the website. By providing this option, are giving users the ability to provide you with more information that you might only be otherwise gained through surveys. A clear understanding of your users will let you provide better targetted content.
 
 ##Search Form and Results
 This theme has a fully functional search form.
