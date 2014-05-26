@@ -115,8 +115,10 @@ time, {
 Courses
 ******************************************************************/
 /* Course Archive Page */
+.course-container{border:none !important;}
 .course-container .archive-header h1{
 	font-size: $h1-font-size !important;
+	border: none !important;
 }
 #main .course  {
 	padding: 0 !important;
@@ -132,6 +134,7 @@ Courses
 	a{color:white;}
 }
 #main .course-container .sensei-course-meta span.course-lesson-count{
+		padding-left: 0;
 		display: inline;
 		font-weight: normal;
 		font-style: italic;
@@ -142,6 +145,11 @@ Courses
 			vertical-align:text-bottom;
 		}
 	}
+#main .course-container img.woo-image.thumbnail{
+	width:250px;
+	height:auto;
+	margin:0 1em 0.5em;
+}
 
 /* Individual Course Page is Lesson Archive Page */
 /******************************************************************
@@ -157,9 +165,7 @@ Lessons
 		-webkit-font-smoothing: antialiased;
 		font: normal 16px/1 'Genericons';
 		vertical-align:text-bottom;
-	}
-}
-
+	}}
 #main .course .course-lessons .lesson .lesson-meta span.lesson-author{
 	display: inline;
 	font-weight: normal;
@@ -169,8 +175,7 @@ Lessons
 		-webkit-font-smoothing: antialiased;
 		font: normal 16px/1 'Genericons';
 		vertical-align:text-bottom;
-	}
-}
+	}}
 #main .course .course-lessons .lesson .lesson-meta span.lesson-complexity{
 	display: inline;
 	font-weight: normal;
@@ -180,7 +185,13 @@ Lessons
 		-webkit-font-smoothing: antialiased;
 		font: normal 16px/1 'Genericons';
 		vertical-align:text-bottom;
-	}
+	}}
+#main .course .course-lessons .meter>span{
+	padding: 3px 10px 0 0;}
+#main .course-lessons img.woo-image.thumbnail{
+	width:250px !important;
+	height:auto;
+	margin:0 1em 0.5em;
 }
 /* Individual Lesson Page */
 
