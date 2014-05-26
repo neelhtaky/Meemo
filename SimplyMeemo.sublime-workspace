@@ -4,6 +4,114 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"jp",
+				"jp-relatedposts-headline"
+			],
+			[
+				"bord",
+				"border-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"po",
+				"position:relative"
+			],
+			[
+				"m",
+				"margin:0"
+			],
+			[
+				"cmtcs",
+				"cmtcssbanner	cmtcssbanner"
+			],
+			[
+				"em",
+				"emCalc"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"cmt",
+				"cmtcssbanner	cmtcssbanner"
+			],
+			[
+				"display",
+				"display_name"
+			],
+			[
+				"is_user",
+				"is_user_logged_in"
+			],
+			[
+				"user_logg",
+				"is_user_logged_in"
+			],
+			[
+				"widget_sen",
+				"widget_sensei_category_courses"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"impor",
+				"important"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"jec",
+				"jetpack_subscription_widget"
+			],
+			[
+				"jet",
+				"jetpack_subscription_widget"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"font",
+				"font"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"widgets-list-lay",
+				"widgets-list-layout-blavatar"
+			],
+			[
 				"post",
 				"postauthordesc"
 			],
@@ -22,18 +130,6 @@
 			[
 				"padding",
 				"padding-top"
-			],
-			[
-				"font",
-				"font-weight"
-			],
-			[
-				"pad",
-				"padding-top"
-			],
-			[
-				"mar",
-				"margin-top"
 			],
 			[
 				"cmtcss",
@@ -58,10 +154,6 @@
 			[
 				"cn-na",
 				"cn-nav-prev"
-			],
-			[
-				"margin",
-				"margin"
 			],
 			[
 				"cn-nav",
@@ -92,20 +184,12 @@
 				"post_id_x"
 			],
 			[
-				"po",
-				"post_id_x"
-			],
-			[
 				"nex",
 				"next_post_link"
 			],
 			[
 				"previous_post",
 				"previous_post_link"
-			],
-			[
-				"text",
-				"text-indent"
 			],
 			[
 				"get_pre",
@@ -164,10 +248,21 @@
 	"buffers":
 	[
 		{
-			"file": "README.md",
+			"contents": "<?php\n/**\n * The Template for outputting Course Archive items\n *\n * Override this template by copying it to yourtheme/sensei/loop-course.php\n *\n * @author 		WooThemes\n * @package 	Sensei/Templates\n * @version     1.0.0\n */\n\nif ( ! defined( 'ABSPATH' ) ) exit;\n\nglobal $woothemes_sensei, $post, $wp_query, $shortcode_override, $course_excludes;\n// Handle Query Type\n$query_type = '';\nif ( isset( $_GET[ 'action' ] ) && ( '' != esc_html( $_GET[ 'action' ] ) ) ) {\n    $query_type = esc_html( $_GET[ 'action' ] );\n} // End If Statement\nif ( '' != $shortcode_override ) {\n	$query_type = $shortcode_override;\n} // End If Statement\nif ( !is_array( $course_excludes ) ) { $course_excludes = array(); } ?>\n<?php\n// Check that query returns results\n// Handle Pagination\n$paged = $wp_query->get( 'paged' );\nif ( ! $paged || $paged < 2 ) {\n    // Check for pagination settings\n    if ( isset( $woothemes_sensei->settings->settings[ 'course_archive_amount' ] ) && ( 0 < absint( $woothemes_sensei->settings->settings[ 'course_archive_amount' ] ) ) ) {\n    	$amount = absint( $woothemes_sensei->settings->settings[ 'course_archive_amount' ] );\n    } else {\n    	$amount = $wp_query->get( 'posts_per_page' );\n    } // End If Statement\n    // This is not a paginated page (or it's simply the first page of a paginated page/post)\n    $course_includes = array();\n    $posts_array = $woothemes_sensei->post_types->course->course_query( $amount, $query_type, $course_includes, $course_excludes );\n    if ( count( $posts_array ) > 0 ) { ?>\n\n    	<section id=\"main-course\" class=\"course-container\">\n\n    	    <?php do_action( 'sensei_course_archive_header', $query_type ); ?>\n\n    	    <?php foreach ($posts_array as $post_item){\n    			// Make sure the other loops dont include the same post twice!\n    			array_push( $course_excludes, $post_item->ID );\n    			// Get meta data\n    			$post_id = absint( $post_item->ID );\n    			$post_title = $post_item->post_title;\n    			$user_info = get_userdata( absint( $post_item->post_author ) );\n    			$author_link = get_author_posts_url( absint( $post_item->post_author ) );\n    			$author_display_name = $user_info->display_name;\n    			$author_id = $post_item->post_author;\n                $category_output = get_the_term_list( $post_id, 'course-category', '', ', ', '' );\n    			?>\n    			<article class=\"<?php echo esc_attr( join( ' ', get_post_class( array( 'course', 'post' ), $post_id ) ) ); ?>\">\n\n                    <?php do_action( 'sensei_course_image', $post_id ); ?>\n\n    				<?php do_action( 'sensei_course_archive_course_title', $post_item ); ?>\n\n    				<section class=\"entry\">\n    					<p class=\"sensei-course-meta\">\n                           <?php if ( isset( $woothemes_sensei->settings->settings[ 'course_author' ] ) && ( $woothemes_sensei->settings->settings[ 'course_author' ] ) ) { ?>\n    					   <span class=\"course-author\"><?php _e( 'by ', 'woothemes-sensei' ); ?><a href=\"<?php echo $author_link; ?>\" title=\"<?php echo esc_attr( $author_display_name ); ?>\"><?php echo esc_html( $author_display_name   ); ?></a></span>\n    					   <?php } // End If Statement ?>\n    					   <span class=\"course-lesson-count\"><?php echo $woothemes_sensei->post_types->course->course_lesson_count( $post_id ) . '&nbsp;' . apply_filters( 'sensei_lessons_text', __( 'Lessons', 'woothemes-sensei' ) ); ?></span>\n                           <?php if ( '' != $category_output ) { ?>\n                           <span class=\"course-category\"><?php echo sprintf( __( 'in %s', 'woothemes-sensei' ), $category_output ); ?></span>\n                           <?php } // End If Statement ?>\n    					   <?php sensei_simple_course_price( $post_id ); ?>\n                        </p>\n                        <p class=\"course-excerpt\"><?php echo $post_item->post_excerpt; ?></p>\n    				</section>\n    			</article>\n    			<?php\n\n    		} // End For Loop\n\n    		if ( '' != $shortcode_override && ( $amount <= count( $posts_array ) ) ) {\n    			echo sensei_course_archive_next_link( $query_type );\n    		} // End If Statement ?>\n\n    	</section>\n\n    <?php } // End If Statement\n} else {\n    // This is a paginated page.\n    // V2 - refactor this into a filter\n	if ( !is_post_type_archive( 'course' ) ) {\n		$query_args = $woothemes_sensei->post_types->course->get_archive_query_args( $query_type );\n		query_posts( $query_args );\n	} // End If Statement\n	if ( have_posts() ) { ?>\n\n		<section id=\"main-course\" class=\"course-container\">\n\n    	    <?php do_action( 'sensei_course_archive_header', $query_type ); ?>\n\n    	    <?php while ( have_posts() ) { the_post();\n    			// Meta data\n    			$post_id = get_the_ID();\n    			$author_display_name = get_the_author();\n    			$author_id = get_the_author_meta('ID');\n                $category_output = get_the_term_list( $post_id, 'course-category', '', ', ', '' );\n 			?>\n\n			<article class=\"<?php echo esc_attr( join( ' ', get_post_class( array( 'course', 'post' ), get_the_ID() ) ) ); ?>\">\n\n                <?php do_action( 'sensei_course_image', $post_id ); ?>\n\n    			<?php do_action( 'sensei_course_archive_course_title' ); ?>\n\n    			<section class=\"entry\">\n                    <p class=\"sensei-course-meta\">\n    				    <?php if ( isset( $woothemes_sensei->settings->settings[ 'course_author' ] ) && ( $woothemes_sensei->settings->settings[ 'course_author' ] ) ) { ?>\n    				    <span class=\"course-author\"><?php _e( 'by ', 'woothemes-sensei' ); ?><?php the_author_link(); ?></span>\n    				    <?php } ?>\n    				    <span class=\"course-lesson-count\"><?php echo $woothemes_sensei->post_types->course->course_lesson_count( $post_id ) . '&nbsp;' . apply_filters( 'sensei_lessons_text', __( 'Lessons', 'woothemes-sensei' ) ); ?></span>\n    				    <?php if ( '' != $category_output ) { ?>\n                        <span class=\"course-category\"><?php echo sprintf( __( 'in %s', 'woothemes-sensei' ), $category_output ); ?></span>\n                        <?php } // End If Statement ?>\n                        <?php sensei_simple_course_price( $post_id ); ?>\n                    </p>\n                    <p class=\"course-excerpt\"><?php echo apply_filters( 'get_the_excerpt', $post_item->post_excerpt ); ?></p>\n    			</section>\n    		</article>\n\n    		<?php } // End While Loop ?>\n\n    	</section>\n\n	<?php } // End If Statement\n\n} // End If Statement\n?>",
+			"file": "sensei/templates/loop-course.php",
+			"file_size": 6310,
+			"file_write_time": 1391941025000000,
 			"settings":
 			{
-				"buffer_size": 2696,
+				"buffer_size": 6310,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/style.scss",
+			"settings":
+			{
+				"buffer_size": 12567,
 				"line_ending": "Unix"
 			}
 		}
@@ -232,33 +327,38 @@
 	},
 	"file_history":
 	[
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss/style.scss",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sidebar-left.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/style.css",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/wrappers/wrapper-end.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/index.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/single.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/wrappers/wrapper-start.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/loop-index.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss/style.scss",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/loop-indexmeta.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/page.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/functions.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sidebar-right.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/single.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/index.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/README.md",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/comments.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/comments3.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss/_mixins.scss",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/header.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sidebar-left.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/search.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss/_settings.scss",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/footer.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/test.html",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/README.md",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/content-logreglost.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/backupnav.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/content-searchsuccess.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/search.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/content-searchfail.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/loop-stickyindex.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/content-404.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/searchform.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sidebar.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/woocommerce.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/wrappers/wrapper-start.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/wrappers/wrapper-end.php",
 		"/Users/Kat/Desktop/backupclean",
 		"/Users/Kat/Downloads/CircleNavigationEffect/index.html",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/page.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/404.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/loop-single.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/loop-related.php",
@@ -267,7 +367,6 @@
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss/app.scss",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/index-base.html",
 		"/Users/Kat/Downloads/Zurb-Foundation-and-Masonry-master/index-base.html",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/style.css",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/masonry.html",
 		"/Users/Kat/Downloads/masonry-docs/masonry.html",
 		"/Users/Kat/Desktop/thesite/home.html",
@@ -340,6 +439,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"author",
+			"by",
+			"hr",
+			"li",
+			"0",
+			"border",
+			"comment-meta",
+			"comment-author",
+			"yellow",
+			"row",
+			"tan",
+			"pings",
+			"body",
+			"vcard",
+			"avatar",
+			"quickneed",
 			"alert",
 			"140deg",
 			"side",
@@ -423,18 +538,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "README.md",
+					"file": "sensei/templates/loop-course.php",
 					"settings":
 					{
-						"buffer_size": 2696,
+						"buffer_size": 6310,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2648,
-								2648
+								3455,
+								3455
 							]
 						],
 						"settings":
@@ -572,10 +687,172 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 125.0,
+						"translation.y": 1777.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "scss/style.scss",
+					"settings":
+					{
+						"buffer_size": 12567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6450,
+								6450
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3501.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -642,7 +919,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 216.0,
 	"status_bar_visible": true
 }

@@ -7,20 +7,18 @@
 				<?php global $woocommerce; ?>
 
 				<?php if (sizeof($woocommerce->cart->cart_contents)>0) { ?>
-
-				<div class="widget-title">
-					<h3>Shopping Cart</h3>
+				<div class="woocommerce_cart">
+					<div class="widget-title">
+						<h3>Shopping Cart</h3>
+					</div>
+					<!-- show cart item count and overall price -->
+					<a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> -
+					<?php echo $woocommerce->cart->get_cart_total(); ?></a>
+					<!-- show checkout link if shopping cart has items -->
+					<?php if (sizeof($woocommerce->cart->cart_contents)>0) :?>
+						<a href="<?php echo $woocommerce->cart->get_checkout_url()?>" title="<?php _e('Checkout','woothemes') ?>"><?php _e('Checkout','woothemes') ?></a>
+					<?php endif; ?>
 				</div>
-
-				<!-- show cart item count and overall price -->
-				<a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> -
-				<?php echo $woocommerce->cart->get_cart_total(); ?></a>
-
-				<!-- show checkout link if shopping cart has items -->
-				<?php if (sizeof($woocommerce->cart->cart_contents)>0) :?>
-					<a href="<?php echo $woocommerce->cart->get_checkout_url()?>" title="<?php _e('Checkout','woothemes') ?>"><?php _e('Checkout','woothemes') ?></a>
-				<?php endif; ?>
-
 			<?php } ?>
 
 			<?php if(!is_woocommerce()) { ?>
@@ -60,6 +58,16 @@
 							</p>
 						</div>
 					</aside>
+					<div id="sharing">
+						<?php if ( function_exists( 'sharing_display' ) ) {
+						    sharing_display( '', true );
+						}
+
+						if ( class_exists( 'Jetpack_Likes' ) ) {
+						    $custom_likes = new Jetpack_Likes;
+						    echo $custom_likes->post_likes( '' );
+						} ?>
+					</div>
 
 					<?php } elseif (is_category()) { ?>
 						<p>You are currently browsing the archives for the <?php single_cat_title(''); ?> category.</p>

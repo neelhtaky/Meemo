@@ -2,7 +2,7 @@
 	<?php get_sidebar('left'); ?>
 
 <!-- MAIN CONTENT WRAPPER -->
-<section id="entries wrap" class="small-12 medium-8 large-6 xlarge-7 xxlarge-7 columns ">
+<section id="entries wrap index" class="small-12 medium-8 large-6 xlarge-7 xxlarge-7 columns ">
 
 	<div id="user_logreglost_alert">
 		<!-- check for and return message on success -->

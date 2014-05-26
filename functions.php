@@ -2,13 +2,15 @@
 /****************************************************************
 ADD THEME SUPPORT
 ***************************************************************/
+/* set support for jetpack */
+if ( ! isset( $content_width ) )
+    $content_width = 1121;
 if(function_exists('add_theme_support')) {
     add_theme_support( 'post-thumbnails' );
     add_theme_support('automatic-feed-links');
     add_theme_support( 'html5', array( 'search-form' ) );
     $formats = array( 'status', 'quote', 'gallery', 'image', 'video', 'audio', 'link', 'aside', 'chat', );
     add_theme_support( 'post-formats', $formats );
-
 }
 /* Register Sidebars */
 if ( function_exists('register_sidebar') ) {
@@ -80,6 +82,7 @@ add_filter('edit_comment_link', 'spam_delete_comment_link');
 /******************************************************************
 Filters Chat Formatted Post for Better Markup and Presentation
 ******************************************************************/
+/*
  * @author David Chandra
  * @link http://www.turtlepod.org
  * @author Justin Tadlock
@@ -343,4 +346,58 @@ function kriesi_pagination($pages = '', $range = 2)
          echo "</ul>\n";
      }
 }
+/******************************************************************
+Custom Comments Display
+******************************************************************/
+function mytheme_comment($comment, $args, $depth) {
+    $GLOBALS['comment'] = $comment;
+    extract($args, EXTR_SKIP);
+
+    if ( 'div' == $args['style'] ) {
+      $tag = 'div';
+      $add_below = 'comment';
+    } else {
+      $tag = 'li';
+      $add_below = 'div-comment';
+    } ?>
+        <<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
+        <?php if ( 'div' != $args['style'] ) : ?>
+        <div id="div-comment-<?php comment_ID() ?>" class="comment-body row">
+        <?php endif; ?>
+        <div id="author_wrap">
+        <div class="comment-author vcard small-12 medium-6 columns">
+        <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+        <?php printf(__('<cite class="fn">%s</cite> <span class="says">said:</span>'), get_comment_author_link()) ?>
+        </div>
+        <div class="comment-meta commentmetadata small-12 medium-6 columns"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
+          <?php
+            /* translators: 1: date, 2: time */
+            printf( __('%1$s'), get_comment_date()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
+          ?>
+        </div>
+      </div><!-- author_wrap -->
+    <?php if ($comment->comment_approved == '0') : ?>
+        <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation, please be patient.') ?></em>
+    <?php endif; ?>
+        <div class="comment-content small-12 columns"><?php comment_text(); ?></div>
+
+        <div class="reply small-12 columns">
+          <?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+        </div>
+        <?php if ( 'div' != $args['style'] ) : ?>
+        </div>
+        <?php endif; ?>
+    <?php
+            }
+/******************************************************************
+Relocate Jetpack Likes to Sidebar. Default is under content.
+******************************************************************/
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+add_action( 'loop_start', 'jptweak_remove_share' );
 ?>
