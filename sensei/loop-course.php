@@ -37,7 +37,7 @@ if ( ! $paged || $paged < 2 ) {
     $posts_array = $woothemes_sensei->post_types->course->course_query( $amount, $query_type, $course_includes, $course_excludes );
     if ( count( $posts_array ) > 0 ) { ?>
 
-    	<section id="main-course" class="course-container">
+    	<section id="main-course course-archive" class="course-container">
 
     	    <?php do_action( 'sensei_course_archive_header', $query_type ); ?>
 

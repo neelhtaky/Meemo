@@ -71,7 +71,7 @@ $quiz_passmark_float = (float) $quiz_passmark;
             <?php do_action( 'sensei_quiz_action_buttons' ); ?>
     	</form>
     <?php } else { ?>
-    	<div class="sensei-message alert"><?php _e( 'There are no questions for this Quiz yet. Check back soon.', 'woothemes-sensei' ); ?></div>
+    	<div class="sensei-message alert-box alert"><?php _e( 'There are no questions for this Quiz yet. Check back soon.', 'woothemes-sensei' ); ?></div>
     <?php } // End If Statement ?>
 </div>
 

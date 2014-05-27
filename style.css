@@ -8722,13 +8722,18 @@ Courses
 }
 
 /* line 136, scss/style.scss */
+#main .course-container .sensei-course-meta {
+  margin: 1em 0;
+}
+
+/* line 139, scss/style.scss */
 #main .course-container .sensei-course-meta span.course-lesson-count {
   padding-left: 0;
   display: inline;
   font-weight: normal;
   font-style: italic;
 }
-/* line 141, scss/style.scss */
+/* line 144, scss/style.scss */
 #main .course-container .sensei-course-meta span.course-lesson-count:before {
   content: '\f100';
   -webkit-font-smoothing: antialiased;
@@ -8736,7 +8741,7 @@ Courses
   vertical-align: text-bottom;
 }
 
-/* line 148, scss/style.scss */
+/* line 152, scss/style.scss */
 #main .course-container img.woo-image.thumbnail {
   width: 250px;
   height: auto;
@@ -8748,46 +8753,33 @@ Courses
 Lessons
 ******************************************************************/
 /* Lesson Archive Page */
-/* line 159, scss/style.scss */
-#main .course .course-lessons .lesson .lesson-meta span.lesson-length {
+/* line 163, scss/style.scss */
+#main .course .course-lessons .lesson .lesson-meta {
+  margin: 1em 0;
+}
+/* line 165, scss/style.scss */
+#main .course .course-lessons .lesson .lesson-meta span {
   display: inline;
   font-weight: normal;
   font-style: italic;
 }
-/* line 163, scss/style.scss */
+/* line 169, scss/style.scss */
+#main .course .course-lessons .lesson .lesson-meta span:before {
+  webkit-font-smoothing: antialiased;
+  font: normal 16px/1 'Genericons';
+  vertical-align: text-bottom;
+}
+/* line 176, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span.lesson-length:before {
   content: '\f303';
-  -webkit-font-smoothing: antialiased;
-  font: normal 16px/1 'Genericons';
-  vertical-align: text-bottom;
 }
-
-/* line 169, scss/style.scss */
-#main .course .course-lessons .lesson .lesson-meta span.lesson-author {
-  display: inline;
-  font-weight: normal;
-  font-style: italic;
-}
-/* line 173, scss/style.scss */
+/* line 180, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span.lesson-author:before {
   content: '\f304';
-  -webkit-font-smoothing: antialiased;
-  font: normal 16px/1 'Genericons';
-  vertical-align: text-bottom;
 }
-
-/* line 179, scss/style.scss */
-#main .course .course-lessons .lesson .lesson-meta span.lesson-complexity {
-  display: inline;
-  font-weight: normal;
-  font-style: italic;
-}
-/* line 183, scss/style.scss */
+/* line 184, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span.lesson-complexity:before {
   content: '\f425';
-  -webkit-font-smoothing: antialiased;
-  font: normal 16px/1 'Genericons';
-  vertical-align: text-bottom;
 }
 
 /* line 189, scss/style.scss */
@@ -8802,11 +8794,29 @@ Lessons
   margin: 0 1em 0.5em;
 }
 
+/*#main .course .course-lessons .lesson .lesson-meta{display:block;}
+#main .course .course-meta, #main .course-container .course-meta{
+	clear:none !important;
+	margin-bottom: 0;
+	.in-progress{float: left;}
+	&::after{display:block;}
+}
+#main #index .course .entry {clear: both;}*/
+/* line 206, scss/style.scss */
+#main .course .course-meta, #main .course-container .course-meta {
+  display: inline-block;
+}
+
+/* line 209, scss/style.scss */
+#main .course .fix {
+  clear: both;
+}
+
 /* Individual Lesson Page */
 /******************************************************************
 Post to Post Navigation
 ******************************************************************/
-/* line 201, scss/style.scss */
+/* line 215, scss/style.scss */
 .cn-nav a span {
   /* size of circle button */
   width: 2.875rem;
@@ -8830,7 +8840,7 @@ Post to Post Navigation
   position: absolute;
 }
 
-/* line 222, scss/style.scss */
+/* line 236, scss/style.scss */
 .cn-nav a:hover span {
   /* increase circle button in size */
   width: 6.25rem;
@@ -8846,7 +8856,7 @@ Post to Post Navigation
   margin: 0.75rem 0;
 }
 
-/* line 235, scss/style.scss */
+/* line 249, scss/style.scss */
 .cn-nav a:hover div {
   width: 5.625rem;
   height: 5.625rem;
@@ -8856,7 +8866,7 @@ Post to Post Navigation
   border-radius: 2.8125rem;
 }
 
-/* line 242, scss/style.scss */
+/* line 256, scss/style.scss */
 .cn-nav a div {
   /* initially make thumbnail invisible */
   width: 0;
@@ -8877,23 +8887,23 @@ Post to Post Navigation
 }
 
 /* FOR NEXT */
-/* line 260, scss/style.scss */
+/* line 274, scss/style.scss */
 .cn-nav a.cn-nav-next span {
   background: #666666 url(library/images/next.png) no-repeat center center;
 }
 
 /* FOR PREVIOUS */
-/* line 262, scss/style.scss */
+/* line 276, scss/style.scss */
 .cn-nav a.cn-nav-prev span {
   background: #666666 url(library/images/prev.png) no-repeat center center;
 }
 
-/* line 263, scss/style.scss */
+/* line 277, scss/style.scss */
 .post .byline {
   line-height: 1.5rem;
 }
 
-/* line 265, scss/style.scss */
+/* line 279, scss/style.scss */
 #jp-relatedposts h3.jp-relatedposts-headline, .sharedaddy h3.sd-title {
   font-size: 1.6875rem !important;
   font-family: "font-family: Garamond, Baskerville, " Baskerville Old Face ", " Hoefler Text ", " Times New Roman ", serif" !important;
@@ -8901,17 +8911,17 @@ Post to Post Navigation
   font-style: normal !important;
   border: none !important;
 }
-/* line 271, scss/style.scss */
+/* line 285, scss/style.scss */
 #jp-relatedposts h3.jp-relatedposts-headline::before, .sharedaddy h3.sd-title::before {
   border: none !important;
 }
 
-/* line 273, scss/style.scss */
+/* line 287, scss/style.scss */
 #jp-relatedposts h3.jp-relatedposts-headline em:before {
   border: none !important;
 }
 
-/* line 277, scss/style.scss */
+/* line 291, scss/style.scss */
 #post-entries .nav-prev a, #post-entries .nav-next a {
   border-style: solid;
   border-width: 0px;
@@ -8947,7 +8957,7 @@ Post to Post Navigation
 /******************************************************************
 Navigation
 ******************************************************************/
-/* line 283, scss/style.scss */
+/* line 297, scss/style.scss */
 #welcome_user {
   margin: 0.8125rem 0.625rem -0.625rem 0;
   color: white;
@@ -8956,7 +8966,7 @@ Navigation
   font-weight: normal;
 }
 
-/* line 289, scss/style.scss */
+/* line 303, scss/style.scss */
 #user_logreglost_alert h1, #user_logreglost_alert h2, #user_logreglost_alert h3, #user_logreglost_alert h4, #user_logreglost_alert h5, #user_logreglost_alert h6, #user_logreglost_alert p, #user_logreglost_alert span {
   color: white;
 }
@@ -8964,7 +8974,7 @@ Navigation
 /******************************************************************
 Comments
 ******************************************************************/
-/* line 293, scss/style.scss */
+/* line 307, scss/style.scss */
 ol.commentlist {
   list-style: none;
   margin: 0 0 1em;
@@ -8972,28 +8982,28 @@ ol.commentlist {
   text-indent: 0;
 }
 
-/* line 299, scss/style.scss */
+/* line 313, scss/style.scss */
 ol.commentlist li.comment {
   padding: 1em;
 }
 
-/* line 301, scss/style.scss */
+/* line 315, scss/style.scss */
 ol.commentlist li.comment div.vcard {
   font: normal 16px georgia,times,serif;
   border: none;
 }
 
-/* line 302, scss/style.scss */
+/* line 316, scss/style.scss */
 ol.commentlist li.comment div.vcard cite.fn {
   font-style: normal;
 }
 
-/* line 303, scss/style.scss */
+/* line 317, scss/style.scss */
 ol.commentlist li.comment div.vcard cite.fn a.url {
   color: #222222;
 }
 
-/* line 304, scss/style.scss */
+/* line 318, scss/style.scss */
 ol.commentlist li.comment div.vcard img.avatar {
   line-height: 0;
   display: inline-block;
@@ -9006,7 +9016,7 @@ ol.commentlist li.comment div.vcard img.avatar:hover, ol.commentlist li.comment 
   box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
 }
 
-/* line 305, scss/style.scss */
+/* line 319, scss/style.scss */
 ol.commentlist li.comment div.vcard img.avatar-32 {
   line-height: 0;
   display: inline-block;
@@ -9019,7 +9029,7 @@ ol.commentlist li.comment div.vcard img.avatar-32:hover, ol.commentlist li.comme
   box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
 }
 
-/* line 306, scss/style.scss */
+/* line 320, scss/style.scss */
 ol.commentlist li.comment div.vcard img.photo {
   line-height: 0;
   display: inline-block;
@@ -9032,43 +9042,43 @@ ol.commentlist li.comment div.vcard img.photo:hover, ol.commentlist li.comment d
   box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
 }
 
-/* line 307, scss/style.scss */
+/* line 321, scss/style.scss */
 ol.commentlist li.comment div.vcard span.says {
   display: none;
 }
 
-/* line 308, scss/style.scss */
+/* line 322, scss/style.scss */
 ol.commentlist li.comment div.commentmetadata {
   text-align: right;
 }
 
-/* line 309, scss/style.scss */
+/* line 323, scss/style.scss */
 ol.commentlist li.comment div.comment-meta {
   margin: 1em 0 0 0;
 }
 
-/* line 310, scss/style.scss */
+/* line 324, scss/style.scss */
 ol.commentlist li.comment div.comment-meta a {
   color: #222222;
 }
 
-/* line 311, scss/style.scss */
+/* line 325, scss/style.scss */
 ol.commentlist li.comment p {
   margin: 0 0 1em;
 }
 
-/* line 312, scss/style.scss */
+/* line 326, scss/style.scss */
 ol.commentlist li.comment ul {
   list-style: square;
   margin: 0 0 1em 2em;
 }
 
-/* line 313, scss/style.scss */
+/* line 327, scss/style.scss */
 ol.commentlist li.comment div.reply {
   text-align: right;
 }
 
-/* line 314, scss/style.scss */
+/* line 328, scss/style.scss */
 ol.commentlist li.comment div.reply a {
   border-style: solid;
   border-width: 0px;
@@ -9101,42 +9111,42 @@ ol.commentlist li.comment div.reply a:hover, ol.commentlist li.comment div.reply
   color: white;
 }
 
-/* line 315, scss/style.scss */
+/* line 329, scss/style.scss */
 ol.commentlist li.comment ul.children {
   list-style: none;
   margin: 1em 0 0;
   text-indent: 0;
 }
 
-/* line 322, scss/style.scss */
+/* line 336, scss/style.scss */
 ol.commentlist li.comment ul.children li.depth-2 {
   border-left: 5px solid #cccccc;
   margin: 0 0 .25em .25em;
 }
 
-/* line 323, scss/style.scss */
+/* line 337, scss/style.scss */
 ol.commentlist li.comment ul.children li.depth-3 {
   border-left: 5px solid #b3b3b3;
   margin: 0 0 .25em .25em;
 }
 
-/* line 324, scss/style.scss */
+/* line 338, scss/style.scss */
 ol.commentlist li.comment ul.children li.depth-4 {
   border-left: 5px solid #999999;
   margin: 0 0 .25em .25em;
 }
 
-/* line 327, scss/style.scss */
+/* line 341, scss/style.scss */
 ol.commentlist li.even {
   background: #fff;
 }
 
-/* line 328, scss/style.scss */
+/* line 342, scss/style.scss */
 ol.commentlist li.odd {
   background: #f6f6f6;
 }
 
-/* line 329, scss/style.scss */
+/* line 343, scss/style.scss */
 ol.commentlist li.parent {
   border-left: 5px solid #d9d9d9;
 }
@@ -9144,32 +9154,32 @@ ol.commentlist li.parent {
 /******************************************************************
 Sidebar
 ******************************************************************/
-/* line 336, scss/style.scss */
+/* line 350, scss/style.scss */
 .widget-title {
   padding-top: 1rem;
 }
 
-/* line 337, scss/style.scss */
+/* line 351, scss/style.scss */
 .widgets-list-layout .widgets-list-layout-blavatar {
   max-width: 5.875rem;
   width: 100%;
   margin: 0.625rem 0.625rem 0 0;
 }
 
-/* line 341, scss/style.scss */
+/* line 355, scss/style.scss */
 .widgets-list-layout .widgets-list-layout-links {
   width: 70%;
   padding-top: 5px;
 }
 
-/* line 342, scss/style.scss */
+/* line 356, scss/style.scss */
 .jetpack_subscription_widget h3 label {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
 }
 
-/* line 346, scss/style.scss */
+/* line 360, scss/style.scss */
 .jetpack_subscription_widget input[type="text"] {
   background-color: white;
   font-family: inherit;
@@ -9202,7 +9212,7 @@ Sidebar
 .jetpack_subscription_widget input[type="text"][disabled], fieldset[disabled] .jetpack_subscription_widget input[type="text"] {
   background-color: #dddddd;
 }
-/* line 348, scss/style.scss */
+/* line 362, scss/style.scss */
 .jetpack_subscription_widget input[type="text"]::hover {
   -webkit-appearance: none !important;
   background-color: #fafafa;
@@ -9224,7 +9234,7 @@ Sidebar
   border-color: #999999;
 }
 
-/* line 349, scss/style.scss */
+/* line 363, scss/style.scss */
 .jetpack_subscription_widget #subscribe-email input[type="text"] {
   background-color: white;
   font-family: inherit;
@@ -9257,7 +9267,7 @@ Sidebar
 .jetpack_subscription_widget #subscribe-email input[type="text"][disabled], fieldset[disabled] .jetpack_subscription_widget #subscribe-email input[type="text"] {
   background-color: #dddddd;
 }
-/* line 351, scss/style.scss */
+/* line 365, scss/style.scss */
 .jetpack_subscription_widget #subscribe-email input[type="text"]::hover {
   -webkit-appearance: none !important;
   background-color: #fafafa;
@@ -9279,7 +9289,7 @@ Sidebar
   border-color: #999999;
 }
 
-/* line 352, scss/style.scss */
+/* line 366, scss/style.scss */
 .jetpack_subscription_widget input[type="submit"], .widget_product_search input[type="submit"] {
   border-style: solid;
   border-width: 0px;
@@ -9312,11 +9322,11 @@ Sidebar
   color: white;
 }
 
-/* line 354, scss/style.scss */
+/* line 368, scss/style.scss */
 .product_list_widget li a {
   font-weight: normal;
 }
-/* line 355, scss/style.scss */
+/* line 369, scss/style.scss */
 .product_list_widget li img {
   width: 5.875rem !important;
   height: auto;
@@ -9324,34 +9334,34 @@ Sidebar
   margin-right: 0.625rem;
 }
 
-/* line 361, scss/style.scss */
+/* line 375, scss/style.scss */
 .widget_sensei_lesson_component li {
   margin-bottom: 0.9375rem;
 }
-/* line 363, scss/style.scss */
+/* line 377, scss/style.scss */
 .widget_sensei_lesson_component li img {
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-/* line 367, scss/style.scss */
+/* line 381, scss/style.scss */
 .widget_sensei_lesson_component img {
   width: 5.875rem;
   height: auto;
   margin: 0.3125rem 0.625rem 0.625rem 0;
 }
 
-/* line 371, scss/style.scss */
+/* line 385, scss/style.scss */
 .widget_sensei_category_courses li img {
   margin-bottom: 0 !important;
 }
 
-/* line 372, scss/style.scss */
+/* line 386, scss/style.scss */
 .widget_sensei_category_courses .fix {
   margin-bottom: 0.9375rem;
 }
 
-/* line 373, scss/style.scss */
+/* line 387, scss/style.scss */
 #sharing {
   width: 100%;
   margin-left: auto;
@@ -9370,22 +9380,22 @@ Sidebar
 #sharing:after {
   clear: both;
 }
-/* line 376, scss/style.scss */
+/* line 390, scss/style.scss */
 #sharing .sd-sharing-enabled .sd-content {
   margin-top: 0;
 }
 
-/* line 379, scss/style.scss */
+/* line 393, scss/style.scss */
 .sd-like {
   margin: 0 0 4em;
 }
 
-/* line 380, scss/style.scss */
+/* line 394, scss/style.scss */
 #sidebar .woocommerce_cart {
   margin: -1em 0 1em;
 }
 
-/* line 381, scss/style.scss */
+/* line 395, scss/style.scss */
 #sidebar .sharedaddy h3.sd-title {
   margin: 0;
 }
@@ -9394,74 +9404,74 @@ Sidebar
 MEDIA QUERIES
 ******************************************************************/
 @media only screen and (max-width: 40em) {
-  /* line 387, scss/style.scss */
+  /* line 401, scss/style.scss */
   html {
     font-size: 0.9rem;
   }
 
-  /* line 388, scss/style.scss */
+  /* line 402, scss/style.scss */
   .cn-nav a.cn-nav-prev span {
     margin: 1.4375rem 0;
     z-index: 200;
   }
 
-  /* line 389, scss/style.scss */
+  /* line 403, scss/style.scss */
   .cn-nav a.cn-nav-prev div {
     margin: 2.8125rem 0 0 1.25rem;
   }
 
-  /* line 390, scss/style.scss */
+  /* line 404, scss/style.scss */
   .cn-nav a.cn-nav-prev:hover div {
     margin: 1.75rem 0 0 0.3125rem;
     z-index: 300;
   }
 
-  /* line 391, scss/style.scss */
+  /* line 405, scss/style.scss */
   .cn-nav a.cn-nav-prev p {
     margin: 0 0 0 3.75rem;
   }
 
-  /* line 392, scss/style.scss */
+  /* line 406, scss/style.scss */
   .cn-nav a.cn-nav-next span {
     margin: 1.4375rem 0 0 -0.625rem;
   }
 
-  /* line 393, scss/style.scss */
+  /* line 407, scss/style.scss */
   .cn-nav a.cn-nav-next:hover span {
     margin: 1.4375rem 0 0 -2.1875rem;
     z-index: 200;
   }
 
-  /* line 394, scss/style.scss */
+  /* line 408, scss/style.scss */
   .cn-nav a.cn-nav-next div {
     margin: 2.8125rem 0 0 1.25rem;
   }
 
-  /* line 395, scss/style.scss */
+  /* line 409, scss/style.scss */
   .cn-nav a.cn-nav-next:hover div {
     transform-origin: right top;
     margin: 1.75rem 0 0 2.8125rem;
     z-index: 300;
   }
 
-  /* line 400, scss/style.scss */
+  /* line 414, scss/style.scss */
   ol.commentlist li.comment div.vcard {
     margin-bottom: 0;
   }
 
-  /* line 403, scss/style.scss */
+  /* line 417, scss/style.scss */
   ol.commentlist li.comment div.commentmetadata {
     margin-top: 0;
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 409, scss/style.scss */
+  /* line 423, scss/style.scss */
   html {
     font-size: 0.95rem;
   }
 }
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
-  /* line 416, scss/style.scss */
+  /* line 430, scss/style.scss */
   html {
     font-size: 1rem;
   }
@@ -9469,3 +9479,7 @@ MEDIA QUERIES
 /******************************************************************
 TEST CODE
 ******************************************************************/
+/* line 438, scss/style.scss */
+form ol#sense-quiz-list {
+  margin-left: 3em;
+}

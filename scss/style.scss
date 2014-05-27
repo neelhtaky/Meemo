@@ -133,6 +133,9 @@ Courses
 	@include button;
 	a{color:white;}
 }
+#main .course-container .sensei-course-meta {
+	margin:1em 0;
+}
 #main .course-container .sensei-course-meta span.course-lesson-count{
 		padding-left: 0;
 		display: inline;
@@ -145,6 +148,7 @@ Courses
 			vertical-align:text-bottom;
 		}
 	}
+
 #main .course-container img.woo-image.thumbnail{
 	width:250px;
 	height:auto;
@@ -156,36 +160,32 @@ Courses
 Lessons
 ******************************************************************/
 /* Lesson Archive Page */
-#main .course .course-lessons .lesson .lesson-meta span.lesson-length{
-	display: inline;
-	font-weight: normal;
-	font-style: italic;
-	&:before{
-		content: '\f303';
-		-webkit-font-smoothing: antialiased;
-		font: normal 16px/1 'Genericons';
-		vertical-align:text-bottom;
-	}}
-#main .course .course-lessons .lesson .lesson-meta span.lesson-author{
-	display: inline;
-	font-weight: normal;
-	font-style: italic;
-	&:before{
-		content: '\f304';
-		-webkit-font-smoothing: antialiased;
-		font: normal 16px/1 'Genericons';
-		vertical-align:text-bottom;
-	}}
-#main .course .course-lessons .lesson .lesson-meta span.lesson-complexity{
-	display: inline;
-	font-weight: normal;
-	font-style: italic;
-	&:before{
-		content: '\f425';
-		-webkit-font-smoothing: antialiased;
-		font: normal 16px/1 'Genericons';
-		vertical-align:text-bottom;
-	}}
+#main .course .course-lessons .lesson .lesson-meta {
+	margin:1em 0;
+	span{
+		display: inline;
+		font-weight: normal;
+		font-style: italic;
+		&:before{
+			webkit-font-smoothing: antialiased;
+			font: normal 16px/1 'Genericons';
+			vertical-align:text-bottom;
+		}
+	}
+	 span.lesson-length{
+		&:before{
+			content: '\f303';
+		}}
+	span.lesson-author{
+		&:before{
+			content: '\f304';
+		}}
+	span.lesson-complexity{
+		&:before{
+			content: '\f425';
+		}}
+}
+
 #main .course .course-lessons .meter>span{
 	padding: 3px 10px 0 0;}
 #main .course-lessons img.woo-image.thumbnail{
@@ -193,6 +193,20 @@ Lessons
 	height:auto;
 	margin:0 1em 0.5em;
 }
+
+/*#main .course .course-lessons .lesson .lesson-meta{display:block;}
+#main .course .course-meta, #main .course-container .course-meta{
+	clear:none !important;
+	margin-bottom: 0;
+	.in-progress{float: left;}
+	&::after{display:block;}
+}
+#main #index .course .entry {clear: both;}*/
+
+#main .course .course-meta, #main .course-container .course-meta{
+	display:inline-block;
+}
+#main .course .fix{clear: both;}
 /* Individual Lesson Page */
 
 /******************************************************************
@@ -421,3 +435,6 @@ MEDIA QUERIES
 /******************************************************************
 TEST CODE
 ******************************************************************/
+form ol#sense-quiz-list{
+	margin-left:3em;
+}
