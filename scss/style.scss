@@ -286,7 +286,7 @@ ol.commentlist li.thread-odd {}
 /* pingbacks */
 ol.pingbacklist { list-style:none; margin:0 0 1em; padding:0; text-indent:0; }
 ol.pingbacklist li.pingback { padding:1em 1em 1em 0; }
-ol.pingbacklist li.pingback div.vcard { font:normal 16px georgia,times,serif; border:none; }
+ol.pingbacklist li.pingback div.vcard { font:normal 16px georgia,times,serif; border:none; @include grid-column(6);}
 ol.pingbacklist li.pingback div.vcard span.says {display:none;}
 ol.pingbacklist li.pingback div.commentmetadata {text-align: right;}
 
@@ -299,8 +299,11 @@ ol.pingbacklist li.pingback div.vcard cite.fn { font-style:normal; }
 ol.pingbacklist li.pingback div.vcard cite.fn a.url {color:$body-font-color;}
 
 ol.pingbacklist li.pingback p { margin:0 0 1em; }
-ol.pingbacklist li.pingback div.comment-meta {margin:-1em 0 0 0;}
-
+ol.pingbacklist li.pingback div.comment-meta {@include grid-column(6); margin-top: 9px;}
+ol.pingbacklist li.pingback p{
+	display:none;
+}
+ol.pingbacklist li.pingback div.comment-body{@include grid-column(12);}
 
 
 /******************************************************************

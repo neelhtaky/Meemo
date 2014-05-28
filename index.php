@@ -18,12 +18,13 @@
 			<h3>Success!</h3>
 			<p>Check your email to reset your password.</p>
 		</span>
-
-		<?php } else { ?>
 		<?php } ?>
 	</div>
 
-	<?php get_template_part( 'loop', 'stickyindex' ); ?>
+	<?php if ( is_home() && !is_paged()) {
+		get_template_part( 'loop', 'stickyindex' );
+	}
+		 get_template_part( 'loop', 'index' ); ?>
 
 	<div class="navigation">
 		<?php kriesi_pagination($pages = '', $range = 6); ?>

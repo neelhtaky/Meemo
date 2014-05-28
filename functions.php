@@ -4,7 +4,7 @@ ADD THEME SUPPORT
 ***************************************************************/
 /* set support for jetpack */
 if ( ! isset( $content_width ) )
-    $content_width = 700;
+    $content_width = 1121;
 if(function_exists('add_theme_support')) {
     add_theme_support( 'post-thumbnails' );
     add_theme_support('automatic-feed-links');
@@ -365,16 +365,16 @@ function mytheme_comment($comment, $args, $depth) {
         <div id="div-comment-<?php comment_ID() ?>" class="comment-body row">
         <?php endif; ?>
         <div id="author_wrap">
-        <div class="comment-author vcard small-12 medium-6 columns">
-        <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-        <?php printf(__('<cite class="fn">%s</cite> <span class="says">said:</span>'), get_comment_author_link()) ?>
-        </div>
-        <div class="comment-meta commentmetadata small-12 medium-6 columns"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
-          <?php
-            /* translators: 1: date, 2: time */
-            printf( __('%1$s'), get_comment_date()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
-          ?>
-        </div>
+          <div class="comment-author vcard small-12 medium-6 columns">
+          <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+          <?php printf(__('<cite class="fn">%s</cite> <span class="says">said:</span>'), get_comment_author_link()) ?>
+          </div>
+          <div class="comment-meta commentmetadata small-12 medium-6 columns"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
+            <?php
+              /* translators: 1: date, 2: time */
+              printf( __('%1$s'), get_comment_date()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
+            ?>
+          </div>
       </div><!-- author_wrap -->
     <?php if ($comment->comment_approved == '0') : ?>
         <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation, please be patient.') ?></em>

@@ -1,6 +1,7 @@
 <div id="sidebar" class="small-12 medium-4 large-3 xlarge-3 xxlarge-3 columns">
 	<aside id="sidebar" role="complementary">
 		<ul class="no-bullet">
+
 			<?php if ( is_active_sidebar( 'primary' ) ) : ?>
 
 				<!-- Show Shopping Cart Globally-->
@@ -21,7 +22,7 @@
 				</div>
 			<?php } ?>
 
-			<?php if(!is_woocommerce()) { ?>
+
 
 				<?php if (is_single())  { ?>
 				<h3>About This Post</h3>
@@ -82,7 +83,8 @@
 					<?php } elseif (is_search()) { ?>
 				    	<p>You have searched the <a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a> blog archives for <strong>'<?php the_search_query(); ?>'</strong>.</p>
 					 <?php } ?>
-				<?php } ?>
+
+
 
 				<?php dynamic_sidebar( 'primary' ); ?>
 			<?php else : ?>
