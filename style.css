@@ -8496,17 +8496,100 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 17, scss/style.scss */
+/******************************************************************
+Wordpress Default Styles
+******************************************************************/
+/* line 20, scss/style.scss */
+.entry img {
+  margin: 0 0 1.5em 0;
+}
+
+/* line 23, scss/style.scss */
+.alignleft, img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+
+/* line 28, scss/style.scss */
+.alignright, img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+
+/* line 33, scss/style.scss */
+.aligncenter, img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+
+/* line 39, scss/style.scss */
+.alignnone, img.alignnone {
+  /* not sure about this one */
+}
+
+/* line 42, scss/style.scss */
+.wp-caption {
+  margin-bottom: 1.5em;
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* line 47, scss/style.scss */
+.wp-caption img {
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 52, scss/style.scss */
+.wp-caption p.wp-caption-text {
+  line-height: 1.5;
+  font-size: 10px;
+  margin: 0;
+}
+
+/* line 57, scss/style.scss */
+blockquote.left {
+  margin-right: 20px;
+  text-align: right;
+  margin-left: 0;
+  width: 33%;
+  float: left;
+}
+
+/* line 64, scss/style.scss */
+blockquote.right {
+  margin-left: 20px;
+  text-align: left;
+  margin-right: 0;
+  width: 33%;
+  float: right;
+}
+
+/* line 82, scss/style.scss */
+#main .entry iframe {
+  width: 100% !important;
+  height: auto;
+}
+
+/******************************************************************
+Links
+******************************************************************/
+/* line 86, scss/style.scss */
 .screen-reader-text {
   display: none;
 }
 
-/* line 18, scss/style.scss */
+/* line 87, scss/style.scss */
 body {
   background: white;
 }
 
-/* line 19, scss/style.scss */
+/* line 88, scss/style.scss */
 a[href]:after {
   content: '\f442';
   display: inline-block;
@@ -8515,7 +8598,7 @@ a[href]:after {
   vertical-align: top;
 }
 
-/* line 28, scss/style.scss */
+/* line 97, scss/style.scss */
 a[href*="skinnyprojects"],
 a[href^="/"], a[href^="#"],
 a[href^="mailto:"],
@@ -8523,7 +8606,7 @@ a[href^="javascript:"] {
   display: inline;
 }
 
-/* line 32, scss/style.scss */
+/* line 101, scss/style.scss */
 a[href*="skinnyprojects"]:after,
 a[href^="/"]:after, a[href^="#"]:after,
 a[href^="mailto:"]:after,
@@ -8531,13 +8614,13 @@ a[href^="javascript:"]:after {
   content: none;
 }
 
-/* line 33, scss/style.scss */
+/* line 102, scss/style.scss */
 .author, .course-author a {
   display: inline;
   font-weight: normal;
   font-style: italic;
 }
-/* line 37, scss/style.scss */
+/* line 106, scss/style.scss */
 .author::before, .course-author a::before {
   content: '\f304';
   -webkit-font-smoothing: antialiased;
@@ -8545,11 +8628,11 @@ a[href^="javascript:"]:after {
   vertical-align: text-bottom;
 }
 
-/* line 43, scss/style.scss */
+/* line 112, scss/style.scss */
 a[rel="category tag"].tags {
   display: inline;
 }
-/* line 45, scss/style.scss */
+/* line 114, scss/style.scss */
 a[rel="category tag"].tags::before {
   color: #222222;
   content: '\f302';
@@ -8559,7 +8642,7 @@ a[rel="category tag"].tags::before {
   vertical-align: text-bottom;
 }
 
-/* line 53, scss/style.scss */
+/* line 122, scss/style.scss */
 a[rel="category tag"]::before, span.course-category::before {
   color: #222222;
   content: '\f301';
@@ -8569,7 +8652,7 @@ a[rel="category tag"]::before, span.course-category::before {
   vertical-align: text-bottom;
 }
 
-/* line 61, scss/style.scss */
+/* line 130, scss/style.scss */
 .tags:before {
   color: #222222;
   content: '\f302';
@@ -8579,12 +8662,12 @@ a[rel="category tag"]::before, span.course-category::before {
   vertical-align: text-bottom;
 }
 
-/* line 68, scss/style.scss */
+/* line 137, scss/style.scss */
 a.comments-link {
   text-decoration: none;
   color: #222222;
 }
-/* line 71, scss/style.scss */
+/* line 140, scss/style.scss */
 a.comments-link:before {
   color: #222222;
   content: '\f300';
@@ -8594,13 +8677,13 @@ a.comments-link:before {
   vertical-align: top;
 }
 
-/* line 79, scss/style.scss */
+/* line 148, scss/style.scss */
 time {
   display: inline;
   font-weight: normal;
   font-style: italic;
 }
-/* line 83, scss/style.scss */
+/* line 152, scss/style.scss */
 time:before {
   content: '\f303';
   -webkit-font-smoothing: antialiased;
@@ -8608,13 +8691,13 @@ time:before {
   vertical-align: text-bottom;
 }
 
-/* line 89, scss/style.scss */
+/* line 158, scss/style.scss */
 .written_by {
   display: inline;
   font-weight: normal;
   font-style: italic;
 }
-/* line 93, scss/style.scss */
+/* line 162, scss/style.scss */
 .written_by:before {
   content: '\f304';
   -webkit-font-smoothing: antialiased;
@@ -8622,37 +8705,37 @@ time:before {
   vertical-align: text-bottom;
 }
 
-/* line 100, scss/style.scss */
+/* line 169, scss/style.scss */
 #main {
   padding-top: 0.625rem;
 }
 
-/* line 101, scss/style.scss */
+/* line 170, scss/style.scss */
 #postauthordesc {
   display: inline;
 }
 
-/* line 102, scss/style.scss */
+/* line 171, scss/style.scss */
 .postmetadata {
   margin-top: 0.3125rem;
 }
 
-/* line 104, scss/style.scss */
+/* line 173, scss/style.scss */
 .postauthor .th {
   float: left;
   margin: 0.3125rem 0.625rem 0 0;
 }
 
-/* line 108, scss/style.scss */
+/* line 177, scss/style.scss */
 .read_more a {
   margin: 0 auto;
 }
 
-/* line 109, scss/style.scss */
+/* line 178, scss/style.scss */
 .post {
   margin-bottom: 3.75rem !important;
 }
-/* line 110, scss/style.scss */
+/* line 179, scss/style.scss */
 .post .attachment-post-thumbnail {
   margin-bottom: 1em;
 }
@@ -8661,30 +8744,30 @@ time:before {
 Courses
 ******************************************************************/
 /* Course Archive Page */
-/* line 118, scss/style.scss */
+/* line 187, scss/style.scss */
 .course-container {
   border: none !important;
 }
 
-/* line 119, scss/style.scss */
+/* line 188, scss/style.scss */
 .course-container .archive-header h1 {
   font-size: 2.75rem !important;
   border: none !important;
 }
 
-/* line 123, scss/style.scss */
+/* line 192, scss/style.scss */
 #main .course {
   padding: 0 !important;
   border-bottom: none !important;
   margin: 0;
 }
 
-/* line 129, scss/style.scss */
+/* line 198, scss/style.scss */
 #main .course .course-lessons > entry {
   margin-bottom: 0;
 }
 
-/* line 132, scss/style.scss */
+/* line 201, scss/style.scss */
 #main .lesson-course {
   border-style: solid;
   border-width: 0px;
@@ -8716,24 +8799,24 @@ Courses
 #main .lesson-course:hover, #main .lesson-course:focus {
   color: white;
 }
-/* line 134, scss/style.scss */
+/* line 203, scss/style.scss */
 #main .lesson-course a {
   color: white;
 }
 
-/* line 136, scss/style.scss */
+/* line 205, scss/style.scss */
 #main .course-container .sensei-course-meta {
   margin: 1em 0;
 }
 
-/* line 139, scss/style.scss */
+/* line 208, scss/style.scss */
 #main .course-container .sensei-course-meta span.course-lesson-count {
   padding-left: 0;
   display: inline;
   font-weight: normal;
   font-style: italic;
 }
-/* line 144, scss/style.scss */
+/* line 213, scss/style.scss */
 #main .course-container .sensei-course-meta span.course-lesson-count:before {
   content: '\f100';
   -webkit-font-smoothing: antialiased;
@@ -8741,7 +8824,7 @@ Courses
   vertical-align: text-bottom;
 }
 
-/* line 152, scss/style.scss */
+/* line 221, scss/style.scss */
 #main .course-container img.woo-image.thumbnail {
   width: 250px;
   height: auto;
@@ -8753,41 +8836,41 @@ Courses
 Lessons
 ******************************************************************/
 /* Lesson Archive Page */
-/* line 163, scss/style.scss */
+/* line 232, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta {
   margin: 1em 0;
 }
-/* line 165, scss/style.scss */
+/* line 234, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span {
   display: inline;
   font-weight: normal;
   font-style: italic;
 }
-/* line 169, scss/style.scss */
+/* line 238, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span:before {
   webkit-font-smoothing: antialiased;
   font: normal 16px/1 'Genericons';
   vertical-align: text-bottom;
 }
-/* line 176, scss/style.scss */
+/* line 245, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span.lesson-length:before {
   content: '\f303';
 }
-/* line 180, scss/style.scss */
+/* line 249, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span.lesson-author:before {
   content: '\f304';
 }
-/* line 184, scss/style.scss */
+/* line 253, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span.lesson-complexity:before {
   content: '\f425';
 }
 
-/* line 189, scss/style.scss */
+/* line 258, scss/style.scss */
 #main .course .course-lessons .meter > span {
   padding: 3px 10px 0 0;
 }
 
-/* line 191, scss/style.scss */
+/* line 260, scss/style.scss */
 #main .course-lessons img.woo-image.thumbnail {
   width: 250px !important;
   height: auto;
@@ -8802,12 +8885,12 @@ Lessons
 	&::after{display:block;}
 }
 #main #index .course .entry {clear: both;}*/
-/* line 206, scss/style.scss */
+/* line 275, scss/style.scss */
 #main .course .course-meta, #main .course-container .course-meta {
   display: inline-block;
 }
 
-/* line 209, scss/style.scss */
+/* line 278, scss/style.scss */
 #main .course .fix {
   clear: both;
 }
@@ -8816,94 +8899,12 @@ Lessons
 /******************************************************************
 Post to Post Navigation
 ******************************************************************/
-/* line 215, scss/style.scss */
-.cn-nav a span {
-  /* size of circle button */
-  width: 2.875rem;
-  height: 2.875rem;
-  -moz-border-radius: 1.4375rem;
-  -webkit-border-radius: 1.4375rem;
-  border-radius: 1.4375rem;
-  cursor: pointer;
-  transform-origin: center center;
-  background-position: center center;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  /* hide placeholder text */
-  text-indent: -562.5rem;
-  /* just for a nice effect */
-  opacity: 0.9;
-  background-size: 1.0625rem 1.5625rem;
-  position: absolute;
-}
-
-/* line 236, scss/style.scss */
-.cn-nav a:hover span {
-  /* increase circle button in size */
-  width: 6.25rem;
-  height: 6.25rem;
-  /* retain shape of circle at larger size */
-  -moz-border-radius: 3.125rem;
-  -webkit-border-radius: 3.125rem;
-  border-radius: 3.125rem;
-  /* just for a nice effect */
-  opacity: 0.6;
-  background-color: #a8872d;
-  background-size: 1.375rem 2rem;
-  margin: 0.75rem 0;
-}
-
-/* line 249, scss/style.scss */
-.cn-nav a:hover div {
-  width: 5.625rem;
-  height: 5.625rem;
-  margin-top: 1rem;
-  -moz-border-radius: 2.8125rem;
-  -webkit-border-radius: 2.8125rem;
-  border-radius: 2.8125rem;
-}
-
-/* line 256, scss/style.scss */
-.cn-nav a div {
-  /* initially make thumbnail invisible */
-  width: 0;
-  height: 0;
-  /* make the background circular */
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  overflow: hidden;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-/* FOR NEXT */
-/* line 274, scss/style.scss */
-.cn-nav a.cn-nav-next span {
-  background: #666666 url(library/images/next.png) no-repeat center center;
-}
-
-/* FOR PREVIOUS */
-/* line 276, scss/style.scss */
-.cn-nav a.cn-nav-prev span {
-  background: #666666 url(library/images/prev.png) no-repeat center center;
-}
-
-/* line 277, scss/style.scss */
+/* line 285, scss/style.scss */
 .post .byline {
   line-height: 1.5rem;
 }
 
-/* line 279, scss/style.scss */
+/* line 287, scss/style.scss */
 #jp-relatedposts h3.jp-relatedposts-headline, .sharedaddy h3.sd-title {
   font-size: 1.6875rem !important;
   font-family: "font-family: Garamond, Baskerville, " Baskerville Old Face ", " Hoefler Text ", " Times New Roman ", serif" !important;
@@ -8911,17 +8912,17 @@ Post to Post Navigation
   font-style: normal !important;
   border: none !important;
 }
-/* line 285, scss/style.scss */
+/* line 293, scss/style.scss */
 #jp-relatedposts h3.jp-relatedposts-headline::before, .sharedaddy h3.sd-title::before {
   border: none !important;
 }
 
-/* line 287, scss/style.scss */
+/* line 295, scss/style.scss */
 #jp-relatedposts h3.jp-relatedposts-headline em:before {
   border: none !important;
 }
 
-/* line 291, scss/style.scss */
+/* line 299, scss/style.scss */
 #post-entries .nav-prev a, #post-entries .nav-next a {
   border-style: solid;
   border-width: 0px;
@@ -8957,7 +8958,7 @@ Post to Post Navigation
 /******************************************************************
 Navigation
 ******************************************************************/
-/* line 297, scss/style.scss */
+/* line 305, scss/style.scss */
 #welcome_user {
   margin: 0.8125rem 0.625rem -0.625rem 0;
   color: white;
@@ -8966,7 +8967,7 @@ Navigation
   font-weight: normal;
 }
 
-/* line 303, scss/style.scss */
+/* line 311, scss/style.scss */
 #user_logreglost_alert h1, #user_logreglost_alert h2, #user_logreglost_alert h3, #user_logreglost_alert h4, #user_logreglost_alert h5, #user_logreglost_alert h6, #user_logreglost_alert p, #user_logreglost_alert span {
   color: white;
 }
@@ -8974,7 +8975,8 @@ Navigation
 /******************************************************************
 Comments
 ******************************************************************/
-/* line 307, scss/style.scss */
+/* comments */
+/* line 316, scss/style.scss */
 ol.commentlist {
   list-style: none;
   margin: 0 0 1em;
@@ -8982,28 +8984,28 @@ ol.commentlist {
   text-indent: 0;
 }
 
-/* line 313, scss/style.scss */
+/* line 322, scss/style.scss */
 ol.commentlist li.comment {
   padding: 1em;
 }
 
-/* line 315, scss/style.scss */
+/* line 324, scss/style.scss */
 ol.commentlist li.comment div.vcard {
   font: normal 16px georgia,times,serif;
   border: none;
 }
 
-/* line 316, scss/style.scss */
+/* line 325, scss/style.scss */
 ol.commentlist li.comment div.vcard cite.fn {
   font-style: normal;
 }
 
-/* line 317, scss/style.scss */
+/* line 326, scss/style.scss */
 ol.commentlist li.comment div.vcard cite.fn a.url {
   color: #222222;
 }
 
-/* line 318, scss/style.scss */
+/* line 327, scss/style.scss */
 ol.commentlist li.comment div.vcard img.avatar {
   line-height: 0;
   display: inline-block;
@@ -9016,7 +9018,7 @@ ol.commentlist li.comment div.vcard img.avatar:hover, ol.commentlist li.comment 
   box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
 }
 
-/* line 319, scss/style.scss */
+/* line 328, scss/style.scss */
 ol.commentlist li.comment div.vcard img.avatar-32 {
   line-height: 0;
   display: inline-block;
@@ -9029,7 +9031,7 @@ ol.commentlist li.comment div.vcard img.avatar-32:hover, ol.commentlist li.comme
   box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
 }
 
-/* line 320, scss/style.scss */
+/* line 329, scss/style.scss */
 ol.commentlist li.comment div.vcard img.photo {
   line-height: 0;
   display: inline-block;
@@ -9042,43 +9044,43 @@ ol.commentlist li.comment div.vcard img.photo:hover, ol.commentlist li.comment d
   box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
 }
 
-/* line 321, scss/style.scss */
+/* line 330, scss/style.scss */
 ol.commentlist li.comment div.vcard span.says {
   display: none;
 }
 
-/* line 322, scss/style.scss */
+/* line 331, scss/style.scss */
 ol.commentlist li.comment div.commentmetadata {
   text-align: right;
 }
 
-/* line 323, scss/style.scss */
+/* line 332, scss/style.scss */
 ol.commentlist li.comment div.comment-meta {
   margin: 1em 0 0 0;
 }
 
-/* line 324, scss/style.scss */
+/* line 333, scss/style.scss */
 ol.commentlist li.comment div.comment-meta a {
   color: #222222;
 }
 
-/* line 325, scss/style.scss */
+/* line 334, scss/style.scss */
 ol.commentlist li.comment p {
   margin: 0 0 1em;
 }
 
-/* line 326, scss/style.scss */
+/* line 335, scss/style.scss */
 ol.commentlist li.comment ul {
   list-style: square;
   margin: 0 0 1em 2em;
 }
 
-/* line 327, scss/style.scss */
+/* line 336, scss/style.scss */
 ol.commentlist li.comment div.reply {
   text-align: right;
 }
 
-/* line 328, scss/style.scss */
+/* line 337, scss/style.scss */
 ol.commentlist li.comment div.reply a {
   border-style: solid;
   border-width: 0px;
@@ -9111,75 +9113,151 @@ ol.commentlist li.comment div.reply a:hover, ol.commentlist li.comment div.reply
   color: white;
 }
 
-/* line 329, scss/style.scss */
+/* line 338, scss/style.scss */
 ol.commentlist li.comment ul.children {
   list-style: none;
   margin: 1em 0 0;
   text-indent: 0;
 }
 
-/* line 336, scss/style.scss */
+/* line 345, scss/style.scss */
 ol.commentlist li.comment ul.children li.depth-2 {
   border-left: 5px solid #cccccc;
   margin: 0 0 .25em .25em;
 }
 
-/* line 337, scss/style.scss */
+/* line 346, scss/style.scss */
 ol.commentlist li.comment ul.children li.depth-3 {
   border-left: 5px solid #b3b3b3;
   margin: 0 0 .25em .25em;
 }
 
-/* line 338, scss/style.scss */
+/* line 347, scss/style.scss */
 ol.commentlist li.comment ul.children li.depth-4 {
   border-left: 5px solid #999999;
   margin: 0 0 .25em .25em;
 }
 
-/* line 341, scss/style.scss */
+/* line 350, scss/style.scss */
 ol.commentlist li.even {
   background: #fff;
 }
 
-/* line 342, scss/style.scss */
+/* line 351, scss/style.scss */
 ol.commentlist li.odd {
   background: #f6f6f6;
 }
 
-/* line 343, scss/style.scss */
+/* line 352, scss/style.scss */
 ol.commentlist li.parent {
   border-left: 5px solid #d9d9d9;
+}
+
+/* pingbacks */
+/* line 359, scss/style.scss */
+ol.pingbacklist {
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0;
+  text-indent: 0;
+}
+
+/* line 360, scss/style.scss */
+ol.pingbacklist li.pingback {
+  padding: 1em 1em 1em 0;
+}
+
+/* line 361, scss/style.scss */
+ol.pingbacklist li.pingback div.vcard {
+  font: normal 16px georgia,times,serif;
+  border: none;
+}
+
+/* line 362, scss/style.scss */
+ol.pingbacklist li.pingback div.vcard span.says {
+  display: none;
+}
+
+/* line 363, scss/style.scss */
+ol.pingbacklist li.pingback div.commentmetadata {
+  text-align: right;
+}
+
+/* line 365, scss/style.scss */
+ol.pingbacklist li.pingback div.comment-meta a {
+  color: #222222;
+}
+
+/* line 366, scss/style.scss */
+ol.pingbacklist li.pingback div.reply {
+  display: none;
+}
+
+/* line 367, scss/style.scss */
+ol.pingbacklist li.even {
+  background: #fff;
+}
+
+/* line 368, scss/style.scss */
+ol.pingbacklist li.odd {
+  background: #f6f6f6;
+}
+
+/* line 369, scss/style.scss */
+ol.pingbacklist li.pingback ul {
+  list-style: square;
+  margin: 0 0 1em 2em;
+}
+
+/* line 370, scss/style.scss */
+ol.pingbacklist li.pingback div.vcard cite.fn {
+  font-style: normal;
+}
+
+/* line 371, scss/style.scss */
+ol.pingbacklist li.pingback div.vcard cite.fn a.url {
+  color: #222222;
+}
+
+/* line 373, scss/style.scss */
+ol.pingbacklist li.pingback p {
+  margin: 0 0 1em;
+}
+
+/* line 374, scss/style.scss */
+ol.pingbacklist li.pingback div.comment-meta {
+  margin: -1em 0 0 0;
 }
 
 /******************************************************************
 Sidebar
 ******************************************************************/
-/* line 350, scss/style.scss */
+/* line 381, scss/style.scss */
 .widget-title {
   padding-top: 1rem;
 }
 
-/* line 351, scss/style.scss */
+/* line 382, scss/style.scss */
 .widgets-list-layout .widgets-list-layout-blavatar {
   max-width: 5.875rem;
   width: 100%;
   margin: 0.625rem 0.625rem 0 0;
 }
 
-/* line 355, scss/style.scss */
+/* line 386, scss/style.scss */
 .widgets-list-layout .widgets-list-layout-links {
   width: 70%;
   padding-top: 5px;
 }
 
-/* line 356, scss/style.scss */
+/* line 387, scss/style.scss */
 .jetpack_subscription_widget h3 label {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
 }
 
-/* line 360, scss/style.scss */
+/* line 391, scss/style.scss */
 .jetpack_subscription_widget input[type="text"] {
   background-color: white;
   font-family: inherit;
@@ -9212,7 +9290,7 @@ Sidebar
 .jetpack_subscription_widget input[type="text"][disabled], fieldset[disabled] .jetpack_subscription_widget input[type="text"] {
   background-color: #dddddd;
 }
-/* line 362, scss/style.scss */
+/* line 393, scss/style.scss */
 .jetpack_subscription_widget input[type="text"]::hover {
   -webkit-appearance: none !important;
   background-color: #fafafa;
@@ -9234,7 +9312,7 @@ Sidebar
   border-color: #999999;
 }
 
-/* line 363, scss/style.scss */
+/* line 394, scss/style.scss */
 .jetpack_subscription_widget #subscribe-email input[type="text"] {
   background-color: white;
   font-family: inherit;
@@ -9267,7 +9345,7 @@ Sidebar
 .jetpack_subscription_widget #subscribe-email input[type="text"][disabled], fieldset[disabled] .jetpack_subscription_widget #subscribe-email input[type="text"] {
   background-color: #dddddd;
 }
-/* line 365, scss/style.scss */
+/* line 396, scss/style.scss */
 .jetpack_subscription_widget #subscribe-email input[type="text"]::hover {
   -webkit-appearance: none !important;
   background-color: #fafafa;
@@ -9289,7 +9367,7 @@ Sidebar
   border-color: #999999;
 }
 
-/* line 366, scss/style.scss */
+/* line 397, scss/style.scss */
 .jetpack_subscription_widget input[type="submit"], .widget_product_search input[type="submit"] {
   border-style: solid;
   border-width: 0px;
@@ -9322,11 +9400,11 @@ Sidebar
   color: white;
 }
 
-/* line 368, scss/style.scss */
+/* line 399, scss/style.scss */
 .product_list_widget li a {
   font-weight: normal;
 }
-/* line 369, scss/style.scss */
+/* line 400, scss/style.scss */
 .product_list_widget li img {
   width: 5.875rem !important;
   height: auto;
@@ -9334,34 +9412,34 @@ Sidebar
   margin-right: 0.625rem;
 }
 
-/* line 375, scss/style.scss */
+/* line 406, scss/style.scss */
 .widget_sensei_lesson_component li {
   margin-bottom: 0.9375rem;
 }
-/* line 377, scss/style.scss */
+/* line 408, scss/style.scss */
 .widget_sensei_lesson_component li img {
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-/* line 381, scss/style.scss */
+/* line 412, scss/style.scss */
 .widget_sensei_lesson_component img {
   width: 5.875rem;
   height: auto;
   margin: 0.3125rem 0.625rem 0.625rem 0;
 }
 
-/* line 385, scss/style.scss */
+/* line 416, scss/style.scss */
 .widget_sensei_category_courses li img {
   margin-bottom: 0 !important;
 }
 
-/* line 386, scss/style.scss */
+/* line 417, scss/style.scss */
 .widget_sensei_category_courses .fix {
   margin-bottom: 0.9375rem;
 }
 
-/* line 387, scss/style.scss */
+/* line 418, scss/style.scss */
 #sharing {
   width: 100%;
   margin-left: auto;
@@ -9380,22 +9458,22 @@ Sidebar
 #sharing:after {
   clear: both;
 }
-/* line 390, scss/style.scss */
+/* line 421, scss/style.scss */
 #sharing .sd-sharing-enabled .sd-content {
   margin-top: 0;
 }
 
-/* line 393, scss/style.scss */
+/* line 424, scss/style.scss */
 .sd-like {
   margin: 0 0 4em;
 }
 
-/* line 394, scss/style.scss */
+/* line 425, scss/style.scss */
 #sidebar .woocommerce_cart {
   margin: -1em 0 1em;
 }
 
-/* line 395, scss/style.scss */
+/* line 426, scss/style.scss */
 #sidebar .sharedaddy h3.sd-title {
   margin: 0;
 }
@@ -9404,74 +9482,74 @@ Sidebar
 MEDIA QUERIES
 ******************************************************************/
 @media only screen and (max-width: 40em) {
-  /* line 401, scss/style.scss */
+  /* line 432, scss/style.scss */
   html {
     font-size: 0.9rem;
   }
 
-  /* line 402, scss/style.scss */
+  /* line 433, scss/style.scss */
   .cn-nav a.cn-nav-prev span {
     margin: 1.4375rem 0;
     z-index: 200;
   }
 
-  /* line 403, scss/style.scss */
+  /* line 434, scss/style.scss */
   .cn-nav a.cn-nav-prev div {
     margin: 2.8125rem 0 0 1.25rem;
   }
 
-  /* line 404, scss/style.scss */
+  /* line 435, scss/style.scss */
   .cn-nav a.cn-nav-prev:hover div {
     margin: 1.75rem 0 0 0.3125rem;
     z-index: 300;
   }
 
-  /* line 405, scss/style.scss */
+  /* line 436, scss/style.scss */
   .cn-nav a.cn-nav-prev p {
     margin: 0 0 0 3.75rem;
   }
 
-  /* line 406, scss/style.scss */
+  /* line 437, scss/style.scss */
   .cn-nav a.cn-nav-next span {
     margin: 1.4375rem 0 0 -0.625rem;
   }
 
-  /* line 407, scss/style.scss */
+  /* line 438, scss/style.scss */
   .cn-nav a.cn-nav-next:hover span {
     margin: 1.4375rem 0 0 -2.1875rem;
     z-index: 200;
   }
 
-  /* line 408, scss/style.scss */
+  /* line 439, scss/style.scss */
   .cn-nav a.cn-nav-next div {
     margin: 2.8125rem 0 0 1.25rem;
   }
 
-  /* line 409, scss/style.scss */
+  /* line 440, scss/style.scss */
   .cn-nav a.cn-nav-next:hover div {
     transform-origin: right top;
     margin: 1.75rem 0 0 2.8125rem;
     z-index: 300;
   }
 
-  /* line 414, scss/style.scss */
+  /* line 445, scss/style.scss */
   ol.commentlist li.comment div.vcard {
     margin-bottom: 0;
   }
 
-  /* line 417, scss/style.scss */
+  /* line 448, scss/style.scss */
   ol.commentlist li.comment div.commentmetadata {
     margin-top: 0;
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 423, scss/style.scss */
+  /* line 454, scss/style.scss */
   html {
     font-size: 0.95rem;
   }
 }
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
-  /* line 430, scss/style.scss */
+  /* line 461, scss/style.scss */
   html {
     font-size: 1rem;
   }
@@ -9479,7 +9557,7 @@ MEDIA QUERIES
 /******************************************************************
 TEST CODE
 ******************************************************************/
-/* line 438, scss/style.scss */
+/* line 469, scss/style.scss */
 form ol#sense-quiz-list {
   margin-left: 3em;
 }
