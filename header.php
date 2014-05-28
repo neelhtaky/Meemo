@@ -77,7 +77,6 @@
 
 								<!-- Right Nav Section -->
 								<ul class="right">
-									<?php wp_register(); ?>
 
 									<?php
 									global $current_user;

@@ -14,11 +14,11 @@
 				<div class="row">
 					<div class="username small-12 large-6 columns">
 						<label for="user_login">Username</label>
-						<input type="text" name="log" id="user_login" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" tabindex="10" />
+						<input type="text" name="log" id="user_login" placeholder="Example: Your Name" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" tabindex="10" />
 					</div><!-- username -->
 					<div class="password small-12 large-6 columns">
 						<label for="user_pass">Password</label>
-						<input type="password" name="pwd" value="" id="user_pass" tabindex="11" />
+						<input type="password" name="pwd" value="" placeholder="Example: A Short Secret" id="user_pass" tabindex="11" />
 					</div><!-- password -->
 				</div><!-- row -->
 				<div class="row">
@@ -38,7 +38,7 @@
 
 		<div class="content" id="panel2-2">
 			<h2>Register</h2>
-			<p>Register to get access to some wonderful goodies. It's fast and <em>free!</em></p>
+			<p>Register cto get access to some wonderful goodies. It's fast and <em>free!</em></p>
 			<?php $register = $_GET['register']; if($register == true) { echo '<p class="alert-box warning">Check your email for the password!</p>'; } ?>
 
 
@@ -49,20 +49,20 @@
 
 						<div class="firstname small-12 large-6 columns">
 							<label for="first_name">First Name</label>
-							<input type="text" name="first_name" id="first_name" class="input" value="<?php echo esc_attr(stripslashes($first_name)); ?>" tabindex="17" />
+							<input type="text" name="first_name" id="first_name" class="input" placeholder="Example: Kat" value="<?php echo esc_attr(stripslashes($first_name)); ?>" tabindex="17" />
 						</div>
 						<div class="lastname small-12 large-6 columns">
 							<label for="last_name">Last Name (Surname)</label>
-							<input type="text" name="last_name" id="last_name" class="input" value="<?php echo esc_attr(stripslashes($last_name)); ?>" tabindex="18" />
+							<input type="text" name="last_name" id="last_name" class="input" placeholder="Example: Skinner" value="<?php echo esc_attr(stripslashes($last_name)); ?>" tabindex="18" />
 						</div>
 					</div>
 					<div class="row">
 						<div class="username small-12 columns">
 							<label for="user_login">Username <small>Required</small>
-							<input type="text" name="user_login" id="user_login" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" tabindex="17" />
+							<input type="text" name="user_login" id="user_login" placeholder="Example: Your Name" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" tabindex="17" />
 						</div><!-- username -->
 						<div class="user_email small-12 columns">
-							<label for="user_email">Your Email <small>Required</small><input type="email" id="user_email" name="user_email" value="<?php echo wp_specialchars(stripslashes($user_email), 1) ?>" tabindex="18" required /></label>
+							<label for="user_email">Your Email <small>Required</small><input type="email" id="user_email" name="user_email" placeholder="Example: someone@somewhere.com" value="<?php echo wp_specialchars(stripslashes($user_email), 1) ?>" tabindex="18" required /></label>
 
 							<small class="error">An email address is required.</small>
 						</div><!-- user_email -->
@@ -71,12 +71,12 @@
 					<div class="row">
 						<div class="password small-12 large-6 columns">
 							<label for="user_pass">Password</label>
-							<input type="password" name="pwd" value="" id="user_pass" tabindex="19" required pattern="[a-zA-Z]+" />
+							<input type="password" name="pwd" placeholder="Example: A Short Secret" value="" id="user_pass" tabindex="19" required pattern="[a-zA-Z]+" />
 							<small class="error">Your password must match the requirements.</small>
 						</div><!-- password -->
 						<div class="password-confirmation-field small-12 large-6 columns">
 							<label for="user_pass">Confirm Password</label>
-							<input type="password" name="pwd" value="" id="user_pass" tabindex="20" required pattern="[a-zA-Z]+" data-equalto="user_pass"/>
+							<input type="password" name="pwd" placeholder="Example: A Short Secret" value="" id="user_pass" tabindex="20" required pattern="[a-zA-Z]+" data-equalto="user_pass"/>
 							<small class="error">The password did not match.</small>
 						</div><!-- password -->
 					</div>
@@ -102,6 +102,8 @@
 			</form><!-- register form -->
 		</div><!-- panel2-2 register -->
 
+
+
 		<div class="content" id="panel2-3">
 			<h2>Lose something?</h2>
 			<p>Enter your username or email to reset your password.</p>
@@ -110,7 +112,7 @@
 				<div class="row">
 					<div class="username small-12 large-6 columns">
 						<label for="user_login">Username or Email</label>
-						<input type="text" name="user_login" id="log user_login" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" tabindex="17"/>
+						<input type="text" name="user_login" id="log user_login" placeholder="Example: someone@somewhere.com" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" tabindex="17"/>
 					</div><!-- username -->
 				</div><!-- row -->
 				<div class="row">

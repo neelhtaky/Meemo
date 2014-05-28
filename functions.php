@@ -4,7 +4,7 @@ ADD THEME SUPPORT
 ***************************************************************/
 /* set support for jetpack */
 if ( ! isset( $content_width ) )
-    $content_width = 1121;
+    $content_width = 700;
 if(function_exists('add_theme_support')) {
     add_theme_support( 'post-thumbnails' );
     add_theme_support('automatic-feed-links');
@@ -400,4 +400,21 @@ function jptweak_remove_share() {
     }
 }
 add_action( 'loop_start', 'jptweak_remove_share' );
+/******************************************************************
+make embeds responsive
+******************************************************************/
+function div_wrapper($content) {
+    // match any iframes
+    $pattern = '~<iframe.*</iframe>|<embed.*</embed>~';
+    preg_match_all($pattern, $content, $matches);
+
+    foreach ($matches[0] as $match) {
+        // wrap matched iframe with div
+        $wrappedframe = '<div class="embed_responsive flex-video">' . $match . '</div>';
+        //replace original iframe with new in content
+        $content = str_replace($match, $wrappedframe, $content);
+    }
+    return $content;
+}
+add_filter('the_content', 'div_wrapper');
 ?>
