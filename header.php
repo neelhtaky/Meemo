@@ -77,6 +77,8 @@
 
 								<!-- Right Nav Section -->
 								<ul class="right">
+									<?php wp_register(); ?>
+
 									<?php
 									global $current_user;
 									get_currentuserinfo();
@@ -94,6 +96,7 @@
 										} else { ?>
 											<li class="has-form">
 												<a href="#" data-reveal-id="user_logreglost" class="button">Login or Register</a>
+
 												<?php get_template_part( 'login', 'modal' ); ?>
 											</li>
 										<?php } ?>

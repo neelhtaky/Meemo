@@ -255,28 +255,17 @@ Lessons
 		}}
 }
 
-#main .course .course-lessons .meter>span{
-	padding: 3px 10px 0 0;}
+#main .course .course-lessons .meter>span{padding: 3px 10px 0 0;}
 #main .course-lessons img.woo-image.thumbnail{
 	width:250px !important;
 	height:auto;
 	margin:0 1em 0.5em;
 }
-
-/*#main .course .course-lessons .lesson .lesson-meta{display:block;}
-#main .course .course-meta, #main .course-container .course-meta{
-	clear:none !important;
-	margin-bottom: 0;
-	.in-progress{float: left;}
-	&::after{display:block;}
-}
-#main #index .course .entry {clear: both;}*/
-
-#main .course .course-meta, #main .course-container .course-meta{
-	display:inline-block;
-}
+#main .course .course-meta, #main .course-container .course-meta{display:inline-block;}
 #main .course .fix{clear: both;}
 /* Individual Lesson Page */
+
+#main .course .module-lessons>header{display:none;}
 
 /******************************************************************
 Post to Post Navigation
@@ -309,6 +298,7 @@ Navigation
 	font-size: 0.8125rem;
 	font-weight: normal;}
 #user_logreglost_alert{h1, h2, h3, h4, h5, h6, p, span{color:white;}}
+.right li > a{@include button;}
 /******************************************************************
 Comments
 ******************************************************************/
