@@ -46,17 +46,6 @@
 
 				<div class="form small-12 large-6 columns">
 					<div class="row">
-
-						<div class="firstname small-12 large-6 columns">
-							<label for="first_name">First Name</label>
-							<input type="text" name="first_name" id="first_name" class="input" placeholder="Example: Kat" value="<?php echo esc_attr(stripslashes($first_name)); ?>" tabindex="17" />
-						</div>
-						<div class="lastname small-12 large-6 columns">
-							<label for="last_name">Last Name (Surname)</label>
-							<input type="text" name="last_name" id="last_name" class="input" placeholder="Example: Skinner" value="<?php echo esc_attr(stripslashes($last_name)); ?>" tabindex="18" />
-						</div>
-					</div>
-					<div class="row">
 						<div class="username small-12 columns">
 							<label for="user_login">Username <small>Required</small>
 							<input type="text" name="user_login" id="user_login" placeholder="Example: Your Name" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" tabindex="17" />
@@ -64,21 +53,7 @@
 						<div class="user_email small-12 columns">
 							<label for="user_email">Your Email <small>Required</small><input type="email" id="user_email" name="user_email" placeholder="Example: someone@somewhere.com" value="<?php echo wp_specialchars(stripslashes($user_email), 1) ?>" tabindex="18" required /></label>
 
-							<small class="error">An email address is required.</small>
 						</div><!-- user_email -->
-					</div>
-
-					<div class="row">
-						<div class="password small-12 large-6 columns">
-							<label for="user_pass">Password</label>
-							<input type="password" name="pwd" placeholder="Example: A Short Secret" value="" id="user_pass" tabindex="19" required pattern="[a-zA-Z]+" />
-							<small class="error">Your password must match the requirements.</small>
-						</div><!-- password -->
-						<div class="password-confirmation-field small-12 large-6 columns">
-							<label for="user_pass">Confirm Password</label>
-							<input type="password" name="pwd" placeholder="Example: A Short Secret" value="" id="user_pass" tabindex="20" required pattern="[a-zA-Z]+" data-equalto="user_pass"/>
-							<small class="error">The password did not match.</small>
-						</div><!-- password -->
 					</div>
 
 				</div>
