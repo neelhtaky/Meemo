@@ -8519,7 +8519,7 @@ a[href]:after {
 }
 
 /* line 31, scss/style.scss */
-a[href*="skinnyprojects"],
+a[href*="wordpress"],
 a[href^="/"], a[href^="#"],
 a[href^="mailto:"],
 a[href^="javascript:"] {
@@ -8527,7 +8527,7 @@ a[href^="javascript:"] {
 }
 
 /* line 35, scss/style.scss */
-a[href*="skinnyprojects"]:after,
+a[href*="wordpress"]:after,
 a[href^="/"]:after, a[href^="#"]:after,
 a[href^="mailto:"]:after,
 a[href^="javascript:"]:after {

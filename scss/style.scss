@@ -25,11 +25,11 @@ a[href]:after {
 	-webkit-font-smoothing: antialiased;
 	font: normal 16px/1 'Genericons';
 	vertical-align: top;}
-a[href*="skinnyprojects"],
+a[href*="wordpress"],
 a[href^="/"], a[href^="#"],
 a[href^="mailto:"],
 a[href^="javascript:"] {display: inline;}
-a[href*="skinnyprojects"]:after,
+a[href*="wordpress"]:after,
 a[href^="/"]:after, a[href^="#"]:after,
 a[href^="mailto:"]:after,
 a[href^="javascript:"]:after {content: none;}
