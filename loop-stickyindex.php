@@ -20,7 +20,7 @@
 	<?php wp_reset_query(); ?>
 
 <!-- DISPLAY MAIN LOOP -->
-
+	<?php $categories = get_the_category(); ?>
 	<?php query_posts(array("post__not_in"=>get_option("sticky_posts"), 'paged'=>get_query_var('paged'))); ?>
 	<?php if (have_posts()) :
 		while (have_posts()) : the_post();

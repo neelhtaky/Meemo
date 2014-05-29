@@ -15,10 +15,6 @@ IMPORT STYLES
 @import "mixins";
 @import "app.scss";
 /******************************************************************
-Wordpress Default Styles
-******************************************************************/
-
-/******************************************************************
 Links
 ******************************************************************/
 .screen-reader-text{display:none;}
@@ -29,11 +25,11 @@ a[href]:after {
 	-webkit-font-smoothing: antialiased;
 	font: normal 16px/1 'Genericons';
 	vertical-align: top;}
-a[href*="skinnyprojects"],
+a[href*="wordpress"],
 a[href^="/"], a[href^="#"],
 a[href^="mailto:"],
 a[href^="javascript:"] {display: inline;}
-a[href*="skinnyprojects"]:after,
+a[href*="wordpress"]:after,
 a[href^="/"]:after, a[href^="#"]:after,
 a[href^="mailto:"]:after,
 a[href^="javascript:"]:after {content: none;}
@@ -399,4 +395,7 @@ TEST CODE
 ******************************************************************/
 form ol#sense-quiz-list{
 	margin-left:3em;
+}
+.quiz input.quiz-submit.reset, .lesson input.quiz-submit.reset{
+	margin:1em 0;
 }
