@@ -15,10 +15,6 @@ IMPORT STYLES
 @import "mixins";
 @import "app.scss";
 /******************************************************************
-Wordpress Default Styles
-******************************************************************/
-
-/******************************************************************
 Links
 ******************************************************************/
 .screen-reader-text{display:none;}
@@ -399,4 +395,7 @@ TEST CODE
 ******************************************************************/
 form ol#sense-quiz-list{
 	margin-left:3em;
+}
+.quiz input.quiz-submit.reset, .lesson input.quiz-submit.reset{
+	margin:1em 0;
 }

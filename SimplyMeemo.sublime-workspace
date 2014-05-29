@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"cmtc",
+				"cmtcssbanner	cmtcssbanner"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"pin",
+				"pingbacklist"
+			],
+			[
+				"cmt",
+				"cmtcssbanner	cmtcssbanner"
+			],
+			[
+				"ping",
+				"pingback"
+			],
+			[
+				"n",
+				"none"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
 				"course",
 				"course-container"
 			],
@@ -14,22 +50,6 @@
 			[
 				"course-les",
 				"course-lesson-count"
-			],
-			[
-				"cmt",
-				"cmtcss	cmtcss"
-			],
-			[
-				"cmtc",
-				"cmtcss	cmtcss"
-			],
-			[
-				"mar",
-				"margin-bottom"
-			],
-			[
-				"marg",
-				"margin-bottom"
 			],
 			[
 				"margin",
@@ -90,10 +110,6 @@
 			[
 				"widget_sen",
 				"widget_sensei_category_courses"
-			],
-			[
-				"pad",
-				"padding-right"
 			],
 			[
 				"impor",
@@ -332,45 +348,52 @@
 	},
 	"file_history":
 	[
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei2/loop-course.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/index.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/loop-index.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/loop-stickyindex.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss/style.scss",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/page.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/single-quiz/question_type-single-line.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/single-quiz/quiz-questions.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/functions.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/plugins/sensei-modules/classes/class-sensei-modules.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sidebar-right.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/page-893.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/search.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/header.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/login-modal.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/comments.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/loop-single.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/page.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/single.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/content-single-course.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/content-single-lesson.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/loop-lesson.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/single-quiz/question_type-multiple-choice.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/content-no-permissions.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/loop-course.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei2/loop-course.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/content-single-lesson.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei2/loop-lesson.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/course-results/course-info.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss/_settings.scss",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/single.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/wrappers/pagination-quiz.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/wrappers/pagination-posts.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/wrappers/pagination-lesson.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/wrappers/pagination.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/loop-lesson.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/templates/loop-course.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/style.css",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/wrappers/wrapper-end.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/index.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sensei/wrappers/wrapper-start.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/loop-index.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/loop-indexmeta.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/functions.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sidebar-right.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/README.md",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/comments.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/comments3.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss/_mixins.scss",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/header.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sidebar-left.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/search.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/footer.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/test.html",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/content-logreglost.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/backupnav.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/content-searchsuccess.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/content-searchfail.php",
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/loop-stickyindex.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/content-404.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/searchform.php",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sidebar.php",
@@ -456,6 +479,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"input",
+			"course_single_lesson",
+			"single_course_remove_lessons",
+			"single_course",
+			"single_course_remo",
+			"author",
+			"commentlist",
+			"comm",
+			"register",
+			"view",
+			"form",
+			"ol",
+			"sensei-course",
+			"meta",
 			"course_archive",
 			"h1",
 			"darken",
