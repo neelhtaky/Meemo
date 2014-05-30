@@ -8,7 +8,7 @@ if ( ! isset( $content_width ) )
 if(function_exists('add_theme_support')) {
     add_theme_support( 'post-thumbnails' );
     add_theme_support('automatic-feed-links');
-    add_theme_support( 'html5', array( 'search-form' ) );
+    add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
     $formats = array( 'status', 'quote', 'gallery', 'image', 'video', 'audio', 'link', 'aside', 'chat', );
     add_theme_support( 'post-formats', $formats );
 }
@@ -48,6 +48,60 @@ if ( function_exists('register_sidebar') ) {
     'nav_footer' => ('Footer Navigation')
 	) );
 }
+add_filter( 'use_default_gallery_style', '__return_false' );
+/******************************************************************
+Strip Headings from Excerpts
+******************************************************************/
+/*
+* @Author: Boutros AbiChedid
+* @Date:   April 18, 2012
+* @Websites: bacsoftwareconsulting.com/ ; blueoliveonline.com/
+* @Description: Remove header tags and their content from the automatically
+* generated Excerpt WHILE AT THE SAME TIME preserving other chosen HTML tags.
+* Also code modifies default excerpt_length and excerpt_more filters.
+* @Tested on: WordPress version 3.3.1
+*/
+
+function bac_wp_strip_header_tags_keep_other_formatting( $text ) {
+
+$raw_excerpt = $text;
+if ( '' == $text ) {
+    //Retrieve the post content.
+    $text = get_the_content('');
+    //remove shortcode tags from the given content.
+    $text = strip_shortcodes( $text );
+    $text = apply_filters('the_content', $text);
+    $text = str_replace(']]>', ']]&gt;', $text);
+
+    //Regular expression that removes the h1-h6 tags with their content.
+    $regex = '#(<h([1-6])[^>]*>)\s?(.*)?\s?(<\/h\2>)#';
+    $text = preg_replace($regex,'', $text);
+
+    /***Add the allowed HTML tags separated by a comma.
+    h1-h6 header tags are NOT allowed. DO NOT add h1,h2,h3,h4,h5,h6 tags here.***/
+    $allowed_tags = '<p>,<em>,<strong>';  //I added p, em, and strong tags.
+    $text = strip_tags($text, $allowed_tags);
+
+    /***Change the excerpt word count.***/
+    $excerpt_word_count = 55; //This is WP default.
+    $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
+
+    /*** Change the excerpt ending.***/
+    $excerpt_end = '[...]'; //This is the WP default.
+    $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
+
+    $words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+        if ( count($words) > $excerpt_length ) {
+            array_pop($words);
+            $text = implode(' ', $words);
+            $text = $text . $excerpt_more;
+        } else {
+            $text = implode(' ', $words);
+        }
+    }
+    return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
+}
+add_filter( 'get_the_excerpt', 'bac_wp_strip_header_tags_keep_other_formatting', 5);
 /******************************************************************
 Excerpt Read More Button
 ******************************************************************/
@@ -244,6 +298,7 @@ function remove_sticky_class($classes) {
   return $classes;
 }
 add_filter('post_class','remove_sticky_class');
+
 /******************************************************************
 WooCommerce Support
 ******************************************************************/

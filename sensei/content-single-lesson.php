@@ -76,6 +76,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 				if( $view_lesson ) { ?>
 				<section class="entry fix">
+					<?php do_action( 'sensei_lesson_back_link', $lesson_course_id ); ?>
                 	<?php if ( $access_permission || ( is_user_logged_in() && $user_taking_course ) ) { the_content(); } else { echo '<p>' . $post->post_excerpt . '</p>'; } ?>
 				</section>
 
