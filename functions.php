@@ -105,6 +105,9 @@ add_filter( 'get_the_excerpt', 'bac_wp_strip_header_tags_keep_other_formatting',
 /******************************************************************
 Excerpt Read More Button
 ******************************************************************/
+
+
+
 //Puts link in excerpts more tag
 function new_excerpt_more($more) {
   global $post;
