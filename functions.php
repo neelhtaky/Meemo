@@ -111,6 +111,7 @@ function new_excerpt_more($more) {
   return '... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
 /******************************************************************
 Add Del and Spam buttons to comments for easy author editing
 ******************************************************************/
