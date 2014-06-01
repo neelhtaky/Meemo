@@ -44,10 +44,10 @@
 
 			<?php if( has_excerpt() ){
 				//if post has custom manual excerpt
-				the_content('Manual Excerpt <span class="meta-nav">&rarr;</span>');
+				the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
 			} else if(strpos($post->post_content, '<!--more-->')) {
 				//should break at more tag
-				the_content('More Tag <span class="meta-nav">&rarr;</span>');
+				the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
 			} else {
 				//display auto generated excerpt
 				the_excerpt();

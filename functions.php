@@ -79,7 +79,7 @@ if ( '' == $text ) {
 
     /***Add the allowed HTML tags separated by a comma.
     h1-h6 header tags are NOT allowed. DO NOT add h1,h2,h3,h4,h5,h6 tags here.***/
-    $allowed_tags = '<p>,<em>,<strong>';  //I added p, em, and strong tags.
+    $allowed_tags = '<p>,<em>,<strong>,<img>';  //I added p, em, and strong tags.
     $text = strip_tags($text, $allowed_tags);
 
     /***Change the excerpt word count.***/
@@ -87,7 +87,7 @@ if ( '' == $text ) {
     $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
 
     /*** Change the excerpt ending.***/
-    $excerpt_end = '[...]'; //This is the WP default.
+    $excerpt_end = '[... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>]'; //This is the WP default.
     $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
 
     $words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
@@ -105,9 +105,6 @@ add_filter( 'get_the_excerpt', 'bac_wp_strip_header_tags_keep_other_formatting',
 /******************************************************************
 Excerpt Read More Button
 ******************************************************************/
-
-
-
 //Puts link in excerpts more tag
 function new_excerpt_more($more) {
   global $post;
@@ -371,7 +368,7 @@ if (!function_exists('loop_columns')) {
   }
 }
 /******************************************************************
-PAGINATION PAGE SUPPORT
+Better Pagination Archive Support
 ******************************************************************/
 function kriesi_pagination($pages = '', $range = 2)
 {
@@ -406,6 +403,97 @@ function kriesi_pagination($pages = '', $range = 2)
      }
 }
 /******************************************************************
+Better Pagination For Pages Support
+******************************************************************/
+
+/**
+ * The formatted output of a list of pages.
+ * Displays page links for paginated posts (i.e. includes the "nextpage"
+ * This tag must be within The Loop.
+ *
+ * The defaults for overwriting are:
+ * 'next_or_number' - Default is 'number' (string). Indicates whether page
+ *      numbers should be used. Valid values are number and next.
+ * 'nextpagelink' - Default is 'Next Page' (string). Text for link to next page.
+ * 'previouspagelink' - Default is 'Previous Page' (string). Text for link to
+ *      previous page, if available.
+ * 'pagelink' - Default is '%' (String).Format string for page numbers. The % in
+ *      the parameter string will be replaced with the page number, so Page %
+ *      generates "Page 1", "Page 2", etc. Defaults to %, just the page number.
+ * 'before' - Default is '<p id="post-pagination"> Pages:' (string). The html
+ *      or text to prepend to each bookmarks.
+ * 'after' - Default is '</p>' (string). The html or text to append to each
+ *      bookmarks.
+ * 'text_before' - Default is '' (string). The text to prepend to each Pages link
+ *      inside the <a> tag. Also prepended to the current item, which is not linked.
+ * 'text_after' - Default is '' (string). The text to append to each Pages link
+ *      inside the <a> tag. Also appended to the current item, which is not linked.
+ *
+ * @param string|array $args Optional. Overwrite the defaults.
+ * @return string Formatted output in HTML.
+ */
+function custom_wp_link_pages( $args = '' ) {
+  $defaults = array(
+    'before' => '<h3>Pages In This Article:</h3><ul id="post-pagination" class="pagination">' . '',
+    'after' => '</ul>',
+    'text_before' => '',
+    'text_after' => '',
+    'next_or_number' => 'number',
+    'nextpagelink' => __( 'Next page' ),
+    'previouspagelink' => __( 'Previous page' ),
+    'pagelink' => '%',
+    'echo' => 1
+  );
+
+  $r = wp_parse_args( $args, $defaults );
+  $r = apply_filters( 'wp_link_pages_args', $r );
+  extract( $r, EXTR_SKIP );
+
+  global $page, $numpages, $multipage, $more, $pagenow;
+
+  $output = '';
+  if ( $multipage ) {
+    if ( 'number' == $next_or_number ) {
+      $output .= $before;
+      for ( $i = 1; $i < ( $numpages + 1 ); $i = $i + 1 ) {
+        $j = str_replace( '%', $i, $pagelink );
+        $output .= ' ';
+        if ( $i != $page || ( ( ! $more ) && ( $page == 1 ) ) )
+          $output .= '<li>' . _wp_link_page( $i );
+        else
+          $output .= '<li class="current-post-page current"><a>';
+
+        $output .= $text_before . $j . $text_after;
+        if ( $i != $page || ( ( ! $more ) && ( $page == 1 ) ) )
+          $output .= '</a></li>';
+        else
+          $output .= '</a></li>';
+      }
+      $output .= $after;
+    } else {
+      if ( $more ) {
+        $output .= $before;
+        $i = $page - 1;
+        if ( $i && $more ) {
+          $output .= _wp_link_page( $i );
+          $output .= '<li>' . $text_before . $previouspagelink . $text_after . '</a></li>';
+        }
+        $i = $page + 1;
+        if ( $i <= $numpages && $more ) {
+          $output .= _wp_link_page( $i );
+          $output .= '<li>' . $text_before . $nextpagelink . $text_after . '</a></li>';
+        }
+        $output .= $after;
+      }
+    }
+  }
+
+  if ( $echo )
+    echo $output;
+
+  return $output;
+}
+/******************************************************************
 Custom Comments Display
 ******************************************************************/
 function mytheme_comment($comment, $args, $depth) {
@@ -424,11 +512,11 @@ function mytheme_comment($comment, $args, $depth) {
         <div id="div-comment-<?php comment_ID() ?>" class="comment-body row">
         <?php endif; ?>
         <div id="author_wrap">
-          <div class="comment-author vcard small-12 medium-6 columns">
+          <div class="comment-author vcard small-12 medium-6 large-6 columns">
           <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
           <?php printf(__('<cite class="fn">%s</cite> <span class="says">said:</span>'), get_comment_author_link()) ?>
           </div>
-          <div class="comment-meta commentmetadata small-12 medium-6 columns"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
+          <div class="comment-meta commentmetadata small-12 medium-6 large-6 columns"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
             <?php
               /* translators: 1: date, 2: time */
               printf( __('%1$s'), get_comment_date()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
