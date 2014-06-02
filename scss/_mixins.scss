@@ -2,8 +2,6 @@
 TYPOGRAPHY
 ******************************************************************/
 $genericons:		"Genericons";
-$star:				"star";
-$woocommercefont: 	"WooCommerce";
 
 @font-face {
     font-family: 'Genericons';
@@ -14,26 +12,6 @@ $woocommercefont: 	"WooCommerce";
          url('library/fonts/genericons-regular-webfont.svg#genericonsregular') format('svg');
     font-weight: normal;
     font-style: normal;
-}
-@font-face {
-	font-family: 'star';
-	src:url('library/fonts/star.eot');
-	src:url('library/fonts/star.eot?#iefix') format('embedded-opentype'),
-		url('library/fonts/star.woff') format('woff'),
-		url('library/fonts/star.ttf') format('truetype'),
-		url('library/fonts/star.svg#star') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'WooCommerce';
-	src:url('library/fonts/WooCommerce.eot');
-	src:url('library/fonts/WooCommerce.eot?#iefix') format('embedded-opentype'),
-		url('library/fonts/WooCommerce.woff') format('woff'),
-		url('library/fonts/WooCommerce.ttf') format('truetype'),
-		url('library/fonts/WooCommerce.svg#WooCommerce') format('svg');
-	font-weight: normal;
-	font-style: normal;
 }
 // $body-font-color: #222;
 // $header-font-color: #222;
