@@ -14,6 +14,7 @@ IMPORT STYLES
 ******************************************************************/
 @import "mixins";
 @import "app.scss";
+
 /******************************************************************
 Links
 ******************************************************************/
@@ -33,9 +34,7 @@ a[href*="wordpress"]:after,
 a[href^="/"]:after, a[href^="#"]:after,
 a[href^="mailto:"]:after,
 a[href^="javascript:"]:after {content: none;}
-input[type="submit"], input[type="button"]{
-	@include button;
-}
+input[type="submit"], input[type="button"]{@include button;}
 .author, .course-author a{
 	display: inline;
 	font-weight: normal;
@@ -46,7 +45,7 @@ input[type="submit"], input[type="button"]{
 		font: normal 16px/1 'Genericons';
 		vertical-align:text-bottom;
 	}}
-a[rel="category tag"].tags, .tags{
+a[rel="category tag"].tags, .tags, span.tagged_as{
 	display: inline;
 	&::before{
 		color: $body-font-color;
@@ -56,7 +55,7 @@ a[rel="category tag"].tags, .tags{
 		font: normal 16px/1 'Genericons';
 		vertical-align:text-bottom;}}
 
-span.course-category{
+span.course-category, span.posted_in{
 	&::before{
 		color: $body-font-color;
 		content: '\f301';
@@ -108,313 +107,11 @@ time {
 	}}
 .read_more a{margin: 0 auto;}
 .post{margin-bottom: emCalc(60px) !important;
-	.attachment-post-thumbnail{
-		margin-bottom: 1em;
-		}
+	.attachment-post-thumbnail{margin-bottom: 1em;}
 	}
 /******************************************************************
-Courses
+Images and Gallery
 ******************************************************************/
-/* Course Archive Page */
-.course-container{border:none !important;}
-.course-container .archive-header h1{
-	font-size: $h1-font-size !important;
-	border: none !important;
-}
-#main .course  {
-	padding: 0 !important;
-	border-bottom: none !important;
-	margin:0;}
-#main .course{
-	.course-lessons {
-		> entry  {margin-bottom: 0;}
-	}
-}
-#main .lesson-course{
-	@include button;
-	a{color:white;}
-}
-#main .course-container .sensei-course-meta {
-	margin:1em 0;
-}
-#main .course header h2, #main .course-container header h2{
-padding-top: 0.1em;
-}
-#main .course-container .sensei-course-meta span.course-lesson-count{
-		padding-left: 0;
-		display: inline;
-		font-weight: normal;
-		font-style: italic;
-		&:before{
-			content: '\f100';
-			-webkit-font-smoothing: antialiased;
-			font: normal 16px/1 'Genericons';
-			vertical-align:text-bottom;
-		}
-	}
-
-#main .course-container img.woo-image.thumbnail{;
-}
-
-/* Individual Course Page is Lesson Archive Page */
-/******************************************************************
-Lessons
-******************************************************************/
-/* Lesson Archive Page */
-#main .course .course-lessons .lesson .lesson-meta {
-	margin:1em 0;
-	span{
-		display: inline;
-		font-weight: normal;
-		font-style: italic;
-		&:before{
-			webkit-font-smoothing: antialiased;
-			font: normal 16px/1 'Genericons';
-			vertical-align:text-bottom;
-		}
-	}
-	 span.lesson-length{
-		&:before{
-			content: '\f303';
-		}}
-	span.lesson-author{
-		&:before{
-			content: '\f304';
-		}}
-	span.lesson-complexity{
-		&:before{
-			content: '\f425';
-		}}
-}
-
-#main .course .course-lessons .meter>span{padding: 3px 10px 0 0;}
-#main .course-lessons img.woo-image.thumbnail{
-	width:250px !important;
-	height:auto;
-	margin:0 1em 0.5em;
-}
-#main .course .course-meta, #main .course-container .course-meta{display:inline-block;}
-#main .course .fix{clear: both;}
-/* Individual Lesson Page */
-
-#main .course .module-lessons>header{display:none;}
-
-/******************************************************************
-Post to Post Navigation
-******************************************************************/
-
-.post .byline{line-height: 1.5rem;}
-
-#jp-relatedposts h3.jp-relatedposts-headline, .sharedaddy h3.sd-title{
-	font-size: rem-calc(27) !important;
-	font-family:$header-font-family !important;
-	font-weight: normal !important;
-	font-style: normal !important;
-	border:none !important;
-	&::before{border:none !important;};
-}
-#jp-relatedposts h3.jp-relatedposts-headline em:before{border:none !important;}
-#post-entries{
-
-	.nav-prev, .nav-next{
-		a{@include button; }
-	}
-}
-/******************************************************************
-Navigation
-******************************************************************/
-#welcome_user{
-	margin:emCalc(13px 10px -10px 0);
-	color:white;
-	font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-	font-size: 0.8125rem;
-	font-weight: normal;}
-#user_logreglost_alert{h1, h2, h3, h4, h5, h6, p, span{color:white;}}
-.right li > a{@include button;}
-.navigation{margin:0 auto;}
-/******************************************************************
-Comments
-******************************************************************/
-/* chats */
-.chat-transcript { }
-.chat-row { }
-.chat-speaker-1{border-left: 5px solid black;
-	.chat-text{background: lighten(black,30%);}
-}
-.chat-speaker-2{border-left: 5px solid black;
-	.chat-text{background: lighten(black,7%);}
-}
-.chat-speaker-3{border-left: 5px solid black;
-	.chat-text{background: lighten(black,55%);}
-}
-.chat-author {
-	margin-top: 13px;
-	background: white;
-	border-left: 5px solid white; }
-.chat-author cite {font-weight: bold;}
-.chat-text {padding: 1px 5px 1px 13px;}
-
-/* comments */
-
-ol.commentlist { list-style:none; margin:0 0 1em; padding:0; text-indent:0; }
-ol.commentlist li { }
-ol.commentlist li.alt { }
-ol.commentlist li.bypostauthor {}
-ol.commentlist li.byuser {}
-ol.commentlist li.comment-author-admin {}
-ol.commentlist li.comment { padding:1em; }
-ol.commentlist li.comment div.comment-author {}
-ol.commentlist li.comment div.vcard { font:normal 16px georgia,times,serif; border:none; }
-ol.commentlist li.comment div.vcard cite.fn { font-style:normal; }
-ol.commentlist li.comment div.vcard cite.fn a.url {color:$body-font-color;}
-ol.commentlist li.comment div.vcard img.avatar { @include thumb;}
-ol.commentlist li.comment div.vcard img.avatar-32 {@include thumb;}
-ol.commentlist li.comment div.vcard img.photo {@include thumb;}
-ol.commentlist li.comment div.vcard span.says {display:none;}
-ol.commentlist li.comment div.commentmetadata {text-align: right;}
-ol.commentlist li.comment div.comment-meta {margin:1em 0 0 0;}
-ol.commentlist li.comment div.comment-meta a { color:$body-font-color;}
-ol.commentlist li.comment p { margin:0 0 1em; }
-ol.commentlist li.comment ul { list-style:square; margin:0 0 1em 2em; }
-ol.commentlist li.comment div.reply { text-align: right;}
-ol.commentlist li.comment div.reply a { @include button; }
-ol.commentlist li.comment ul.children { list-style:none; margin:1em 0 0; text-indent:0; }
-ol.commentlist li.comment ul.children li {}
-ol.commentlist li.comment ul.children li.alt {}
-ol.commentlist li.comment ul.children li.bypostauthor {}
-ol.commentlist li.comment ul.children li.byuser {}
-ol.commentlist li.comment ul.children li.comment {}
-ol.commentlist li.comment ul.children li.comment-author-admin {}
-ol.commentlist li.comment ul.children li.depth-2 { border-left:5px solid lighten(black, 80%); margin:0 0 .25em .25em; }
-ol.commentlist li.comment ul.children li.depth-3 { border-left:5px solid lighten(black, 70%); margin:0 0 .25em .25em; }
-ol.commentlist li.comment ul.children li.depth-4 { border-left:5px solid lighten(black, 60%); margin:0 0 .25em .25em; }
-ol.commentlist li.comment ul.children li.depth-5 {border-left:5px solid lighten(black, 50%); margin:0 0 0 .25em;}
-ol.commentlist li.comment ul.children li.odd {}
-ol.commentlist li.even { background:#fff; }
-ol.commentlist li.odd { background:#f6f6f6; }
-ol.commentlist li.parent { border-left:5px solid lighten(black, 85%); }
-ol.commentlist li.thread-alt { }
-ol.commentlist li.thread-even {}
-ol.commentlist li.thread-odd {}
-
-
-/* pingbacks */
-ol.pingbacklist { list-style:none; margin:0 0 1em; padding:0; text-indent:0; }
-ol.pingbacklist li.pingback { padding:1em 1em 1em 0; }
-ol.pingbacklist li.pingback div.vcard { font:normal 16px georgia,times,serif; border:none; margin-bottom: 0; }
-ol.pingbacklist li.pingback div.vcard span.says {display:none;}
-ol.pingbacklist li.pingback div.commentmetadata {}
-ol.pingbacklist li.pingback div.comment-meta a time {margin-left: 10em; color:$body-font-color;}
-ol.pingbacklist li.pingback div.reply { display:none;}
-ol.pingbacklist li.even { background:#fff; }
-ol.pingbacklist li.odd { background:#f6f6f6; }
-ol.pingbacklist li.pingback ul { list-style:square; margin:0 0 1em 2em; }
-ol.pingbacklist li.pingback div.vcard cite.fn { font-style:normal; }
-ol.pingbacklist li.pingback div.vcard cite.fn a.url {color:$body-font-color;}
-
-ol.pingbacklist li.pingback p { margin:0 0 1em; }
-ol.pingbacklist li.pingback div.comment-meta { margin-top: 9px;}
-ol.pingbacklist li.pingback p{display:none;}
-ol.pingbacklist li.pingback div.comment-body{}
-
-
-/******************************************************************
-Sidebar
-******************************************************************/
-.widget-title{padding-top: 1rem;}
-.widgets-list-layout .widgets-list-layout-blavatar{
-	max-width:emCalc(94px);
-	width:100%;
-	margin:emCalc(10px 10px 0 0);}
-.widgets-list-layout .widgets-list-layout-links{width:70%;padding-top:5px;}
-.jetpack_subscription_widget h3 label{
-	font-size: inherit;
-	line-height: inherit;
-	color:inherit;}
-.jetpack_subscription_widget input[type="text"]{
-	@include form-element;
-	&::hover{@include form-select;}}
-.jetpack_subscription_widget #subscribe-email input[type="text"]{
-	@include form-element;
-		&::hover{@include form-select;}}
-.jetpack_subscription_widget input[type="submit"], .widget_product_search input[type="submit"] {@include button;}
-.product_list_widget li {
-	a{font-weight: normal;}
-	img{
-		width:emCalc(94px) !important;
-		height:auto;
-		float: left;
-		margin-right: emCalc(10px);
-	}}
-.widget_sensei_lesson_component li{
-	margin-bottom: emCalc(15px);
-	img{
-		padding-bottom: 0;
-		margin-bottom: 0;
-		}}
-.widget_sensei_lesson_component img{
-	width:emCalc(94px);
-	height:auto;
-	margin:emCalc(5px 10px 10px 0);}
-.widget_sensei_category_courses li{img{margin-bottom: 0 !important;}}
-.widget_sensei_category_courses .fix{margin-bottom: emCalc(15px);}
-#sharing{
-	@include grid-row;
-	.sd-sharing-enabled{
-		.sd-content{margin-top: 0;}
-	}
-}
-.sd-like{margin:0 0 4em;}
-#sidebar .woocommerce_cart{margin:-1em 0 1em;}
-#sidebar .sharedaddy h3.sd-title{margin: 0;}
-/******************************************************************
-MEDIA QUERIES
-******************************************************************/
-// Small screens max-width 640px
-@media only screen and (max-width: 40em) {
-	html{font-size: 0.9rem;}
-	.cn-nav a.cn-nav-prev span{margin: emCalc(23px 0);z-index: 200;}
-	.cn-nav a.cn-nav-prev div{margin: emCalc(45px 0 0 20px);}
-	.cn-nav a.cn-nav-prev:hover div{margin: emCalc(28px 0 0 5px);z-index: 300;}
-	.cn-nav a.cn-nav-prev p{margin: emCalc(0 0 0 60px);}
-	.cn-nav a.cn-nav-next span{margin: emCalc(23px 0 0 -10px);}
-	.cn-nav a.cn-nav-next:hover span{margin:emCalc(23px 0 0 -35px);z-index: 200;}
-	.cn-nav a.cn-nav-next div{margin: emCalc(45px 0 0 20px);}
-	.cn-nav a.cn-nav-next:hover div{
-		transform-origin: right top;
-		margin:emCalc(28px 0 0 45%);
-		z-index: 300;
-	}
-	ol.commentlist li.comment div.vcard {
-		margin-bottom: 0;
-	}
-	ol.commentlist li.comment div.commentmetadata {
-		margin-top:0;
-	}
-}
-// Medium screens min-width 641px,  max-width 1024px
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-	html{font-size: 0.95rem;}
-}
-// Large screens min-width 1025px, max-width 1440px
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
-}
-// XLarge screens
-@media only screen and (min-width: 90.063em) and (max-width: 120em) {
-	html{font-size: 1rem;}
-}
-// XXLarge screens min-width 1921px
-@media only screen and (min-width: 120.063em) {
-}
-/******************************************************************
-TEST CODE
-******************************************************************/
-form ol#sense-quiz-list{margin-left:3em;}
-.quiz input.quiz-submit.reset, .lesson input.quiz-submit.reset{margin:1em 0;}
-
-
-
-
 .entry img {@include thumb; margin: 10px !important;}
 .alignleft, img.alignleft {
 	margin-right: 1.5em;
@@ -507,7 +204,6 @@ form ol#sense-quiz-list{margin-left:3em;}
 .gallery-columns-9 .gallery-caption {
 	display: none;
 }
-
 .gallery-item .gallery-caption{
 	background-color: rgba(0, 0, 0, 0.7);
 	-webkit-box-sizing: border-box;
@@ -536,10 +232,288 @@ form ol#sense-quiz-list{margin-left:3em;}
 	}
 }
 img.gallery-item {transition: transform 0.4s;}
-
 .gallery-item:hover .gallery-caption {
 	opacity: 1;
 	transition: transform 0.4s, opacity 0.1s;
 }
-
 .wp-caption .wp-caption-text { text-align:center; font-size: 0.87rem; font-style: italic; color: lighten($body-font-color,40%); }
+
+/******************************************************************
+Courses
+******************************************************************/
+/* Course Archive Page */
+.course-container{border:none !important;}
+.course-container .archive-header h1{
+	font-size: $h1-font-size !important;
+	border: none !important;
+}
+#main .course  {
+	padding: 0 !important;
+	border-bottom: none !important;
+	margin:0;}
+#main .course{
+	.course-lessons {
+		> entry  {margin-bottom: 0;}
+	}
+}
+#main .lesson-course{
+	@include button;
+	a{color:white;}
+}
+#main .course-container .sensei-course-meta {margin:1em 0;}
+#main .course header h2, #main .course-container header h2{padding-top: 0.1em;}
+#main .course-container .sensei-course-meta span.course-lesson-count{
+		padding-left: 0;
+		display: inline;
+		font-weight: normal;
+		font-style: italic;
+		&:before{
+			content: '\f100';
+			-webkit-font-smoothing: antialiased;
+			font: normal 16px/1 'Genericons';
+			vertical-align:text-bottom;
+		}
+	}
+/* Individual Course Page is Lesson Archive Page */
+/******************************************************************
+Lessons
+******************************************************************/
+/* Lesson Archive Page */
+#main .course .course-lessons .lesson .lesson-meta {
+	margin:1em 0;
+	span{
+		display: inline;
+		font-weight: normal;
+		font-style: italic;
+		&:before{
+			webkit-font-smoothing: antialiased;
+			font: normal 16px/1 'Genericons';
+			vertical-align:text-bottom;
+		}
+	}
+	 span.lesson-length{
+		&:before{content: '\f303';}}
+	span.lesson-author{
+		&:before{content: '\f304';}}
+	span.lesson-complexity{
+		&:before{content: '\f425';}}
+}
+
+#main .course .course-lessons .meter>span{padding: 3px 10px 0 0;}
+#main .course-lessons img.woo-image.thumbnail{
+	width:250px !important;
+	height:auto;
+	margin:0 1em 0.5em;
+}
+#main .course .course-meta, #main .course-container .course-meta{display:inline-block;}
+#main .course .fix{clear: both;}
+
+/* Individual Lesson Page */
+#main .course .module-lessons>header{display:none;}
+/******************************************************************
+Post to Post Navigation
+******************************************************************/
+.post .byline{line-height: 1.5rem;}
+#jp-relatedposts h3.jp-relatedposts-headline, .sharedaddy h3.sd-title{
+	font-size: rem-calc(27) !important;
+	font-family:$header-font-family !important;
+	font-weight: normal !important;
+	font-style: normal !important;
+	border:none !important;
+	&::before{border:none !important;};
+}
+#jp-relatedposts h3.jp-relatedposts-headline em:before{border:none !important;}
+#post-entries{
+	.nav-prev, .nav-next{a{@include button; }}
+}
+/******************************************************************
+Navigation
+******************************************************************/
+#welcome_user{
+	margin:emCalc(13px 10px -10px 0);
+	color:white;
+	font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 0.8125rem;
+	font-weight: normal;}
+#user_logreglost_alert{h1, h2, h3, h4, h5, h6, p, span{color:white;}}
+.right li > a{@include button;}
+.navigation{margin:0 auto;}
+/******************************************************************
+Comments
+******************************************************************/
+/* chats */
+.chat-transcript { }
+.chat-row { }
+.chat-speaker-1{border-left: 5px solid black;
+	.chat-text{background: lighten(black,30%);}
+}
+.chat-speaker-2{border-left: 5px solid black;
+	.chat-text{background: lighten(black,7%);}
+}
+.chat-speaker-3{border-left: 5px solid black;
+	.chat-text{background: lighten(black,55%);}
+}
+.chat-author {
+	margin-top: 13px;
+	background: white;
+	border-left: 5px solid white; }
+.chat-author cite {font-weight: bold;}
+.chat-text {padding: 1px 5px 1px 13px;}
+
+/* comments */
+ol.commentlist { list-style:none; margin:0 0 1em; padding:0; text-indent:0; }
+ol.commentlist li { }
+ol.commentlist li.alt { }
+ol.commentlist li.bypostauthor {}
+ol.commentlist li.byuser {}
+ol.commentlist li.comment-author-admin {}
+ol.commentlist li.comment { padding:1em; }
+ol.commentlist li.comment div.comment-author {}
+ol.commentlist li.comment div.vcard { font:normal 16px georgia,times,serif; border:none; }
+ol.commentlist li.comment div.vcard cite.fn { font-style:normal; }
+ol.commentlist li.comment div.vcard cite.fn a.url {color:$body-font-color;}
+ol.commentlist li.comment div.vcard img.avatar { @include thumb;}
+ol.commentlist li.comment div.vcard img.avatar-32 {@include thumb;}
+ol.commentlist li.comment div.vcard img.photo {@include thumb;}
+ol.commentlist li.comment div.vcard span.says {display:none;}
+ol.commentlist li.comment div.commentmetadata {text-align: right;}
+ol.commentlist li.comment div.comment-meta {margin:1em 0 0 0;}
+ol.commentlist li.comment div.comment-meta a { color:$body-font-color;}
+ol.commentlist li.comment p { margin:0 0 1em; }
+ol.commentlist li.comment ul { list-style:square; margin:0 0 1em 2em; }
+ol.commentlist li.comment div.reply { text-align: right;}
+ol.commentlist li.comment div.reply a { @include button; }
+ol.commentlist li.comment ul.children { list-style:none; margin:1em 0 0; text-indent:0; }
+ol.commentlist li.comment ul.children li {}
+ol.commentlist li.comment ul.children li.alt {}
+ol.commentlist li.comment ul.children li.bypostauthor {}
+ol.commentlist li.comment ul.children li.byuser {}
+ol.commentlist li.comment ul.children li.comment {}
+ol.commentlist li.comment ul.children li.comment-author-admin {}
+ol.commentlist li.comment ul.children li.depth-2 { border-left:5px solid lighten(black, 80%); margin:0 0 .25em .25em; }
+ol.commentlist li.comment ul.children li.depth-3 { border-left:5px solid lighten(black, 70%); margin:0 0 .25em .25em; }
+ol.commentlist li.comment ul.children li.depth-4 { border-left:5px solid lighten(black, 60%); margin:0 0 .25em .25em; }
+ol.commentlist li.comment ul.children li.depth-5 {border-left:5px solid lighten(black, 50%); margin:0 0 0 .25em;}
+ol.commentlist li.comment ul.children li.odd {}
+ol.commentlist li.even { background:#fff; }
+ol.commentlist li.odd { background:#f6f6f6; }
+ol.commentlist li.parent { border-left:5px solid lighten(black, 85%); }
+ol.commentlist li.thread-alt { }
+ol.commentlist li.thread-even {}
+ol.commentlist li.thread-odd {}
+
+/* pingbacks */
+ol.pingbacklist { list-style:none; margin:0 0 1em; padding:0; text-indent:0; }
+ol.pingbacklist li.pingback { padding:1em 1em 1em 0; }
+ol.pingbacklist li.pingback div.vcard { font:normal 16px georgia,times,serif; border:none; margin-bottom: 0; }
+ol.pingbacklist li.pingback div.vcard span.says {display:none;}
+ol.pingbacklist li.pingback div.commentmetadata {}
+ol.pingbacklist li.pingback div.comment-meta a time {margin-left: 10em; color:$body-font-color;}
+ol.pingbacklist li.pingback div.reply { display:none;}
+ol.pingbacklist li.even { background:#fff; }
+ol.pingbacklist li.odd { background:#f6f6f6; }
+ol.pingbacklist li.pingback ul { list-style:square; margin:0 0 1em 2em; }
+ol.pingbacklist li.pingback div.vcard cite.fn { font-style:normal; }
+ol.pingbacklist li.pingback div.vcard cite.fn a.url {color:$body-font-color;}
+
+ol.pingbacklist li.pingback p { margin:0 0 1em; }
+ol.pingbacklist li.pingback div.comment-meta { margin-top: 9px;}
+ol.pingbacklist li.pingback p{display:none;}
+ol.pingbacklist li.pingback div.comment-body{}
+
+
+/******************************************************************
+Sidebar
+******************************************************************/
+.widget-title{padding-top: 1rem;}
+.widgets-list-layout .widgets-list-layout-blavatar{
+	max-width:emCalc(94px);
+	width:100%;
+	margin:emCalc(10px 10px 0 0);}
+.widgets-list-layout .widgets-list-layout-links{width:70%;padding-top:5px;}
+.jetpack_subscription_widget h3 label{
+	font-size: inherit;
+	line-height: inherit;
+	color:inherit;}
+.jetpack_subscription_widget input[type="text"]{
+	@include form-element;
+	&::hover{@include form-select;}}
+.jetpack_subscription_widget #subscribe-email input[type="text"]{
+	@include form-element;
+		&::hover{@include form-select;}}
+.jetpack_subscription_widget input[type="submit"], .widget_product_search input[type="submit"] {@include button;}
+.product_list_widget li {
+	a{font-weight: normal;}
+	img{
+		width:emCalc(94px) !important;
+		height:auto;
+		float: left;
+		margin-right: emCalc(10px);
+	}}
+.widget_sensei_lesson_component li{
+	margin-bottom: emCalc(15px);
+	img{
+		padding-bottom: 0;
+		margin-bottom: 0;
+		}}
+.widget_sensei_lesson_component img{
+	width:emCalc(94px);
+	height:auto;
+	margin:emCalc(5px 10px 10px 0);}
+.widget_sensei_category_courses li{img{margin-bottom: 0 !important;}}
+.widget_sensei_category_courses .fix{margin-bottom: emCalc(15px);}
+#sharing{
+	@include grid-row;
+	.sd-sharing-enabled{
+		.sd-content{margin-top: 0;}
+	}
+}
+.sd-like{margin:0 0 4em;}
+#sidebar .woocommerce_cart{margin:-1em 0 1em;}
+#sidebar .sharedaddy h3.sd-title{margin: 0;}
+/******************************************************************
+MEDIA QUERIES
+******************************************************************/
+// Small screens max-width 640px
+@media only screen and (max-width: 40em) {
+	html{font-size: 0.9rem;}
+	.cn-nav a.cn-nav-prev span{margin: emCalc(23px 0);z-index: 200;}
+	.cn-nav a.cn-nav-prev div{margin: emCalc(45px 0 0 20px);}
+	.cn-nav a.cn-nav-prev:hover div{margin: emCalc(28px 0 0 5px);z-index: 300;}
+	.cn-nav a.cn-nav-prev p{margin: emCalc(0 0 0 60px);}
+	.cn-nav a.cn-nav-next span{margin: emCalc(23px 0 0 -10px);}
+	.cn-nav a.cn-nav-next:hover span{margin:emCalc(23px 0 0 -35px);z-index: 200;}
+	.cn-nav a.cn-nav-next div{margin: emCalc(45px 0 0 20px);}
+	.cn-nav a.cn-nav-next:hover div{
+		transform-origin: right top;
+		margin:emCalc(28px 0 0 45%);
+		z-index: 300;
+	}
+	ol.commentlist li.comment div.vcard {margin-bottom: 0;}
+	ol.commentlist li.comment div.commentmetadata {margin-top:0;}
+}
+// Medium screens min-width 641px,  max-width 1024px
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	html{font-size: 0.95rem;}
+}
+// Large screens min-width 1025px, max-width 1440px
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+}
+// XLarge screens
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+	html{font-size: 1rem;}
+}
+// XXLarge screens min-width 1921px
+@media only screen and (min-width: 120.063em) {
+}
+/******************************************************************
+TEST CODE
+******************************************************************/
+form ol#sense-quiz-list{margin-left:3em;}
+.quiz input.quiz-submit.reset, .lesson input.quiz-submit.reset{margin:1em 0;}
+
+
+
+
+
+

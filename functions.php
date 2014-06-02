@@ -306,20 +306,6 @@ WooCommerce Support
 add_theme_support( 'woocommerce' );
 add_filter( 'use_default_gallery_style', '__return_false' );
 
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-
-add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
-
-function my_theme_wrapper_start() {
-  echo '<section id="entries wrap" class="small-12 medium-8  large-6 xlarge-7  xxlarge-7 columns ">';
-}
-
-function my_theme_wrapper_end() {
-  echo '</section>';
-}
-
 /* customise to rename home to shop home */
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_home_text' );
 function jk_change_breadcrumb_home_text( $defaults ) {
@@ -364,9 +350,20 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 add_filter('loop_shop_columns', 'loop_columns');
 if (!function_exists('loop_columns')) {
   function loop_columns() {
-    return 2; // 3 products per row
+    return 4; // 3 products per row
   }
 }
+// Remove each style one by one
+add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
+function jk_dequeue_styles( $enqueue_styles ) {
+  unset( $enqueue_styles['woocommerce-general'] );  // Remove the gloss
+  unset( $enqueue_styles['woocommerce-layout'] );   // Remove the layout
+  unset( $enqueue_styles['woocommerce-smallscreen'] );  // Remove the smallscreen optimisation
+  return $enqueue_styles;
+}
+
+// Or just remove them all in one line
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 /******************************************************************
 Better Pagination Archive Support
 ******************************************************************/

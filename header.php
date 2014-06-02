@@ -100,19 +100,6 @@
 												<?php get_template_part( 'login', 'modal' ); ?>
 											</li>
 										<?php } ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
 									<li class="has-form show-for-large-up">
 										<?php get_search_form(); ?>
 									</li>

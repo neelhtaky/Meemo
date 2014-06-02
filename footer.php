@@ -32,11 +32,20 @@
 	</div><!-- #page END -->
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation.min.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+
+	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation/foundation.tab.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation/foundation.abide.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/app.js"></script>
 	<script>
-	   $(document).foundation();
+	   $(document).foundation(
+{
+    tab: {
+      callback : function (tab) {
+        console.log(tab);
+      }
+    }
+  }
+	   	);
 	 </script>
 
 	<?php wp_footer(); ?>
