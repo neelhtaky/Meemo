@@ -1,0 +1,23 @@
+div.product, #content div.product {
+
+	.product_title {}
+
+	/* Sale labels */
+	span.onsale {
+		font-weight:bold;
+		text-align: center;
+		top:0.5em;
+	}
+}
+
+/* Stock */
+// p.stock {font-size: 0.92em;}
+p.stock {
+	font-size:0.9rem;
+
+}
+.stock {color: $secondary-color;}
+.out-of-stock {
+	color: red;
+
+}

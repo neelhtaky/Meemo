@@ -361,16 +361,24 @@ function woocommerce_pagination() {
 add_action( 'woocommerce_pagination', 'woocommerce_pagination', 10);
 
 // Remove each style one by one
-add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
+// add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
 function jk_dequeue_styles( $enqueue_styles ) {
   unset( $enqueue_styles['woocommerce-general'] );  // Remove the gloss
-  unset( $enqueue_styles['woocommerce-layout'] );   // Remove the layout
-  unset( $enqueue_styles['woocommerce-smallscreen'] );  // Remove the smallscreen optimisation
+  // unset( $enqueue_styles['woocommerce-layout'] );   // Remove the layout
+  // unset( $enqueue_styles['woocommerce-smallscreen'] );  // Remove the smallscreen optimisation
   return $enqueue_styles;
 }
-
 // Or just remove them all in one line
-add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+// add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+add_filter( 'woocommerce_enqueue_styles', 'dequeue_woocommerce_general_stylesheet' );
+
+function woocommerce_style_sheet() {
+wp_register_style( 'woocommerce', get_stylesheet_directory_uri() . '/woocommerce.css' );
+if ( class_exists( 'woocommerce' ) ) {
+wp_enqueue_style( 'woocommerce' );
+  }
+}
+add_action('wp_enqueue_scripts', 'woocommerce_style_sheet');
 /******************************************************************
 Better Pagination Archive Support
 ******************************************************************/
