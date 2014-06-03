@@ -313,9 +313,11 @@ div.product, #content div.product {
 		line-height: 1em;
 		font-size: 1em;
 		width: 5.4em;
-		font-family: $star;
+		// font-family: $star;
+		font: normal 16px/1 "star";
 		&:before {
 			content: "\73\73\73\73\73";
+
 			// color: darken( @secondary, 10 );
 			float: left;
 			top: 0;
@@ -329,12 +331,15 @@ div.product, #content div.product {
 			left: 0;
 			position: absolute;
 			padding-top: 1.5em;
+			font-family: $star;
 		}
 		span:before {
 			content: "\53\53\53\53\53";
+
 			top: 0;
 			position: absolute;
 			left: 0;
+			font-family: $star;
 		}
 	}
 
