@@ -64,11 +64,11 @@ ob_start();
 			?></td>
 		</tr>
 	<?php endforeach; ?>
-	
+
 </table>
 <?php
 if ( $has_row ) {
 	echo ob_get_clean();
 } else {
 	ob_end_clean();
-}
+} ?>
