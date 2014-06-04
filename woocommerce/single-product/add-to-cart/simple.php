@@ -20,16 +20,16 @@ if ( ! $product->is_purchasable() ) return;
 	$availability = $product->get_availability();
 
 	if ( $availability['availability'] )
-		echo apply_filters( 'woocommerce_stock_html', '<div class="stock alert-box alert small-12 medium-6 large-6 xlarge-8 xxlarge-8 columns' . esc_attr( $availability['class'] ) . '">' . esc_html( $availability['availability'] ) . '</div>', $availability['availability'] );
+		echo apply_filters( 'woocommerce_stock_html', '<div class="stock alert-box alert' . esc_attr( $availability['class'] ) . '">' . esc_html( $availability['availability'] ) . '</div>', $availability['availability'] );
 ?>
 
 <?php if ( $product->is_in_stock() ) : ?>
 
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-	<form class="cart small-12 medium-6 large-6 xlarge-8 xxlarge-8 columns" method="post" enctype='multipart/form-data'>
+	<form class="cart" method="post" enctype='multipart/form-data'>
 	 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-
+	<div class="small-2 medium-2 large-2 xlarge-2 xxlarge-2 columns">
 	 	<?php
 	 		if ( ! $product->is_sold_individually() )
 	 			woocommerce_quantity_input( array(
@@ -37,11 +37,12 @@ if ( ! $product->is_purchasable() ) return;
 	 				'max_value' => apply_filters( 'woocommerce_quantity_input_max', $product->backorders_allowed() ? '' : $product->get_stock_quantity(), $product )
 	 			) );
 	 	?>
-
+</div>
+<div class="small-10 medium-10 large-10 xlarge-10 xxlarge-10 columns">
 	 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>"  class=""/>
 
 	 	<button type="submit" class="single_add_to_cart_button button alt"><?php echo $product->single_add_to_cart_text(); ?></button>
-
+</div>
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>
 </div>
