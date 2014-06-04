@@ -11,7 +11,6 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
-
 <?php
 	/**
 	 * woocommerce_before_single_product hook
@@ -31,8 +30,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook
-		 *
+		 * 			row and full width for flash
 		 * @hooked woocommerce_show_product_sale_flash - 10
+		 *         open wrapper excerpt row
+		 *         wrapper for images
 		 * @hooked woocommerce_show_product_images - 20
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
@@ -45,17 +46,27 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			 * woocommerce_single_product_summary hook
 			 *
 			 * @hooked woocommerce_template_single_title - 5
+			 *         open excerpt text wrapper
 			 * @hooked woocommerce_template_single_rating - 10
 			 * @hooked woocommerce_template_single_price - 10
 			 * @hooked woocommerce_template_single_excerpt - 20
+			 *         close excerpt text wrapper
+			 *         close row
 			 * @hooked woocommerce_template_single_add_to_cart - 30
+			 *         row for each type
+			 *         add to cart wrapper for each type
 			 * @hooked woocommerce_template_single_meta - 40
+			 *         open row
+			 *         open wrapper
 			 * @hooked woocommerce_template_single_sharing - 50
+			 *         close wrapper
+			 *         close row
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
 
 	</div><!-- .summary -->
+
 
 	<?php
 		/**

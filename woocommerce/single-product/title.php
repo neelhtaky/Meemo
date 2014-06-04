@@ -10,4 +10,6 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 ?>
-<h1 itemprop="name" class="product_title entry-title  small-12 medium-6 large-6 xlarge-8 xxlarge-8 columns"><?php the_title(); ?></h1>
+<!-- wrapper for excerpt -->
+<div class="small-12 medium-6 large-6 xlarge-8 xxlarge-8 columns">
+	<h1 itemprop="name" class="product_title "><?php the_title(); ?></h1>

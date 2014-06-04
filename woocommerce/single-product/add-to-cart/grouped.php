@@ -15,6 +15,9 @@ $parent_product_post = $post;
 
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
+<div class="row">
+<div class="small-12 medium-12 large-12 xlarge-12 xxlarge-12 columns">
+
 <form class="cart" method="post" enctype='multipart/form-data'>
 	<table cellspacing="0" class="group_table">
 		<tbody>
@@ -77,4 +80,6 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php endif; ?>
 </form>
 
+</div>
+</div>
 <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
