@@ -10,7 +10,8 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
+?>
+<?php
 global $product, $woocommerce_loop;
 
 // Store loop count we're currently on
@@ -35,7 +36,9 @@ if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 
 if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 	$classes[] = 'last';
 ?>
-<li <?php post_class( $classes ); ?>>
+
+
+<div class="small-6 medium-4 large-3 xlarge-3 xxlarge-3 columns <?php post_class( $classes ); ?>">
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
@@ -66,5 +69,4 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 	</a>
 
 	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
-
-</li>
+</div>

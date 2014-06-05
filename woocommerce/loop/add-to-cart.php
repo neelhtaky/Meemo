@@ -10,7 +10,9 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $product;
-
+?>
+<div class="row">
+<?php
 echo apply_filters( 'woocommerce_loop_add_to_cart_link',
 	sprintf( '<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" class="button %s product_type_%s">%s</a>',
 		esc_url( $product->add_to_cart_url() ),
@@ -21,3 +23,5 @@ echo apply_filters( 'woocommerce_loop_add_to_cart_link',
 		esc_html( $product->add_to_cart_text() )
 	),
 $product );
+?>
+</div>

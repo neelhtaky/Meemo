@@ -2,7 +2,6 @@
 
 div.product, #content div.product {
 	.product_title {}
-
 	/* Sale labels */
 	span.onsale {
 		font-weight:bold;
@@ -18,10 +17,8 @@ div.product, #content div.product {
 			color: lighten ($body-font-color, 90%);
 		}
 	}
-
 	/* Cart button */
 		p.cart {margin-bottom: 2em;}
-
 		/* add to cart forms */
 		form.cart {
 			margin-bottom: 2em;
@@ -40,7 +37,6 @@ div.product, #content div.product {
 					// display:block;
 					// float:none;
 				}
-
 			}
 			.variations {
 				// margin-bottom: 1em;
@@ -52,7 +48,6 @@ div.product, #content div.product {
 				}
 			}
 			.button {@include button;}
-
 			.group_table {
 				td.label {
 					// padding-right: 1em;
@@ -66,26 +61,21 @@ div.product, #content div.product {
 		}
 		/* =Quantity inputs
 	-------------------------------------------------------------- */
-
 	.quantity, #content .quantity {
 		width: 60px;
 		position: relative;
 		// margin: 0 auto;
 		overflow:hidden;
 		zoom: 1;
-
 		input.qty {
 			width: 40px;
 			height: 40px;
 			// float:left;
 			padding: 0;
 			text-align: right;
-			// border: 1px solid darken( @secondary, 20 );
-			// border-right: 0;
 			font-weight:bold;
 			-moz-appearance: textfield; /* Hide buttons for Firefox 29 and later */
 		}
-
 		/* Hide buttons for opera */
 		noindex:-o-prefocus, input[type=number] {
 			padding-right: 1.2em;
@@ -106,7 +96,6 @@ div.product, #content div.product {
 			cursor: pointer;
 			line-height: 13px;
 			font-size: 12px;
-			// border: 1px solid darken( @secondary, 20 );
 			&:hover {}
 		}
 		.plus {
@@ -122,6 +111,7 @@ div.product, #content div.product {
 	-------------------------------------------------------------- */
 
 	.products ul, ul.products {
+
 		margin: 0 0 1em;
 		padding: 0;
 		list-style:none outside;
@@ -134,6 +124,7 @@ div.product, #content div.product {
 
 	ul.products {
 		li.product {
+
 			.onsale {
 				top: 0;
 				right: 0;
@@ -530,8 +521,29 @@ div.product, #content div.product {
 		min-width: 80px;
 	}
 
-
+	/* =Cart
+	-------------------------------------------------------------- */
+	table.cart, #content table.cart {
+		.product-thumbnail {}
+		img {}
+		th, td {
+			vertical-align: middle;
+		}
+		a.remove {
+			display:block;
+			font-size:1.5em;
+			color: red;
+			font-weight: bold;
+			text-align: center;
+			text-decoration: none;
+			width:1em;
+			height:1em;
+		}
+		a.remove:hover {
+			background-color: red;
+			color: #fff;
+		}
+		td.actions {}
+		input {}
+	}
 } //.woocommerce, .woocommerce-page
-
-
-

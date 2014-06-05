@@ -20,7 +20,7 @@ if ( 1 == $wp_query->found_posts || ! woocommerce_products_will_display() )
 			$catalog_orderby = apply_filters( 'woocommerce_catalog_orderby', array(
 				'menu_order' => __( 'Default Sorting', 'woocommerce' ),
 				'popularity' => __( 'Sort By Popularity', 'woocommerce' ),
-				'rating'     => __( 'Sort By Average rating', 'woocommerce' ),
+				'rating'     => __( 'Sort By Average Rating', 'woocommerce' ),
 				'date'       => __( 'Sort By Age: Newest First', 'woocommerce' ),
 				'price'      => __( 'Sort By Price: Low to High', 'woocommerce' ),
 				'price-desc' => __( 'Sort By Price: High to Low', 'woocommerce' )
