@@ -114,16 +114,33 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<td colspan="6" class="actions">
 
 				<?php if ( WC()->cart->coupons_enabled() ) { ?>
-					<div class="coupon">
-
-						<label for="coupon_code"><?php _e( 'Coupon', 'woocommerce' ); ?>:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
+					<div class="coupon row">
+						<div class="small-12 medium-12 large-12 xlarge-12 xxlarge-12 columns">
+							<label for="coupon_code"><?php _e( 'Coupon', 'woocommerce' ); ?>:</label>
+						</div>
+						<div class="small-7 medium-6 large-7 xlarge-9 xxlarge-9 columns">
+							<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" />
+						</div>
+						<div class="small-5 medium-6 large-5 xlarge-3 xxlarge-3 columns">
+							<input type="submit" class="button" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
+						</div>
 
 						<?php do_action('woocommerce_cart_coupon'); ?>
 
 					</div>
+
 				<?php } ?>
 
-				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
+<div class="row">
+	<div class="small-5 medium-5 large-6 xlarge-8 xxlarge-6 columns">
+		<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
+	</div>
+	<div class="small-7 medium-7 large-6 xlarge-4 xxlarge-6 columns">
+		<input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
+	</div>
+
+</div>
+
 
 				<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 

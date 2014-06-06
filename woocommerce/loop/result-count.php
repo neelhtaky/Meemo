@@ -16,7 +16,7 @@ global $woocommerce, $wp_query;
 if ( ! woocommerce_products_will_display() )
 	return;
 ?>
-<p class="woocommerce-result-count">
+<p class="woocommerce-result-count small-12 medium-6 large-6 xlarge-6 xxlarge-6 columns">
 	<?php
 	$paged    = max( 1, $wp_query->get( 'paged' ) );
 	$per_page = $wp_query->get( 'posts_per_page' );

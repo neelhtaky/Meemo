@@ -38,7 +38,7 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->g
 
 			</div>
 
-			<div class="col-2">
+			<div class="col-2 ">
 
 				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 

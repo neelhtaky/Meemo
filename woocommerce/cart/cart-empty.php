@@ -13,7 +13,7 @@ wc_print_notices();
 
 ?>
 
-<p class="cart-empty"><?php _e( 'Your cart is currently empty.', 'woocommerce' ) ?></p>
+<div class="cart-empty alert-box alert"><?php _e( 'Your cart is currently empty.', 'woocommerce' ) ?></div>
 
 <?php do_action( 'woocommerce_cart_is_empty' ); ?>
 

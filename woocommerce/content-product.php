@@ -31,14 +31,18 @@ $woocommerce_loop['loop']++;
 
 // Extra post classes
 $classes = array();
+
 if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 == $woocommerce_loop['columns'] )
 	$classes[] = 'first';
 if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 	$classes[] = 'last';
 ?>
+	<?php
+$classes[] = 'small-6 medium-4 large-4 xlarge-3 xxlarge-3 columns';
+	?>
 
 
-<div class="small-6 medium-4 large-3 xlarge-3 xxlarge-3 columns <?php post_class( $classes ); ?>">
+<div <?php post_class( $classes); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
