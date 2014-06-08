@@ -20,11 +20,14 @@ wc_print_notices(); ?>
 		$current_user->display_name,
 		wp_logout_url( get_permalink( wc_get_page_id( 'myaccount' ) ) )
 	);
-
+?>
+<p>
+<?php
 	printf( __( 'From your account dashboard you can view your recent orders, manage your shipping and billing addresses and <a href="%s">edit your password and account details</a>.', 'woocommerce' ),
 		wc_customer_edit_account_url()
 	);
 	?>
+	</p>
 </p>
 
 <?php do_action( 'woocommerce_before_my_account' ); ?>

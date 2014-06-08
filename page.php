@@ -23,7 +23,7 @@
 
 			<?php
 			if (is_single() || is_page()) {
-				if (is_cart() || is_checkout()) {
+				if (is_cart() || is_checkout() || is_account_page() ) {
 				} else {
 					comments_template();
 				}

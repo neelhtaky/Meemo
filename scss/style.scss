@@ -110,6 +110,15 @@ time {
 .post{margin-bottom: emCalc(60px) !important;
 	.attachment-post-thumbnail{margin-bottom: 1em;}
 	}
+address{
+	font-size:1rem;
+	// font-style:normal;
+	line-height: $base-line-height;
+}
+table tbody{
+	font-size:1rem;
+	td.order-actions a{padding:0.5em 1em;}
+}
 /******************************************************************
 Images and Gallery
 ******************************************************************/
@@ -658,8 +667,23 @@ Sidebar
 	.cart-contents{margin-right:1em;}
 	a[title^="Checkout"]{@include button;}
 }
-
 #sidebar .sharedaddy h3.sd-title{margin: 0;}
+#sidebar input#s.search-field{
+	height:3.2rem;
+}
+/******************************************************************
+FOOTER
+******************************************************************/
+footer ul.inline-list li a{
+	background:none;
+	border:none;
+	padding:0;
+	color:$body-font-color;
+	&:hover{
+		background:none;
+		color:lighten($body-font-color,20%);
+	}
+}
 /******************************************************************
 MEDIA QUERIES
 ******************************************************************/

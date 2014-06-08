@@ -91,7 +91,7 @@
 												<li><a class="button" href="<?php echo get_edit_user_link(); ?>">Your Profile</a></li>
 											<?php } else{ ?>
 												<li id="welcome_user">Welcome <?php echo $dname; ?>!</li>
-												<li><a class="button" href="<?php echo get_edit_user_link(); ?>">Your Profile</a></li>
+												<li><a class="button" href="<?php echo get_page_link(568); ?>">Your Profile</a></li>
 											<?php }
 										} else { ?>
 											<li class="has-form">
