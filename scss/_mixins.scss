@@ -4,6 +4,11 @@ TYPOGRAPHY
 $genericons:		"Genericons";
 $star:				"star";
 $woocommercefont: 	"WooCommerce";
+// $primary-color: #008CBA; is blue
+// $secondary-color: #e7e7e7; is grey
+// $alert-color: #f04124; is red
+// $success-color: #43AC6A; is green
+
 
 @font-face {
     font-family: 'Genericons';
@@ -44,10 +49,8 @@ $woocommercefont: 	"WooCommerce";
 // $anchor-font-color: $primary-color;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 // $button-font-color: #fff;
-//
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
+
+
+
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;

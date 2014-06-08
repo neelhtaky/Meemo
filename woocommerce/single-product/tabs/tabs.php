@@ -27,7 +27,7 @@ if ( ! empty( $tabs ) ) : ?>
 				</dd>
 			<?php endforeach; ?>
 		</dl>
-		<div class="tabs-content">
+		<div class="tabs-content small-12 medium-12 large-12 xlarge-12 xxlarge-12 columns">
 		<?php $tabcount = 0; ?>
 			<?php foreach ( $tabs as $key => $tab ) : ?>
 			<div class="entry-content content <?php if ($tabcount==0){echo'active';}?> " id="tab-<?php echo $key ?>">

@@ -277,6 +277,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
   <?php
   $fragments['a.cart-contents'] = ob_get_clean();
   return $fragments;}
+
 // Change number or products per row to 3
 add_filter('loop_shop_columns', 'loop_columns');
 if (!function_exists('loop_columns')) {
@@ -299,6 +300,43 @@ function custom_get_availability( $availability, $_product ) {
     if ( !$_product->is_in_stock() ) $availability['availability'] = __('Sorry, but this product is now sold out.', 'woocommerce');
         return $availability;
     }
+
+add_filter( 'add_to_cart_text', 'woo_custom_cart_button_text' );
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );
+function woo_custom_cart_button_text() {
+        return __( 'Buy Now', 'woocommerce' );
+}
+//change button texts appropriately
+add_filter( 'woocommerce_product_add_to_cart_text' , 'custom_woocommerce_product_add_to_cart_text' );
+
+/**
+ * custom_woocommerce_template_loop_add_to_cart
+*/
+function custom_woocommerce_product_add_to_cart_text() {
+  global $product;
+
+  $product_type = $product->product_type;
+
+  switch ( $product_type ) {
+    case 'external':
+      return __( 'Buy Product', 'woocommerce' );
+    break;
+    case 'grouped':
+      return __( 'View Products', 'woocommerce' );
+    break;
+    case 'simple':
+      return __( 'Add To Cart', 'woocommerce' );
+    break;
+    case 'variable':
+      return __( 'Select Options', 'woocommerce' );
+    break;
+    default:
+      return __( 'Read more', 'woocommerce' );
+  }
+
+
+
+}
 /******************************************************************
 Better Pagination Archive Support
 ******************************************************************/

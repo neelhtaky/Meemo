@@ -8515,72 +8515,40 @@ th.hide-for-touch {
 /* line 1, scss/_woocommerce.scss */
 .woocommerce, .woocommerce-page {
   /* Sale labels */
-  /* =Reviews/comments
-  	-------------------------------------------------------------- */
-  /* Star rating */
+  /* =Reviews/comments ----------------------------------------------------------- */
   /* =Tables
-  	-------------------------------------------------------------- */
-  /* =Cart
   -------------------------------------------------------------- */
-  /* =Forms
+  			/* =Cart
   -------------------------------------------------------------- */
+  /* =Forms ------------------------------------------------------------- */
 }
 /* line 2, scss/_woocommerce.scss */
-.woocommerce #products, .woocommerce-page #products {
-  margin-top: 4rem;
-}
-/* line 6, scss/_woocommerce.scss */
 .woocommerce div.product, .woocommerce #content div.product, .woocommerce-page div.product, .woocommerce-page #content div.product {
-  /* Sale labels */
-  /* Price */
-  /* Cart button */
-  /* add to cart forms */
-  	/* =Quantity inputs
-  -------------------------------------------------------------- */
-  /* =Product Loops
-  -------------------------------------------------------------- */
+  /* =Quantity inputs ------------------------------------------------------ */
+  /* =Product Loops --------------------------------------------------------- */
 }
-/* line 11, scss/_woocommerce.scss */
-.woocommerce div.product span.onsale, .woocommerce #content div.product span.onsale, .woocommerce-page div.product span.onsale, .woocommerce-page #content div.product span.onsale {
-  font-weight: bold;
-  text-align: center;
-  top: 0.5em;
-}
-/* line 18, scss/_woocommerce.scss */
-.woocommerce div.product span.price, .woocommerce div.product p.price, .woocommerce #content div.product span.price, .woocommerce #content div.product p.price, .woocommerce-page div.product span.price, .woocommerce-page div.product p.price, .woocommerce-page #content div.product span.price, .woocommerce-page #content div.product p.price {
-  font-size: 1.25em;
-}
-/* line 20, scss/_woocommerce.scss */
-.woocommerce div.product span.price ins, .woocommerce div.product p.price ins, .woocommerce #content div.product span.price ins, .woocommerce #content div.product p.price ins, .woocommerce-page div.product span.price ins, .woocommerce-page div.product p.price ins, .woocommerce-page #content div.product span.price ins, .woocommerce-page #content div.product p.price ins {
-  background: inherit;
-}
-/* line 21, scss/_woocommerce.scss */
-.woocommerce div.product span.price del, .woocommerce div.product p.price del, .woocommerce #content div.product span.price del, .woocommerce #content div.product p.price del, .woocommerce-page div.product span.price del, .woocommerce-page div.product p.price del, .woocommerce-page #content div.product span.price del, .woocommerce-page #content div.product p.price del {
-  font-size: 0.67em;
-  color: lighten #222222, 90%;
-}
-/* line 27, scss/_woocommerce.scss */
+/* line 4, scss/_woocommerce.scss */
 .woocommerce div.product p.cart, .woocommerce #content div.product p.cart, .woocommerce-page div.product p.cart, .woocommerce-page #content div.product p.cart {
   margin-bottom: 2em;
 }
-/* line 29, scss/_woocommerce.scss */
+/* line 5, scss/_woocommerce.scss */
 .woocommerce div.product form.cart, .woocommerce #content div.product form.cart, .woocommerce-page div.product form.cart, .woocommerce-page #content div.product form.cart {
   margin-bottom: 2em;
 }
-/* line 32, scss/_woocommerce.scss */
+/* line 8, scss/_woocommerce.scss */
 .woocommerce div.product form.cart table, .woocommerce #content div.product form.cart table, .woocommerce-page div.product form.cart table, .woocommerce-page #content div.product form.cart table {
   border: none;
 }
-/* line 39, scss/_woocommerce.scss */
+/* line 15, scss/_woocommerce.scss */
 .woocommerce div.product form.cart .variations label, .woocommerce #content div.product form.cart .variations label, .woocommerce-page div.product form.cart .variations label, .woocommerce-page #content div.product form.cart .variations label {
   font-weight: bold;
 }
-/* line 41, scss/_woocommerce.scss */
+/* line 17, scss/_woocommerce.scss */
 .woocommerce div.product form.cart .variations td.label, .woocommerce #content div.product form.cart .variations td.label, .woocommerce-page div.product form.cart .variations td.label, .woocommerce-page #content div.product form.cart .variations td.label {
-  margin-top: 1em;
+  margin-top: 1.2em;
   background: white;
 }
-/* line 46, scss/_woocommerce.scss */
+/* line 22, scss/_woocommerce.scss */
 .woocommerce div.product form.cart .button, .woocommerce #content div.product form.cart .button, .woocommerce-page div.product form.cart .button, .woocommerce-page #content div.product form.cart .button {
   border-style: solid;
   border-width: 0px;
@@ -8612,30 +8580,30 @@ th.hide-for-touch {
 .woocommerce div.product form.cart .button:hover, .woocommerce div.product form.cart .button:focus, .woocommerce #content div.product form.cart .button:hover, .woocommerce #content div.product form.cart .button:focus, .woocommerce-page div.product form.cart .button:hover, .woocommerce-page div.product form.cart .button:focus, .woocommerce-page #content div.product form.cart .button:hover, .woocommerce-page #content div.product form.cart .button:focus {
   color: white;
 }
-/* line 54, scss/_woocommerce.scss */
+/* line 29, scss/_woocommerce.scss */
 .woocommerce div.product .quantity, .woocommerce div.product #content .quantity, .woocommerce #content div.product .quantity, .woocommerce #content div.product #content .quantity, .woocommerce-page div.product .quantity, .woocommerce-page div.product #content .quantity, .woocommerce-page #content div.product .quantity, .woocommerce-page #content div.product #content .quantity {
-  width: 60px;
+  width: 4rem;
   position: relative;
-  height: 60px;
+  height: 3.625rem;
   overflow: hidden;
   zoom: 1;
   /* Hide buttons for opera */
 }
-/* line 60, scss/_woocommerce.scss */
+/* line 35, scss/_woocommerce.scss */
 .woocommerce div.product .quantity input.qty, .woocommerce div.product #content .quantity input.qty, .woocommerce #content div.product .quantity input.qty, .woocommerce #content div.product #content .quantity input.qty, .woocommerce-page div.product .quantity input.qty, .woocommerce-page div.product #content .quantity input.qty, .woocommerce-page #content div.product .quantity input.qty, .woocommerce-page #content div.product #content .quantity input.qty {
-  width: 50px;
-  height: 50px;
-  padding: 0;
-  text-align: right;
+  width: 5rem;
+  height: 3rem;
+  padding-left: 0.75rem;
+  text-align: left;
   font-weight: bold;
   -moz-appearance: textfield;
   /* Hide buttons for Firefox 29 and later */
 }
-/* line 69, scss/_woocommerce.scss */
+/* line 44, scss/_woocommerce.scss */
 .woocommerce div.product .quantity noindex:-o-prefocus, .woocommerce div.product .quantity input[type=number], .woocommerce div.product #content .quantity noindex:-o-prefocus, .woocommerce div.product #content .quantity input[type=number], .woocommerce #content div.product .quantity noindex:-o-prefocus, .woocommerce #content div.product .quantity input[type=number], .woocommerce #content div.product #content .quantity noindex:-o-prefocus, .woocommerce #content div.product #content .quantity input[type=number], .woocommerce-page div.product .quantity noindex:-o-prefocus, .woocommerce-page div.product .quantity input[type=number], .woocommerce-page div.product #content .quantity noindex:-o-prefocus, .woocommerce-page div.product #content .quantity input[type=number], .woocommerce-page #content div.product .quantity noindex:-o-prefocus, .woocommerce-page #content div.product .quantity input[type=number], .woocommerce-page #content div.product #content .quantity noindex:-o-prefocus, .woocommerce-page #content div.product #content .quantity input[type=number] {
-  padding-right: 1.2em;
+  padding-right: 1.2rem;
 }
-/* line 72, scss/_woocommerce.scss */
+/* line 45, scss/_woocommerce.scss */
 .woocommerce div.product .quantity .plus, .woocommerce div.product .quantity .minus, .woocommerce div.product #content .quantity .plus, .woocommerce div.product #content .quantity .minus, .woocommerce #content div.product .quantity .plus, .woocommerce #content div.product .quantity .minus, .woocommerce #content div.product #content .quantity .plus, .woocommerce #content div.product #content .quantity .minus, .woocommerce-page div.product .quantity .plus, .woocommerce-page div.product .quantity .minus, .woocommerce-page div.product #content .quantity .plus, .woocommerce-page div.product #content .quantity .minus, .woocommerce-page #content div.product .quantity .plus, .woocommerce-page #content div.product .quantity .minus, .woocommerce-page #content div.product #content .quantity .plus, .woocommerce-page #content div.product #content .quantity .minus {
   display: block;
   padding: 0;
@@ -8643,8 +8611,8 @@ th.hide-for-touch {
   position: absolute;
   text-align: center;
   vertical-align: text-top;
-  width: 20px;
-  height: 28px;
+  width: 1.875rem;
+  height: 1.5rem;
   text-decoration: none;
   overflow: visible;
   text-decoration: none;
@@ -8653,89 +8621,88 @@ th.hide-for-touch {
   line-height: 13px;
   font-size: 12px;
 }
-/* line 90, scss/_woocommerce.scss */
+/* line 63, scss/_woocommerce.scss */
 .woocommerce div.product .quantity .plus, .woocommerce div.product #content .quantity .plus, .woocommerce #content div.product .quantity .plus, .woocommerce #content div.product #content .quantity .plus, .woocommerce-page div.product .quantity .plus, .woocommerce-page div.product #content .quantity .plus, .woocommerce-page #content div.product .quantity .plus, .woocommerce-page #content div.product #content .quantity .plus {
   top: 0;
   right: 0;
 }
-/* line 94, scss/_woocommerce.scss */
+/* line 67, scss/_woocommerce.scss */
 .woocommerce div.product .quantity .minus, .woocommerce div.product #content .quantity .minus, .woocommerce #content div.product .quantity .minus, .woocommerce #content div.product #content .quantity .minus, .woocommerce-page div.product .quantity .minus, .woocommerce-page div.product #content .quantity .minus, .woocommerce-page #content div.product .quantity .minus, .woocommerce-page #content div.product #content .quantity .minus {
-  bottom: 1.2em;
+  bottom: 0.85em;
   right: 0;
 }
-/* line 102, scss/_woocommerce.scss */
-.woocommerce div.product .products ul, .woocommerce div.product ul.products, .woocommerce #content div.product .products ul, .woocommerce #content div.product ul.products, .woocommerce-page div.product .products ul, .woocommerce-page div.product ul.products, .woocommerce-page #content div.product .products ul, .woocommerce-page #content div.product ul.products {
+/* line 72, scss/_woocommerce.scss */
+.woocommerce div.product .products, .woocommerce #content div.product .products, .woocommerce-page div.product .products, .woocommerce-page #content div.product .products {
   margin: 0 0 1em;
   padding: 0;
   list-style: none outside;
   clear: both;
 }
-/* line 109, scss/_woocommerce.scss */
-.woocommerce div.product .products ul li, .woocommerce div.product ul.products li, .woocommerce #content div.product .products ul li, .woocommerce #content div.product ul.products li, .woocommerce-page div.product .products ul li, .woocommerce-page div.product ul.products li, .woocommerce-page #content div.product .products ul li, .woocommerce-page #content div.product ul.products li {
+/* line 77, scss/_woocommerce.scss */
+.woocommerce div.product .products li, .woocommerce #content div.product .products li, .woocommerce-page div.product .products li, .woocommerce-page #content div.product .products li {
   list-style: none outside;
 }
-/* line 117, scss/_woocommerce.scss */
-.woocommerce div.product ul.products li.product .onsale, .woocommerce #content div.product ul.products li.product .onsale, .woocommerce-page div.product ul.products li.product .onsale, .woocommerce-page #content div.product ul.products li.product .onsale {
+/* line 81, scss/_woocommerce.scss */
+.woocommerce div.product .products .product .onsale, .woocommerce #content div.product .products .product .onsale, .woocommerce-page div.product .products .product .onsale, .woocommerce-page #content div.product .products .product .onsale {
   top: 0;
   right: 0;
   left: auto;
   margin: -6px -6px 0 0;
 }
-/* line 123, scss/_woocommerce.scss */
-.woocommerce div.product ul.products li.product h3, .woocommerce #content div.product ul.products li.product h3, .woocommerce-page div.product ul.products li.product h3, .woocommerce-page #content div.product ul.products li.product h3 {
+/* line 87, scss/_woocommerce.scss */
+.woocommerce div.product .products .product h3, .woocommerce #content div.product .products .product h3, .woocommerce-page div.product .products .product h3, .woocommerce-page #content div.product .products .product h3 {
   padding: .5em 0;
   margin: 0;
   font-size: 1em;
 }
-/* line 128, scss/_woocommerce.scss */
-.woocommerce div.product ul.products li.product a, .woocommerce #content div.product ul.products li.product a, .woocommerce-page div.product ul.products li.product a, .woocommerce-page #content div.product ul.products li.product a {
+/* line 92, scss/_woocommerce.scss */
+.woocommerce div.product .products .product a, .woocommerce #content div.product .products .product a, .woocommerce-page div.product .products .product a, .woocommerce-page #content div.product .products .product a {
   text-decoration: none;
 }
-/* line 131, scss/_woocommerce.scss */
-.woocommerce div.product ul.products li.product a img, .woocommerce #content div.product ul.products li.product a img, .woocommerce-page div.product ul.products li.product a img, .woocommerce-page #content div.product ul.products li.product a img {
+/* line 93, scss/_woocommerce.scss */
+.woocommerce div.product .products .product a img, .woocommerce #content div.product .products .product a img, .woocommerce-page div.product .products .product a img, .woocommerce-page #content div.product .products .product a img {
   width: 100%;
   height: auto;
   display: block;
   margin: 0 0 8px;
 }
-/* line 142, scss/_woocommerce.scss */
-.woocommerce div.product ul.products li.product strong, .woocommerce #content div.product ul.products li.product strong, .woocommerce-page div.product ul.products li.product strong, .woocommerce-page #content div.product ul.products li.product strong {
+/* line 100, scss/_woocommerce.scss */
+.woocommerce div.product .products .product strong, .woocommerce #content div.product .products .product strong, .woocommerce-page div.product .products .product strong, .woocommerce-page #content div.product .products .product strong {
   display: block;
 }
-/* line 145, scss/_woocommerce.scss */
-.woocommerce div.product ul.products li.product .price, .woocommerce #content div.product ul.products li.product .price, .woocommerce-page div.product ul.products li.product .price, .woocommerce-page #content div.product ul.products li.product .price {
+/* line 101, scss/_woocommerce.scss */
+.woocommerce div.product .products .product .price, .woocommerce #content div.product .products .product .price, .woocommerce-page div.product .products .product .price, .woocommerce-page #content div.product .products .product .price {
   display: block;
   font-weight: normal;
   margin-bottom: .5em;
 }
-/* line 150, scss/_woocommerce.scss */
-.woocommerce div.product ul.products li.product .price del, .woocommerce #content div.product ul.products li.product .price del, .woocommerce-page div.product ul.products li.product .price del, .woocommerce-page #content div.product ul.products li.product .price del {
+/* line 105, scss/_woocommerce.scss */
+.woocommerce div.product .products .product .price del, .woocommerce #content div.product .products .product .price del, .woocommerce-page div.product .products .product .price del, .woocommerce-page #content div.product .products .product .price del {
   font-size: 0.67em;
-  margin: -2px 0 0 0;
 }
-/* line 155, scss/_woocommerce.scss */
-.woocommerce div.product ul.products li.product .price ins, .woocommerce #content div.product ul.products li.product .price ins, .woocommerce-page div.product ul.products li.product .price ins, .woocommerce-page #content div.product ul.products li.product .price ins {
+/* line 108, scss/_woocommerce.scss */
+.woocommerce div.product .products .product .price ins, .woocommerce #content div.product .products .product .price ins, .woocommerce-page div.product .products .product .price ins, .woocommerce-page #content div.product .products .product .price ins {
   background: none;
 }
-/* line 158, scss/_woocommerce.scss */
-.woocommerce div.product ul.products li.product .price .from, .woocommerce #content div.product ul.products li.product .price .from, .woocommerce-page div.product ul.products li.product .price .from, .woocommerce-page #content div.product ul.products li.product .price .from {
+/* line 111, scss/_woocommerce.scss */
+.woocommerce div.product .products .product .price .from, .woocommerce #content div.product .products .product .price .from, .woocommerce-page div.product .products .product .price .from, .woocommerce-page #content div.product .products .product .price .from {
   font-size: 0.67em;
   margin: -2px 0 0 0;
   text-transform: uppercase;
 }
-/* line 167, scss/_woocommerce.scss */
+/* line 119, scss/_woocommerce.scss */
 .woocommerce div.product .woocommerce-result-count, .woocommerce #content div.product .woocommerce-result-count, .woocommerce-page div.product .woocommerce-result-count, .woocommerce-page #content div.product .woocommerce-result-count {
-  margin: 0 0 1em;
+  margin: 0 0 4em;
 }
-/* line 170, scss/_woocommerce.scss */
+/* line 120, scss/_woocommerce.scss */
 .woocommerce div.product .woocommerce-ordering, .woocommerce #content div.product .woocommerce-ordering, .woocommerce-page div.product .woocommerce-ordering, .woocommerce-page #content div.product .woocommerce-ordering {
-  margin: 0 0 1em;
+  margin: 0 0 4em;
 }
-/* line 172, scss/_woocommerce.scss */
+/* line 122, scss/_woocommerce.scss */
 .woocommerce div.product .woocommerce-ordering select, .woocommerce #content div.product .woocommerce-ordering select, .woocommerce-page div.product .woocommerce-ordering select, .woocommerce-page #content div.product .woocommerce-ordering select {
   vertical-align: top;
 }
-/* line 179, scss/_woocommerce.scss */
+/* line 124, scss/_woocommerce.scss */
 .woocommerce span.onsale, .woocommerce-page span.onsale {
   min-height: 32px;
   min-width: 32px;
@@ -8750,7 +8717,7 @@ th.hide-for-touch {
   color: white;
   background: #008cba;
 }
-/* line 208, scss/_woocommerce.scss */
+/* line 149, scss/_woocommerce.scss */
 .woocommerce #reviews #comments ol.commentlist li img.avatar, .woocommerce-page #reviews #comments ol.commentlist li img.avatar {
   float: left;
   line-height: 0;
@@ -8764,197 +8731,18 @@ th.hide-for-touch {
 .woocommerce #reviews #comments ol.commentlist li img.avatar:hover, .woocommerce #reviews #comments ol.commentlist li img.avatar:focus, .woocommerce-page #reviews #comments ol.commentlist li img.avatar:hover, .woocommerce-page #reviews #comments ol.commentlist li img.avatar:focus {
   box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
 }
-/* line 213, scss/_woocommerce.scss */
+/* line 154, scss/_woocommerce.scss */
 .woocommerce #reviews #comments ol.commentlist li .comment-text, .woocommerce-page #reviews #comments ol.commentlist li .comment-text {
   padding: 1em 1em 0;
 }
-/* line 226, scss/_woocommerce.scss */
-.woocommerce .star-rating, .woocommerce-page .star-rating {
-  float: right;
-  overflow: hidden;
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  font-size: 1em;
-  width: 5.4em;
-  font: normal 16px/1 "star";
-}
-/* line 235, scss/_woocommerce.scss */
-.woocommerce .star-rating:before, .woocommerce-page .star-rating:before {
-  content: "\73\73\73\73\73";
-  float: left;
-  top: 0;
-  left: 0;
-  position: absolute;
-}
-/* line 243, scss/_woocommerce.scss */
-.woocommerce .star-rating span, .woocommerce-page .star-rating span {
-  overflow: hidden;
-  float: left;
-  top: 0;
-  left: 0;
-  position: absolute;
-  padding-top: 1.5em;
-  font-family: "star";
-}
-/* line 252, scss/_woocommerce.scss */
-.woocommerce .star-rating span:before, .woocommerce-page .star-rating span:before {
-  content: "\53\53\53\53\53";
-  top: 0;
-  position: absolute;
-  left: 0;
-  font-family: "star";
-}
-/* line 259, scss/_woocommerce.scss */
-.woocommerce .woocommerce-product-rating, .woocommerce-page .woocommerce-product-rating {
-  line-height: 2em;
-  display: block;
-  color: #222222;
-}
-/* line 263, scss/_woocommerce.scss */
-.woocommerce .woocommerce-product-rating .star-rating, .woocommerce-page .woocommerce-product-rating .star-rating {
-  margin: .5em 4px 0 0;
-  float: left;
-}
-/* line 267, scss/_woocommerce.scss */
-.woocommerce .woocommerce-product-rating a, .woocommerce-page .woocommerce-product-rating a {
-  color: #222222;
-}
-/* line 270, scss/_woocommerce.scss */
-.woocommerce .products .star-rating, .woocommerce-page .products .star-rating {
-  display: block;
-  margin: 0 0 .5em;
-  float: none;
-}
-/* line 276, scss/_woocommerce.scss */
-.woocommerce .hreview-aggregate .star-rating, .woocommerce-page .hreview-aggregate .star-rating {
-  margin: 10px 0 0 0;
-}
-/* line 280, scss/_woocommerce.scss */
-.woocommerce #review_form #respond, .woocommerce-page #review_form #respond {
-  position: static;
-  margin: 0;
-  width: auto;
-  padding: 0 0 0;
-  background: transparent none;
-  border: 0;
-}
-/* line 288, scss/_woocommerce.scss */
-.woocommerce #review_form #respond p, .woocommerce-page #review_form #respond p {
-  margin: 0 0 10px;
-}
-/* line 292, scss/_woocommerce.scss */
-.woocommerce #review_form #respond .form-submit input, .woocommerce-page #review_form #respond .form-submit input {
-  left: auto;
-}
-/* line 296, scss/_woocommerce.scss */
-.woocommerce #review_form #respond textarea, .woocommerce-page #review_form #respond textarea {
-  -webkit-box-sizing: border-box;
-  /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;
-  /* Firefox, other Gecko */
-  box-sizing: border-box;
-  /* Opera/IE 8+ */
-  width: 100%;
-}
-/* line 303, scss/_woocommerce.scss */
-.woocommerce p.stars, .woocommerce-page p.stars {
-  position: relative;
-  font-size: 1em;
-}
-/* line 307, scss/_woocommerce.scss */
-.woocommerce p.stars a, .woocommerce-page p.stars a {
-  display: inline-block;
-  font-weight: 700;
-  margin-right: 1em;
-  text-indent: -9999px;
-  position: relative;
-}
-/* line 314, scss/_woocommerce.scss */
-.woocommerce p.stars a:last-child, .woocommerce-page p.stars a:last-child {
-  border-right: 0;
-}
-/* line 322, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-1, .woocommerce p.stars a.star-2, .woocommerce p.stars a.star-3, .woocommerce p.stars a.star-4, .woocommerce p.stars a.star-5, .woocommerce-page p.stars a.star-1, .woocommerce-page p.stars a.star-2, .woocommerce-page p.stars a.star-3, .woocommerce-page p.stars a.star-4, .woocommerce-page p.stars a.star-5 {
-  border-right: 1px solid #ccc;
-}
-/* line 325, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-1:after, .woocommerce p.stars a.star-2:after, .woocommerce p.stars a.star-3:after, .woocommerce p.stars a.star-4:after, .woocommerce p.stars a.star-5:after, .woocommerce-page p.stars a.star-1:after, .woocommerce-page p.stars a.star-2:after, .woocommerce-page p.stars a.star-3:after, .woocommerce-page p.stars a.star-4:after, .woocommerce-page p.stars a.star-5:after {
-  font-family: "WooCommerce";
-  text-indent: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 336, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-1, .woocommerce-page p.stars a.star-1 {
-  width: 2em;
-}
-/* line 339, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-1:after, .woocommerce-page p.stars a.star-1:after {
-  content: "\e021";
-}
-/* line 344, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-1:hover:after, .woocommerce p.stars a.star-1.active:after, .woocommerce-page p.stars a.star-1:hover:after, .woocommerce-page p.stars a.star-1.active:after {
-  content: "\e020";
-}
-/* line 349, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-2, .woocommerce-page p.stars a.star-2 {
-  width: 3em;
-}
-/* line 352, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-2:after, .woocommerce-page p.stars a.star-2:after {
-  content: "\e021\e021";
-}
-/* line 357, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-2:hover:after, .woocommerce p.stars a.star-2.active:after, .woocommerce-page p.stars a.star-2:hover:after, .woocommerce-page p.stars a.star-2.active:after {
-  content: "\e020\e020";
-}
-/* line 362, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-3, .woocommerce-page p.stars a.star-3 {
-  width: 4em;
-}
-/* line 365, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-3:after, .woocommerce-page p.stars a.star-3:after {
-  content: "\e021\e021\e021";
-}
-/* line 370, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-3:hover:after, .woocommerce p.stars a.star-3.active:after, .woocommerce-page p.stars a.star-3:hover:after, .woocommerce-page p.stars a.star-3.active:after {
-  content: "\e020\e020\e020";
-}
-/* line 375, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-4, .woocommerce-page p.stars a.star-4 {
-  width: 5em;
-}
-/* line 378, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-4:after, .woocommerce-page p.stars a.star-4:after {
-  content: "\e021\e021\e021\e021";
-}
-/* line 383, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-4:hover:after, .woocommerce p.stars a.star-4.active:after, .woocommerce-page p.stars a.star-4:hover:after, .woocommerce-page p.stars a.star-4.active:after {
-  content: "\e020\e020\e020\e020";
-}
-/* line 388, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-5, .woocommerce-page p.stars a.star-5 {
-  width: 6em;
-  border: 0;
-}
-/* line 392, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-5:after, .woocommerce-page p.stars a.star-5:after {
-  content: "\e021\e021\e021\e021\e021";
-}
-/* line 397, scss/_woocommerce.scss */
-.woocommerce p.stars a.star-5:hover:after, .woocommerce p.stars a.star-5.active:after, .woocommerce-page p.stars a.star-5:hover:after, .woocommerce-page p.stars a.star-5.active:after {
-  content: "\e020\e020\e020\e020\e020";
-}
-/* line 406, scss/_woocommerce.scss */
+/* line 169, scss/_woocommerce.scss */
 .woocommerce table.shop_attributes, .woocommerce-page table.shop_attributes {
   border: 0;
   border-top: 1px dotted rgba(0, 0, 0, 0.1);
   margin-bottom: 1.618em;
   width: 100%;
 }
-/* line 411, scss/_woocommerce.scss */
+/* line 174, scss/_woocommerce.scss */
 .woocommerce table.shop_attributes th, .woocommerce-page table.shop_attributes th {
   width: 150px;
   font-weight: bold;
@@ -8964,7 +8752,7 @@ th.hide-for-touch {
   margin: 0;
   line-height: 1.5em;
 }
-/* line 420, scss/_woocommerce.scss */
+/* line 183, scss/_woocommerce.scss */
 .woocommerce table.shop_attributes td, .woocommerce-page table.shop_attributes td {
   font-style: italic;
   padding: 0;
@@ -8973,103 +8761,99 @@ th.hide-for-touch {
   margin: 0;
   line-height: 1.5em;
 }
-/* line 427, scss/_woocommerce.scss */
+/* line 190, scss/_woocommerce.scss */
 .woocommerce table.shop_attributes td p, .woocommerce-page table.shop_attributes td p {
   margin: 0;
   padding: 8px 0;
 }
-/* line 432, scss/_woocommerce.scss */
+/* line 195, scss/_woocommerce.scss */
 .woocommerce table.shop_attributes .alt td, .woocommerce table.shop_attributes .alt th, .woocommerce-page table.shop_attributes .alt td, .woocommerce-page table.shop_attributes .alt th {
   background: rgba(0, 0, 0, 0.025);
 }
-/* line 437, scss/_woocommerce.scss */
+/* line 199, scss/_woocommerce.scss */
 .woocommerce table.shop_table, .woocommerce-page table.shop_table {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  border: 1px solid #e7e7e7;
   margin: 0px -1px 24px 0px;
   text-align: left;
   width: 100%;
   border-collapse: separate;
 }
-/* line 444, scss/_woocommerce.scss */
+/* line 206, scss/_woocommerce.scss */
 .woocommerce table.shop_table th, .woocommerce-page table.shop_table th {
   font-weight: bold;
-  line-height: 18px;
   padding: 9px 12px;
+  font-size: 1.2rem;
 }
-/* line 449, scss/_woocommerce.scss */
+/* line 211, scss/_woocommerce.scss */
 .woocommerce table.shop_table td, .woocommerce-page table.shop_table td {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 6px 12px;
   vertical-align: middle;
+  font-size: 1em;
 }
-/* line 453, scss/_woocommerce.scss */
+/* line 216, scss/_woocommerce.scss */
 .woocommerce table.shop_table td small, .woocommerce-page table.shop_table td small {
   font-weight: normal;
 }
-/* line 457, scss/_woocommerce.scss */
+/* line 220, scss/_woocommerce.scss */
 .woocommerce table.shop_table tfoot td, .woocommerce table.shop_table tfoot th, .woocommerce-page table.shop_table tfoot td, .woocommerce-page table.shop_table tfoot th {
   font-weight: bold;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 463, scss/_woocommerce.scss */
+/* line 224, scss/_woocommerce.scss */
 .woocommerce table.my_account_orders, .woocommerce-page table.my_account_orders {
   font-size: 0.85em;
 }
-/* line 465, scss/_woocommerce.scss */
+/* line 226, scss/_woocommerce.scss */
 .woocommerce table.my_account_orders th, .woocommerce table.my_account_orders td, .woocommerce-page table.my_account_orders th, .woocommerce-page table.my_account_orders td {
   padding: 4px 8px;
   vertical-align: middle;
 }
-/* line 469, scss/_woocommerce.scss */
+/* line 230, scss/_woocommerce.scss */
 .woocommerce table.my_account_orders .button, .woocommerce-page table.my_account_orders .button {
   white-space: nowrap;
 }
-/* line 472, scss/_woocommerce.scss */
+/* line 233, scss/_woocommerce.scss */
 .woocommerce table.my_account_orders .order-actions, .woocommerce-page table.my_account_orders .order-actions {
   text-align: right;
 }
-/* line 474, scss/_woocommerce.scss */
+/* line 235, scss/_woocommerce.scss */
 .woocommerce table.my_account_orders .order-actions .button, .woocommerce-page table.my_account_orders .order-actions .button {
   margin: .125em 0 .125em .25em;
 }
-/* line 481, scss/_woocommerce.scss */
+/* line 242, scss/_woocommerce.scss */
 .woocommerce td.product-name dl.variation, .woocommerce-page td.product-name dl.variation {
-  margin: .25em 0;
+  padding-left: 1rem;
 }
-/* line 485, scss/_woocommerce.scss */
+/* line 244, scss/_woocommerce.scss */
 .woocommerce td.product-name dl.variation dt, .woocommerce td.product-name dl.variation dd, .woocommerce-page td.product-name dl.variation dt, .woocommerce-page td.product-name dl.variation dd {
-  display: inline-block;
+  font-weight: normal;
   float: left;
-  margin-bottom: 1em;
+  font-size: 1em;
+  line-height: 150%;
 }
-/* line 491, scss/_woocommerce.scss */
+/* line 250, scss/_woocommerce.scss */
 .woocommerce td.product-name dl.variation dt, .woocommerce-page td.product-name dl.variation dt {
-  font-weight: bold;
-  padding: 0 0 .25em 0;
   margin: 0 4px 0 0;
-  clear: left;
 }
-/* line 497, scss/_woocommerce.scss */
-.woocommerce td.product-name dl.variation dd, .woocommerce-page td.product-name dl.variation dd {
-  padding: 0 0 .25em 0;
+/* line 254, scss/_woocommerce.scss */
+.woocommerce td.product-name dl.variation dd p, .woocommerce-page td.product-name dl.variation dd p {
+  line-height: 150%;
 }
-/* line 499, scss/_woocommerce.scss */
-.woocommerce td.product-name dl.variation dd p:last-child, .woocommerce-page td.product-name dl.variation dd p:last-child {
-  margin-bottom: 0;
-}
-/* line 504, scss/_woocommerce.scss */
+/* line 259, scss/_woocommerce.scss */
 .woocommerce td.product-name p.backorder_notification, .woocommerce-page td.product-name p.backorder_notification {
   font-size: 0.83em;
 }
-/* line 509, scss/_woocommerce.scss */
+/* line 262, scss/_woocommerce.scss */
 .woocommerce td.product-quantity, .woocommerce-page td.product-quantity {
   min-width: 80px;
 }
-/* line 518, scss/_woocommerce.scss */
+/* line 269, scss/_woocommerce.scss */
 .woocommerce table.cart th, .woocommerce table.cart td, .woocommerce #content table.cart th, .woocommerce #content table.cart td, .woocommerce-page table.cart th, .woocommerce-page table.cart td, .woocommerce-page #content table.cart th, .woocommerce-page #content table.cart td {
   vertical-align: middle;
 }
-/* line 521, scss/_woocommerce.scss */
+/* line 272, scss/_woocommerce.scss */
 .woocommerce table.cart a.remove, .woocommerce #content table.cart a.remove, .woocommerce-page table.cart a.remove, .woocommerce-page #content table.cart a.remove {
   display: block;
   font-size: 1.5em;
@@ -9080,12 +8864,12 @@ th.hide-for-touch {
   width: 1em;
   height: 1em;
 }
-/* line 531, scss/_woocommerce.scss */
+/* line 282, scss/_woocommerce.scss */
 .woocommerce table.cart a.remove:hover, .woocommerce #content table.cart a.remove:hover, .woocommerce-page table.cart a.remove:hover, .woocommerce-page #content table.cart a.remove:hover {
   background-color: red;
   color: #fff;
 }
-/* line 537, scss/_woocommerce.scss */
+/* line 288, scss/_woocommerce.scss */
 .woocommerce table.cart .quantity, .woocommerce table.cart #content .quantity, .woocommerce #content table.cart .quantity, .woocommerce #content table.cart #content .quantity, .woocommerce-page table.cart .quantity, .woocommerce-page table.cart #content .quantity, .woocommerce-page #content table.cart .quantity, .woocommerce-page #content table.cart #content .quantity {
   width: 60px;
   position: relative;
@@ -9093,7 +8877,7 @@ th.hide-for-touch {
   zoom: 1;
   /* Hide buttons for opera */
 }
-/* line 543, scss/_woocommerce.scss */
+/* line 293, scss/_woocommerce.scss */
 .woocommerce table.cart .quantity input.qty, .woocommerce table.cart #content .quantity input.qty, .woocommerce #content table.cart .quantity input.qty, .woocommerce #content table.cart #content .quantity input.qty, .woocommerce-page table.cart .quantity input.qty, .woocommerce-page table.cart #content .quantity input.qty, .woocommerce-page #content table.cart .quantity input.qty, .woocommerce-page #content table.cart #content .quantity input.qty {
   width: 40px;
   height: 40px;
@@ -9103,11 +8887,11 @@ th.hide-for-touch {
   -moz-appearance: textfield;
   /* Hide buttons for Firefox 29 and later */
 }
-/* line 553, scss/_woocommerce.scss */
+/* line 302, scss/_woocommerce.scss */
 .woocommerce table.cart .quantity noindex:-o-prefocus, .woocommerce table.cart .quantity input[type=number], .woocommerce table.cart #content .quantity noindex:-o-prefocus, .woocommerce table.cart #content .quantity input[type=number], .woocommerce #content table.cart .quantity noindex:-o-prefocus, .woocommerce #content table.cart .quantity input[type=number], .woocommerce #content table.cart #content .quantity noindex:-o-prefocus, .woocommerce #content table.cart #content .quantity input[type=number], .woocommerce-page table.cart .quantity noindex:-o-prefocus, .woocommerce-page table.cart .quantity input[type=number], .woocommerce-page table.cart #content .quantity noindex:-o-prefocus, .woocommerce-page table.cart #content .quantity input[type=number], .woocommerce-page #content table.cart .quantity noindex:-o-prefocus, .woocommerce-page #content table.cart .quantity input[type=number], .woocommerce-page #content table.cart #content .quantity noindex:-o-prefocus, .woocommerce-page #content table.cart #content .quantity input[type=number] {
   padding-right: 1.2em;
 }
-/* line 556, scss/_woocommerce.scss */
+/* line 305, scss/_woocommerce.scss */
 .woocommerce table.cart .quantity .plus, .woocommerce table.cart .quantity .minus, .woocommerce table.cart #content .quantity .plus, .woocommerce table.cart #content .quantity .minus, .woocommerce #content table.cart .quantity .plus, .woocommerce #content table.cart .quantity .minus, .woocommerce #content table.cart #content .quantity .plus, .woocommerce #content table.cart #content .quantity .minus, .woocommerce-page table.cart .quantity .plus, .woocommerce-page table.cart .quantity .minus, .woocommerce-page table.cart #content .quantity .plus, .woocommerce-page table.cart #content .quantity .minus, .woocommerce-page #content table.cart .quantity .plus, .woocommerce-page #content table.cart .quantity .minus, .woocommerce-page #content table.cart #content .quantity .plus, .woocommerce-page #content table.cart #content .quantity .minus {
   display: block;
   padding: 0;
@@ -9125,40 +8909,40 @@ th.hide-for-touch {
   line-height: 13px;
   font-size: 12px;
 }
-/* line 574, scss/_woocommerce.scss */
+/* line 323, scss/_woocommerce.scss */
 .woocommerce table.cart .quantity .plus, .woocommerce table.cart #content .quantity .plus, .woocommerce #content table.cart .quantity .plus, .woocommerce #content table.cart #content .quantity .plus, .woocommerce-page table.cart .quantity .plus, .woocommerce-page table.cart #content .quantity .plus, .woocommerce-page #content table.cart .quantity .plus, .woocommerce-page #content table.cart #content .quantity .plus {
   top: 0;
   right: 0;
 }
-/* line 578, scss/_woocommerce.scss */
+/* line 327, scss/_woocommerce.scss */
 .woocommerce table.cart .quantity .minus, .woocommerce table.cart #content .quantity .minus, .woocommerce #content table.cart .quantity .minus, .woocommerce #content table.cart #content .quantity .minus, .woocommerce-page table.cart .quantity .minus, .woocommerce-page table.cart #content .quantity .minus, .woocommerce-page #content table.cart .quantity .minus, .woocommerce-page #content table.cart #content .quantity .minus {
   bottom: 1.3em;
   right: 0;
 }
-/* line 592, scss/_woocommerce.scss */
+/* line 338, scss/_woocommerce.scss */
 .woocommerce form .form-row [placeholder]:focus::-webkit-input-placeholder, .woocommerce-page form .form-row [placeholder]:focus::-webkit-input-placeholder {
   -webkit-transition: opacity 0.5s 0.5s ease;
   -moz-transition: opacity 0.5s 0.5s ease;
   transition: opacity 0.5s 0.5s ease;
   opacity: 0;
 }
-/* line 638, scss/_woocommerce.scss */
+/* line 384, scss/_woocommerce.scss */
 .woocommerce form .form-row.validate-required.woocommerce-invalid .chosen-single, .woocommerce form .form-row.validate-required.woocommerce-invalid .chosen-drop, .woocommerce form .form-row.validate-required.woocommerce-invalid input.input-text, .woocommerce form .form-row.validate-required.woocommerce-invalid select, .woocommerce-page form .form-row.validate-required.woocommerce-invalid .chosen-single, .woocommerce-page form .form-row.validate-required.woocommerce-invalid .chosen-drop, .woocommerce-page form .form-row.validate-required.woocommerce-invalid input.input-text, .woocommerce-page form .form-row.validate-required.woocommerce-invalid select {
   border-color: #fb7f88;
 }
-/* line 642, scss/_woocommerce.scss */
+/* line 388, scss/_woocommerce.scss */
 .woocommerce form .form-row ::-webkit-input-placeholder, .woocommerce-page form .form-row ::-webkit-input-placeholder {
   line-height: normal;
 }
-/* line 645, scss/_woocommerce.scss */
+/* line 391, scss/_woocommerce.scss */
 .woocommerce form .form-row :-moz-placeholder, .woocommerce-page form .form-row :-moz-placeholder {
   line-height: normal;
 }
-/* line 648, scss/_woocommerce.scss */
+/* line 394, scss/_woocommerce.scss */
 .woocommerce form .form-row :-ms-input-placeholder, .woocommerce-page form .form-row :-ms-input-placeholder {
   line-height: normal;
 }
-/* line 662, scss/_woocommerce.scss */
+/* line 405, scss/_woocommerce.scss */
 .woocommerce ul#shipping_method, .woocommerce-page ul#shipping_method {
   list-style: none outside;
   margin: 0;
@@ -9394,12 +9178,12 @@ Images and Gallery
   max-width: 100%;
 }
 
-/* line 137, scss/style.scss */
+/* line 136, scss/style.scss */
 .gallery {
   margin-bottom: 1em;
 }
 
-/* line 138, scss/style.scss */
+/* line 137, scss/style.scss */
 .gallery-item {
   float: left;
   margin: 0 8px 8px 0;
@@ -9407,68 +9191,68 @@ Images and Gallery
   position: relative;
 }
 
-/* line 145, scss/style.scss */
+/* line 143, scss/style.scss */
 .gallery-columns-1 .gallery-item {
   max-width: 100%;
 }
 
-/* line 146, scss/style.scss */
+/* line 144, scss/style.scss */
 .gallery-columns-2 .gallery-item {
   max-width: 48%;
   max-width: -webkit-calc(50% - 8px);
   max-width: calc(50% - 8px);
 }
 
-/* line 151, scss/style.scss */
+/* line 149, scss/style.scss */
 .gallery-columns-3 .gallery-item {
   max-width: 32%;
   max-width: -webkit-calc(33.3% - 8px);
   max-width: calc(33.3% - 8px);
 }
 
-/* line 156, scss/style.scss */
+/* line 154, scss/style.scss */
 .gallery-columns-4 .gallery-item {
   max-width: 23%;
   max-width: -webkit-calc(25% - 8px);
   max-width: calc(25% - 8px);
 }
 
-/* line 161, scss/style.scss */
+/* line 159, scss/style.scss */
 .gallery-columns-5 .gallery-item {
   max-width: 19%;
   max-width: -webkit-calc(20% - 8px);
   max-width: calc(20% - 8px);
 }
 
-/* line 166, scss/style.scss */
+/* line 164, scss/style.scss */
 .gallery-columns-6 .gallery-item {
   max-width: 15%;
   max-width: -webkit-calc(16.7% - 8px);
   max-width: calc(16.7% - 8px);
 }
 
-/* line 171, scss/style.scss */
+/* line 169, scss/style.scss */
 .gallery-columns-7 .gallery-item {
   max-width: 13%;
   max-width: -webkit-calc(14.28% - 8px);
   max-width: calc(14.28% - 8px);
 }
 
-/* line 176, scss/style.scss */
+/* line 174, scss/style.scss */
 .gallery-columns-8 .gallery-item {
   max-width: 11%;
   max-width: -webkit-calc(12.5% - 8px);
   max-width: calc(12.5% - 8px);
 }
 
-/* line 181, scss/style.scss */
+/* line 179, scss/style.scss */
 .gallery-columns-9 .gallery-item {
   max-width: 9%;
   max-width: -webkit-calc(11.1% - 8px);
   max-width: calc(11.1% - 8px);
 }
 
-/* line 194, scss/style.scss */
+/* line 192, scss/style.scss */
 .gallery-columns-1 .gallery-item:nth-of-type(1n),
 .gallery-columns-2 .gallery-item:nth-of-type(2n),
 .gallery-columns-3 .gallery-item:nth-of-type(3n),
@@ -9481,7 +9265,7 @@ Images and Gallery
   margin-right: 0;
 }
 
-/* line 200, scss/style.scss */
+/* line 198, scss/style.scss */
 .gallery-columns-1.gallery-size-medium figure.gallery-item:nth-of-type(1n+1),
 .gallery-columns-1.gallery-size-thumbnail figure.gallery-item:nth-of-type(1n+1),
 .gallery-columns-2.gallery-size-thumbnail figure.gallery-item:nth-of-type(2n+1),
@@ -9489,14 +9273,14 @@ Images and Gallery
   clear: left;
 }
 
-/* line 205, scss/style.scss */
+/* line 203, scss/style.scss */
 .gallery-columns-7 .gallery-caption,
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
   display: none;
 }
 
-/* line 208, scss/style.scss */
+/* line 206, scss/style.scss */
 .gallery-item .gallery-caption {
   background-color: rgba(0, 0, 0, 0.7);
   -webkit-box-sizing: border-box;
@@ -9517,7 +9301,7 @@ Images and Gallery
   top: auto;
   transition: 0.4s, opacity 0.1s 0.3s;
 }
-/* line 227, scss/style.scss */
+/* line 225, scss/style.scss */
 .gallery-item .gallery-caption::before {
   content: "";
   height: 100%;
@@ -9526,18 +9310,18 @@ Images and Gallery
   width: 100%;
 }
 
-/* line 235, scss/style.scss */
+/* line 233, scss/style.scss */
 img.gallery-item {
   transition: transform 0.4s;
 }
 
-/* line 236, scss/style.scss */
+/* line 234, scss/style.scss */
 .gallery-item:hover .gallery-caption {
   opacity: 1;
   transition: transform 0.4s, opacity 0.1s;
 }
 
-/* line 240, scss/style.scss */
+/* line 238, scss/style.scss */
 .wp-caption .wp-caption-text {
   text-align: center;
   font-size: 0.87rem;
@@ -9549,30 +9333,30 @@ img.gallery-item {
 Courses
 ******************************************************************/
 /* Course Archive Page */
-/* line 246, scss/style.scss */
+/* line 243, scss/style.scss */
 .course-container {
   border: none !important;
 }
 
-/* line 247, scss/style.scss */
+/* line 244, scss/style.scss */
 .course-container .archive-header h1 {
   font-size: 2.75rem !important;
   border: none !important;
 }
 
-/* line 251, scss/style.scss */
+/* line 248, scss/style.scss */
 #main .course {
   padding: 0 !important;
   border-bottom: none !important;
   margin: 0;
 }
 
-/* line 257, scss/style.scss */
+/* line 254, scss/style.scss */
 #main .course .course-lessons > entry {
   margin-bottom: 0;
 }
 
-/* line 260, scss/style.scss */
+/* line 257, scss/style.scss */
 #main .lesson-course {
   border-style: solid;
   border-width: 0px;
@@ -9604,8 +9388,12 @@ Courses
 #main .lesson-course:hover, #main .lesson-course:focus {
   color: white;
 }
-/* line 262, scss/style.scss */
+/* line 259, scss/style.scss */
 #main .lesson-course a {
+  color: white;
+}
+/* line 261, scss/style.scss */
+#main .lesson-course a em {
   color: white;
 }
 
@@ -9613,20 +9401,42 @@ Courses
 #main .course-container .sensei-course-meta {
   margin: 1em 0;
 }
+/* line 266, scss/style.scss */
+#main .course-container .sensei-course-meta .course-price, #main .course-container .sensei-course-meta p.course-price, #main .course-container .sensei-course-meta span.course-price {
+  width: 8em;
+  font-weight: normal !important;
+  font-size: 1.2rem;
+  position: relative;
+  text-align: center;
+  margin: 0.5em 0 0;
+  overflow: hidden;
+  color: white;
+  padding: 0.25em 0.5em;
+  background: #008cba;
+}
+/* line 277, scss/style.scss */
+#main .course-container .sensei-course-meta .course-price ins, #main .course-container .sensei-course-meta p.course-price ins, #main .course-container .sensei-course-meta span.course-price ins {
+  text-decoration: none;
+  font-weight: bold;
+}
+/* line 282, scss/style.scss */
+#main .course-container .sensei-course-meta .course-price del, #main .course-container .sensei-course-meta p.course-price del, #main .course-container .sensei-course-meta span.course-price del {
+  font-size: 0.67em;
+}
 
-/* line 265, scss/style.scss */
+/* line 286, scss/style.scss */
 #main .course header h2, #main .course-container header h2 {
   padding-top: 0.1em;
 }
 
-/* line 266, scss/style.scss */
+/* line 287, scss/style.scss */
 #main .course-container .sensei-course-meta span.course-lesson-count {
   padding-left: 0;
   display: inline;
   font-weight: normal;
   font-style: italic;
 }
-/* line 271, scss/style.scss */
+/* line 292, scss/style.scss */
 #main .course-container .sensei-course-meta span.course-lesson-count:before {
   content: '\f100';
   -webkit-font-smoothing: antialiased;
@@ -9639,72 +9449,319 @@ Courses
 Lessons
 ******************************************************************/
 /* Lesson Archive Page */
-/* line 283, scss/style.scss */
+/* line 304, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta {
   margin: 1em 0;
 }
-/* line 285, scss/style.scss */
+/* line 306, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span {
   display: inline;
   font-weight: normal;
   font-style: italic;
 }
-/* line 289, scss/style.scss */
+/* line 310, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span:before {
   webkit-font-smoothing: antialiased;
   font: normal 16px/1 'Genericons';
   vertical-align: text-bottom;
 }
-/* line 296, scss/style.scss */
+/* line 317, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span.lesson-length:before {
   content: '\f303';
 }
-/* line 298, scss/style.scss */
+/* line 319, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span.lesson-author:before {
   content: '\f304';
 }
-/* line 300, scss/style.scss */
+/* line 321, scss/style.scss */
 #main .course .course-lessons .lesson .lesson-meta span.lesson-complexity:before {
   content: '\f425';
 }
 
-/* line 303, scss/style.scss */
+/* line 323, scss/style.scss */
 #main .course .course-lessons .meter > span {
   padding: 3px 10px 0 0;
 }
 
-/* line 304, scss/style.scss */
+/* line 324, scss/style.scss */
 #main .course-lessons img.woo-image.thumbnail {
   width: 250px !important;
   height: auto;
   margin: 0 1em 0.5em;
 }
 
-/* line 309, scss/style.scss */
+/* line 329, scss/style.scss */
 #main .course .course-meta, #main .course-container .course-meta {
   display: inline-block;
 }
 
-/* line 310, scss/style.scss */
+/* line 330, scss/style.scss */
 #main .course .fix {
   clear: both;
 }
 
 /* Individual Lesson Page */
-/* line 313, scss/style.scss */
+/* line 332, scss/style.scss */
 #main .course .module-lessons > header {
   display: none;
 }
 
 /******************************************************************
+WooCommerce
+******************************************************************/
+/* line 336, scss/style.scss */
+.woocommerce, .woocommerce-page {
+  /* Main Loop */
+  /* Single Product Page */
+  /* Star rating */
+  /* checkout */
+}
+/* line 338, scss/style.scss */
+.woocommerce .products_archive, .woocommerce-page .products_archive {
+  margin-top: 4em;
+}
+/* line 343, scss/style.scss */
+.woocommerce #products .star-rating, .woocommerce-page #products .star-rating {
+  margin: 0 auto;
+  margin-bottom: 0.25rem;
+}
+/* line 347, scss/style.scss */
+.woocommerce #products .price, .woocommerce-page #products .price {
+  text-align: center;
+}
+/* line 348, scss/style.scss */
+.woocommerce #products h3, .woocommerce-page #products h3 {
+  text-align: center;
+}
+/* line 349, scss/style.scss */
+.woocommerce #products img, .woocommerce-page #products img {
+  width: 100%;
+  height: auto;
+}
+/* line 353, scss/style.scss */
+.woocommerce #products a.button, .woocommerce-page #products a.button {
+  margin: 0 auto;
+  display: block;
+}
+/* line 359, scss/style.scss */
+.woocommerce div.product .woocommerce-tabs, .woocommerce #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs {
+  margin-top: 1em;
+}
+/* line 360, scss/style.scss */
+.woocommerce div.product .tabs-content, .woocommerce #content div.product .tabs-content, .woocommerce-page div.product .tabs-content, .woocommerce-page #content div.product .tabs-content {
+  border: 1px solid #e7e7e7;
+}
+/* line 361, scss/style.scss */
+.woocommerce div.product span.onsale_single, .woocommerce #content div.product span.onsale_single, .woocommerce-page div.product span.onsale_single, .woocommerce-page #content div.product span.onsale_single {
+  margin-bottom: 1em;
+}
+/* line 362, scss/style.scss */
+.woocommerce div.product .sensei-course-meta .course-price, .woocommerce div.product .price, .woocommerce div.product p.price, .woocommerce #content div.product .sensei-course-meta .course-price, .woocommerce #content div.product .price, .woocommerce #content div.product p.price, .woocommerce-page div.product .sensei-course-meta .course-price, .woocommerce-page div.product .price, .woocommerce-page div.product p.price, .woocommerce-page #content div.product .sensei-course-meta .course-price, .woocommerce-page #content div.product .price, .woocommerce-page #content div.product p.price {
+  text-align: center;
+  font-size: 1.1rem;
+}
+/* line 365, scss/style.scss */
+.woocommerce div.product .sensei-course-meta .course-price ins, .woocommerce div.product .price ins, .woocommerce div.product p.price ins, .woocommerce #content div.product .sensei-course-meta .course-price ins, .woocommerce #content div.product .price ins, .woocommerce #content div.product p.price ins, .woocommerce-page div.product .sensei-course-meta .course-price ins, .woocommerce-page div.product .price ins, .woocommerce-page div.product p.price ins, .woocommerce-page #content div.product .sensei-course-meta .course-price ins, .woocommerce-page #content div.product .price ins, .woocommerce-page #content div.product p.price ins {
+  background: inherit;
+  text-decoration: none;
+}
+/* line 367, scss/style.scss */
+.woocommerce div.product .sensei-course-meta .course-price del, .woocommerce div.product .price del, .woocommerce div.product p.price del, .woocommerce #content div.product .sensei-course-meta .course-price del, .woocommerce #content div.product .price del, .woocommerce #content div.product p.price del, .woocommerce-page div.product .sensei-course-meta .course-price del, .woocommerce-page div.product .price del, .woocommerce-page div.product p.price del, .woocommerce-page #content div.product .sensei-course-meta .course-price del, .woocommerce-page #content div.product .price del, .woocommerce-page #content div.product p.price del {
+  font-size: 0.67em;
+  color: lighten #222222, 90%;
+}
+/* line 373, scss/style.scss */
+.woocommerce .star-rating, .woocommerce-page .star-rating {
+  overflow: hidden;
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  font-size: 1em;
+  width: 5.4em;
+  font: normal 16px/1 "star";
+}
+/* line 381, scss/style.scss */
+.woocommerce .star-rating:before, .woocommerce-page .star-rating:before {
+  content: "\73\73\73\73\73";
+  float: left;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+/* line 388, scss/style.scss */
+.woocommerce .star-rating span, .woocommerce-page .star-rating span {
+  overflow: hidden;
+  float: left;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding-top: 1.5em;
+  font-family: "star";
+}
+/* line 396, scss/style.scss */
+.woocommerce .star-rating span:before, .woocommerce-page .star-rating span:before {
+  content: "\53\53\53\53\53";
+  top: 0;
+  position: absolute;
+  left: 0;
+  font-family: "star";
+}
+/* line 405, scss/style.scss */
+.woocommerce .woocommerce-product-rating, .woocommerce-page .woocommerce-product-rating {
+  line-height: 2em;
+  display: block;
+  color: #222222;
+}
+/* line 409, scss/style.scss */
+.woocommerce .woocommerce-product-rating .star-rating, .woocommerce-page .woocommerce-product-rating .star-rating {
+  margin: .5em 4px 0 0;
+  float: left;
+}
+/* line 413, scss/style.scss */
+.woocommerce .woocommerce-product-rating a, .woocommerce-page .woocommerce-product-rating a {
+  color: #222222;
+}
+/* line 416, scss/style.scss */
+.woocommerce .products .star-rating, .woocommerce-page .products .star-rating {
+  display: block;
+  margin: 0 0 .5em;
+  float: none;
+}
+/* line 422, scss/style.scss */
+.woocommerce .hreview-aggregate .star-rating, .woocommerce-page .hreview-aggregate .star-rating {
+  margin: 10px 0 0 0;
+}
+/* line 425, scss/style.scss */
+.woocommerce #review_form #respond, .woocommerce-page #review_form #respond {
+  position: static;
+  margin: 0;
+  width: auto;
+  padding: 0 0 0;
+  background: transparent none;
+  border: 0;
+}
+/* line 432, scss/style.scss */
+.woocommerce #review_form #respond p, .woocommerce-page #review_form #respond p {
+  margin: 0 0 10px;
+}
+/* line 434, scss/style.scss */
+.woocommerce #review_form #respond .form-submit input, .woocommerce-page #review_form #respond .form-submit input {
+  left: auto;
+}
+/* line 436, scss/style.scss */
+.woocommerce #review_form #respond textarea, .woocommerce-page #review_form #respond textarea {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  width: 100%;
+}
+/* line 444, scss/style.scss */
+.woocommerce p.stars, .woocommerce-page p.stars {
+  position: relative;
+  font-size: 1em;
+}
+/* line 447, scss/style.scss */
+.woocommerce p.stars a, .woocommerce-page p.stars a {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 1em;
+  text-indent: -9999px;
+  position: relative;
+}
+/* line 453, scss/style.scss */
+.woocommerce p.stars a:last-child, .woocommerce-page p.stars a:last-child {
+  border-right: 0;
+}
+/* line 458, scss/style.scss */
+.woocommerce p.stars a.star-1, .woocommerce p.stars a.star-2, .woocommerce p.stars a.star-3, .woocommerce p.stars a.star-4, .woocommerce p.stars a.star-5, .woocommerce-page p.stars a.star-1, .woocommerce-page p.stars a.star-2, .woocommerce-page p.stars a.star-3, .woocommerce-page p.stars a.star-4, .woocommerce-page p.stars a.star-5 {
+  border-right: 1px solid #ccc;
+}
+/* line 459, scss/style.scss */
+.woocommerce p.stars a.star-1:after, .woocommerce p.stars a.star-2:after, .woocommerce p.stars a.star-3:after, .woocommerce p.stars a.star-4:after, .woocommerce p.stars a.star-5:after, .woocommerce-page p.stars a.star-1:after, .woocommerce-page p.stars a.star-2:after, .woocommerce-page p.stars a.star-3:after, .woocommerce-page p.stars a.star-4:after, .woocommerce-page p.stars a.star-5:after {
+  font-family: "WooCommerce";
+  text-indent: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 467, scss/style.scss */
+.woocommerce p.stars a.star-1, .woocommerce-page p.stars a.star-1 {
+  width: 2em;
+}
+/* line 468, scss/style.scss */
+.woocommerce p.stars a.star-1:after, .woocommerce-page p.stars a.star-1:after {
+  content: "\e021";
+}
+/* line 470, scss/style.scss */
+.woocommerce p.stars a.star-1:hover:after, .woocommerce p.stars a.star-1.active:after, .woocommerce-page p.stars a.star-1:hover:after, .woocommerce-page p.stars a.star-1.active:after {
+  content: "\e020";
+}
+/* line 472, scss/style.scss */
+.woocommerce p.stars a.star-2, .woocommerce-page p.stars a.star-2 {
+  width: 3em;
+}
+/* line 473, scss/style.scss */
+.woocommerce p.stars a.star-2:after, .woocommerce-page p.stars a.star-2:after {
+  content: "\e021\e021";
+}
+/* line 475, scss/style.scss */
+.woocommerce p.stars a.star-2:hover:after, .woocommerce p.stars a.star-2.active:after, .woocommerce-page p.stars a.star-2:hover:after, .woocommerce-page p.stars a.star-2.active:after {
+  content: "\e020\e020";
+}
+/* line 477, scss/style.scss */
+.woocommerce p.stars a.star-3, .woocommerce-page p.stars a.star-3 {
+  width: 4em;
+}
+/* line 478, scss/style.scss */
+.woocommerce p.stars a.star-3:after, .woocommerce-page p.stars a.star-3:after {
+  content: "\e021\e021\e021";
+}
+/* line 480, scss/style.scss */
+.woocommerce p.stars a.star-3:hover:after, .woocommerce p.stars a.star-3.active:after, .woocommerce-page p.stars a.star-3:hover:after, .woocommerce-page p.stars a.star-3.active:after {
+  content: "\e020\e020\e020";
+}
+/* line 482, scss/style.scss */
+.woocommerce p.stars a.star-4, .woocommerce-page p.stars a.star-4 {
+  width: 5em;
+}
+/* line 483, scss/style.scss */
+.woocommerce p.stars a.star-4:after, .woocommerce-page p.stars a.star-4:after {
+  content: "\e021\e021\e021\e021";
+}
+/* line 485, scss/style.scss */
+.woocommerce p.stars a.star-4:hover:after, .woocommerce p.stars a.star-4.active:after, .woocommerce-page p.stars a.star-4:hover:after, .woocommerce-page p.stars a.star-4.active:after {
+  content: "\e020\e020\e020\e020";
+}
+/* line 487, scss/style.scss */
+.woocommerce p.stars a.star-5, .woocommerce-page p.stars a.star-5 {
+  width: 6em;
+  border: 0;
+}
+/* line 490, scss/style.scss */
+.woocommerce p.stars a.star-5:after, .woocommerce-page p.stars a.star-5:after {
+  content: "\e021\e021\e021\e021\e021";
+}
+/* line 492, scss/style.scss */
+.woocommerce p.stars a.star-5:hover:after, .woocommerce p.stars a.star-5.active:after, .woocommerce-page p.stars a.star-5:hover:after, .woocommerce-page p.stars a.star-5.active:after {
+  content: "\e020\e020\e020\e020\e020";
+}
+/* line 497, scss/style.scss */
+.woocommerce #payment ul, .woocommerce-page #payment ul {
+  list-style: none outside;
+}
+
+/******************************************************************
 Post to Post Navigation
 ******************************************************************/
-/* line 317, scss/style.scss */
+/* line 505, scss/style.scss */
 .post .byline {
   line-height: 1.5rem;
 }
 
-/* line 318, scss/style.scss */
+/* line 506, scss/style.scss */
 #jp-relatedposts h3.jp-relatedposts-headline, .sharedaddy h3.sd-title {
   font-size: 1.6875rem !important;
   font-family: "font-family: Garamond, Baskerville, " Baskerville Old Face ", " Hoefler Text ", " Times New Roman ", serif" !important;
@@ -9712,17 +9769,17 @@ Post to Post Navigation
   font-style: normal !important;
   border: none !important;
 }
-/* line 324, scss/style.scss */
+/* line 512, scss/style.scss */
 #jp-relatedposts h3.jp-relatedposts-headline::before, .sharedaddy h3.sd-title::before {
   border: none !important;
 }
 
-/* line 326, scss/style.scss */
+/* line 514, scss/style.scss */
 #jp-relatedposts h3.jp-relatedposts-headline em:before {
   border: none !important;
 }
 
-/* line 328, scss/style.scss */
+/* line 516, scss/style.scss */
 #post-entries .nav-prev a, #post-entries .nav-next a {
   border-style: solid;
   border-width: 0px;
@@ -9758,7 +9815,7 @@ Post to Post Navigation
 /******************************************************************
 Navigation
 ******************************************************************/
-/* line 333, scss/style.scss */
+/* line 521, scss/style.scss */
 #welcome_user {
   margin: 0.8125rem 0.625rem -0.625rem 0;
   color: white;
@@ -9767,12 +9824,12 @@ Navigation
   font-weight: normal;
 }
 
-/* line 339, scss/style.scss */
+/* line 527, scss/style.scss */
 #user_logreglost_alert h1, #user_logreglost_alert h2, #user_logreglost_alert h3, #user_logreglost_alert h4, #user_logreglost_alert h5, #user_logreglost_alert h6, #user_logreglost_alert p, #user_logreglost_alert span {
   color: white;
 }
 
-/* line 340, scss/style.scss */
+/* line 528, scss/style.scss */
 .right li > a {
   border-style: solid;
   border-width: 0px;
@@ -9805,7 +9862,7 @@ Navigation
   color: white;
 }
 
-/* line 341, scss/style.scss */
+/* line 529, scss/style.scss */
 .navigation {
   margin: 0 auto;
 }
@@ -9814,52 +9871,52 @@ Navigation
 Comments
 ******************************************************************/
 /* chats */
-/* line 348, scss/style.scss */
+/* line 536, scss/style.scss */
 .chat-speaker-1 {
   border-left: 5px solid black;
 }
-/* line 349, scss/style.scss */
+/* line 537, scss/style.scss */
 .chat-speaker-1 .chat-text {
   background: #4d4d4d;
 }
 
-/* line 351, scss/style.scss */
+/* line 539, scss/style.scss */
 .chat-speaker-2 {
   border-left: 5px solid black;
 }
-/* line 352, scss/style.scss */
+/* line 540, scss/style.scss */
 .chat-speaker-2 .chat-text {
   background: #121212;
 }
 
-/* line 354, scss/style.scss */
+/* line 542, scss/style.scss */
 .chat-speaker-3 {
   border-left: 5px solid black;
 }
-/* line 355, scss/style.scss */
+/* line 543, scss/style.scss */
 .chat-speaker-3 .chat-text {
   background: #8c8c8c;
 }
 
-/* line 357, scss/style.scss */
+/* line 545, scss/style.scss */
 .chat-author {
   margin-top: 13px;
   background: white;
   border-left: 5px solid white;
 }
 
-/* line 361, scss/style.scss */
+/* line 549, scss/style.scss */
 .chat-author cite {
   font-weight: bold;
 }
 
-/* line 362, scss/style.scss */
+/* line 550, scss/style.scss */
 .chat-text {
   padding: 1px 5px 1px 13px;
 }
 
 /* comments */
-/* line 365, scss/style.scss */
+/* line 552, scss/style.scss */
 ol.commentlist {
   list-style: none;
   margin: 0 0 1em;
@@ -9867,28 +9924,28 @@ ol.commentlist {
   text-indent: 0;
 }
 
-/* line 371, scss/style.scss */
+/* line 558, scss/style.scss */
 ol.commentlist li.comment {
   padding: 1em;
 }
 
-/* line 373, scss/style.scss */
+/* line 560, scss/style.scss */
 ol.commentlist li.comment div.vcard {
   font: normal 16px georgia,times,serif;
   border: none;
 }
 
-/* line 374, scss/style.scss */
+/* line 561, scss/style.scss */
 ol.commentlist li.comment div.vcard cite.fn {
   font-style: normal;
 }
 
-/* line 375, scss/style.scss */
+/* line 562, scss/style.scss */
 ol.commentlist li.comment div.vcard cite.fn a.url {
   color: #222222;
 }
 
-/* line 376, scss/style.scss */
+/* line 563, scss/style.scss */
 ol.commentlist li.comment div.vcard img.avatar {
   line-height: 0;
   display: inline-block;
@@ -9901,7 +9958,7 @@ ol.commentlist li.comment div.vcard img.avatar:hover, ol.commentlist li.comment 
   box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
 }
 
-/* line 377, scss/style.scss */
+/* line 564, scss/style.scss */
 ol.commentlist li.comment div.vcard img.avatar-32 {
   line-height: 0;
   display: inline-block;
@@ -9914,7 +9971,7 @@ ol.commentlist li.comment div.vcard img.avatar-32:hover, ol.commentlist li.comme
   box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
 }
 
-/* line 378, scss/style.scss */
+/* line 565, scss/style.scss */
 ol.commentlist li.comment div.vcard img.photo {
   line-height: 0;
   display: inline-block;
@@ -9927,43 +9984,43 @@ ol.commentlist li.comment div.vcard img.photo:hover, ol.commentlist li.comment d
   box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
 }
 
-/* line 379, scss/style.scss */
+/* line 566, scss/style.scss */
 ol.commentlist li.comment div.vcard span.says {
   display: none;
 }
 
-/* line 380, scss/style.scss */
+/* line 567, scss/style.scss */
 ol.commentlist li.comment div.commentmetadata {
   text-align: right;
 }
 
-/* line 381, scss/style.scss */
+/* line 568, scss/style.scss */
 ol.commentlist li.comment div.comment-meta {
   margin: 1em 0 0 0;
 }
 
-/* line 382, scss/style.scss */
+/* line 569, scss/style.scss */
 ol.commentlist li.comment div.comment-meta a {
   color: #222222;
 }
 
-/* line 383, scss/style.scss */
+/* line 570, scss/style.scss */
 ol.commentlist li.comment p {
   margin: 0 0 1em;
 }
 
-/* line 384, scss/style.scss */
+/* line 571, scss/style.scss */
 ol.commentlist li.comment ul {
   list-style: square;
   margin: 0 0 1em 2em;
 }
 
-/* line 385, scss/style.scss */
+/* line 572, scss/style.scss */
 ol.commentlist li.comment div.reply {
   text-align: right;
 }
 
-/* line 386, scss/style.scss */
+/* line 573, scss/style.scss */
 ol.commentlist li.comment div.reply a {
   border-style: solid;
   border-width: 0px;
@@ -9996,54 +10053,54 @@ ol.commentlist li.comment div.reply a:hover, ol.commentlist li.comment div.reply
   color: white;
 }
 
-/* line 387, scss/style.scss */
+/* line 574, scss/style.scss */
 ol.commentlist li.comment ul.children {
   list-style: none;
   margin: 1em 0 0;
   text-indent: 0;
 }
 
-/* line 394, scss/style.scss */
+/* line 581, scss/style.scss */
 ol.commentlist li.comment ul.children li.depth-2 {
   border-left: 5px solid #cccccc;
   margin: 0 0 .25em .25em;
 }
 
-/* line 395, scss/style.scss */
+/* line 582, scss/style.scss */
 ol.commentlist li.comment ul.children li.depth-3 {
   border-left: 5px solid #b3b3b3;
   margin: 0 0 .25em .25em;
 }
 
-/* line 396, scss/style.scss */
+/* line 583, scss/style.scss */
 ol.commentlist li.comment ul.children li.depth-4 {
   border-left: 5px solid #999999;
   margin: 0 0 .25em .25em;
 }
 
-/* line 397, scss/style.scss */
+/* line 584, scss/style.scss */
 ol.commentlist li.comment ul.children li.depth-5 {
   border-left: 5px solid gray;
   margin: 0 0 0 .25em;
 }
 
-/* line 399, scss/style.scss */
+/* line 586, scss/style.scss */
 ol.commentlist li.even {
   background: #fff;
 }
 
-/* line 400, scss/style.scss */
+/* line 587, scss/style.scss */
 ol.commentlist li.odd {
   background: #f6f6f6;
 }
 
-/* line 401, scss/style.scss */
+/* line 588, scss/style.scss */
 ol.commentlist li.parent {
   border-left: 5px solid #d9d9d9;
 }
 
 /* pingbacks */
-/* line 407, scss/style.scss */
+/* line 593, scss/style.scss */
 ol.pingbacklist {
   list-style: none;
   margin: 0 0 1em;
@@ -10051,71 +10108,71 @@ ol.pingbacklist {
   text-indent: 0;
 }
 
-/* line 408, scss/style.scss */
+/* line 594, scss/style.scss */
 ol.pingbacklist li.pingback {
   padding: 1em 1em 1em 0;
 }
 
-/* line 409, scss/style.scss */
+/* line 595, scss/style.scss */
 ol.pingbacklist li.pingback div.vcard {
   font: normal 16px georgia,times,serif;
   border: none;
   margin-bottom: 0;
 }
 
-/* line 410, scss/style.scss */
+/* line 596, scss/style.scss */
 ol.pingbacklist li.pingback div.vcard span.says {
   display: none;
 }
 
-/* line 412, scss/style.scss */
+/* line 598, scss/style.scss */
 ol.pingbacklist li.pingback div.comment-meta a time {
   margin-left: 10em;
   color: #222222;
 }
 
-/* line 413, scss/style.scss */
+/* line 599, scss/style.scss */
 ol.pingbacklist li.pingback div.reply {
   display: none;
 }
 
-/* line 414, scss/style.scss */
+/* line 600, scss/style.scss */
 ol.pingbacklist li.even {
   background: #fff;
 }
 
-/* line 415, scss/style.scss */
+/* line 601, scss/style.scss */
 ol.pingbacklist li.odd {
   background: #f6f6f6;
 }
 
-/* line 416, scss/style.scss */
+/* line 602, scss/style.scss */
 ol.pingbacklist li.pingback ul {
   list-style: square;
   margin: 0 0 1em 2em;
 }
 
-/* line 417, scss/style.scss */
+/* line 603, scss/style.scss */
 ol.pingbacklist li.pingback div.vcard cite.fn {
   font-style: normal;
 }
 
-/* line 418, scss/style.scss */
+/* line 604, scss/style.scss */
 ol.pingbacklist li.pingback div.vcard cite.fn a.url {
   color: #222222;
 }
 
-/* line 420, scss/style.scss */
+/* line 605, scss/style.scss */
 ol.pingbacklist li.pingback p {
   margin: 0 0 1em;
 }
 
-/* line 421, scss/style.scss */
+/* line 606, scss/style.scss */
 ol.pingbacklist li.pingback div.comment-meta {
   margin-top: 9px;
 }
 
-/* line 422, scss/style.scss */
+/* line 607, scss/style.scss */
 ol.pingbacklist li.pingback p {
   display: none;
 }
@@ -10123,32 +10180,32 @@ ol.pingbacklist li.pingback p {
 /******************************************************************
 Sidebar
 ******************************************************************/
-/* line 429, scss/style.scss */
+/* line 612, scss/style.scss */
 .widget-title {
   padding-top: 1rem;
 }
 
-/* line 430, scss/style.scss */
+/* line 613, scss/style.scss */
 .widgets-list-layout .widgets-list-layout-blavatar {
   max-width: 5.875rem;
   width: 100%;
   margin: 0.625rem 0.625rem 0 0;
 }
 
-/* line 434, scss/style.scss */
+/* line 617, scss/style.scss */
 .widgets-list-layout .widgets-list-layout-links {
   width: 70%;
   padding-top: 5px;
 }
 
-/* line 435, scss/style.scss */
+/* line 618, scss/style.scss */
 .jetpack_subscription_widget h3 label {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
 }
 
-/* line 439, scss/style.scss */
+/* line 622, scss/style.scss */
 .jetpack_subscription_widget input[type="text"] {
   background-color: white;
   font-family: inherit;
@@ -10181,7 +10238,7 @@ Sidebar
 .jetpack_subscription_widget input[type="text"][disabled], fieldset[disabled] .jetpack_subscription_widget input[type="text"] {
   background-color: #dddddd;
 }
-/* line 441, scss/style.scss */
+/* line 624, scss/style.scss */
 .jetpack_subscription_widget input[type="text"]::hover {
   -webkit-appearance: none !important;
   background-color: #fafafa;
@@ -10203,7 +10260,7 @@ Sidebar
   border-color: #999999;
 }
 
-/* line 442, scss/style.scss */
+/* line 625, scss/style.scss */
 .jetpack_subscription_widget #subscribe-email input[type="text"] {
   background-color: white;
   font-family: inherit;
@@ -10236,7 +10293,7 @@ Sidebar
 .jetpack_subscription_widget #subscribe-email input[type="text"][disabled], fieldset[disabled] .jetpack_subscription_widget #subscribe-email input[type="text"] {
   background-color: #dddddd;
 }
-/* line 444, scss/style.scss */
+/* line 627, scss/style.scss */
 .jetpack_subscription_widget #subscribe-email input[type="text"]::hover {
   -webkit-appearance: none !important;
   background-color: #fafafa;
@@ -10258,7 +10315,7 @@ Sidebar
   border-color: #999999;
 }
 
-/* line 445, scss/style.scss */
+/* line 628, scss/style.scss */
 .jetpack_subscription_widget input[type="submit"], .widget_product_search input[type="submit"] {
   border-style: solid;
   border-width: 0px;
@@ -10291,11 +10348,11 @@ Sidebar
   color: white;
 }
 
-/* line 447, scss/style.scss */
+/* line 630, scss/style.scss */
 .product_list_widget li a {
   font-weight: normal;
 }
-/* line 448, scss/style.scss */
+/* line 631, scss/style.scss */
 .product_list_widget li img {
   width: 5.875rem !important;
   height: auto;
@@ -10303,34 +10360,34 @@ Sidebar
   margin-right: 0.625rem;
 }
 
-/* line 454, scss/style.scss */
+/* line 637, scss/style.scss */
 .widget_sensei_lesson_component li {
   margin-bottom: 0.9375rem;
 }
-/* line 456, scss/style.scss */
+/* line 639, scss/style.scss */
 .widget_sensei_lesson_component li img {
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-/* line 460, scss/style.scss */
+/* line 643, scss/style.scss */
 .widget_sensei_lesson_component img {
   width: 5.875rem;
   height: auto;
   margin: 0.3125rem 0.625rem 0.625rem 0;
 }
 
-/* line 464, scss/style.scss */
+/* line 647, scss/style.scss */
 .widget_sensei_category_courses li img {
   margin-bottom: 0 !important;
 }
 
-/* line 465, scss/style.scss */
+/* line 648, scss/style.scss */
 .widget_sensei_category_courses .fix {
   margin-bottom: 0.9375rem;
 }
 
-/* line 466, scss/style.scss */
+/* line 649, scss/style.scss */
 #sharing {
   width: 100%;
   margin-left: auto;
@@ -10349,22 +10406,58 @@ Sidebar
 #sharing:after {
   clear: both;
 }
-/* line 469, scss/style.scss */
+/* line 652, scss/style.scss */
 #sharing .sd-sharing-enabled .sd-content {
   margin-top: 0;
 }
 
-/* line 472, scss/style.scss */
+/* line 655, scss/style.scss */
 .sd-like {
   margin: 0 0 4em;
 }
 
-/* line 473, scss/style.scss */
+/* line 656, scss/style.scss */
 #sidebar .woocommerce_cart {
-  margin: -1em 0 1em;
+  margin: -1em 0 0;
+}
+/* line 658, scss/style.scss */
+#sidebar .woocommerce_cart .cart-contents {
+  margin-right: 1em;
+}
+/* line 659, scss/style.scss */
+#sidebar .woocommerce_cart a[title^="Checkout"] {
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  background-color: #008cba;
+  border-color: #007095;
+  color: white;
+}
+/* line 134, bower_components/foundation/scss/foundation/components/_buttons.scss */
+#sidebar .woocommerce_cart a[title^="Checkout"]:hover, #sidebar .woocommerce_cart a[title^="Checkout"]:focus {
+  background-color: #007095;
+}
+/* line 145, bower_components/foundation/scss/foundation/components/_buttons.scss */
+#sidebar .woocommerce_cart a[title^="Checkout"]:hover, #sidebar .woocommerce_cart a[title^="Checkout"]:focus {
+  color: white;
 }
 
-/* line 474, scss/style.scss */
+/* line 662, scss/style.scss */
 #sidebar .sharedaddy h3.sd-title {
   margin: 0;
 }
@@ -10373,74 +10466,74 @@ Sidebar
 MEDIA QUERIES
 ******************************************************************/
 @media only screen and (max-width: 40em) {
-  /* line 480, scss/style.scss */
+  /* line 668, scss/style.scss */
   html {
     font-size: 0.9rem;
   }
 
-  /* line 481, scss/style.scss */
+  /* line 669, scss/style.scss */
   .cn-nav a.cn-nav-prev span {
     margin: 1.4375rem 0;
     z-index: 200;
   }
 
-  /* line 482, scss/style.scss */
+  /* line 670, scss/style.scss */
   .cn-nav a.cn-nav-prev div {
     margin: 2.8125rem 0 0 1.25rem;
   }
 
-  /* line 483, scss/style.scss */
+  /* line 671, scss/style.scss */
   .cn-nav a.cn-nav-prev:hover div {
     margin: 1.75rem 0 0 0.3125rem;
     z-index: 300;
   }
 
-  /* line 484, scss/style.scss */
+  /* line 672, scss/style.scss */
   .cn-nav a.cn-nav-prev p {
     margin: 0 0 0 3.75rem;
   }
 
-  /* line 485, scss/style.scss */
+  /* line 673, scss/style.scss */
   .cn-nav a.cn-nav-next span {
     margin: 1.4375rem 0 0 -0.625rem;
   }
 
-  /* line 486, scss/style.scss */
+  /* line 674, scss/style.scss */
   .cn-nav a.cn-nav-next:hover span {
     margin: 1.4375rem 0 0 -2.1875rem;
     z-index: 200;
   }
 
-  /* line 487, scss/style.scss */
+  /* line 675, scss/style.scss */
   .cn-nav a.cn-nav-next div {
     margin: 2.8125rem 0 0 1.25rem;
   }
 
-  /* line 488, scss/style.scss */
+  /* line 676, scss/style.scss */
   .cn-nav a.cn-nav-next:hover div {
     transform-origin: right top;
     margin: 1.75rem 0 0 2.8125rem;
     z-index: 300;
   }
 
-  /* line 493, scss/style.scss */
+  /* line 681, scss/style.scss */
   ol.commentlist li.comment div.vcard {
     margin-bottom: 0;
   }
 
-  /* line 494, scss/style.scss */
+  /* line 682, scss/style.scss */
   ol.commentlist li.comment div.commentmetadata {
     margin-top: 0;
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 498, scss/style.scss */
+  /* line 686, scss/style.scss */
   html {
     font-size: 0.95rem;
   }
 }
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
-  /* line 505, scss/style.scss */
+  /* line 692, scss/style.scss */
   html {
     font-size: 1rem;
   }
@@ -10448,12 +10541,12 @@ MEDIA QUERIES
 /******************************************************************
 TEST CODE
 ******************************************************************/
-/* line 513, scss/style.scss */
+/* line 699, scss/style.scss */
 form ol#sense-quiz-list {
   margin-left: 3em;
 }
 
-/* line 514, scss/style.scss */
+/* line 700, scss/style.scss */
 .quiz input.quiz-submit.reset, .lesson input.quiz-submit.reset {
   margin: 1em 0;
 }

@@ -33,7 +33,7 @@ $woocommerce_loop['columns'] = apply_filters( 'woocommerce_cross_sells_columns',
 
 if ( $products->have_posts() ) : ?>
 
-	<div class="cross-sells small-12 medium-6 large-6 xlarge-6 xxlarge-6 columns">
+	<div class="cross-sells ">
 
 		<h2><?php _e( 'You may be interested in&hellip;', 'woocommerce' ) ?></h2>
 

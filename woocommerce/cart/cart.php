@@ -126,21 +126,18 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</div>
 
 						<?php do_action('woocommerce_cart_coupon'); ?>
-
 					</div>
 
 				<?php } ?>
 
-<div class="row">
-	<div class="small-5 medium-5 large-6 xlarge-8 xxlarge-6 columns">
-		<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
-	</div>
-	<div class="small-7 medium-7 large-6 xlarge-4 xxlarge-6 columns">
-		<input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
-	</div>
-
-</div>
-
+				<div class="row">
+					<div class="small-5 medium-5 large-6 xlarge-8 xxlarge-6 columns">
+						<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
+					</div>
+					<div class="small-7 medium-7 large-6 xlarge-4 xxlarge-6 columns">
+						<input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
+					</div>
+				</div>
 
 				<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 
@@ -158,9 +155,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <div class="cart-collaterals">
 
-	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
-
 	<?php woocommerce_cart_totals(); ?>
+	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
 
 	<?php woocommerce_shipping_calculator(); ?>
 

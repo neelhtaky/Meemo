@@ -8,5 +8,5 @@
  */
 ?>
 
-<div id="products" class="js-masonry" data-masonry-options='{
+<div id="products" class="js-masonry products_archive" data-masonry-options='{
 				"itemSelector": ".product" }' >

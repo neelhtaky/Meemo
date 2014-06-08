@@ -68,7 +68,8 @@ if ( ! $paged || $paged < 2 ) {
                            <?php if ( '' != $category_output ) { ?>
                            <span class="course-category"><?php echo sprintf( __( 'in %s', 'woothemes-sensei' ), $category_output ); ?></span>
                            <?php } // End If Statement ?>
-    					   <?php sensei_simple_course_price( $post_id ); ?>
+
+                           <?php sensei_simple_course_price( $post_id ); ?>
                         </p>
                         <p class="course-excerpt"><?php echo $post_item->post_excerpt; ?></p>
     				</section>

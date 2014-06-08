@@ -29,7 +29,7 @@ if ( ! $product->is_purchasable() ) return;
 
 	<form class="cart" method="post" enctype='multipart/form-data'>
 	 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-	<div class="small-2 medium-2 large-2 xlarge-2 xxlarge-2 columns">
+	<div class="small-2 medium-5 large-5 xlarge-2 xxlarge-2 columns">
 	 	<?php
 	 		if ( ! $product->is_sold_individually() )
 	 			woocommerce_quantity_input( array(
@@ -38,7 +38,7 @@ if ( ! $product->is_purchasable() ) return;
 	 			) );
 	 	?>
 </div>
-<div class="small-10 medium-10 large-10 xlarge-10 xxlarge-10 columns">
+<div class="small-10 medium-7 large-7 xlarge-10 xxlarge-10 columns">
 	 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>"  class=""/>
 
 	 	<button type="submit" class="single_add_to_cart_button button alt"><?php echo $product->single_add_to_cart_text(); ?></button>

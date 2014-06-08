@@ -20,11 +20,18 @@
 
 
 		 <?php wp_link_pages('before=<div id="page-links">&after=</div>'); ?>
-		 <?php if (!is_woocommerce()) {
-		 	 if( is_single() || is_page() ){ ?>
-			<?php comments_template();
+
+			<?php
+			if (is_single() || is_page()) {
+				if (is_cart() || is_checkout()) {
+				} else {
+					comments_template();
+				}
 			}
-			} ?>
+			 ?>
+
+
+
 <?php endwhile; else: ?>
 		  <p>
 		    Sorry, no posts matched your criteria.

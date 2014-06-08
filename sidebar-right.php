@@ -1,10 +1,7 @@
 <div id="sidebar" class="small-12 medium-4 large-3 xlarge-3 xxlarge-3 columns">
 	<aside id="sidebar" role="complementary">
 		<ul class="no-bullet">
-
-			<?php if ( is_active_sidebar( 'primary' ) ) : ?>
-
-				<!-- Show Shopping Cart Globally-->
+		<!-- Show Shopping Cart Globally-->
 				<?php global $woocommerce; ?>
 
 				<?php if (sizeof($woocommerce->cart->cart_contents)>0) { ?>
@@ -22,15 +19,19 @@
 				</div>
 			<?php } ?>
 
+			<?php if ( is_active_sidebar( 'primary' ) ) : ?>
 
 
-				<?php if (is_single())  { ?>
-				<h3>About This Post</h3>
+
+
+
+				<?php if (is_singular('post'))  { ?>
+					<h3>About This Post</h3>
 					<?php if ( has_post_thumbnail() ) { ?>
 				        <aside class="thumbnail th">
 				        	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 				        </aside>
-				    <?php } else {}?>
+				    <?php } ?>
 
 			        <aside class="byline meta postmetadata">
 						<div class="post_details">
@@ -69,6 +70,56 @@
 						    echo $custom_likes->post_likes( '' );
 						} ?>
 					</div>
+					<?php } elseif (is_singular( 'lesson' )) { ?>
+					<h3>About This Lesson</h3>
+					<?php if ( has_post_thumbnail() ) { ?>
+				        <aside class="thumbnail th">
+				        	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+				        </aside>
+				    <?php } ?>
+
+			        <aside class="byline meta postmetadata">
+						<div class="post_details">
+
+							This post was written by <address class="author"><?php the_author_posts_link(); ?></address>.
+							It was published on a <?php the_time('l'); ?>, which is the <?php the_time('jS'); ?> day in <?php the_time('F, Y'); ?>.
+							It was posted under the topic <span class="course-category"><?php the_category(', ') ?></span>.
+							It is tagged with <span class="tags"><?php the_tags('', ', ', '. '); ?></span>
+							<?php if ( comments_open() ) :
+								echo '<p>';
+								comments_popup_link( 'There are no responses yet. Why not leave a response?','There is 1 response.', 'There are % responses.', 'comments-link', 'Sorry, but comments are closed.');
+								echo '</p>';
+							endif; ?>
+						</div>
+
+						<div class="postauthor">
+							<h3>About The Author</h3>
+							<div class="th"><?php echo get_avatar( get_the_author_id() , 95 ); ?></div>
+							<p id="postauthordesc">Hi, I am <?php the_author_meta( 'nickname', $author_id ); ?>. I have written <a href="<?php bloginfo('url'); ?>/?author=<?php the_author_ID(); ?>"><?php the_author_posts(); ?> article<?php
+							$postcnt =(int)get_the_author_posts();
+							if ($postcnt>=2){
+							echo "s";}?>
+							</a> for <?php bloginfo('name'); ?>.
+
+							<?php the_author_meta( 'description' ); ?>
+							</p>
+						</div>
+					</aside>
+					<div id="sharing">
+						<?php if ( function_exists( 'sharing_display' ) ) {
+						    sharing_display( '', true );
+						}
+
+						if ( class_exists( 'Jetpack_Likes' ) ) {
+						    $custom_likes = new Jetpack_Likes;
+						    echo $custom_likes->post_likes( '' );
+						} ?>
+					</div>
+
+
+
+
+
 
 					<?php } elseif (is_category()) { ?>
 						<p>You are currently browsing the archives for the <?php single_cat_title(''); ?> category.</p>
