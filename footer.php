@@ -34,6 +34,18 @@
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation/foundation.abide.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/app.js"></script>
+	<script>
+
+// or with jQuery
+var $container = $('#main_wrapper');
+// initialize Masonry after all images have loaded
+$container.imagesLoaded( function() {
+  $container.masonry();
+});
+
+
+
+	</script>
 	<?php wp_footer(); ?>
 </body>
 </html>

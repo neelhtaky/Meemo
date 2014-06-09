@@ -21,9 +21,22 @@
 			<?php } ?>
 		</div>
 
-		<div id="main_wrapper" class="js-masonry "
+
+
+
+
+
+		<div id="main_wrapper" class="js-masonry"
 				data-masonry-options='{
-				"itemSelector": ".post" }' >
+				isInitLayout: false,
+				"itemSelector": ".post"
+				}' >
+
+
+
+
+
+
 
 <?php if(is_home() && !is_paged()) {
 

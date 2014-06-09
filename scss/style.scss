@@ -3,11 +3,11 @@ Theme Name: Simply Meemo
 Theme URI: www.quickneed.com
 Author: Kat Skinner
 Author URI: http://katskinner.com
-Description: A theme with a focus on content.
-Version: 0.5
+Description: A simple theme with a focus on content.
+Version: 1.0
 License: Attribution-NonCommercial-NoDerivs. CC BY-NC-ND.
 License URI: http://creativecommons.org/licenses/
-Tags:
+Tags: white, light, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, post-formats
 */
 /******************************************************************
 IMPORT STYLES
@@ -27,11 +27,11 @@ a[href]:after {
 	-webkit-font-smoothing: antialiased;
 	font: normal 16px/1 'Genericons';
 	vertical-align: top;}
-a[href*="wordpress"],
+a[href*="quickneed"],
 a[href^="/"], a[href^="#"],
 a[href^="mailto:"],
 a[href^="javascript:"] {display: inline;}
-a[href*="wordpress"]:after,
+a[href*="quickneed"]:after,
 a[href^="/"]:after, a[href^="#"]:after,
 a[href^="mailto:"]:after,
 a[href^="javascript:"]:after {content: none;}
