@@ -35,7 +35,7 @@ if ( function_exists('register_sidebar') ) {
 		'name' => 'Footer Sidebar',
 		'id' => 'footer',
     'description' => __('To add extra widgets to the footer, such as contact information.'),
-		'before_widget' => '<li id="%1$s" class="large-3 small-6 columns widget %2$s clearfix">',
+		'before_widget' => '<li id="%1$s" class="small-6 medium-6 large-3 columns widget %2$s clearfix">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',

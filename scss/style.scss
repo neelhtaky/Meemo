@@ -674,11 +674,25 @@ Sidebar
 /******************************************************************
 FOOTER
 ******************************************************************/
+#footer_widgets{
+	background:$bgcolorlight;
+	color:$body-font-color-grey;
+	padding: 0 0 2rem 0;
+	.widget-title{color:white;}
+}
+#footer_meta{
+	padding:1rem 0 0 0;
+	background: $bgcolordark;
+	color:$body-font-color-grey;
+}
+
 footer ul.inline-list li a{
 	background:none;
 	border:none;
 	padding:0;
-	color:$body-font-color;
+	line-height: $paragraph-line-height;
+	margin:$paragraph-line-height;
+	color:$body-font-color-grey;
 	&:hover{
 		background:none;
 		color:lighten($body-font-color,20%);

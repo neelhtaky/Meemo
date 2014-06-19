@@ -1,6 +1,6 @@
 	</div><!-- #main .site-main row -->
 </div><!-- #container -->
-<footer class="row">
+<footer id="footer_widgets" class="row">
 	<ul class="no-bullet">
 		<?php if ( is_active_sidebar( 'footer' ) ) : ?>
 			<?php dynamic_sidebar( 'footer' ); ?>
@@ -11,18 +11,19 @@
 		<?php endif; ?>
 	</ul>
 </footer>
-<footer class="row">
-		<div class="large-6 columns">
+<footer id="footer_meta" class="row">
+		<div class="small-12 medium-6 large-6 xlarge-4 columns">
 			<p>Copyright &copy; <?php echo date("Y") ?> <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved.
 			</br>
 			Theme Designed By <a href="<?php echo esc_url( __( 'http://katskinner.com/') ); ?>" title="<?php esc_attr_e( 'Kat Skinner' ); ?>">Kat Skinner</a>.
+			</br>
 			<span id="wordpress">
-				</br>
 				Proudly powered by <a href="<?php echo esc_url( __( 'http://wordpress.org/') ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform' ); ?>"><?php printf( __( '%s'), 'WordPress' ); ?></a>.
 			</span>
 		</div>
-		</br>
-		<?php wp_nav_menu(array('theme_location' => 'nav_footer', 'container_class' => 'large-6 columns', 'menu_class' => 'inline-list right', 'depth' => 1)); ?>
+
+			<?php wp_nav_menu(array('theme_location' => 'nav_footer', 'container_class' => 'small-12 medium-6 large-6 xlarge-8 columns', 'menu_class' => 'inline-list right', 'depth' => 1)); ?>
+
 </footer>
 					<!-- close the off-canvas menu -->
 					<a class="exit-off-canvas"></a>

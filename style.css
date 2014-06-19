@@ -10486,13 +10486,33 @@ Sidebar
 FOOTER
 ******************************************************************/
 /* line 677, scss/style.scss */
+#footer_widgets {
+  background: #333333;
+  color: #999999;
+  padding: 0 0 2rem 0;
+}
+/* line 681, scss/style.scss */
+#footer_widgets .widget-title {
+  color: white;
+}
+
+/* line 683, scss/style.scss */
+#footer_meta {
+  padding: 1rem 0 0 0;
+  background: #232323;
+  color: #999999;
+}
+
+/* line 689, scss/style.scss */
 footer ul.inline-list li a {
   background: none;
   border: none;
   padding: 0;
-  color: #222222;
+  line-height: 1.5;
+  margin: 1.5;
+  color: #999999;
 }
-/* line 682, scss/style.scss */
+/* line 696, scss/style.scss */
 footer ul.inline-list li a:hover {
   background: none;
   color: #555555;
@@ -10502,74 +10522,74 @@ footer ul.inline-list li a:hover {
 MEDIA QUERIES
 ******************************************************************/
 @media only screen and (max-width: 40em) {
-  /* line 692, scss/style.scss */
+  /* line 706, scss/style.scss */
   html {
     font-size: 0.9rem;
   }
 
-  /* line 693, scss/style.scss */
+  /* line 707, scss/style.scss */
   .cn-nav a.cn-nav-prev span {
     margin: 1.4375rem 0;
     z-index: 200;
   }
 
-  /* line 694, scss/style.scss */
+  /* line 708, scss/style.scss */
   .cn-nav a.cn-nav-prev div {
     margin: 2.8125rem 0 0 1.25rem;
   }
 
-  /* line 695, scss/style.scss */
+  /* line 709, scss/style.scss */
   .cn-nav a.cn-nav-prev:hover div {
     margin: 1.75rem 0 0 0.3125rem;
     z-index: 300;
   }
 
-  /* line 696, scss/style.scss */
+  /* line 710, scss/style.scss */
   .cn-nav a.cn-nav-prev p {
     margin: 0 0 0 3.75rem;
   }
 
-  /* line 697, scss/style.scss */
+  /* line 711, scss/style.scss */
   .cn-nav a.cn-nav-next span {
     margin: 1.4375rem 0 0 -0.625rem;
   }
 
-  /* line 698, scss/style.scss */
+  /* line 712, scss/style.scss */
   .cn-nav a.cn-nav-next:hover span {
     margin: 1.4375rem 0 0 -2.1875rem;
     z-index: 200;
   }
 
-  /* line 699, scss/style.scss */
+  /* line 713, scss/style.scss */
   .cn-nav a.cn-nav-next div {
     margin: 2.8125rem 0 0 1.25rem;
   }
 
-  /* line 700, scss/style.scss */
+  /* line 714, scss/style.scss */
   .cn-nav a.cn-nav-next:hover div {
     transform-origin: right top;
     margin: 1.75rem 0 0 2.8125rem;
     z-index: 300;
   }
 
-  /* line 705, scss/style.scss */
+  /* line 719, scss/style.scss */
   ol.commentlist li.comment div.vcard {
     margin-bottom: 0;
   }
 
-  /* line 706, scss/style.scss */
+  /* line 720, scss/style.scss */
   ol.commentlist li.comment div.commentmetadata {
     margin-top: 0;
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 710, scss/style.scss */
+  /* line 724, scss/style.scss */
   html {
     font-size: 0.95rem;
   }
 }
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
-  /* line 716, scss/style.scss */
+  /* line 730, scss/style.scss */
   html {
     font-size: 1rem;
   }
@@ -10577,12 +10597,12 @@ MEDIA QUERIES
 /******************************************************************
 TEST CODE
 ******************************************************************/
-/* line 723, scss/style.scss */
+/* line 737, scss/style.scss */
 form ol#sense-quiz-list {
   margin-left: 3em;
 }
 
-/* line 724, scss/style.scss */
+/* line 738, scss/style.scss */
 .quiz input.quiz-submit.reset, .lesson input.quiz-submit.reset {
   margin: 1em 0;
 }
