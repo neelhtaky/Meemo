@@ -40,7 +40,9 @@
 var $container = $('#main_wrapper');
 // initialize Masonry after all images have loaded
 $container.imagesLoaded( function() {
-  $container.masonry();
+	$container.masonry({
+  "itemSelector": ".post"
+});
 });
 
 

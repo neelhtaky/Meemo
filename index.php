@@ -28,8 +28,7 @@
 
 		<div id="main_wrapper" class="js-masonry"
 				data-masonry-options='{
-				isInitLayout: false,
-				"itemSelector": ".post"
+				"isInitLayout": "false"
 				}' >
 
 

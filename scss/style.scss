@@ -4,7 +4,7 @@ Theme URI: www.quickneed.com
 Author: Kat Skinner
 Author URI: http://katskinner.com
 Description: A simple theme with a focus on content.
-Version: 1.0
+Version: 1.1
 License: Attribution-NonCommercial-NoDerivs. CC BY-NC-ND.
 License URI: http://creativecommons.org/licenses/
 Tags: white, light, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, post-formats
@@ -623,7 +623,7 @@ Sidebar
 	max-width:emCalc(94px);
 	width:100%;
 	margin:emCalc(10px 10px 0 0);}
-.widgets-list-layout .widgets-list-layout-links{width:70%;padding-top:5px;}
+.widgets-list-layout .widgets-list-layout-links{width:75% !important;padding-top:5px;}
 .jetpack_subscription_widget h3 label{
 	font-size: inherit;
 	line-height: inherit;
