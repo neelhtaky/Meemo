@@ -9,9 +9,6 @@ License: Attribution-NonCommercial-NoDerivs. CC BY-NC-ND.
 License URI: http://creativecommons.org/licenses/
 Tags: white, light, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, post-formats
 */
-/******************************************************************
-IMPORT STYLES
-******************************************************************/
 @import "mixins";
 @import "app.scss";
 @import "woocommerce";
@@ -20,7 +17,6 @@ IMPORT STYLES
 Links
 ******************************************************************/
 .screen-reader-text{display:none;}
-body{background: white;}
 a[href]:after {
 	content: '\f442';
 	display: inline-block;
@@ -55,7 +51,6 @@ a[rel="category tag"].tags, .tags, span.tagged_as{
 		-webkit-font-smoothing: antialiased;
 		font: normal 16px/1 'Genericons';
 		vertical-align:text-bottom;}}
-
 span.course-category, span.posted_in{
 	&::before{
 		color: $body-font-color;
@@ -63,9 +58,8 @@ span.course-category, span.posted_in{
 		display: inline-block;
 		-webkit-font-smoothing: antialiased;
 		font: normal 16px/1 'Genericons';
-		vertical-align:text-bottom;
-	}}
-
+		vertical-align:text-bottom;}
+}
 a.comments-link{
 	text-decoration: none;
 	color: $body-font-color;
@@ -96,8 +90,7 @@ time {
 		-webkit-font-smoothing: antialiased;
 		font: normal 16px/1 'Genericons';
 		vertical-align:text-bottom;
-	}
-}
+	}}
 #main{padding-top: emCalc(10px);}
 #postauthordesc{display:inline; }
 .postmetadata{margin-top: emCalc(5px);}
@@ -106,31 +99,43 @@ time {
 		float: left;
 		margin: emCalc(5px 10px 0 0);
 	}}
-.read_more a{margin: 0 auto;}
-.post{margin-bottom: emCalc(60px) !important;
-	.attachment-post-thumbnail{margin-bottom: 1em;}
-	}
 address{
 	font-size:1rem;
 	// font-style:normal;
-	line-height: $base-line-height;
-}
+	line-height: $base-line-height;}
 table tbody{
 	font-size:1rem;
-	td.order-actions a{padding:0.5em 1em;}
+	td.order-actions a{padding:0.5em 1em;}}
+/******************************************************************
+Entries & Posts
+******************************************************************/
+/* Entries */
+.entry{
+	background: pink;
+	border: 1px solid $bgcolorlight;
+	img{@include thumb;}
+left: 0px;
+top: 0px;
+}
+.entry > article{
+	padding: 0 1em 2em;
+}
+/* Posts */
+.post{
+	margin-bottom: 1rem !important;
+	.attachment-post-thumbnail{margin-bottom: 1em;}
 }
 /******************************************************************
 Images and Gallery
 ******************************************************************/
-.entry img {@include thumb; margin: 10px !important;}
 .alignleft, img.alignleft {
-	margin-right: 1.5em;
+	margin-right: 1.5rem;
 	display: inline;
 	float: left;
 	max-width: 100%;
 	}
 .alignright, img.alignright {
-	margin-left: 1.5em;
+	margin-left: 1.5rem;
 	display: inline;
 	float: right;
 	max-width: 100%;
@@ -153,43 +158,35 @@ Images and Gallery
 .gallery-columns-2 .gallery-item {
 	max-width: 48%;
 	max-width: -webkit-calc(50% - 8px);
-	max-width:         calc(50% - 8px);
-}
+	max-width:         calc(50% - 8px);}
 .gallery-columns-3 .gallery-item {
 	max-width: 32%;
 	max-width: -webkit-calc(33.3% - 8px);
-	max-width:         calc(33.3% - 8px);
-}
+	max-width:         calc(33.3% - 8px);}
 .gallery-columns-4 .gallery-item {
 	max-width: 23%;
 	max-width: -webkit-calc(25% - 8px);
-	max-width:         calc(25% - 8px);
-}
+	max-width:         calc(25% - 8px);}
 .gallery-columns-5 .gallery-item {
 	max-width: 19%;
 	max-width: -webkit-calc(20% - 8px);
-	max-width:         calc(20% - 8px);
-}
+	max-width:         calc(20% - 8px);}
 .gallery-columns-6 .gallery-item {
 	max-width: 15%;
 	max-width: -webkit-calc(16.7% - 8px);
-	max-width:         calc(16.7% - 8px);
-}
+	max-width:         calc(16.7% - 8px);}
 .gallery-columns-7 .gallery-item {
 	max-width: 13%;
 	max-width: -webkit-calc(14.28% - 8px);
-	max-width:         calc(14.28% - 8px);
-}
+	max-width:         calc(14.28% - 8px);}
 .gallery-columns-8 .gallery-item {
 	max-width: 11%;
 	max-width: -webkit-calc(12.5% - 8px);
-	max-width:         calc(12.5% - 8px);
-}
+	max-width:         calc(12.5% - 8px);}
 .gallery-columns-9 .gallery-item {
 	max-width: 9%;
 	max-width: -webkit-calc(11.1% - 8px);
-	max-width:         calc(11.1% - 8px);
-}
+	max-width:         calc(11.1% - 8px);}
 .gallery-columns-1 .gallery-item:nth-of-type(1n),
 .gallery-columns-2 .gallery-item:nth-of-type(2n),
 .gallery-columns-3 .gallery-item:nth-of-type(3n),
@@ -201,17 +198,10 @@ Images and Gallery
 .gallery-columns-9 .gallery-item:nth-of-type(9n) {
 	margin-right: 0;
 }
-.gallery-columns-1.gallery-size-medium figure.gallery-item:nth-of-type(1n+1),
-.gallery-columns-1.gallery-size-thumbnail figure.gallery-item:nth-of-type(1n+1),
-.gallery-columns-2.gallery-size-thumbnail figure.gallery-item:nth-of-type(2n+1),
-.gallery-columns-3.gallery-size-thumbnail figure.gallery-item:nth-of-type(3n+1) {
+.gallery-columns-1.gallery-size-medium figure.gallery-item:nth-of-type(1n+1), .gallery-columns-1.gallery-size-thumbnail figure.gallery-item:nth-of-type(1n+1), .gallery-columns-2.gallery-size-thumbnail figure.gallery-item:nth-of-type(2n+1), .gallery-columns-3.gallery-size-thumbnail figure.gallery-item:nth-of-type(3n+1) {
 	clear: left;
 }
-.gallery-columns-7 .gallery-caption,
-.gallery-columns-8 .gallery-caption,
-.gallery-columns-9 .gallery-caption {
-	display: none;
-}
+.gallery-columns-7 .gallery-caption, .gallery-columns-8 .gallery-caption, .gallery-columns-9 .gallery-caption {display: none;}
 .gallery-item .gallery-caption{
 	background-color: rgba(0, 0, 0, 0.7);
 	-webkit-box-sizing: border-box;
@@ -242,8 +232,7 @@ Images and Gallery
 img.gallery-item {transition: transform 0.4s;}
 .gallery-item:hover .gallery-caption {
 	opacity: 1;
-	transition: transform 0.4s, opacity 0.1s;
-}
+	transition: transform 0.4s, opacity 0.1s;}
 .wp-caption .wp-caption-text { text-align:center; font-size: 0.87rem; font-style: italic; color: lighten($body-font-color,40%); }
 /******************************************************************
 Courses
@@ -261,15 +250,13 @@ Courses
 #main .course{
 	.course-lessons {
 		> entry  {margin-bottom: 0;}
-	}
-}
+	}}
 #main .lesson-course{
 	@include button;
 	a{
 		color:white;
 		em{color:white;}
-	}
-}
+	}}
 #main .course-container .sensei-course-meta {
 	margin:1em 0;
 	.course-price, p.course-price, span.course-price {
@@ -290,8 +277,7 @@ Courses
 		}
 		del {
 			font-size: 0.67em;
-		}
-}}
+		}}}
 #main .course header h2, #main .course-container header h2{padding-top: 0.1em;}
 #main .course-container .sensei-course-meta span.course-lesson-count{
 		padding-left: 0;
@@ -303,8 +289,7 @@ Courses
 			-webkit-font-smoothing: antialiased;
 			font: normal 16px/1 'Genericons';
 			vertical-align:text-bottom;
-		}
-	}
+		}}
 /* Individual Course Page is Lesson Archive Page */
 /******************************************************************
 Lessons
@@ -409,8 +394,7 @@ WooCommerce
 			left: 0;
 			font-family: $star;
 			}
-		}
-	}
+		}}
 	.woocommerce-product-rating {
 		line-height: 2em;
 		display: block;
@@ -506,7 +490,6 @@ WooCommerce
 	#payment ul{
 		list-style: none outside;
 	}
-
 }//.woocommerce .woocommerce-page
 /******************************************************************
 Post to Post Navigation
@@ -618,7 +601,14 @@ ol.pingbacklist li.pingback div.comment-body{}
 /******************************************************************
 Sidebar
 ******************************************************************/
-.widget-title{padding-top: 1rem;}
+#sidebar{
+	background:lightblue;
+	p, a{
+		font-size:0.85rem;
+	}
+	h3{font-size:1.1rem;}
+}
+.widget-title{padding-top: 1rem; text-transform: uppercase;}
 .widgets-list-layout .widgets-list-layout-blavatar{
 	max-width:emCalc(94px);
 	width:100%;
@@ -678,15 +668,20 @@ FOOTER
 	background:$bgcolorlight;
 	color:$body-font-color-grey;
 	padding: 0 0 2rem 0;
-	.widget-title{color:white;}
-}
+	.widget-title{
+		color:white;
+		font-size:1.1rem;
+	}
+	.textwidget{font-size:0.9rem;}}
 #footer_meta{
 	padding:1rem 0 0 0;
 	background: $bgcolordark;
 	color:$body-font-color-grey;
-}
-
+	p{
+		font-size:0.9rem;
+	}}
 footer ul.inline-list li a{
+	font-size:0.9rem;
 	background:none;
 	border:none;
 	padding:0;
@@ -696,8 +691,7 @@ footer ul.inline-list li a{
 	&:hover{
 		background:none;
 		color:lighten($body-font-color,20%);
-	}
-}
+	}}
 /******************************************************************
 MEDIA QUERIES
 ******************************************************************/

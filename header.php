@@ -9,7 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/modernizr/modernizr.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
-
 	<title>
 		<?php if (function_exists('is_tag') && is_tag()) {
 			single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
