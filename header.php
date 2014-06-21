@@ -54,7 +54,7 @@
 					<!-- content goes in here -->
 					<div class="contain-to-grid sticky hide-for-small">
 						<nav class="top-bar" data-topbar data-options="mobile_show_parent_link: true">
-							<ul class="title-area">
+							<ul class="title-area hide-for-large-up">
 								<li class="name">
 									<h1><a href="#"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></a></h1>
 								</li>

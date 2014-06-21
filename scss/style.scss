@@ -23,11 +23,11 @@ a[href]:after {
 	-webkit-font-smoothing: antialiased;
 	font: normal 16px/1 'Genericons';
 	vertical-align: top;}
-a[href*="quickneed"],
+a[href*="quickneed"], a[href*="wordpress"],  a[href*="katskinner"],
 a[href^="/"], a[href^="#"],
 a[href^="mailto:"],
 a[href^="javascript:"] {display: inline;}
-a[href*="quickneed"]:after,
+a[href*="quickneed"]:after, a[href*="wordpress"]:after, a[href*="katskinner"]:after
 a[href^="/"]:after, a[href^="#"]:after,
 a[href^="mailto:"]:after,
 a[href^="javascript:"]:after {content: none;}
@@ -107,6 +107,13 @@ table tbody{
 	font-size:1rem;
 	td.order-actions a{padding:0.5em 1em;}}
 /******************************************************************
+Navigation
+******************************************************************/
+.top-bar{
+	box-shadow: 0 0.5rem lighten($bgcolorlight, 40%);
+}
+
+/******************************************************************
 Entries & Posts
 ******************************************************************/
 /* Entries */
@@ -114,12 +121,8 @@ Entries & Posts
 	background: pink;
 	border: 1px solid $bgcolorlight;
 	img{@include thumb;}
-left: 0px;
-top: 0px;
 }
-.entry > article{
-	padding: 0 1em 2em;
-}
+
 /* Posts */
 .post{
 	margin-bottom: 1rem !important;
@@ -665,29 +668,37 @@ Sidebar
 FOOTER
 ******************************************************************/
 #footer_widgets{
-	background:$bgcolorlight;
+
+	background:$bgcolormedium;
 	color:$body-font-color-grey;
-	padding: 0 0 2rem 0;
+	padding: 0 0 0.5rem 0;
+	border-top: 15px solid lighten($bgcolorlight,40%);
+	border-bottom: 1px solid $bgcolorlight;
 	.widget-title{
 		color:white;
 		font-size:1.1rem;
 	}
-	.textwidget{font-size:0.9rem;}}
+	.textwidget, .textwidget p{font-size:0.85rem;}}
 #footer_meta{
 	padding:1rem 0 0 0;
 	background: $bgcolordark;
-	color:$body-font-color-grey;
+	color:darken($body-font-color-grey,20%);
 	p{
 		font-size:0.9rem;
-	}}
+	}
+	a{color:$body-font-color-grey;
+		&:hover{
+			color: lighten($body-font-color-grey, 20%);
+			}}
+}
 footer ul.inline-list li a{
 	font-size:0.9rem;
 	background:none;
 	border:none;
 	padding:0;
-	line-height: $paragraph-line-height;
-	margin:$paragraph-line-height;
-	color:$body-font-color-grey;
+	line-height: 0.4;
+	margin-bottom:$paragraph-line-height;
+	color:darken($body-font-color-grey,20%);
 	&:hover{
 		background:none;
 		color:lighten($body-font-color,20%);
