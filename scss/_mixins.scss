@@ -8,7 +8,8 @@ $woocommercefont: 	"WooCommerce";
 // $secondary-color: #e7e7e7; is grey
 // $alert-color: #f04124; is red
 // $success-color: #43AC6A; is green
-$bgcolorlight: 		#333;
+$bgcolormedium: 	#333;
+$bgcolorlight:		lighten($bgcolormedium,20%);
 $bgcolordark: 		#232323;
 $body-font-color-grey: #999;
 
