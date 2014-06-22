@@ -1,4 +1,4 @@
-<div id="sidebar" class="small-12 medium-4 large-3 xlarge-3 xxlarge-3 columns">
+<div id="sidebar" class="small-12 medium-3 large-3 xlarge-2 xxlarge-2 columns">
 	<aside id="sidebar" role="complementary">
 		<ul class="no-bullet">
 		<!-- Show Shopping Cart Globally-->

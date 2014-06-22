@@ -1,27 +1,45 @@
-<?php get_header(); ?>
-<!-- TO INSERT BREADCRUMBS HERE -->
-	<?php get_sidebar('left'); ?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Isotope Tutorial</title>
 
-	<!-- MAIN CONTENT WRAPPER -->
-	<section id="entries wrap index" class="small-12 medium-9 large-7 xlarge-8 xxlarge-8 columns ">
+		<link rel="stylesheet" href="isotope.css">
 
-		<div id="user_logreglost_alert">
-			<!-- check for and return message on success -->
-			<?php $register = $_GET['register']; $reset = $_GET['reset']; if ($register == true) { ?>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">
+		</script>
 
-			<span class="alert-box success">
-				<h3>Success!</h3>
-				<p>Check your email for the password and then return to log in.</p>
-			</span>
+		<script type="text/javascript" src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
 
-			<?php } elseif ($reset == true) { ?>
-			<span class="alert-box warning">
-				<h3>Success!</h3>
-				<p>Check your email to reset your password.</p>
-			</span>
-			<?php } ?>
+		<script type="text/javascript">
+
+		$(document).ready(function(){
+			var $container = $('#content');
+			$container.isotope({
+				filter: '*',
+				animationOptions: {
+				     duration: 750,
+				     easing: 'linear',
+				     queue: false,
+			 	}
+			});
+
+
+		});
+
+
+		</script>
+	</head>
+
+	<body>
+		<div id="header"></div>
+		<div id="nav">
+			<ul>
+				<li><a href="" data-filter="*">All</a></li>
+				<li><a href="" data-filter=".cat1">Category 1</a></li>
+				<li><a href="" data-filter=".cat2">Category 2</a></li>
+				<li><a href="" data-filter=".cat3">Category 3</a></li>
+			</ul>
 		</div>
-
 
 		<div id="content">
 			<div class="box cat1 cat3">
@@ -87,14 +105,5 @@
 
 
 		</div>
-
-
-
-
-	<div class="navigation">
-		<?php kriesi_pagination($pages = '', $range = 6); ?>
-	</div><!-- .navigation -->
-<?php wp_reset_query(); ?>
-		</section>
-		<?php get_sidebar('right'); ?>
-		<?php get_footer(); ?>
+	</body>
+</html>

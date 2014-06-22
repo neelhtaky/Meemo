@@ -1,4 +1,4 @@
-<div id="sidebar" class="hide-for-medium-down large-3 xlarge-2 xxlarge-2 columns">
+<div id="sidebar" class="hide-for-medium-down large-2 xlarge-2 xxlarge-2 columns">
 	<aside id="sidebar" role="complementary">
 		<ul class="no-bullet">
 
