@@ -116,13 +116,57 @@ Navigation
 /******************************************************************
 Entries & Posts
 ******************************************************************/
+
+
 /* Entries */
 .entry{
-	background: pink;
-	border: 1px solid $bgcolorlight;
 	img{@include thumb;}
 }
+.item {
 
+	padding: 15px;
+	float: left;
+	// width: 350px;
+	background: lime;
+	border: 1px solid #787878;
+	margin-bottom: 20px;
+ }
+.sticky{
+	padding: 15px;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 600px;
+	background: pink;
+	border: 1px solid #787878;
+	margin-bottom: 20px;
+}
+
+.isotope-item {
+    z-index: 2;
+}
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
 /* Posts */
 .post{
 	margin-bottom: 1rem !important;
@@ -244,8 +288,7 @@ Courses
 .course-container{border:none !important;}
 .course-container .archive-header h1{
 	font-size: $h1-font-size !important;
-	border: none !important;
-}
+	border: none !important;}
 #main .course  {
 	padding: 0 !important;
 	border-bottom: none !important;
@@ -315,14 +358,12 @@ Lessons
 	span.lesson-author{
 		&:before{content: '\f304';}}
 	span.lesson-complexity{
-		&:before{content: '\f425';}}
-}
+		&:before{content: '\f425';}}}
 #main .course .course-lessons .meter>span{padding: 3px 10px 0 0;}
 #main .course-lessons img.woo-image.thumbnail{
 	width:250px !important;
 	height:auto;
-	margin:0 1em 0.5em;
-}
+	margin:0 1em 0.5em;}
 #main .course .course-meta, #main .course-container .course-meta{display:inline-block;}
 #main .course .fix{clear: both;}
 /* Individual Lesson Page */
@@ -724,94 +765,51 @@ MEDIA QUERIES
 	}
 	ol.commentlist li.comment div.vcard {margin-bottom: 0;}
 	ol.commentlist li.comment div.commentmetadata {margin-top:0;}
+	.item{
+		width:100%;
+	}
 }
 // Medium screens min-width 641px,  max-width 1024px
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 	html{font-size: 0.95rem;}
+	.item{width:100%;}
 }
 // Large screens min-width 1025px, max-width 1440px
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {}
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	.item{
+		width:48%;
+		&:nth-child(odd){
+			margin-right: 2%;
+		}
+	}
+}
 // XLarge screens
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
 	html{font-size: 1rem;}
+	.item{
+		width:31%;
+		&:nth-child(2n+2){
+			margin-right: 2%;
+		}
+		&:nth-child(1n+1){
+			margin-right:2%;
+		}
+	}
 }
 // XXLarge screens min-width 1921px
-@media only screen and (min-width: 120.063em) {}
+@media only screen and (min-width: 120.063em) {
+	.item{
+		width:31%;
+		&:nth-child(2n+2){
+			margin-right: 2%;
+		}
+		&:nth-child(1n+1){
+			margin-right:2%;
+		}
+	}
+}
 /******************************************************************
 TEST CODE
 ******************************************************************/
 form ol#sense-quiz-list{margin-left:3em;}
 .quiz input.quiz-submit.reset, .lesson input.quiz-submit.reset{margin:1em 0;}
-
-
-
-
-
-
-.isotope-item{background:lime; }
-
-
-
-
-// =============================================================================
-// SCSS/SITE/STACKS/INTEGRITY/_ISOTOPE.SCSS
-// -----------------------------------------------------------------------------
-// Styles for Isotope elements. Class names can be changed to something more
-// semantic if desired.
-// =============================================================================
-
-// =============================================================================
-// TABLE OF CONTENTS
-// -----------------------------------------------------------------------------
-//   01. Isotope Filtering
-//   02. Isotope CSS3 Transitions
-//   03. Isotope Container
-//   04. Isotope Item
-//   05. Filters
-//   06. Loading Element
-// =============================================================================
-
-// Isotope Filtering
-// =============================================================================
-
-.isotope-item {
-  z-index: 2;
-}
-
-// Isotope Container
-// =============================================================================
-
-.x-iso-container {
-  margin: 0 -1em;
-  @include box-sizing(content-box);
-}
-
-
-
-// Isotope Item
-// =============================================================================
-
-.isotope-item {
-  margin: 0;
-  padding: 0 1em 2em;
-}
-
-.cols-1 .isotope-item {
-  width: 100%;
-}
-
-.cols-2 .isotope-item {
-  width: 49.95%;
-}
-
-.cols-3 .isotope-item {
-  width: 33.28%;
-}
-
-.cols-4 .isotope-item {
-  width: 33.28%;
-}
-
-
-
-

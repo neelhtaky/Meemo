@@ -1,9 +1,11 @@
 <?php get_header(); ?>
+
+<?php get_sidebar('left'); ?>
 <!-- TO INSERT BREADCRUMBS HERE -->
-	<?php get_sidebar('left'); ?>
+
 
 	<!-- MAIN CONTENT WRAPPER -->
-	<section id="entries wrap index" class="small-12 medium-9 large-7 xlarge-8 xxlarge-8 columns ">
+	<section id="entries wrap index" class="small-12 medium-9 large-7 xlarge-8 xxlarge-8 columns">
 
 		<div id="user_logreglost_alert">
 			<!-- check for and return message on success -->
@@ -23,70 +25,88 @@
 		</div>
 
 
-		<div id="content">
-			<div class="box cat1 cat3">
-				<h2 class="box-title">Lorem Ipsum</h2>
-				<div class="box-text">
-					Urna vut, eros aliquet sagittis augue? Augue adipiscing duis? Et a placerat, magna enim? Lacus sit. Nunc montes tristique purus auctor. Nascetur? Vut amet, phasellus pulvinar et odio. Ut aliquet integer sed enim ac amet nunc? Tincidunt sit, cum ridiculus, placerat cum, vut magna ridiculus ut phasellus ridiculus? Eu hac, mattis adipiscing, montes adipiscing urna montes rhoncus!
-				</div>
-			</div>
 
-			<div class="box cat1">
-				<h2 class="box-title">Lorem Ipsum</h2>
-				<div class="box-text">
-					Urna vut, eros aliquet sagittis augue? Augue adipiscing duis? Et a placerat, magna enim? Lacus sit. Nunc montes tristique purus auctor. Nascetur? Vut amet, phasellus pulvinar et odio. Ut aliquet integer sed enim ac amet nunc? Tincidunt sit, cum ridiculus, placerat cum, vut magna ridiculus ut phasellus ridiculus? Eu hac, mattis adipiscing, montes adipiscing urna montes rhoncus! Odio placerat pellentesque risus urna elit, odio phasellus, rhoncus, est ridiculus purus etiam, penatibus integer!
-				</div>
-			</div>
+<div id="container" class="js-isotope" data-isotope-options='{ "itemSelector": ".item" }'>
 
-			<div class="box cat2 cat3">
-				<h2 class="box-title">Lorem Ipsum</h2>
-				<div class="box-text">
-					Urna vut, eros aliquet sagittis augue? Augue adipiscing duis? Et a placerat, magna enim? Lacus sit. Nunc montes tristique purus auctor. Nascetur?
-				</div>
-			</div>
+ <?php if(is_home() && !is_paged()) {
 
-			<div class="box cat1">
-				<h2 class="box-title">Lorem Ipsum</h2>
-				<div class="box-text">
-					Amet dolor? Diam cras ac quis a ut, augue massa cursus natoque cursus in sociis rhoncus, scelerisque mus ac. Pellentesque odio rhoncus, aliquet tempor? Nisi cursus lorem tincidunt penatibus eu scelerisque! Scelerisque mid rhoncus turpis eros? Nunc rhoncus in turpis, mus, nec augue, odio, mid tempor aliquam, ultricies.
-				</div>
-			</div>
-			<div class="box cat2">
-				<h2 class="box-title">Lorem Ipsum</h2>
-				<div class="box-text">
-					Diam cras ac quis a ut, augue massa cursus natoque cursus in sociis rhoncus, scelerisque mus ac. Pellentesque odio rhoncus, aliquet tempor? Nisi cursus lorem tincidunt penatibus eu scelerisque! Scelerisque mid rhoncus turpis eros? Nunc rhoncus in turpis, mus, nec augue, odio, mid tempor aliquam, ultricies.
-				</div>
-			</div>
-			<div class="box cat2">
-				<h2 class="box-title">Lorem Ipsum</h2>
-				<div class="box-text">
-					Urna vut, eros aliquet sagittis augue? Augue adipiscing duis? Et a placerat, magna enim? Lacus sit. Nunc montes tristique purus auctor. Nascetur? Vut amet, phasellus pulvinar et odio. Pellentesque odio rhoncus, aliquet tempor? Nisi cursus lorem tincidunt penatibus eu scelerisque! Scelerisque mid rhoncus turpis eros? Nunc rhoncus in turpis, mus, nec augue, odio, mid tempor aliquam, ultricies.
-				</div>
-			</div>
+	$args1 =  array('post__in'=>get_option('sticky_posts'));
+	$stickyQuery = new WP_Query ($args1);
 
-			<div class="box cat2 cat3">
-				<h2 class="box-title">Lorem Ipsum</h2>
-				<div class="box-text">
-					Urna vut, eros aliquet sagittis augue? Augue adipiscing duis? Et a placerat, magna enim? Lacus sit.
-				</div>
-			</div>
+	if ($stickyQuery -> have_posts()) :
+		while ( $stickyQuery -> have_posts() ) :
+			?>
+		<?php
+			$stickyQuery -> the_post(); ?>
 
-			<div class="box cat1">
-				<h2 class="box-title">Lorem Ipsum</h2>
-				<div class="box-text">
-					Amet dolor? Diam cras ac quis a ut, augue massa cursus natoque cursus in sociis rhoncus, scelerisque mus ac. Pellentesque odio rhoncus, aliquet tempor? Nisi cursus lorem tincidunt penatibus eu scelerisque! Scelerisque mid rhoncus turpis eros? Nunc rhoncus in turpis, mus, nec augue, odio, mid tempor aliquam, ultricies.
-				</div>
-			</div>
+		<article <?php post_class("sticky entry item"); ?> id="post-<?php the_ID(); ?>" role="article">
+			<h2 class="post_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+			<?php if (has_post_thumbnail( )): ?>
+				<aside class="thumbnail">
+					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+				</aside>
+			<?php endif ?>
 
-			<div class="box cat2 cat3">
-				<h2 class="box-title">Lorem Ipsum</h2>
-				<div class="box-text">
-					Urna vut, eros aliquet sagittis augue? Augue adipiscing duis? Et a placerat, magna enim? Lacus sit. Nunc montes tristique purus auctor. Amet dolor? Diam cras ac quis a ut, augue massa cursus natoque cursus in sociis rhoncus, scelerisque mus ac. Pellentesque odio rhoncus, aliquet tempor? Nisi cursus lorem tincidunt penatibus eu scelerisque! Scelerisque mid rhoncus turpis eros? Nunc rhoncus in turpis, mus, nec augue, odio, mid tempor aliquam, ultricies.
-				</div>
-			</div>
+			<?php if( has_excerpt() ){
+				//if post has custom manual excerpt
+				the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
+			} else if(strpos($post->post_content, '<!--more-->')) {
+				//should break at more tag
+				the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
+			} else {
+				//display auto generated excerpt
+				the_excerpt();
+			}?>
+
+		</article>
+
+		<?php endwhile;
+	endif;
+	wp_reset_postdata(); ?>
+<?php
+} //end if is home and not paged
+
+$args2 = array(
+	'post__not_in' => get_option('sticky_posts'),
+	'paged' => get_query_var('paged')
+	);
+$normalQuery = new WP_Query ( $args2 );
+if ($normalQuery -> have_posts()) :
+	while ( $normalQuery -> have_posts() ) :
+		$normalQuery -> the_post(); ?>
+
+			<article <?php post_class("item entry"); ?> id="post-<?php the_ID(); ?>" role="article">
+				<h2 class="post_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				<?php if (has_post_thumbnail( )): ?>
+					<aside class="thumbnail">
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+					</aside>
+				<?php endif ?>
+							<?php if( has_excerpt() ){
+				//if post has custom manual excerpt
+				the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
+			} else if(strpos($post->post_content, '<!--more-->')) {
+				//should break at more tag
+				the_content('<div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
+			} else {
+				//display auto generated excerpt
+				the_excerpt();
+			}?>
+			</article>
+	<?php endwhile;
+endif;
+wp_reset_postdata();
+
+?>
+</div>
 
 
-		</div>
+
+
+
+
+
+
 
 
 
@@ -96,5 +116,5 @@
 	</div><!-- .navigation -->
 <?php wp_reset_query(); ?>
 		</section>
-		<?php get_sidebar('right'); ?>
+	<?php get_sidebar('right'); ?>
 		<?php get_footer(); ?>
