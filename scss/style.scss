@@ -115,7 +115,7 @@ table tbody{
 Navigation
 ******************************************************************/
 .top-bar{
-	box-shadow: 0 0.5rem lighten($bgcolorlight, 40%);}
+	box-shadow: 0 0.5rem $bgcolorlight;}
 
 /******************************************************************
 Entries & Posts
@@ -125,9 +125,9 @@ Entries & Posts
 	float: left;
 	// width: 350px;
 	background: white;
-	border: 1px solid lighten($bgcolorlight,40%);
+	border: 1px solid $bgcolorlight;
 	margin-bottom: 20px;
-	box-shadow: 1px 2px 9px lighten($bgcolorlight,50%);
+	box-shadow: 1px 2px 9px $bgcolorlight;
 	border-radius: 0.2rem;
 	.entry_content{
 		padding: 15px;
@@ -135,6 +135,15 @@ Entries & Posts
 	img{
 		width:100%;
 		border-top-right-radius: 0.2rem;
+	}
+	.read_more{
+		background:lighten($bgcolorlight,13%);
+		margin-top:2rem;
+		padding:0.5rem 1rem;
+		margin-bottom:0.5rem;
+		width:100%;
+		border:1px double $bgcolorlight;
+		text-align: center;
 	}
  }
 .sticky{
@@ -706,7 +715,7 @@ FOOTER
 	background:$bgcolormedium;
 	color:$body-font-color-grey;
 	padding: 0 0 0.5rem 0;
-	border-top: 15px solid lighten($bgcolorlight,40%);
+	border-top: 15px solid $bgcolorlight,40%;
 	border-bottom: 1px solid $bgcolorlight;
 	.widget-title{
 		color:white;

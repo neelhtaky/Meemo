@@ -25,8 +25,20 @@
 		</div>
 
 
+<script type="text/javascript">
 
-<div id="container" class="js-isotope" data-isotope-options='{ "itemSelector": ".item" }'>
+
+
+	// initialize Isotope after all images have loaded
+	var $container = $('#container').imagesLoaded( function() {
+	  $container.isotope({
+	    // options
+	    itemSelector: '.item'
+	  });
+});
+</script>
+
+<div id="container" class="js-isotope">
 
  <?php if(is_home() && !is_paged()) {
 
@@ -90,10 +102,10 @@ if ($normalQuery -> have_posts()) :
 				<h2 class="post_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 							<?php if( has_excerpt() ){
 				//if post has custom manual excerpt
-				the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
+				the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '"  rel="bookmark">Read More</a></div>');
 			} else if(strpos($post->post_content, '<!--more-->')) {
 				//should break at more tag
-				the_content('<div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
+				the_content('<div class="read_more"><a href="'. get_permalink($post->ID) . '"  rel="bookmark">Read More</a></div>');
 			} else {
 				//display auto generated excerpt
 				the_excerpt();

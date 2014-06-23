@@ -83,31 +83,5 @@
 		  </section>
 		</nav>
 
-		<!-- BRAND -->
-		<div class="brand">
-			<h1 class="title"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-		</div>
-
-		<!-- PRIMARY MENU -->
-		<nav class="top-bar contain-to-grid" data-topbar>
-
-		  <section class="top-bar-section">
-		  	<!-- Left Nav Section -->
-		    <ul class="left">
-		     <?php $options = array(
-				'theme_location' => 'nav_primary',
-				'container' => false,
-				'depth' => 2,
-				'items_wrap' => '<ul id="%1$s" class="left %2$s">%3$s</ul>',
-				'walker' => new GC_walker_nav_menu()
-				);
-				wp_nav_menu($options); ?>
-		    </ul>
-
-
-
-		  </section>
-		</nav>
-
 		<div id="container">
 			<div id="main" class="site-main row">

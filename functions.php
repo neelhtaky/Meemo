@@ -76,7 +76,7 @@ if ( '' == $text ) {
     $excerpt_word_count = 55; //This is WP default.
     $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
     /*** Change the excerpt ending.***/
-    $excerpt_end = '[... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>]'; //This is the WP default.
+    $excerpt_end = '[... <div class="read_more"><a href="'. get_permalink($post->ID) . '"  rel="bookmark">Read More</a></div>]'; //This is the WP default.
     $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
     $words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
         if ( count($words) > $excerpt_length ) {
@@ -94,7 +94,7 @@ add_filter( 'get_the_excerpt', 'bac_wp_strip_header_tags_keep_other_formatting',
  */
 function new_excerpt_more($more) {
   global $post;
-  return '... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>';
+  return '... <div class="read_more"><a href="'. get_permalink($post->ID) . '" rel="bookmark">Read More</a></div>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 /******************************************************************
