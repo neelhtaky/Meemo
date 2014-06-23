@@ -40,23 +40,27 @@
 			$stickyQuery -> the_post(); ?>
 
 		<article <?php post_class("sticky entry item"); ?> id="post-<?php the_ID(); ?>" role="article">
-			<h2 class="post_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+
 			<?php if (has_post_thumbnail( )): ?>
 				<aside class="thumbnail">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 				</aside>
 			<?php endif ?>
+			<div class="entry_content">
+				<h2 class="post_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+					<?php if( has_excerpt() ){
+						//if post has custom manual excerpt
+						the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
+					} else if(strpos($post->post_content, '<!--more-->')) {
+						//should break at more tag
+						the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
+					} else {
+						//display auto generated excerpt
+						the_excerpt();
+					}?>
+			</div>
 
-			<?php if( has_excerpt() ){
-				//if post has custom manual excerpt
-				the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
-			} else if(strpos($post->post_content, '<!--more-->')) {
-				//should break at more tag
-				the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
-			} else {
-				//display auto generated excerpt
-				the_excerpt();
-			}?>
+
 
 		</article>
 
@@ -76,12 +80,14 @@ if ($normalQuery -> have_posts()) :
 		$normalQuery -> the_post(); ?>
 
 			<article <?php post_class("item entry"); ?> id="post-<?php the_ID(); ?>" role="article">
-				<h2 class="post_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+
 				<?php if (has_post_thumbnail( )): ?>
 					<aside class="thumbnail">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 					</aside>
 				<?php endif ?>
+				<div class="entry_content">
+				<h2 class="post_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 							<?php if( has_excerpt() ){
 				//if post has custom manual excerpt
 				the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
@@ -92,6 +98,7 @@ if ($normalQuery -> have_posts()) :
 				//display auto generated excerpt
 				the_excerpt();
 			}?>
+			</div>
 			</article>
 	<?php endwhile;
 endif;

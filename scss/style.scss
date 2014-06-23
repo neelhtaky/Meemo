@@ -16,6 +16,11 @@ Tags: white, light, right-sidebar, flexible-width, custom-menu, editor-style, fe
 /******************************************************************
 Links
 ******************************************************************/
+body{
+	background-color: #ffffff;
+background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);
+
+}
 .screen-reader-text{display:none;}
 a[href]:after {
 	content: '\f442';
@@ -110,26 +115,27 @@ table tbody{
 Navigation
 ******************************************************************/
 .top-bar{
-	box-shadow: 0 0.5rem lighten($bgcolorlight, 40%);
-}
+	box-shadow: 0 0.5rem lighten($bgcolorlight, 40%);}
 
 /******************************************************************
 Entries & Posts
 ******************************************************************/
-
-
 /* Entries */
-.entry{
-	img{@include thumb;}
-}
 .item {
-
-	padding: 15px;
 	float: left;
 	// width: 350px;
-	background: lime;
-	border: 1px solid #787878;
+	background: white;
+	border: 1px solid lighten($bgcolorlight,40%);
 	margin-bottom: 20px;
+	box-shadow: 1px 2px 9px lighten($bgcolorlight,50%);
+	border-radius: 0.2rem;
+	.entry_content{
+		padding: 15px;
+	}
+	img{
+		width:100%;
+		border-top-right-radius: 0.2rem;
+	}
  }
 .sticky{
 	padding: 15px;
@@ -139,16 +145,13 @@ Entries & Posts
 	width: 600px;
 	background: pink;
 	border: 1px solid #787878;
-	margin-bottom: 20px;
-}
+	margin-bottom: 20px;}
 
 .isotope-item {
-    z-index: 2;
-}
+    z-index: 2;}
 .isotope-hidden.isotope-item {
     pointer-events: none;
-    z-index: 1;
-}
+    z-index: 1;}
 .isotope,
 .isotope .isotope-item {
   /* change duration value to whatever you like */
@@ -160,18 +163,15 @@ Entries & Posts
 .isotope {
     -webkit-transition-property: height, width;
     -moz-transition-property: height, width;
-    transition-property: height, width;
-}
+    transition-property: height, width;}
 .isotope .isotope-item {
     -webkit-transition-property: -webkit-transform, opacity;
     -moz-transition-property: -moz-transform, opacity;
-    transition-property: transform, opacity;
-}
+    transition-property: transform, opacity;}
 /* Posts */
 .post{
 	margin-bottom: 1rem !important;
-	.attachment-post-thumbnail{margin-bottom: 1em;}
-}
+	.attachment-post-thumbnail{margin-bottom: 1em;}}
 /******************************************************************
 Images and Gallery
 ******************************************************************/
@@ -545,12 +545,10 @@ Post to Post Navigation
 	font-weight: normal !important;
 	font-style: normal !important;
 	border:none !important;
-	&::before{border:none !important;};
-}
+	&::before{border:none !important;};}
 #jp-relatedposts h3.jp-relatedposts-headline em:before{border:none !important;}
 #post-entries{
-	.nav-prev, .nav-next{a{@include button; }}
-}
+	.nav-prev, .nav-next{a{@include button; }}}
 /******************************************************************
 Navigation
 ******************************************************************/
@@ -567,17 +565,14 @@ Navigation
 Comments
 ******************************************************************/
 /* chats */
-.chat-transcript { }
-.chat-row { }
+.chat-transcript {}
+.chat-row {}
 .chat-speaker-1{border-left: 5px solid black;
-	.chat-text{background: lighten(black,30%);}
-}
+	.chat-text{background: lighten(black,30%);}}
 .chat-speaker-2{border-left: 5px solid black;
-	.chat-text{background: lighten(black,7%);}
-}
+	.chat-text{background: lighten(black,7%);}}
 .chat-speaker-3{border-left: 5px solid black;
-	.chat-text{background: lighten(black,55%);}
-}
+	.chat-text{background: lighten(black,55%);}}
 .chat-author {
 	margin-top: 13px;
 	background: white;
@@ -646,7 +641,6 @@ ol.pingbacklist li.pingback div.comment-body{}
 Sidebar
 ******************************************************************/
 #sidebar{
-	background:lightblue;
 	p, a{
 		font-size:0.85rem;
 	}
