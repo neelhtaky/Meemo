@@ -36,30 +36,29 @@
 <body <?php body_class(''); ?>>
 <div id="top" class="hfeed site">
 	<header id="header" role="banner">
-
 		<!-- TOPBAR -->
-		<nav class="top-bar" data-topbar>
+		<div class="contain-to-grid">
+			<nav class="top-bar" data-topbar>
+				<section class="top-bar-section">
+				  	<!-- Left Nav Section -->
+				    <ul class="left">
+				     <?php $options = array(
+						'theme_location' => 'nav_primary',
+						'container' => false,
+						'depth' => 2,
+						'items_wrap' => '<ul id="%1$s" class="left %2$s">%3$s</ul>',
+						'walker' => new GC_walker_nav_menu()
+						);
+						wp_nav_menu($options); ?>
+				    </ul>
 
-		  <section class="top-bar-section">
-		  	<!-- Left Nav Section -->
-		    <ul class="left">
-		     <?php $options = array(
-				'theme_location' => 'nav_primary',
-				'container' => false,
-				'depth' => 2,
-				'items_wrap' => '<ul id="%1$s" class="left %2$s">%3$s</ul>',
-				'walker' => new GC_walker_nav_menu()
-				);
-				wp_nav_menu($options); ?>
-		    </ul>
-
-			<!-- Right Nav Section -->
-			<ul class="right">
-				<?php
-					global $current_user;
-					get_currentuserinfo();
-					$fname = $current_user->user_firstname;
-					$dname = $current_user->display_name;
+					<!-- Right Nav Section -->
+					<ul class="right">
+						<?php
+						global $current_user;
+						get_currentuserinfo();
+						$fname = $current_user->user_firstname;
+						$dname = $current_user->display_name;
 						if (is_user_logged_in()) {
 							if (!empty($fname)) {
 								 ?>
@@ -70,18 +69,19 @@
 								<li><a class="button" href="<?php echo get_page_link(568); ?>">Your Profile</a></li>
 							<?php }
 						} else { ?>
-							<li class="has-form">
-								<a href="#" data-reveal-id="user_logreglost" class="button">Login or Register</a>
+						<li class="has-form">
+							<a href="#" data-reveal-id="user_logreglost" class="button">Login or Register</a>
 
-								<?php get_template_part( 'login', 'modal' ); ?>
-							</li>
+							<?php get_template_part( 'login', 'modal' ); ?>
+						</li>
 						<?php } ?>
-					<li class="has-form show-for-large-up">
-						<?php get_search_form(); ?>
-					</li>
-
-		  </section>
-		</nav>
-
+						<li class="has-form show-for-large-up">
+							<?php get_search_form(); ?>
+						</li>
+					</ul>
+			  	</section>
+			</nav>
+		</div>
+		</header>
 		<div id="container">
 			<div id="main" class="site-main row">

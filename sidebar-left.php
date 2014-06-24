@@ -1,8 +1,8 @@
 <div id="sidebar" class="hide-for-medium-down large-2 xlarge-2 xxlarge-2 columns">
-	<aside id="sidebar" role="complementary">
+	<aside class="sidebar" role="complementary">
 		<ul class="no-bullet">
 
-			<div id="site_title">
+			<div class="site_title">
 				<?php if(is_home()){ ?>
 				<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 				<?php } else { ?>

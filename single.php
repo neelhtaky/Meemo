@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <?php get_sidebar('left'); ?>
-<section id="entries wrap" class="small-12 medium-8  large-6 xlarge-7  xxlarge-7 columns ">
-<?php
+<section id="entries wrap single" class="small-12 medium-9 large-7 xlarge-8 xxlarge-8 columns"><?php
 if (have_posts()) :
 	while (have_posts()) :
 		the_post(); ?>

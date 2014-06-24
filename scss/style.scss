@@ -111,24 +111,34 @@ address{
 table tbody{
 	font-size:1rem;
 	td.order-actions a{padding:0.5em 1em;}}
+
 /******************************************************************
 Navigation
 ******************************************************************/
-.top-bar{
-	box-shadow: 0 0.5rem $bgcolorlight;}
+#header .contain-to-grid{
+	border-bottom: 0.5rem solid $bgcolorlight;
+}
+// .top-bar{box-shadow: 0 0.5rem ;}
+.sidebar .side-nav ul{
+	list-style: none;
+	li{list-style: none;}
+}
 
 /******************************************************************
 Entries & Posts
 ******************************************************************/
-/* Entries */
-.item {
-	float: left;
-	// width: 350px;
+.item, .post, .sticky{
 	background: white;
 	border: 1px solid $bgcolorlight;
 	margin-bottom: 20px;
 	box-shadow: 1px 2px 9px $bgcolorlight;
 	border-radius: 0.2rem;
+}
+
+/* Entries */
+.item {
+	float: left;
+	// width: 350px;
 	.entry_content{
 		padding: 15px;
 	}
@@ -179,6 +189,7 @@ Entries & Posts
     transition-property: transform, opacity;}
 /* Posts */
 .post{
+	padding:1rem;
 	margin-bottom: 1rem !important;
 	.attachment-post-thumbnail{margin-bottom: 1em;}}
 /******************************************************************
@@ -569,7 +580,17 @@ Navigation
 	font-weight: normal;}
 #user_logreglost_alert{h1, h2, h3, h4, h5, h6, p, span{color:white;}}
 .right li > a{@include button;}
-.navigation{margin:0 auto;}
+.navigation{
+	background:lighten($bgcolorlight,10%);
+	border: 1px solid $bgcolorlight;
+	padding:0.5rem;
+	margin-bottom:1rem;
+	border-radius: 0.2rem;
+	ul{
+		margin-bottom:0px;
+	}
+	li a:hover{background:lighten($bgcolorlight,15%) !important;}
+}
 /******************************************************************
 Comments
 ******************************************************************/
@@ -650,10 +671,17 @@ ol.pingbacklist li.pingback div.comment-body{}
 Sidebar
 ******************************************************************/
 #sidebar{
-	p, a{
+	p, a, li{
 		font-size:0.85rem;
 	}
 	h3{font-size:1.1rem;}
+}
+.sidebar .site_title h1 a, .sidebar .site_title h4 a {
+	font-size: 2.2rem !important;
+	font-weight:bold;
+}
+.sidebar #description{
+	font-style:italic;
 }
 .widget-title{padding-top: 1rem; text-transform: uppercase;}
 .widgets-list-layout .widgets-list-layout-blavatar{

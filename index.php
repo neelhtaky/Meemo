@@ -1,21 +1,16 @@
 <?php get_header(); ?>
-
 <?php get_sidebar('left'); ?>
 <!-- TO INSERT BREADCRUMBS HERE -->
 
-
 	<!-- MAIN CONTENT WRAPPER -->
 	<section id="entries wrap index" class="small-12 medium-9 large-7 xlarge-8 xxlarge-8 columns">
-
 		<div id="user_logreglost_alert">
 			<!-- check for and return message on success -->
 			<?php $register = $_GET['register']; $reset = $_GET['reset']; if ($register == true) { ?>
-
 			<span class="alert-box success">
 				<h3>Success!</h3>
 				<p>Check your email for the password and then return to log in.</p>
 			</span>
-
 			<?php } elseif ($reset == true) { ?>
 			<span class="alert-box warning">
 				<h3>Success!</h3>
@@ -23,12 +18,7 @@
 			</span>
 			<?php } ?>
 		</div>
-
-
 <script type="text/javascript">
-
-
-
 	// initialize Isotope after all images have loaded
 	var $container = $('#container').imagesLoaded( function() {
 	  $container.isotope({
@@ -130,9 +120,10 @@ wp_reset_postdata();
 
 
 
-	<div class="navigation">
+	<div class="navigation small-12 medium-12 large-12 xlarge-12 xxlarge-12 small-centered columns end">
 		<?php kriesi_pagination($pages = '', $range = 6); ?>
 	</div><!-- .navigation -->
+
 <?php wp_reset_query(); ?>
 		</section>
 	<?php get_sidebar('right'); ?>
