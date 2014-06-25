@@ -14,86 +14,110 @@ Tags: white, light, right-sidebar, flexible-width, custom-menu, editor-style, fe
 @import "woocommerce";
 
 /******************************************************************
-Links
+Icons
 ******************************************************************/
-body{
-	background-color: #ffffff;
-	background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);}
-.screen-reader-text{display:none;}
+.author, .course-author a, .written_by, a[rel="category tag"].tags, .tags, span.tagged_as, span.course-category, span.posted_in, a.comments-link, time, .widget_categories .children li, .page_item .children li{
+	&:before{
+		-webkit-font-smoothing: antialiased;
+		font: normal 12px/1 'FontAwesome';
+		padding-right:0.3rem;
+		vertical-align:text-middle;
+	}
+}
 a[href]:after {
-	content: '\f442';
+	content: '\f08e';
 	display: inline-block;
+	vertical-align: top;
 	-webkit-font-smoothing: antialiased;
-	font: normal 16px/1 'Genericons';
-	vertical-align: top;}
-a[href*="quickneed"], a[href*="wordpress"], a[href*="katskinner"],
-a[href^="/"], a[href^="#"],
-a[href^="mailto:"],
-a[href^="javascript:"] {display: inline;}
-a[href*="quickneed"]:after, a[href*="wordpress"]:after,  a[href*="katskinner"]:after,
-a[href^="/"]:after, a[href^="#"]:after,
-a[href^="mailto:"]:after,
-a[href^="javascript:"]:after {content: none;}
-input[type="submit"], input[type="button"]{@include button;}
-.author, .course-author a{
+		font: normal 9px/1 'FontAwesome';}
+
+#main .course-container .lesson .lesson-meta {
+	margin:1em 0;
+	span{
+		display: inline;
+		font-weight: normal;
+		font-style: italic;
+		&:before{
+			webkit-font-smoothing: antialiased;
+			font: normal 12px/1 'FontAwesome';
+			vertical-align:text-middle;
+			padding-right:0.3rem;
+		}
+	}
+	 span.lesson-length{
+		&:before{content: '\f017';}}
+	span.lesson-author{
+		&:before{content: '\f182';}}
+	span.lesson-complexity{
+		&:before{content: '\f0e4';}}}
+#main .course-container .sensei-course-meta span.course-lesson-count{
+		display: inline;
+		font-weight: normal;
+		font-style: italic;
+		&:before{
+			color:$bgcolormedium;
+			padding-right:0.3rem;
+			content: '\f15c';
+			-webkit-font-smoothing: antialiased;
+			font: normal 12px/1 'FontAwesome';
+			vertical-align:text-middle;
+		}}
+.author, .course-author a, .written_by{
 	display: inline;
 	font-weight: normal;
 	font-style: italic;
 	&::before{
-		content: '\f304';
-		-webkit-font-smoothing: antialiased;
-		font: normal 16px/1 'Genericons';
-		vertical-align:text-bottom;
+		content: '\f182';
 	}}
 a[rel="category tag"].tags, .tags, span.tagged_as{
 	display: inline;
 	&::before{
 		color: $body-font-color;
-		content: '\f302';
+		content: '\f02c';
 		display: inline-block;
-		-webkit-font-smoothing: antialiased;
-		font: normal 16px/1 'Genericons';
-		vertical-align:text-bottom;}}
+		}}
 span.course-category, span.posted_in{
 	&::before{
 		color: $body-font-color;
-		content: '\f301';
+		content: '\f07c';
 		display: inline-block;
-		-webkit-font-smoothing: antialiased;
-		font: normal 16px/1 'Genericons';
-		vertical-align:text-bottom;}
+		}
 }
 a.comments-link{
 	text-decoration: none;
 	color: $body-font-color;
 	&:before{
 		color: $body-font-color;
-		content: '\f300';
+		content: '\f086';
 		display: inline-block;
-		-webkit-font-smoothing: antialiased;
-		font: normal 16px/1 'Genericons';
-		vertical-align: top;
 	}}
 time {
 	display: inline;
 	font-weight: normal;
 	font-style: italic;
 	&:before{
-		content: '\f303';
-		-webkit-font-smoothing: antialiased;
-		font: normal 16px/1 'Genericons';
-		vertical-align:text-bottom;
+		content: '\f017';
 	}}
-.written_by{
-	display: inline;
-	font-weight: normal;
-	font-style: italic;
-	&:before{
-		content: '\f304';
-		-webkit-font-smoothing: antialiased;
-		font: normal 16px/1 'Genericons';
-		vertical-align:text-bottom;
-	}}
+
+	.widget_categories .children li, .page_item .children li{
+	&::before{
+		content: '\f054';
+		padding-right:2px;
+		color:lighten($bgcolormedium,50%);
+	}
+}
+/******************************************************************
+Links
+******************************************************************/
+body{
+	background-color: #ffffff;
+	background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);}
+.screen-reader-text{display:none;}
+
+a[href*="quickneed"], a[href*="wordpress"], a[href*="katskinner"], a[href^="/"], a[href^="#"], a[href^="mailto:"], a[href^="javascript:"] {display: inline;}
+a[href*="quickneed"]:after, a[href*="wordpress"]:after,  a[href*="katskinner"]:after, a[href^="/"]:after, a[href^="#"]:after, a[href^="mailto:"]:after, a[href^="javascript:"]:after {content: none;}
+input[type="submit"], input[type="button"]{@include button;}
+
 #main{padding-top: emCalc(10px);}
 #postauthordesc{display:inline; }
 .postmetadata{margin-top: emCalc(5px);}
@@ -132,7 +156,6 @@ Entries & Posts
 /* Entries */
 .item {
 	float: left;
-	// width: 350px;
 	.entry_content{
 		padding: 15px;
 	}
@@ -167,7 +190,6 @@ Entries & Posts
 .isotope,
 .isotope .isotope-item {
   /* change duration value to whatever you like */
-
     -webkit-transition-duration: 0.8s;
     -moz-transition-duration: 0.8s;
     transition-duration: 0.8s;}
@@ -334,40 +356,13 @@ Courses
 			font-size: 0.67em;
 		}}}
 #main .course header h2, #main .course-container header h2{padding-top: 0.1em;}
-#main .course-container .sensei-course-meta span.course-lesson-count{
-		padding-left: 0;
-		display: inline;
-		font-weight: normal;
-		font-style: italic;
-		&:before{
-			content: '\f100';
-			-webkit-font-smoothing: antialiased;
-			font: normal 16px/1 'Genericons';
-			vertical-align:text-bottom;
-		}}
+
 /* Individual Course Page is Lesson Archive Page */
 /******************************************************************
 Lessons
 ******************************************************************/
 /* Lesson Archive Page */
-#main .course .course-lessons .lesson .lesson-meta {
-	margin:1em 0;
-	span{
-		display: inline;
-		font-weight: normal;
-		font-style: italic;
-		&:before{
-			webkit-font-smoothing: antialiased;
-			font: normal 16px/1 'Genericons';
-			vertical-align:text-bottom;
-		}
-	}
-	 span.lesson-length{
-		&:before{content: '\f303';}}
-	span.lesson-author{
-		&:before{content: '\f304';}}
-	span.lesson-complexity{
-		&:before{content: '\f425';}}}
+
 #main .course .course-lessons .meter>span{padding: 3px 10px 0 0;}
 #main .course-lessons img.woo-image.thumbnail{
 	width:250px !important;
@@ -386,7 +381,6 @@ WooCommerce
 	margin-top:4em;
 	}
 	#products{
-
 		.star-rating{
 			margin:0 auto;
 			margin-bottom: 0.25rem;
@@ -671,14 +665,11 @@ Sidebar
 .sidebar #description{font-style:italic;}
 /* Jetpack Styles */
 .widget-title{padding-top: 1rem; text-transform: uppercase;}
-.widget_categories .children li, .page_item .children li{
-	&::before{
-		content: '\f054';
-		padding-right:2px;
-		-webkit-font-smoothing: antialiased;
-		font: normal 12px/1 'FontAwesome';
-		vertical-align:text-bottom;
-		color:lighten($bgcolormedium,50%);
+.widget_facebook_likebox{
+	.widget-title a{
+		color: $body-font-color;
+		font-size:1.1rem !important;
+		&:after{content:none;}
 	}
 }
 
