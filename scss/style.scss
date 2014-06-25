@@ -18,9 +18,7 @@ Links
 ******************************************************************/
 body{
 	background-color: #ffffff;
-background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);
-
-}
+	background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);}
 .screen-reader-text{display:none;}
 a[href]:after {
 	content: '\f442';
@@ -116,13 +114,11 @@ table tbody{
 Navigation
 ******************************************************************/
 #header .contain-to-grid{
-	border-bottom: 0.5rem solid $bgcolorlight;
-}
+	border-bottom: 0.5rem solid $bgcolorlight;}
 // .top-bar{box-shadow: 0 0.5rem ;}
 .sidebar .side-nav ul{
 	list-style: none;
-	li{list-style: none;}
-}
+	li{list-style: none;}}
 
 /******************************************************************
 Entries & Posts
@@ -132,9 +128,7 @@ Entries & Posts
 	border: 1px solid $bgcolorlight;
 	margin-bottom: 20px;
 	box-shadow: 1px 2px 9px $bgcolorlight;
-	border-radius: 0.2rem;
-}
-
+	border-radius: 0.2rem;}
 /* Entries */
 .item {
 	float: left;
@@ -165,7 +159,6 @@ Entries & Posts
 	background: pink;
 	border: 1px solid #787878;
 	margin-bottom: 20px;}
-
 .isotope-item {
     z-index: 2;}
 .isotope-hidden.isotope-item {
@@ -177,8 +170,7 @@ Entries & Posts
 
     -webkit-transition-duration: 0.8s;
     -moz-transition-duration: 0.8s;
-    transition-duration: 0.8s;
-}
+    transition-duration: 0.8s;}
 .isotope {
     -webkit-transition-property: height, width;
     -moz-transition-property: height, width;
@@ -263,11 +255,9 @@ Images and Gallery
 .gallery-columns-7 .gallery-item:nth-of-type(7n),
 .gallery-columns-8 .gallery-item:nth-of-type(8n),
 .gallery-columns-9 .gallery-item:nth-of-type(9n) {
-	margin-right: 0;
-}
+	margin-right: 0;}
 .gallery-columns-1.gallery-size-medium figure.gallery-item:nth-of-type(1n+1), .gallery-columns-1.gallery-size-thumbnail figure.gallery-item:nth-of-type(1n+1), .gallery-columns-2.gallery-size-thumbnail figure.gallery-item:nth-of-type(2n+1), .gallery-columns-3.gallery-size-thumbnail figure.gallery-item:nth-of-type(3n+1) {
-	clear: left;
-}
+	clear: left;}
 .gallery-columns-7 .gallery-caption, .gallery-columns-8 .gallery-caption, .gallery-columns-9 .gallery-caption {display: none;}
 .gallery-item .gallery-caption{
 	background-color: rgba(0, 0, 0, 0.7);
@@ -294,8 +284,7 @@ Images and Gallery
 		position: absolute;
 		left: 0;
 		width: 100%;
-	}
-}
+	}}
 img.gallery-item {transition: transform 0.4s;}
 .gallery-item:hover .gallery-caption {
 	opacity: 1;
@@ -678,17 +667,28 @@ Sidebar
 }
 .sidebar .site_title h1 a, .sidebar .site_title h4 a {
 	font-size: 2.2rem !important;
-	font-weight:bold;
-}
-.sidebar #description{
-	font-style:italic;
-}
+	font-weight:bold;}
+.sidebar #description{font-style:italic;}
+/* Jetpack Styles */
 .widget-title{padding-top: 1rem; text-transform: uppercase;}
+.widget_categories .children li, .page_item .children li{
+	&::before{
+		content: '\f054';
+		padding-right:2px;
+		-webkit-font-smoothing: antialiased;
+		font: normal 12px/1 'FontAwesome';
+		vertical-align:text-bottom;
+		color:lighten($bgcolormedium,50%);
+	}
+}
+
+
 .widgets-list-layout .widgets-list-layout-blavatar{
 	max-width:emCalc(94px);
 	width:100%;
 	margin:emCalc(10px 10px 0 0);}
 .widgets-list-layout .widgets-list-layout-links{width:75% !important;padding-top:5px;}
+
 .jetpack_subscription_widget h3 label{
 	font-size: inherit;
 	line-height: inherit;
@@ -838,6 +838,7 @@ MEDIA QUERIES
 			margin-right:2%;
 		}
 	}
+	.widget_archive ul li{@include grid-column(6);}
 }
 /******************************************************************
 TEST CODE
