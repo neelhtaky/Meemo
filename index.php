@@ -85,19 +85,19 @@ if ($normalQuery -> have_posts()) :
 					</aside>
 				<?php endif ?>
 				<div class="entry_content">
-				<h2 class="post_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+					<h2 class="post_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 							<?php if( has_excerpt() ){
-				//if post has custom manual excerpt
-				the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '"  rel="bookmark">Read More</a></div>');
-			} else if(strpos($post->post_content, '<!--more-->')) {
-				//should break at more tag
-				the_content('<div class="read_more"><a href="'. get_permalink($post->ID) . '"  rel="bookmark">Read More</a></div>');
-			} else {
-				//display auto generated excerpt
-				the_excerpt();
-			}?>
+					//if post has custom manual excerpt
+					the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '"  rel="bookmark">Read More</a></div>');
+				} else if(strpos($post->post_content, '<!--more-->')) {
+					//should break at more tag
+					the_content('<div class="read_more"><a href="'. get_permalink($post->ID) . '"  rel="bookmark">Read More</a></div>');
+				} else {
+					//display auto generated excerpt
+					the_excerpt();
+				}?>
 			</div>
-			</article>
+		</article>
 	<?php endwhile;
 endif;
 wp_reset_postdata();

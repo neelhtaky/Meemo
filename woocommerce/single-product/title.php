@@ -11,5 +11,4 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 ?>
 <!-- wrapper for excerpt -->
-<div class="small-12 medium-6 large-6 xlarge-8 xxlarge-8 columns">
 	<h1 itemprop="name" class="product_title "><?php the_title(); ?></h1>

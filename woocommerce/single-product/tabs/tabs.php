@@ -36,5 +36,8 @@ if ( ! empty( $tabs ) ) : ?>
 		<?php $tabcount++; ?>
 		<?php endforeach; ?>
 		</div>
+	</div>
+</div>
 
 <?php endif; ?>
+</div>

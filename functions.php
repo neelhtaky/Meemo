@@ -334,6 +334,29 @@ function custom_woocommerce_product_add_to_cart_text() {
       return __( 'Read more', 'woocommerce' );
   }
 }
+/**
+ * Custom Add To Cart Messages
+ * Add this to your theme functions.php file
+ **/
+add_filter( 'woocommerce_add_to_cart_message', 'custom_add_to_cart_message' );
+function custom_add_to_cart_message() {
+  global $woocommerce;
+
+  // Output success messages
+  if (get_option('woocommerce_cart_redirect_after_add')=='yes') :
+
+    $return_to  = get_permalink(woocommerce_get_page_id('shop'));
+
+    $message  = sprintf('<a href="%s" class="button">%s</a> %s', $return_to, __('Continue Shopping &rarr;', 'woocommerce'), __('Product successfully added to your cart.', 'woocommerce') );
+
+  else :
+
+    $message  = sprintf('<a href="%s" class="button">%s</a> %s', get_permalink(woocommerce_get_page_id('cart')), __('View Cart &rarr;', 'woocommerce'), __('Product successfully added to your cart.', 'woocommerce') );
+
+  endif;
+
+    return $message;
+}
 /******************************************************************
 Better Pagination Archive Support
 ******************************************************************/
