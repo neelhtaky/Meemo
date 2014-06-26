@@ -4,7 +4,7 @@ Theme URI: www.quickneed.com
 Author: Kat Skinner
 Author URI: http://katskinner.com
 Description: A simple theme with a focus on content.
-Version: 1.1
+Version: 1.5
 License: Attribution-NonCommercial-NoDerivs. CC BY-NC-ND.
 License URI: http://creativecommons.org/licenses/
 Tags: white, light, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, post-formats
@@ -16,12 +16,13 @@ Tags: white, light, right-sidebar, flexible-width, custom-menu, editor-style, fe
 /******************************************************************
 Icons
 ******************************************************************/
-.author, .course-author a, .written_by, a[rel="category tag"].tags, .tags, span.tagged_as, span.course-category, span.posted_in, a.comments-link, time, .widget_categories .children li, .page_item .children li{
-	&:before{
+.author, .course-author a, .written_by, a[rel="category tag"].tags, .tags, span.tagged_as, span.course-category, span.posted_in, a.comments-link, time, .widget_categories .children li, .page_item .children li, .widget_rss .widget-title, .widget_sensei_lesson_component .lesson-course a, .widget_sensei_category_courses .course-lesson-count, .widget_sensei_course_component .course-lesson-count, .widget_rss_links ul li a, .widget_nav_menu .sub-menu li, .widget_jetpack_readmill_widget h3, .widget_shopping_cart_content .empty {
+	&:before {
 		-webkit-font-smoothing: antialiased;
 		font: normal 12px/1 'FontAwesome';
 		padding-right:0.3rem;
 		vertical-align:text-middle;
+		color:$bgcolormedium;
 	}
 }
 a[href]:after {
@@ -30,7 +31,6 @@ a[href]:after {
 	vertical-align: top;
 	-webkit-font-smoothing: antialiased;
 		font: normal 9px/1 'FontAwesome';}
-
 #main .course-container .lesson .lesson-meta {
 	margin:1em 0;
 	span{
@@ -50,7 +50,7 @@ a[href]:after {
 		&:before{content: '\f182';}}
 	span.lesson-complexity{
 		&:before{content: '\f0e4';}}}
-#main .course-container .sensei-course-meta span.course-lesson-count{
+#main .course-container .sensei-course-meta span.course-lesson-count, .widget_sensei_category_courses .course-lesson-count, .widget_sensei_course_component .course-lesson-count{
 		display: inline;
 		font-weight: normal;
 		font-style: italic;
@@ -69,6 +69,16 @@ a[href]:after {
 	&::before{
 		content: '\f182';
 	}}
+.widget_rss .widget-title{
+	&:before{
+	content:'\f143';}
+}
+.widget_rss_links ul{
+	li a{
+		&:before{
+			content:'\f143';
+		}
+	}}
 a[rel="category tag"].tags, .tags, span.tagged_as{
 	display: inline;
 	&::before{
@@ -76,13 +86,12 @@ a[rel="category tag"].tags, .tags, span.tagged_as{
 		content: '\f02c';
 		display: inline-block;
 		}}
-span.course-category, span.posted_in{
+span.course-category, span.posted_in, .widget_sensei_lesson_component .lesson-course a{
 	&::before{
 		color: $body-font-color;
 		content: '\f07c';
 		display: inline-block;
-		}
-}
+		}}
 a.comments-link{
 	text-decoration: none;
 	color: $body-font-color;
@@ -99,13 +108,17 @@ time {
 		content: '\f017';
 	}}
 
-	.widget_categories .children li, .page_item .children li{
+	.widget_categories .children li, .page_item .children li, .widget_nav_menu .sub-menu li, .widget_sensei_course_categories ul li ul{
 	&::before{
 		content: '\f054';
 		padding-right:2px;
 		color:lighten($bgcolormedium,50%);
-	}
-}
+	}}
+.widget_jetpack_readmill_widget h3:before{
+	content: '\f02d';}
+.widget_shopping_cart_content .empty:before{
+	content:'\f071';}
+
 /******************************************************************
 Links
 ******************************************************************/
@@ -329,26 +342,25 @@ Courses
 		> entry  {margin-bottom: 0;}
 	}}
 #main .lesson-course{
-	@include button;
-	a{
-		color:white;
-		em{color:white;}
+
+	a:after{
+		content:none;
+
+		em:after{}
 	}}
-#main .course-container .sensei-course-meta {
-	margin:1em 0;
+#main .course-container {
+
+	.sensei-course-meta{margin-bottom:0.5rem;}
+	.course{margin-bottom:4rem;}
 	.course-price, p.course-price, span.course-price {
-		width:8em;
+		margin:0.5rem 0.5rem 0 0;
 		font-weight: normal !important;
-		font-size: 1.2rem;
-		position: relative;
+		font-size: 1.2rem !important;
 		text-align: center;
-		margin: 0.5em 0 0;
-		overflow: hidden;
-		color:white;
+		color:white !important;
 		padding:0.25em 0.5em;
 		background:$primary-color;
 		ins {
-
 			text-decoration: none;
 			font-weight:bold;
 		}
@@ -358,6 +370,7 @@ Courses
 #main .course header h2, #main .course-container header h2{padding-top: 0.1em;}
 
 /* Individual Course Page is Lesson Archive Page */
+#main .course {padding:1rem !important;}
 /******************************************************************
 Lessons
 ******************************************************************/
@@ -537,6 +550,13 @@ WooCommerce
 	#payment ul{
 		list-style: none outside;
 	}
+	.addresses{
+		@include grid-row;
+		.col-1, .col-2{
+			// @include grid-column(6);
+		}
+	}
+
 }//.woocommerce .woocommerce-page
 /******************************************************************
 Post to Post Navigation
@@ -665,13 +685,58 @@ Sidebar
 .sidebar #description{font-style:italic;}
 /* Jetpack Styles */
 .widget-title{padding-top: 1rem; text-transform: uppercase;}
-.widget_facebook_likebox{
+.widget_facebook_likebox, .widget_rss{
 	.widget-title a{
 		color: $body-font-color;
 		font-size:1.1rem !important;
 		&:after{content:none;}
 	}
 }
+.widget_rss .widget-title a img{display:none;}
+.product_list_widget {
+	margin-left:0px !important;
+	padding-left:0px;
+	li{
+		a{font-weight: normal;}
+		del{
+			display:block;
+			color:$alert-color;
+			}
+		ins{text-decoration: none;}
+		img{
+			width:emCalc(94px) !important;
+			height:auto;
+			float: left;
+			margin-right: emCalc(10px);
+		}
+	}
+}
+.widget_sensei_lesson_component {
+	ul{margin-left:0 !important;}
+	li{
+		margin-bottom: emCalc(15px);
+		img{
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+	.lesson-course{padding-left:1rem;}
+	.my-account a{
+		padding-top:1rem;
+		@include grid-column(12);
+	}
+}
+.widget_sensei_category_courses ul, .widget_sensei_course_categories ul, .widget_rss_links ul, .widget_nav_menu .menu, .widget_sensei_course_component ul{margin-left: 0 !important;}
+.widget_sensei_course_component li{
+	margin-bottom:1rem;
+	.course-price{
+		del{
+			display:block;
+			color:$alert-color;
+		}
+	}
+}
+
 
 
 .widgets-list-layout .widgets-list-layout-blavatar{
@@ -691,20 +756,8 @@ Sidebar
 	@include form-element;
 		&::hover{@include form-select;}}
 .jetpack_subscription_widget input[type="submit"], .widget_product_search input[type="submit"] {@include button;}
-.product_list_widget li {
-	a{font-weight: normal;}
-	img{
-		width:emCalc(94px) !important;
-		height:auto;
-		float: left;
-		margin-right: emCalc(10px);
-	}}
-.widget_sensei_lesson_component li{
-	margin-bottom: emCalc(15px);
-	img{
-		padding-bottom: 0;
-		margin-bottom: 0;
-		}}
+
+
 .widget_sensei_lesson_component img{
 	width:emCalc(94px);
 	height:auto;

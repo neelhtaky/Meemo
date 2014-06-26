@@ -8,5 +8,14 @@
  */
 ?>
 
-<div id="products" class="js-masonry products_archive" data-masonry-options='{
-				"itemSelector": ".product" }' >
+<script type="text/javascript">
+	// initialize Isotope after all images have loaded
+	var $container = $('#products').imagesLoaded( function() {
+	  $container.isotope({
+	    // options
+	    itemSelector: '.product'
+	  });
+});
+</script>
+<div id="products">
+

@@ -80,7 +80,7 @@ if ( 0 < $total_lessons ) {
     	    $user_info = get_userdata( absint( $lesson_item->post_author ) );
     	    if ( '' != $lesson_item->post_excerpt ) { $lesson_excerpt = $lesson_item->post_excerpt; } else { $lesson_excerpt = $lesson_item->post_content; }
 
-    	    $html .= '<article class="' . esc_attr( join( ' ', get_post_class( array( 'course', 'post' ), $lesson_item->ID ) ) ) . '">';
+    	    $html .= '<article class="' . esc_attr( join( ' ', get_post_class( array( 'course' ), $lesson_item->ID ) ) ) . '">';
 
     			$html .= '<header>';
 

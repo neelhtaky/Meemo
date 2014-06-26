@@ -333,9 +333,6 @@ function custom_woocommerce_product_add_to_cart_text() {
     default:
       return __( 'Read more', 'woocommerce' );
   }
-
-
-
 }
 /******************************************************************
 Better Pagination Archive Support

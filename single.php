@@ -1,10 +1,10 @@
-<?php get_header(); ?>
-<?php get_sidebar('left'); ?>
-<section id="entries wrap single" class="small-12 medium-9 large-7 xlarge-8 xxlarge-8 columns"><?php
+<?php get_template_part('partials/content', 'container'); ?>
+
+<?php
 if (have_posts()) :
 	while (have_posts()) :
 		the_post(); ?>
-	<article <?php post_class("clear post small-12 medium-12 xlarge-12 xxlarge-12 columns"); ?> id="post-<?php the_ID(); ?>" role="article">
+	<article <?php post_class("clear post"); ?> id="post-<?php the_ID(); ?>" role="article">
 		<?php if ( is_singular() || is_single() || is_404() || is_archive() ) { ?>
 			<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 		<?php } else { ?>

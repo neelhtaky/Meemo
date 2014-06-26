@@ -1,9 +1,5 @@
-<?php get_header(); ?>
-<?php get_sidebar('left'); ?>
-<!-- TO INSERT BREADCRUMBS HERE -->
+<?php get_template_part('partials/content', 'container'); ?>
 
-	<!-- MAIN CONTENT WRAPPER -->
-	<section id="entries wrap index" class="small-12 medium-9 large-7 xlarge-8 xxlarge-8 columns">
 		<div id="user_logreglost_alert">
 			<!-- check for and return message on success -->
 			<?php $register = $_GET['register']; $reset = $_GET['reset']; if ($register == true) { ?>
@@ -127,4 +123,4 @@ wp_reset_postdata();
 <?php wp_reset_query(); ?>
 		</section>
 	<?php get_sidebar('right'); ?>
-		<?php get_footer(); ?>
+<?php get_footer(); ?>

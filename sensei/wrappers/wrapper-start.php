@@ -27,7 +27,7 @@ switch( $template ) {
 	// Default
 	default :
 		get_sidebar('left');
-		echo '<section id="entries wrap index" class="small-12 medium-8 large-6 xlarge-7 xxlarge-7 columns ">';
+		echo '<section id="entries wrap index" class="small-12 medium-9 large-7 xlarge-8 xxlarge-8 columns">';
 		break;
 }
 ?>

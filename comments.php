@@ -13,6 +13,18 @@ die ('Please do not load this page directly. Thanks!'); ?>
         <h3 id="comments"><?php comments_number('There Are No Responses... Yet.', 'There Is One Response So Far', 'There Are % Responses So Far' );?>. Why Not Leave Yours?</h3>
     </div>
 
+    <?php
+if ($prev_link || $next_link) {
+  echo '<ul class="navigation">';
+  if ($prev_link){
+    echo '<li>'.$prev_link .'</li>';
+  }
+  if ($next_link){
+    echo '<li>'.$next_link .'</li>';
+  }
+}
+     ?>
+
     <div class="navigation">
         <div class="alignleft"><?php previous_comments_link() ?></div>
         <div class="alignright"><?php next_comments_link() ?></div>
