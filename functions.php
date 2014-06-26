@@ -282,7 +282,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 add_filter('loop_shop_columns', 'loop_columns');
 if (!function_exists('loop_columns')) {
   function loop_columns() {
-    return 4; // 3 products per row
+    return 3; // 3 products per row
   }}
 //
 remove_action('woocommerce_pagination', 'woocommerce_pagination', 10);

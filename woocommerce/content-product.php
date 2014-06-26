@@ -38,7 +38,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 	$classes[] = 'last';
 ?>
 	<?php
-$classes[] = 'small-6 medium-4 large-4 xlarge-3 xxlarge-3 columns';
+$classes[] = '';
 	?>
 
 

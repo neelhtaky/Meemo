@@ -160,14 +160,14 @@ Navigation
 /******************************************************************
 Entries & Posts
 ******************************************************************/
-.item, .post, .sticky{
+.item, .post, .sticky, .product{
 	background: white;
 	border: 1px solid $bgcolorlight;
 	margin-bottom: 20px;
 	box-shadow: 1px 2px 9px $bgcolorlight;
 	border-radius: 0.2rem;}
 /* Entries */
-.item {
+.item, .product {
 	float: left;
 	.entry_content{
 		padding: 15px;
@@ -176,7 +176,7 @@ Entries & Posts
 		width:100%;
 		border-top-right-radius: 0.2rem;
 	}
-	.read_more{
+	.read_more, #archive_cart_button{
 		background:lighten($bgcolorlight,13%);
 		margin-top:2rem;
 		padding:0.5rem 1rem;
@@ -389,40 +389,51 @@ Lessons
 WooCommerce
 ******************************************************************/
 .woocommerce, .woocommerce-page {
-/* Main Loop */
-	.products_archive{
-	margin-top:4em;
-	}
-	#products{
-		.star-rating{
-			margin:0 auto;
-			margin-bottom: 0.25rem;
-		}
-		.price{text-align:center;}
-		h3{text-align: center;}
-		img{
-			width:100%;
-			height:auto;
-		}
-		a.button{margin:0 auto;
-			display:block;
-		}
-	}
+	/* Main Loop */
+	// #products{
+	// 	margin-top:4em;
+	// }
+	// #products{
+	// 	.star-rating{
+	// 		margin:0 auto;
+	// 		margin-bottom: 0.25rem;
+	// 	}
+	// 	.price{text-align:center;}
+	// 	h3{text-align: center;}
+	// 	img{
+	// 		width:100%;
+	// 		height:auto;
+	// 	}
+	// 	a.button{margin:0 auto;
+	// 		display:block;
+	// 	}
+	// 	#archive_cart_button{
+	// 		background:lighten($bgcolorlight,13%);
+	// 		padding:0.5rem 1rem;
+	// 		margin-bottom:0.5rem;
+	// 		width:100%;
+	// 		border:1px double $bgcolorlight;
+	// 		text-align: center;
+	// 	}
+	// }
+
+
+
 /* Single Product Page */
-	div.product, #content div.product {
-		.woocommerce-tabs{margin-top:1em;}
-		.tabs-content{border:1px solid $secondary-color;}
-		span.onsale_single{margin-bottom: 1em;}
-		.sensei-course-meta .course-price, .price, p.price {
-			text-align: center;
-			font-size: 1.1rem;
-			ins {background: inherit;
-				text-decoration: none; }
-			del {
-				font-size: 0.67em;
-				color: lighten ($body-font-color, 90%);
-			}
-		}}
+	// div.product, #content div.product {
+	// 	.woocommerce-tabs{margin-top:1em;}
+	// 	.tabs-content{border:1px solid $secondary-color;}
+	// 	span.onsale_single{margin-bottom: 1em;}
+	// 	.sensei-course-meta .course-price, .price, p.price {
+	// 		text-align: center;
+	// 		font-size: 1.1rem;
+	// 		ins {background: inherit;
+	// 			text-decoration: none; }
+	// 		del {
+	// 			font-size: 0.67em;
+	// 			color: lighten ($body-font-color, 90%);
+	// 		}
+	// 	}}
 /* Star rating */
 	.star-rating {
 		overflow: hidden;
@@ -547,15 +558,15 @@ WooCommerce
 		}
 	}
 /* checkout */
-	#payment ul{
-		list-style: none outside;
-	}
-	.addresses{
-		@include grid-row;
-		.col-1, .col-2{
-			// @include grid-column(6);
-		}
-	}
+	// #payment ul{
+	// 	list-style: none outside;
+	// }
+	// .addresses{
+	// 	@include grid-row;
+	// 	.col-1, .col-2{
+	// 		// @include grid-column(6);
+	// 	}
+	// }
 
 }//.woocommerce .woocommerce-page
 /******************************************************************
@@ -843,15 +854,27 @@ MEDIA QUERIES
 	.item{
 		width:100%;
 	}
+	.product{
+		width:48%;
+		&:nth-child(odd){
+			margin-right: 2%;
+		}
+	}
 }
 // Medium screens min-width 641px,  max-width 1024px
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 	html{font-size: 0.95rem;}
-	.item{width:100%;}
+	.item {width:100%;}
+	.product{
+		width:48%;
+		&:nth-child(odd){
+			margin-right: 2%;
+		}
+	}
 }
 // Large screens min-width 1025px, max-width 1440px
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
-	.item{
+	.item, #products .product{
 		width:48%;
 		&:nth-child(odd){
 			margin-right: 2%;
@@ -861,7 +884,7 @@ MEDIA QUERIES
 // XLarge screens
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
 	html{font-size: 1rem;}
-	.item{
+	.item, #products .product{
 		width:31%;
 		&:nth-child(2n+2){
 			margin-right: 2%;
@@ -873,7 +896,7 @@ MEDIA QUERIES
 }
 // XXLarge screens min-width 1921px
 @media only screen and (min-width: 120.063em) {
-	.item{
+	.item, #products .product{
 		width:31%;
 		&:nth-child(2n+2){
 			margin-right: 2%;

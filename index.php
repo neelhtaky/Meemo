@@ -17,11 +17,11 @@
 <script type="text/javascript">
 	// initialize Isotope after all images have loaded
 	var $container = $('#container').imagesLoaded( function() {
-	  $container.isotope({
-	    // options
-	    itemSelector: '.item'
-	  });
-});
+	  	$container.isotope({
+	    	// options
+	    	itemSelector: '.item'
+	  	});
+	});
 </script>
 
 <div id="container" class="js-isotope">
