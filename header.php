@@ -36,8 +36,9 @@
 <body <?php body_class(''); ?>>
 <div id="top" class="hfeed site">
 	<header id="header" role="banner">
+
 		<!-- TOPBAR -->
-		<div class="contain-to-grid">
+		<div class="contain-to-grid hide-for-small-only">
 			<nav class="top-bar" data-topbar>
 				<section class="top-bar-section">
 				  	<!-- Left Nav Section -->
@@ -82,6 +83,45 @@
 			  	</section>
 			</nav>
 		</div>
-		</header>
-		<div id="container">
+
+
+<div class="off-canvas-wrap hide-for-medium-up" data-offcanvas>
+	<div class="inner-wrap">
+
+	<nav class="tab-bar">
+		<section class="left-small">
+	        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+	    </section>
+	    <section class="middle tab-bar-section">
+        	<h1 class="title">Foundation</h1>
+      	</section>
+
+      	<section class="right-small">
+        	<a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      	</section>
+	</nav>
+
+	<!-- target the leftside menu -->
+	<a class="left-off-canvas-toggle" href="#">Left Menu</a>
+	<!-- target the rightside menu -->
+	<a class="right-off-canvas-toggle" href="#">Right Menu</a>
+
+    <!-- Off Canvas Menu -->
+    <aside class="left-off-canvas-menu">
+	    <ul class="off-canvas-list">
+	        <li><label>Foundation</label></li>
+	        <li><a href="#">The Psychohistorians</a></li>
+	        <li><a href="#">...</a></li>
+	    </ul>
+    </aside>
+
+	<aside class="right-off-canvas-menu">
+    	<ul class="off-canvas-list">
+	        <li><label>Users</label></li>
+	        <li><a href="#">Hari Seldon</a></li>
+	        <li><a href="#">...</a></li>
+    	</ul>
+    </aside>
+    <!-- main content goes here -->
+
 			<div id="main" class="site-main row">
