@@ -152,7 +152,7 @@ Navigation
 ******************************************************************/
 #header .contain-to-grid{
 	border-bottom: 0.5rem solid $bgcolorlight;}
-// .top-bar{box-shadow: 0 0.5rem ;}
+.top-bar{margin-bottom:0 !important;}
 .sidebar .side-nav ul{
 	list-style: none;
 	li{list-style: none;}}
@@ -187,7 +187,7 @@ Entries & Posts
 	}
  }
 .sticky{
-	padding: 15px;
+	// padding: 15px;
 	float: left;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -215,7 +215,7 @@ Entries & Posts
     -moz-transition-property: -moz-transform, opacity;
     transition-property: transform, opacity;}
 /* Posts */
-.post{
+.single_content, .page_content{
 	padding:1rem;
 	margin-bottom: 1rem !important;
 	.attachment-post-thumbnail{margin-bottom: 1em;}}

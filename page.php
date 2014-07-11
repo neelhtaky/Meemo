@@ -7,7 +7,7 @@
 	<!-- Loop through posts and process each according to the code specified here  Process any code included in this region before the content of each post. -->
 
 
-		<article <?php post_class("clear post"); ?> id="post-<?php the_ID(); ?>" role="article">
+		<article <?php post_class("clear page_content"); ?> id="post-<?php the_ID(); ?>" role="article">
 			<?php if ( is_singular() || is_single() || is_404() || is_archive() ) { ?>
 				<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 			<?php } else { ?>

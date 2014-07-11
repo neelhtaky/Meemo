@@ -25,11 +25,6 @@ if ($prev_link || $next_link) {
 }
      ?>
 
-    <div class="navigation">
-        <div class="alignleft"><?php previous_comments_link() ?></div>
-        <div class="alignright"><?php next_comments_link() ?></div>
-    </div>
-
     <?php $comments_by_type = &separate_comments($comments); ?>
         <?php if (!empty($comments_by_type['comment'])) { ?>
             <h3 id="comments">Comments</h3>
@@ -48,10 +43,6 @@ if ($prev_link || $next_link) {
             </ol>
     <?php } ?>
 
-    <div class="navigation">
-        <div class="alignleft"><?php previous_comments_link() ?></div>
-        <div class="alignright"><?php next_comments_link() ?></div>
-    </div>
 <?php else : // this is displayed if there are no comments so far ?>
 
     <?php if ('open' == $post->comment_status) : ?>

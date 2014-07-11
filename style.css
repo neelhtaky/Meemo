@@ -9449,6 +9449,11 @@ Navigation
   border-bottom: 0.5rem solid #cccccc;
 }
 
+/* line 155, scss/style.scss */
+.top-bar {
+  margin-bottom: 0 !important;
+}
+
 /* line 156, scss/style.scss */
 .sidebar .side-nav ul {
   list-style: none;
@@ -9497,7 +9502,6 @@ Entries & Posts
 
 /* line 189, scss/style.scss */
 .sticky {
-  padding: 15px;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
@@ -9543,12 +9547,12 @@ Entries & Posts
 
 /* Posts */
 /* line 218, scss/style.scss */
-.post {
+.single_content, .page_content {
   padding: 1rem;
   margin-bottom: 1rem !important;
 }
 /* line 221, scss/style.scss */
-.post .attachment-post-thumbnail {
+.single_content .attachment-post-thumbnail, .page_content .attachment-post-thumbnail {
   margin-bottom: 1em;
 }
 
