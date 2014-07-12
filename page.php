@@ -1,4 +1,4 @@
-<?php get_template_part('partials/content', 'container'); ?>
+<?php get_template_part('partials/content', 'containeropen'); ?>
 
 <?php if (have_posts()) : ?>
 	<!-- Display any code output from this region above the entire set of posts, generated via the h2 element only if there are posts. Any code is processed only once. -->
@@ -36,6 +36,4 @@
 		  </p>
 	<?php endif; ?>
 
-</section>
-<?php get_sidebar('right'); ?>
-<?php get_footer(); ?>
+<?php get_template_part('partials/content', 'containerclose'); ?>

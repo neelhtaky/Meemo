@@ -1,4 +1,4 @@
-<?php get_template_part('partials/content', 'container'); ?>
+<?php get_template_part('partials/content', 'containeropen'); ?>
 
 <?php
 if (have_posts()) :
@@ -19,6 +19,5 @@ if (have_posts()) :
 		<?php if( is_single() || is_page() ){ ?>
 			<?php comments_template(); ?>
 		<?php } ?>
-</section>
-<?php get_sidebar('right'); ?>
-<?php get_footer(); ?>
+
+<?php get_template_part('partials/content', 'containerclose'); ?>

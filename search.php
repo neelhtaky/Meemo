@@ -26,6 +26,5 @@ echo 'By the way, we found ' . $wp_query->found_posts.' results.'; ?></p>
     <?php get_template_part( 'content', 'searchfail' ); ?>
     <!-- here's where we'll put a search form if there're no posts -->
     <?php endif; ?>
-</section>
-<?php get_sidebar('right'); ?>
-<?php get_footer(); ?>
+
+<?php get_template_part('partials/content', 'containerclose'); ?>

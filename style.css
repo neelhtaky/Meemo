@@ -10603,58 +10603,58 @@ Sidebar
   font-size: 1.1rem;
 }
 
-/* line 761, scss/style.scss */
-.sidebar .site_title h1 a, .sidebar .site_title h4 a {
+/* line 762, scss/style.scss */
+#sidebar .site_title h1 a, #sidebar .site_title h4 a {
   font-size: 2.2rem !important;
   font-weight: bold;
 }
 
-/* line 764, scss/style.scss */
+/* line 765, scss/style.scss */
 .sidebar #description {
   font-style: italic;
 }
 
 /* Jetpack Styles */
-/* line 766, scss/style.scss */
+/* line 767, scss/style.scss */
 .widget-title {
   padding-top: 1rem;
   text-transform: uppercase;
 }
 
-/* line 768, scss/style.scss */
+/* line 769, scss/style.scss */
 .widget_facebook_likebox .widget-title a, .widget_rss .widget-title a {
   color: #222222;
   font-size: 1.1rem !important;
 }
-/* line 771, scss/style.scss */
+/* line 772, scss/style.scss */
 .widget_facebook_likebox .widget-title a:after, .widget_rss .widget-title a:after {
   content: none;
 }
 
-/* line 774, scss/style.scss */
+/* line 775, scss/style.scss */
 .widget_rss .widget-title a img {
   display: none;
 }
 
-/* line 775, scss/style.scss */
+/* line 776, scss/style.scss */
 .product_list_widget {
   margin-left: 0px !important;
   padding-left: 0px;
 }
-/* line 779, scss/style.scss */
+/* line 780, scss/style.scss */
 .product_list_widget li a {
   font-weight: normal;
 }
-/* line 780, scss/style.scss */
+/* line 781, scss/style.scss */
 .product_list_widget li del {
   display: block;
   color: #f04124;
 }
-/* line 784, scss/style.scss */
+/* line 785, scss/style.scss */
 .product_list_widget li ins {
   text-decoration: none;
 }
-/* line 785, scss/style.scss */
+/* line 786, scss/style.scss */
 .product_list_widget li img {
   width: 5.875rem !important;
   height: auto;
@@ -10662,24 +10662,24 @@ Sidebar
   margin-right: 0.625rem;
 }
 
-/* line 794, scss/style.scss */
+/* line 795, scss/style.scss */
 .widget_sensei_lesson_component ul {
   margin-left: 0 !important;
 }
-/* line 795, scss/style.scss */
+/* line 796, scss/style.scss */
 .widget_sensei_lesson_component li {
   margin-bottom: 0.9375rem;
 }
-/* line 797, scss/style.scss */
+/* line 798, scss/style.scss */
 .widget_sensei_lesson_component li img {
   padding-bottom: 0;
   margin-bottom: 0;
 }
-/* line 802, scss/style.scss */
+/* line 803, scss/style.scss */
 .widget_sensei_lesson_component .lesson-course {
   padding-left: 1rem;
 }
-/* line 803, scss/style.scss */
+/* line 804, scss/style.scss */
 .widget_sensei_lesson_component .my-account a {
   padding-top: 1rem;
   padding-left: 0.9375rem;
@@ -10688,42 +10688,42 @@ Sidebar
   float: left;
 }
 
-/* line 808, scss/style.scss */
+/* line 809, scss/style.scss */
 .widget_sensei_category_courses ul, .widget_sensei_course_categories ul, .widget_rss_links ul, .widget_nav_menu .menu, .widget_sensei_course_component ul {
   margin-left: 0 !important;
 }
 
-/* line 809, scss/style.scss */
+/* line 810, scss/style.scss */
 .widget_sensei_course_component li {
   margin-bottom: 1rem;
 }
-/* line 812, scss/style.scss */
+/* line 813, scss/style.scss */
 .widget_sensei_course_component li .course-price del {
   display: block;
   color: #f04124;
 }
 
-/* line 821, scss/style.scss */
+/* line 822, scss/style.scss */
 .widgets-list-layout .widgets-list-layout-blavatar {
   max-width: 5.875rem;
   width: 100%;
   margin: 0.625rem 0.625rem 0 0;
 }
 
-/* line 825, scss/style.scss */
+/* line 826, scss/style.scss */
 .widgets-list-layout .widgets-list-layout-links {
   width: 75% !important;
   padding-top: 5px;
 }
 
-/* line 827, scss/style.scss */
+/* line 828, scss/style.scss */
 .jetpack_subscription_widget h3 label {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
 }
 
-/* line 831, scss/style.scss */
+/* line 832, scss/style.scss */
 .jetpack_subscription_widget input[type="text"] {
   background-color: white;
   font-family: inherit;
@@ -10756,7 +10756,7 @@ Sidebar
 .jetpack_subscription_widget input[type="text"][disabled], fieldset[disabled] .jetpack_subscription_widget input[type="text"] {
   background-color: #dddddd;
 }
-/* line 833, scss/style.scss */
+/* line 834, scss/style.scss */
 .jetpack_subscription_widget input[type="text"]::hover {
   -webkit-appearance: none !important;
   background-color: #fafafa;
@@ -10780,7 +10780,7 @@ Sidebar
   border-color: #999999;
 }
 
-/* line 834, scss/style.scss */
+/* line 835, scss/style.scss */
 .jetpack_subscription_widget #subscribe-email input[type="text"] {
   background-color: white;
   font-family: inherit;
@@ -10813,7 +10813,7 @@ Sidebar
 .jetpack_subscription_widget #subscribe-email input[type="text"][disabled], fieldset[disabled] .jetpack_subscription_widget #subscribe-email input[type="text"] {
   background-color: #dddddd;
 }
-/* line 836, scss/style.scss */
+/* line 837, scss/style.scss */
 .jetpack_subscription_widget #subscribe-email input[type="text"]::hover {
   -webkit-appearance: none !important;
   background-color: #fafafa;
@@ -10837,7 +10837,7 @@ Sidebar
   border-color: #999999;
 }
 
-/* line 837, scss/style.scss */
+/* line 838, scss/style.scss */
 .jetpack_subscription_widget input[type="submit"], .widget_product_search input[type="submit"] {
   border-style: solid;
   border-width: 0px;
@@ -10870,24 +10870,24 @@ Sidebar
   color: white;
 }
 
-/* line 840, scss/style.scss */
+/* line 841, scss/style.scss */
 .widget_sensei_lesson_component img {
   width: 5.875rem;
   height: auto;
   margin: 0.3125rem 0.625rem 0.625rem 0;
 }
 
-/* line 844, scss/style.scss */
+/* line 845, scss/style.scss */
 .widget_sensei_category_courses li img {
   margin-bottom: 0 !important;
 }
 
-/* line 845, scss/style.scss */
+/* line 846, scss/style.scss */
 .widget_sensei_category_courses .fix {
   margin-bottom: 0.9375rem;
 }
 
-/* line 846, scss/style.scss */
+/* line 847, scss/style.scss */
 #sharing {
   width: 100%;
   margin-left: auto;
@@ -10905,25 +10905,25 @@ Sidebar
 #sharing:after {
   clear: both;
 }
-/* line 849, scss/style.scss */
+/* line 850, scss/style.scss */
 #sharing .sd-sharing-enabled .sd-content {
   margin-top: 0;
 }
 
-/* line 852, scss/style.scss */
+/* line 853, scss/style.scss */
 .sd-like {
   margin: 0 0 4em;
 }
 
-/* line 853, scss/style.scss */
+/* line 854, scss/style.scss */
 #sidebar .woocommerce_cart {
   margin: -1em 0 0;
 }
-/* line 855, scss/style.scss */
+/* line 856, scss/style.scss */
 #sidebar .woocommerce_cart .cart-contents {
   margin-right: 1em;
 }
-/* line 856, scss/style.scss */
+/* line 857, scss/style.scss */
 #sidebar .woocommerce_cart a[title^="Checkout"] {
   border-style: solid;
   border-width: 0px;
@@ -10956,12 +10956,12 @@ Sidebar
   color: white;
 }
 
-/* line 858, scss/style.scss */
+/* line 859, scss/style.scss */
 #sidebar .sharedaddy h3.sd-title {
   margin: 0;
 }
 
-/* line 859, scss/style.scss */
+/* line 860, scss/style.scss */
 #sidebar input#s.search-field {
   height: 3.2rem;
 }
@@ -10969,7 +10969,7 @@ Sidebar
 /******************************************************************
 FOOTER
 ******************************************************************/
-/* line 865, scss/style.scss */
+/* line 866, scss/style.scss */
 #footer_widgets {
   background: #333333;
   color: #999999;
@@ -10977,36 +10977,36 @@ FOOTER
   border-top: 15px solid #cccccc, 40%;
   border-bottom: 1px solid #cccccc;
 }
-/* line 871, scss/style.scss */
+/* line 872, scss/style.scss */
 #footer_widgets .widget-title {
   color: white;
   font-size: 1.1rem;
 }
-/* line 875, scss/style.scss */
+/* line 876, scss/style.scss */
 #footer_widgets .textwidget, #footer_widgets .textwidget p {
   font-size: 0.85rem;
 }
 
-/* line 876, scss/style.scss */
+/* line 877, scss/style.scss */
 #footer_meta {
   padding: 1rem 0 0 0;
   background: #232323;
   color: #666666;
 }
-/* line 880, scss/style.scss */
+/* line 881, scss/style.scss */
 #footer_meta p {
   font-size: 0.9rem;
 }
-/* line 883, scss/style.scss */
+/* line 884, scss/style.scss */
 #footer_meta a {
   color: #999999;
 }
-/* line 885, scss/style.scss */
+/* line 886, scss/style.scss */
 #footer_meta a:hover {
   color: #cccccc;
 }
 
-/* line 890, scss/style.scss */
+/* line 891, scss/style.scss */
 footer ul.inline-list li a {
   font-size: 0.9rem;
   background: none;
@@ -11016,7 +11016,7 @@ footer ul.inline-list li a {
   margin-bottom: 1.5;
   color: #666666;
 }
-/* line 898, scss/style.scss */
+/* line 899, scss/style.scss */
 footer ul.inline-list li a:hover {
   background: none;
   color: #555555;
@@ -11026,144 +11026,144 @@ footer ul.inline-list li a:hover {
 MEDIA QUERIES
 ******************************************************************/
 @media only screen and (max-width: 40em) {
-  /* line 907, scss/style.scss */
+  /* line 908, scss/style.scss */
   html {
     font-size: 0.9rem;
   }
 
-  /* line 908, scss/style.scss */
+  /* line 909, scss/style.scss */
   .cn-nav a.cn-nav-prev span {
     margin: 1.4375rem 0;
     z-index: 200;
   }
 
-  /* line 909, scss/style.scss */
+  /* line 910, scss/style.scss */
   .cn-nav a.cn-nav-prev div {
     margin: 2.8125rem 0 0 1.25rem;
   }
 
-  /* line 910, scss/style.scss */
+  /* line 911, scss/style.scss */
   .cn-nav a.cn-nav-prev:hover div {
     margin: 1.75rem 0 0 0.3125rem;
     z-index: 300;
   }
 
-  /* line 911, scss/style.scss */
+  /* line 912, scss/style.scss */
   .cn-nav a.cn-nav-prev p {
     margin: 0 0 0 3.75rem;
   }
 
-  /* line 912, scss/style.scss */
+  /* line 913, scss/style.scss */
   .cn-nav a.cn-nav-next span {
     margin: 1.4375rem 0 0 -0.625rem;
   }
 
-  /* line 913, scss/style.scss */
+  /* line 914, scss/style.scss */
   .cn-nav a.cn-nav-next:hover span {
     margin: 1.4375rem 0 0 -2.1875rem;
     z-index: 200;
   }
 
-  /* line 914, scss/style.scss */
+  /* line 915, scss/style.scss */
   .cn-nav a.cn-nav-next div {
     margin: 2.8125rem 0 0 1.25rem;
   }
 
-  /* line 915, scss/style.scss */
+  /* line 916, scss/style.scss */
   .cn-nav a.cn-nav-next:hover div {
     transform-origin: right top;
     margin: 1.75rem 0 0 2.8125rem;
     z-index: 300;
   }
 
-  /* line 920, scss/style.scss */
+  /* line 921, scss/style.scss */
   ol.commentlist li.comment div.vcard {
     margin-bottom: 0;
   }
 
-  /* line 921, scss/style.scss */
+  /* line 922, scss/style.scss */
   ol.commentlist li.comment div.commentmetadata {
     margin-top: 0;
   }
 
-  /* line 922, scss/style.scss */
+  /* line 923, scss/style.scss */
   .item {
     width: 100%;
   }
 
-  /* line 925, scss/style.scss */
+  /* line 926, scss/style.scss */
   #products .product {
     width: 48%;
   }
-  /* line 927, scss/style.scss */
+  /* line 928, scss/style.scss */
   #products .product:nth-child(odd) {
     margin-right: 2%;
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 934, scss/style.scss */
+  /* line 935, scss/style.scss */
   html {
     font-size: 0.95rem;
   }
 
-  /* line 935, scss/style.scss */
+  /* line 936, scss/style.scss */
   .item {
     width: 100%;
   }
 
-  /* line 936, scss/style.scss */
+  /* line 937, scss/style.scss */
   #products .product {
     width: 48%;
   }
-  /* line 938, scss/style.scss */
+  /* line 939, scss/style.scss */
   #products .product:nth-child(odd) {
     margin-right: 2%;
   }
 }
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
-  /* line 945, scss/style.scss */
+  /* line 946, scss/style.scss */
   .item, #products .product {
     width: 48%;
   }
-  /* line 947, scss/style.scss */
+  /* line 948, scss/style.scss */
   .item:nth-child(odd), #products .product:nth-child(odd) {
     margin-right: 2%;
   }
 }
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
-  /* line 954, scss/style.scss */
+  /* line 955, scss/style.scss */
   html {
     font-size: 1rem;
   }
 
-  /* line 955, scss/style.scss */
+  /* line 956, scss/style.scss */
   .item, #products .product {
     width: 31%;
   }
-  /* line 957, scss/style.scss */
+  /* line 958, scss/style.scss */
   .item:nth-child(2n+2), #products .product:nth-child(2n+2) {
     margin-right: 2%;
   }
-  /* line 960, scss/style.scss */
+  /* line 961, scss/style.scss */
   .item:nth-child(1n+1), #products .product:nth-child(1n+1) {
     margin-right: 2%;
   }
 }
 @media only screen and (min-width: 120.063em) {
-  /* line 967, scss/style.scss */
+  /* line 968, scss/style.scss */
   .item, #products .product {
     width: 31%;
   }
-  /* line 969, scss/style.scss */
+  /* line 970, scss/style.scss */
   .item:nth-child(2n+2), #products .product:nth-child(2n+2) {
     margin-right: 2%;
   }
-  /* line 972, scss/style.scss */
+  /* line 973, scss/style.scss */
   .item:nth-child(1n+1), #products .product:nth-child(1n+1) {
     margin-right: 2%;
   }
 
-  /* line 976, scss/style.scss */
+  /* line 977, scss/style.scss */
   .widget_archive ul li {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -11174,12 +11174,12 @@ MEDIA QUERIES
 /******************************************************************
 TEST CODE
 ******************************************************************/
-/* line 981, scss/style.scss */
+/* line 982, scss/style.scss */
 form ol#sense-quiz-list {
   margin-left: 3em;
 }
 
-/* line 982, scss/style.scss */
+/* line 983, scss/style.scss */
 .quiz input.quiz-submit.reset, .lesson input.quiz-submit.reset {
   margin: 1em 0;
 }

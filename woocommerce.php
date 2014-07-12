@@ -1,6 +1,5 @@
-<?php get_template_part('partials/content', 'container'); ?>
+<?php get_template_part('partials/content', 'containeropen'); ?>
 
 	<?php woocommerce_content(); ?>
-</section>
-<?php get_sidebar('right'); ?>
-<?php get_footer(); ?>
+
+<?php get_template_part('partials/content', 'containerclose'); ?>

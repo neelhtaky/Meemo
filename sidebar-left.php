@@ -1,5 +1,7 @@
 <aside id="sidebar" class="hide-for-medium-down large-2 xlarge-2 xxlarge-2 columns" role="complementary">
 	<ul class="no-bullet">
+		<div class="logo"></div>
+		<img src="<?php bloginfo('template_directory'); ?>/library/images/Logo.png">
 		<div class="site_title">
 			<?php if(is_home()){ ?>
 			<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
