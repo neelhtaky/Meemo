@@ -85,43 +85,33 @@
 		</div>
 
 
-<div class="off-canvas-wrap hide-for-medium-up" data-offcanvas>
+<div class="off-canvas-wrap" data-offcanvas>
 	<div class="inner-wrap">
 
-	<nav class="tab-bar">
-		<section class="left-small">
-	        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-	    </section>
-	    <section class="middle tab-bar-section">
-        	<h1 class="title">Foundation</h1>
-      	</section>
+		<nav class="tab-bar hide-for-medium-up">
+			<section class="left-medium">
+		        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+		    </section>
+		    <section class="middle tab-bar-section">
+	        	<h1 class="title"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+	      	</section>
 
-      	<section class="right-small">
-        	<a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
-      	</section>
-	</nav>
+		</nav>
 
-	<!-- target the leftside menu -->
-	<a class="left-off-canvas-toggle" href="#">Left Menu</a>
-	<!-- target the rightside menu -->
-	<a class="right-off-canvas-toggle" href="#">Right Menu</a>
+	    <!-- Off Canvas Menu -->
+	    <aside class="left-off-canvas-menu">
+		    <ul class="off-canvas-list">
+		        <?php $options = array(
+					'theme_location' => 'nav_primary',
+					'container' => false,
+					'depth' => 2,
+					'items_wrap' => '<ul id="%1$s" class="no-bullet">%3$s</ul>',
+					'walker' => new GC_walker_nav_menu()
+				);
+				wp_nav_menu($options); ?>
+		    </ul>
+	    </aside>
 
-    <!-- Off Canvas Menu -->
-    <aside class="left-off-canvas-menu">
-	    <ul class="off-canvas-list">
-	        <li><label>Foundation</label></li>
-	        <li><a href="#">The Psychohistorians</a></li>
-	        <li><a href="#">...</a></li>
-	    </ul>
-    </aside>
-
-	<aside class="right-off-canvas-menu">
-    	<ul class="off-canvas-list">
-	        <li><label>Users</label></li>
-	        <li><a href="#">Hari Seldon</a></li>
-	        <li><a href="#">...</a></li>
-    	</ul>
-    </aside>
-    <!-- main content goes here -->
+    	<!-- main content goes here -->
 
 			<div id="main" class="site-main row">
