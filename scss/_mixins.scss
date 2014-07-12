@@ -35,12 +35,12 @@ $body-font-color-grey: #999;
 }
 @font-face {
   font-family: 'FontAwesome';
-  src: url('bower_components/fontawesome/fonts/fontawesome-webfont.eot?');
-  src: url('bower_components/fontawesome/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-    url('bower_components/fontawesome/fonts/fontawesome-webfont.woff?') format('woff'),
-    url('bower_components/fontawesome/fonts/fontawesome-webfont.ttf?') format('truetype'),
-    url('bower_components/fontawesome/fonts/fontawesome-webfont.svg?#fontawesomeregular') format('svg');
-  //src: url('bower_components/fontawesome/fonts/FontAwesome.otf') format('opentype'); // used when developing fonts
+  src: url('library/fonts/fontawesome-webfont.eot?');
+  src: url('library/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+    url('library/fonts/fontawesome-webfont.woff?') format('woff'),
+    url('library/fonts/fontawesome-webfont.ttf?') format('truetype'),
+    url('library/fonts/fontawesome-webfont.svg?#fontawesomeregular') format('svg');
+  //src: url('library/fonts/FontAwesome.otf') format('opentype'); // used when developing fonts
   font-weight: normal;
   font-style: normal;
 }
