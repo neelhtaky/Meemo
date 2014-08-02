@@ -1,7 +1,5 @@
-<?php get_header(); ?>
+<?php get_template_part('partials/content', 'containeropen'); ?>
 
-<!-- MAIN CONTENT WRAPPER -->
-<section id="entries wrap" class="small-12 medium-8 large-6 xlarge-7  xxlarge-7 columns ">
 		<h1>404 - Not Found</h1>
 		<p>Well this is embarrassing, isn’t it?</p>
 		<p>I cannot seem to find what you were looking for. I'm very sorry. That page or file may have been moved or deleted.</p>
@@ -34,9 +32,4 @@
 				} ?>
 	</ul>
 
-</section>
-
-
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_template_part('partials/content', 'containerclose'); ?>

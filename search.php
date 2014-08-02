@@ -1,6 +1,4 @@
-<?php get_header(); ?>
-<?php get_sidebar('left'); ?>
-<section id="entries wrap" class="small-12 medium-8  large-6 xlarge-7  xxlarge-7 columns ">
+<?php get_template_part('partials/content', 'containeropen'); ?>
 
     <?php if ( have_posts() ) : ?>
      <h2>Here are the results for the '<?php echo get_search_query(); ?>' search:</h2>

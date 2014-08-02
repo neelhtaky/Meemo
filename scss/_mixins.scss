@@ -8,11 +8,22 @@ $woocommercefont: 	"WooCommerce";
 // $secondary-color: #e7e7e7; is grey
 // $alert-color: #f04124; is red
 // $success-color: #43AC6A; is green
-$bgcolorlight:		#cccccc;
-$bgcolormedium: 	#333;
-$bgcolordark: 		#232323;
-$body-font-color-grey: #999;
-
+$bgcolor: 				#f3f3f3;
+$bgcolorlight:			#cccccc;
+$bgcolormedium: 		#333;
+$bgcolordark: 			#232323;
+$body-font-color-grey: 	#999;
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('library/fonts/fontawesome-webfont.eot?');
+  src: url('library/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+    url('library/fonts/fontawesome-webfont.woff?') format('woff'),
+    url('library/fonts/fontawesome-webfont.ttf?') format('truetype'),
+    url('library/fonts/fontawesome-webfont.svg?#fontawesomeregular') format('svg');
+  //src: url('library/fonts/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
 	font-family: 'star';
 	src:url('library/fonts/star.eot');
@@ -33,17 +44,7 @@ $body-font-color-grey: #999;
 	font-weight: normal;
 	font-style: normal;
 }
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('library/fonts/fontawesome-webfont.eot?');
-  src: url('library/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-    url('library/fonts/fontawesome-webfont.woff?') format('woff'),
-    url('library/fonts/fontawesome-webfont.ttf?') format('truetype'),
-    url('library/fonts/fontawesome-webfont.svg?#fontawesomeregular') format('svg');
-  //src: url('library/fonts/FontAwesome.otf') format('opentype'); // used when developing fonts
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 
 // $body-font-color: #222;
