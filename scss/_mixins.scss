@@ -4,7 +4,7 @@ TYPOGRAPHY
 $fontawesome:		"FontAwesome";
 $star:				"star";
 $woocommercefont: 	"WooCommerce";
-// $primary-color: #008CBA; is blue
+$primary-color: #008CBA;
 // $secondary-color: #e7e7e7; is grey
 // $alert-color: #f04124; is red
 // $success-color: #43AC6A; is green
@@ -13,6 +13,8 @@ $bgcolorlight:			#cccccc;
 $bgcolormedium: 		#333;
 $bgcolordark: 			#232323;
 $body-font-color-grey: 	#999;
+$header-font-color: 	#222;
+
 @font-face {
   font-family: 'FontAwesome';
   src: url('library/fonts/fontawesome-webfont.eot?');
@@ -48,11 +50,11 @@ $body-font-color-grey: 	#999;
 
 
 // $body-font-color: #222;
-// $header-font-color: #222;
+
 // $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
-// $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
+$anchor-font-color: $primary-color;
+$anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 // $button-font-color: #fff;
 
 // $warning-color: #f08a24;

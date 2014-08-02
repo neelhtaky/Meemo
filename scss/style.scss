@@ -178,7 +178,17 @@ Entries & Posts
 	border: 1px solid $bgcolorlight;
 	margin-bottom: 20px;
 	box-shadow: 1px 2px 9px $bgcolorlight;
-	border-radius: 0.2rem;}
+	border-radius: 0.2rem;
+	}
+.post_title a{
+	font-size:1.75rem !important;
+	font-weight:500;
+	font-family:"Lato";
+	color:$body-font-color;
+	&:hover{
+		color:$primary-color;
+	}
+}
 /* Entries */
 .item, #products .product {
 	float: left;
