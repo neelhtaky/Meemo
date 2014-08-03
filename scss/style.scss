@@ -180,17 +180,16 @@ Entries & Posts
 	box-shadow: 1px 2px 9px $bgcolorlight;
 	border-radius: 0.2rem;
 	}
-	.post_title{
-		line-height: 0.8;
-	}
-.post_title a{
-	font-size:1.75rem !important;
-	font-weight:500;
-	font-family:"Lato";
-	color:$body-font-color;
-
-	&:hover{
-		color:$primary-color;
+.post_title{
+	line-height: 0.9;
+	a{
+		font-size:1.75rem !important;
+		font-weight:500;
+		font-family:"Lato";
+		color:$body-font-color;
+		&:hover{
+			color:$primary-color;
+		}
 	}
 }
 /* Entries */
@@ -401,10 +400,11 @@ Courses
 Lessons
 ******************************************************************/
 /* Lesson Archive Page */
-
+#main .lesson{
+	padding:1rem;
+}
 #main .course .course-lessons .meter>span{padding: 3px 10px 0 0;}
 #main .course-lessons img.woo-image.thumbnail{
-	width:250px !important;
 	height:auto;
 	margin:0 1em 0.5em;}
 #main .course .course-meta, #main .course-container .course-meta{display:inline-block;}
@@ -778,6 +778,7 @@ Sidebar
 		font-size:0.85rem;
 	}
 	h3{font-size:1.1rem;}
+	ul li ul{margin-left: 0 !important;}
 }
 
 #sidebar .site_title h1 a, #sidebar .site_title h4 a {
@@ -785,7 +786,7 @@ Sidebar
 	font-weight:bold;}
 .sidebar #description{font-style:italic;}
 /* Jetpack Styles */
-.widget-title{padding-top: 1rem; text-transform: uppercase;}
+.widget-title{padding-top: 1rem; text-transform: uppercase; }
 .widget_facebook_likebox, .widget_rss{
 	.widget-title a{
 		color: $body-font-color;
@@ -812,6 +813,7 @@ Sidebar
 		}
 	}
 }
+
 .widget_sensei_course_component{
 	a .woo-image{width:100%;}
 }
@@ -842,10 +844,8 @@ Sidebar
 }
 
 
-
 .widgets-list-layout .widgets-list-layout-blavatar{
-	max-width:emCalc(94px);
-	width:100%;
+	max-width:100%;
 	margin:emCalc(10px 10px 0 0);}
 .widgets-list-layout .widgets-list-layout-links{width:75% !important;padding-top:5px;}
 
@@ -897,7 +897,10 @@ FOOTER
 		color:white;
 		font-size:1.1rem;
 	}
-	.textwidget, .textwidget p{font-size:0.85rem;}}
+	.textwidget, .textwidget p{font-size:0.85rem;}
+	ul li ul{margin-left: 0 !important;}
+	.children li{margin-left:1.25rem;}
+}
 #footer_meta{
 	padding:1rem 0 1rem 0;
 	background: $bgcolordark;
@@ -950,19 +953,16 @@ MEDIA QUERIES
 	.cn-nav a.cn-nav-next:hover div{
 		transform-origin: right top;
 		margin:emCalc(28px 0 0 45%);
-		z-index: 300;
-	}
+		z-index: 300;}
 	ol.commentlist li.comment div.vcard {margin-bottom: 0;}
 	ol.commentlist li.comment div.commentmetadata {margin-top:0;}
-	.item{
-		width:100%;
-	}
+	.item{width:100%;}
 	#products .product{
 		width:48%;
 		&:nth-child(odd){
 			margin-right: 2%;
-		}
-	}
+		}}
+	#sidebar .widgets-list-layout img.widgets-list-layout-blavatar{min-width:80px;max-width: 110px;}
 }
 // Medium screens min-width 641px,  max-width 1024px
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
@@ -974,6 +974,12 @@ MEDIA QUERIES
 			margin-right: 2%;
 		}
 	}
+	#sidebar .widgets-list-layout img.widgets-list-layout-blavatar{
+		float: none;
+		min-width:130px;
+		max-width:220px;
+	}
+	#sidebar .widgets-list-layout-links{width:100% !important;}
 }
 // Large screens min-width 1025px, max-width 1440px
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
@@ -982,6 +988,10 @@ MEDIA QUERIES
 		&:nth-child(odd){
 			margin-right: 2%;
 		}
+	}
+	#sidebar .widgets-list-layout img.widgets-list-layout-blavatar{
+		min-width:45px;
+		max-width:70px;
 	}
 }
 // XLarge screens
@@ -995,6 +1005,9 @@ MEDIA QUERIES
 		&:nth-child(1n+1){
 			margin-right:2%;
 		}
+	}
+	#sidebar .widgets-list-layout img.widgets-list-layout-blavatar{
+		width:49px;
 	}
 }
 // XXLarge screens min-width 1921px

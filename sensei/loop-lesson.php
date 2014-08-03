@@ -65,7 +65,7 @@ $lesson_count = 1;
                     $user_info = get_userdata( absint( get_the_author_meta( 'ID' ) ) );
                     if ( '' != get_the_excerpt() ) { $lesson_excerpt = get_the_excerpt(); } else { $lesson_excerpt = get_the_content(); }
 
-                    $html = '<article class="' . esc_attr( join( ' ', get_post_class( array( 'lesson', 'course', 'post' ), $post_id ) ) ) . '">';
+                    $html = '<article class="' . esc_attr( join( ' ', get_post_class( array( 'course', 'post' ), $post_id ) ) ) . '">';
 
                         $html .= '<header>';
 
