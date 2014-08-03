@@ -180,11 +180,15 @@ Entries & Posts
 	box-shadow: 1px 2px 9px $bgcolorlight;
 	border-radius: 0.2rem;
 	}
+	.post_title{
+		line-height: 0.8;
+	}
 .post_title a{
 	font-size:1.75rem !important;
 	font-weight:500;
 	font-family:"Lato";
 	color:$body-font-color;
+
 	&:hover{
 		color:$primary-color;
 	}
