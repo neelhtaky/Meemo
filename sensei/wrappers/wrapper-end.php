@@ -1,13 +1,18 @@
 <?php
 /**
  * Content wrappers
+ *
  * @author 		WooThemes
  * @package 	Sensei/Templates
  * @version     1.0.0
  */
+
 if ( ! defined( 'ABSPATH' ) ) exit;
+
 $template = get_option('template');
+
 switch( $template ) {
+
 	// IF Twenty Eleven
 	case 'twentyeleven' :
 	?>
@@ -15,6 +20,7 @@ switch( $template ) {
 		</div>
 	<?php
 		break;
+
 	// IF Twenty Twelve
 	case 'twentytwelve' :
 	?>
@@ -24,15 +30,18 @@ switch( $template ) {
 	</div>
 	<?php
 		break;
+
 	// IF Twenty Fourteen
 	case 'twentyfourteen' :
 	?>
+					</div>
 				</div>
 			</div>
 		</div>
 		<?php get_sidebar(); ?>
 	<?php
 		break;
+
 	// IF Canvas
 	case 'canvas' :
 	?>
@@ -48,6 +57,7 @@ switch( $template ) {
 	    </div><!-- /#content -->
 	<?php
 		break;
+
 	// Default
 	default :
 	?>
