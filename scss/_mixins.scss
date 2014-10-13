@@ -4,6 +4,7 @@ TYPOGRAPHY
 $genericons:		"Genericons";
 $star:				"star";
 $woocommercefont: 	"WooCommerce";
+$FootlightFont:		"Footlight";
 // $primary-color: #008CBA; is blue
 // $secondary-color: #e7e7e7; is grey
 // $alert-color: #f04124; is red
@@ -40,6 +41,13 @@ $body-font-color-grey: #999;
 		url('library/fonts/WooCommerce.woff') format('woff'),
 		url('library/fonts/WooCommerce.ttf') format('truetype'),
 		url('library/fonts/WooCommerce.svg#WooCommerce') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Footlight';
+	src:		url('library/fonts/Foootlight.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
