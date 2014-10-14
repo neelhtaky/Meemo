@@ -2,221 +2,407 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "17945",
 "files": {
-	"\/bower_components\/isotope\/_posts\/docs\/2010-12-01-introduction.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
+	"\/404.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-01-introduction.md",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-01-introduction.html",
+		"inputAbbreviatedPath": "\/404.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/_posts\/docs\/2010-12-03-options.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
+	"\/comments.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-03-options.md",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-03-options.html",
+		"inputAbbreviatedPath": "\/comments.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/_posts\/docs\/2010-12-04-methods.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
+	"\/config.rb": {
+		"fileType": 131072,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-04-methods.md",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-04-methods.html",
+		"inputAbbreviatedPath": "\/config.rb",
+		"outputAbbreviatedPath": "\/config.rb",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/_posts\/docs\/2010-12-05-layout-modes.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
+	"\/content-404.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-05-layout-modes.md",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-05-layout-modes.html",
+		"inputAbbreviatedPath": "\/content-404.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/_posts\/docs\/2010-12-06-filtering.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
+	"\/content-logreglost.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-06-filtering.md",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-06-filtering.html",
+		"inputAbbreviatedPath": "\/content-logreglost.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/_posts\/docs\/2010-12-07-sorting.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
+	"\/content-searchfail.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-07-sorting.md",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-07-sorting.html",
+		"inputAbbreviatedPath": "\/content-searchfail.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/_posts\/docs\/2010-12-09-animating.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
+	"\/content-searchsuccess.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-09-animating.md",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-09-animating.html",
+		"inputAbbreviatedPath": "\/content-searchsuccess.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/_posts\/docs\/2010-12-10-adding-items.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
+	"\/footer.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-10-adding-items.md",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2010-12-10-adding-items.html",
+		"inputAbbreviatedPath": "\/footer.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/_posts\/docs\/2011-05-25-extending-isotope.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
+	"\/functions.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2011-05-25-extending-isotope.md",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2011-05-25-extending-isotope.html",
+		"inputAbbreviatedPath": "\/functions.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/_posts\/docs\/2011-06-16-hash-history-jquery-bbq.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
+	"\/header.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2011-06-16-hash-history-jquery-bbq.md",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2011-06-16-hash-history-jquery-bbq.html",
+		"inputAbbreviatedPath": "\/header.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/_posts\/docs\/2011-12-11-help.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
+	"\/index.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2011-12-11-help.md",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2011-12-11-help.html",
+		"inputAbbreviatedPath": "\/index.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/_posts\/docs\/2011-12-20-license.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
+	"\/library\/images\/Logo.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2011-12-20-license.md",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/_posts\/docs\/2011-12-20-license.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/isotope\/dist\/isotope.pkgd.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/dist\/isotope.pkgd.js",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/dist\/min\/isotope.pkgd-min.js",
+		"initialSize": 1531,
+		"inputAbbreviatedPath": "\/library\/images\/Logo.png",
+		"outputAbbreviatedPath": "\/library\/images\/Logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"processed": 0
 		},
-	"\/bower_components\/isotope\/dist\/isotope.pkgd.min.js": {
-		"fileType": 64,
+	"\/library\/images\/next.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/dist\/isotope.pkgd.min.js",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/dist\/min\/isotope.pkgd.min-min.js",
+		"initialSize": 456,
+		"inputAbbreviatedPath": "\/library\/images\/next.png",
+		"outputAbbreviatedPath": "\/library\/images\/next.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"processed": 0
 		},
-	"\/bower_components\/isotope\/jquery.isotope.js": {
-		"fileType": 64,
+	"\/library\/images\/prev.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/jquery.isotope.js",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/min\/jquery.isotope-min.js",
+		"initialSize": 439,
+		"inputAbbreviatedPath": "\/library\/images\/prev.png",
+		"outputAbbreviatedPath": "\/library\/images\/prev.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"processed": 0
 		},
-	"\/bower_components\/isotope\/jquery.isotope.min.js": {
-		"fileType": 64,
+	"\/login-modal.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/jquery.isotope.min.js",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/min\/jquery.isotope.min-min.js",
+		"inputAbbreviatedPath": "\/login-modal.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/js\/isotope.js": {
-		"fileType": 64,
+	"\/loop-related.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/js\/isotope.js",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/js\/min\/isotope-min.js",
+		"inputAbbreviatedPath": "\/loop-related.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/isotope\/js\/item.js": {
-		"fileType": 64,
+	"\/page.php": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/isotope\/js\/item.js",
-		"outputAbbreviatedPath": "\/bower_components\/isotope\/js\/min\/item-min.js",
+		"inputAbbreviatedPath": "\/page.php",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"outputPathIsSetByUser": 0
+		},
+	"\/README.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/README.md",
+		"outputAbbreviatedPath": "\/README.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/search.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/search.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/searchform.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/searchform.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sensei_backup\/content-no-permissions.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sensei_backup\/content-no-permissions.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sensei_backup\/content-single-course.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sensei_backup\/content-single-course.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sensei_backup\/loop-course.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sensei_backup\/loop-course.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sensei_backup\/loop-lesson.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sensei_backup\/loop-lesson.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sensei_backup\/single-quiz\/quiz-questions.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sensei_backup\/single-quiz\/quiz-questions.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sensei_backup\/wrappers\/pagination-lesson.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sensei_backup\/wrappers\/pagination-lesson.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sensei_backup\/wrappers\/pagination-posts.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sensei_backup\/wrappers\/pagination-posts.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sensei_backup\/wrappers\/pagination-quiz.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sensei_backup\/wrappers\/pagination-quiz.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sidebar-left.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sidebar-left.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sidebar-right.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sidebar-right.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/single.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/single.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/style.css": {
 		"fileType": 16,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/woocommerce.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/woocommerce\/single-product\/add-to-cart\/grouped.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce\/single-product\/add-to-cart\/grouped.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/woocommerce\/single-product\/add-to-cart\/simple.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce\/single-product\/add-to-cart\/simple.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/woocommerce\/single-product\/add-to-cart\/variable.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce\/single-product\/add-to-cart\/variable.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/woocommerce\/single-product\/product-image.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce\/single-product\/product-image.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/woocommerce\/single-product\/rating.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce\/single-product\/rating.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/woocommerce\/single-product\/related.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce\/single-product\/related.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/woocommerce\/single-product\/sale-flash.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce\/single-product\/sale-flash.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/woocommerce\/single-product\/share.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce\/single-product\/share.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/woocommerce\/single-product\/short-description.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce\/single-product\/short-description.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/woocommerce\/single-product\/tabs\/tabs.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce\/single-product\/tabs\/tabs.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/woocommerce\/single-product\/title.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/woocommerce\/single-product\/title.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
