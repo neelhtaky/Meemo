@@ -35,12 +35,29 @@
 			<article <?php post_class("sticky entry item"); ?> id="post-<?php the_ID(); ?>" role="article">
 
 				<?php if (has_post_thumbnail( )): ?>
-					<aside class="thumbnail">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
-					</aside>
+					<?php $post_thumbnail_id = get_post_thumbnail_id( $post_id );
+					$imgmeta = wp_get_attachment_metadata( $post_thumbnail_id );
+					if ($imgmeta['width'] > $imgmeta['height']) {
+						//if
+					?>
+						<aside class="thumbnail small-6 columns">
+							<a class="th" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+						</aside>
+					 <?php } else { ?>
+						<aside class="thumbnail small-12 columns">
+							<a class="th" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+						</aside>
+					<?php } ?>
+
 				<?php endif ?>
 				<div class="entry_content">
 					<h2 class="post_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+
+
+
+
+
+
 						<?php if( has_excerpt() ){
 							//if post has custom manual excerpt
 							the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '" class="button" rel="bookmark">Read More</a></div>');
@@ -72,12 +89,39 @@
 			<article <?php post_class("item entry"); ?> id="post-<?php the_ID(); ?>" role="article">
 
 				<?php if (has_post_thumbnail( )): ?>
-					<aside class="thumbnail">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
-					</aside>
+
+
+					<?php $post_thumbnail_id = get_post_thumbnail_id( $post_id );
+					$imgmeta = wp_get_attachment_metadata( $post_thumbnail_id );
+					if ($imgmeta['width'] > $imgmeta['height']) {
+						//vertical image
+					?>
+						<aside class="thumbnail small-12 columns">
+							<a class="th" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+						</aside>
+					 <?php } else {
+					 	//horizontal image
+					 	?>
+						<aside class="thumbnail small-6 columns">
+							<a class="th" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+						</aside>
+					<?php } ?>
 				<?php endif ?>
 				<div class="entry_content">
 					<h2 class="post_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+					<footer class="byline meta postmetadata">
+						<time class="published" datetime="<?php the_time('l, F jS, Y') ?>"><?php the_time('jS F Y') ?>.</time>
+						<div class="author"><?php the_author(); ?>.</div>
+						<a href="<?php comments_link(); ?>" class="comments-link">
+							<?php comments_number( 'No Comments Yet.','1 Comment.', '% Comments.', 'comments-link', 'Sorry, Comments are closed.'); ?></a>
+						<?php if(has_category()){ ?>
+							<span class="category"><?php the_category(', ') ?>.</span>
+						<?php } else {} ?>
+						<?php  if(has_tag()){ ?>
+							<span class="tags"><?php the_tags('Tags: ', ', ', '. '); ?>.</span>
+						<?php } else {} ?>
+					</footer>
+
 					<?php if( has_excerpt() ){
 						//if post has custom manual excerpt
 						the_content('... <div class="read_more"><a href="'. get_permalink($post->ID) . '"  rel="bookmark">Read More</a></div>');
@@ -96,8 +140,8 @@
 	?>
 </div><!-- container -->
 
-<div class="navigation small-12 medium-12 large-12 xlarge-12 xxlarge-12 small-centered columns end">
-	<?php kriesi_pagination($pages = '', $range = 6); ?>
+<div class="panel small-12 medium-12 large-12 xlarge-12 xxlarge-12 columns text-center">
+	<?php kriesi_pagination($pages = '', $range = 4); ?>
 </div><!-- .navigation -->
 
 <?php wp_reset_query(); ?>

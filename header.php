@@ -34,28 +34,31 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(''); ?>>
+
+
+
+
+
+
+
+
+
+
+
 <div id="top" class="hfeed site">
 	<header id="header" role="banner">
 
 		<!-- TOPBAR -->
-		<div class="contain-to-grid hide-for-small-only">
-			<nav class="top-bar" data-topbar>
-				<section class="top-bar-section">
-				  	<!-- Left Nav Section -->
-				    <ul class="left">
-				     <?php $options = array(
-						'theme_location' => 'nav_primary',
-						'container' => false,
-						'depth' => 2,
-						'items_wrap' => '<ul id="%1$s" class="left %2$s">%3$s</ul>',
-						'walker' => new GC_walker_nav_menu()
-						);
-						wp_nav_menu($options); ?>
-				    </ul>
-
-					<!-- Right Nav Section -->
-					<ul class="right">
-						<?php
+		<div id="nav_wrapper">
+			<nav class="top-bar" data-topbar role="navigation">
+			<ul class="title-area">
+					<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			</ul>
+			<section class="top-bar-section">
+			  	<!-- Left Nav Section -->
+			    <ul class="left">
+			     	<?php
 						global $current_user;
 						get_currentuserinfo();
 						$fname = $current_user->user_firstname;
@@ -76,13 +79,56 @@
 							<?php get_template_part( 'login', 'modal' ); ?>
 						</li>
 						<?php } ?>
-						<li class="has-form show-for-large-up">
-							<?php get_search_form(); ?>
-						</li>
-					</ul>
-			  	</section>
-			</nav>
+    			</ul>
+
+			    <!-- Right Nav Section -->
+			    <ul class="right">
+			      <?php $options = array(
+					'theme_location' => 'nav_primary',
+					'container' => false,
+					'depth' => 2,
+					'items_wrap' => '<ul id="%1$s" class="left %2$s">%3$s</ul>',
+					'walker' => new GC_walker_nav_menu()
+					);
+					wp_nav_menu($options); ?>
+				</ul>
+  			</section>
+		</nav>
 		</div>
+
+
+		<div id="header_title" class="row hide-for-small-only">
+			<div id="logo">
+				<a href="<?php echo home_url(); ?>" >
+					<img src="<?php bloginfo('template_directory'); ?>/library/images/Logo.png">
+				</a>
+			</div>
+
+			<div class="site_title">
+				<?php if(is_home()){ ?>
+					<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+				<?php } else { ?>
+					<h4><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h4>
+				<?php } ?>
+			</div><!-- #site_title END -->
+
+			<div id="description" >
+				<p><?php bloginfo('description'); ?></p>
+			</div><!-- #description END -->
+
+		</div>
+		<div id="header_menu" class="row hide-for-small-only">
+						 <?php $options = array(
+					'theme_location' => 'nav_primary',
+					'container' => false,
+					'depth' => 2,
+					'items_wrap' => '<ul id="%1$s" class="left %2$s">%3$s</ul>',
+					'walker' => new GC_walker_nav_menu()
+					);
+					wp_nav_menu($options); ?>
+		</div>
+
+
 
 
 <div class="off-canvas-wrap" data-offcanvas>
@@ -115,3 +161,4 @@
     	<!-- main content goes here -->
 
 			<div id="main" class="site-main row">
+

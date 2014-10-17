@@ -1,4 +1,4 @@
-<aside id="sidebar"  class="small-12 medium-3 large-3 xlarge-2 xxlarge-2 columns" role="complementary">
+<aside id="sidebar"  class="sidebar_right small-12 medium-3 large-3 xlarge-2 xxlarge-2 columns" role="complementary">
 	<ul class="no-bullet">
 	<!-- Show Shopping Cart Globally-->
 		<?php global $woocommerce; ?>

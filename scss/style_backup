@@ -1,17 +1,4 @@
-/*
-Theme Name: Simply Meemo
-Theme URI: www.quickneed.com
-Author: Kat Skinner
-Author URI: http://katskinner.com
-Description: A simple theme with a focus on content.
-Version: 1.1
-License: Attribution-NonCommercial-NoDerivs. CC BY-NC-ND.
-License URI: http://creativecommons.org/licenses/
-Tags: white, light, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, post-formats
-*/
-@import "mixins";
-@import "app.scss";
-@import "woocommerce";
+
 
 /******************************************************************
 Links

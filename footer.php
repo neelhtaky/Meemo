@@ -17,14 +17,9 @@
 
 		<div id="footer_meta" >
 			<div class="row">
-				<div class="small-12 medium-6 large-6 xlarge-4 columns">
+				<div id="copyright" class="small-12 medium-6 large-6 xlarge-4 columns">
 					<p>Copyright &copy; <?php echo date("Y") ?> <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved.
-					</br>
-					Theme Designed By <a href="<?php echo esc_url( __( 'http://katskinner.com/') ); ?>" title="<?php esc_attr_e( 'Kat Skinner' ); ?>">Kat Skinner</a>.
 					</p>
-					<span id="wordpress">
-						Proudly powered by <a href="<?php echo esc_url( __( 'http://wordpress.org/') ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform' ); ?>"><?php printf( __( '%s'), 'WordPress' ); ?></a>.
-					</span>
 				</div><!-- fsize -->
 				<?php wp_nav_menu(array('theme_location' => 'nav_footer', 'container_class' => 'small-12 medium-6 large-6 xlarge-8 columns', 'menu_class' => 'inline-list right', 'depth' => 1)); ?>
 			</div><!-- row -->
