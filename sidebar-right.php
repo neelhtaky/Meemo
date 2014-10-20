@@ -39,7 +39,7 @@
 
 					<?php
 						if(has_tag()){ ?>
-						   It is tagged with <span class="tags"><?php the_tags('', ', ', '. '); ?></span>.
+						   It is tagged with <span class="tags"><?php the_tags('', ', ', '. '); ?></span>
 					<?php } else {} ?>
 					<br>
 					<?php if ( comments_open() ) :

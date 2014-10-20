@@ -52,7 +52,18 @@
 				<?php endif ?>
 				<div class="entry_content">
 					<h2 class="post_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-
+						<footer class="byline meta postmetadata">
+						<time class="published" datetime="<?php the_time('l, F jS, Y') ?>"><?php the_time('jS F Y') ?>.</time>
+						<div class="author"><?php the_author(); ?>.</div>
+						<a href="<?php comments_link(); ?>" class="comments-link">
+							<?php comments_number( 'No Comments Yet.','1 Comment.', '% Comments.', 'comments-link', 'Sorry, Comments are closed.'); ?></a>
+						<?php if(has_category()){ ?>
+							<span class="category"><?php the_category(', ') ?>.</span>
+						<?php } else {} ?>
+						<?php  if(has_tag()){ ?>
+							<span class="tags"><?php the_tags('Tags: ', ', ', '. '); ?>.</span>
+						<?php } else {} ?>
+					</footer>
 
 
 

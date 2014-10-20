@@ -7,7 +7,11 @@ $woocommercefont: 	"WooCommerce";
 $FootlightFont:		"Footlight";
 
 $primary-color: #55b4b5; //is aqua
-$secondary-color:#bee3ef;
+$secondary-color:#bee3ef; //is light blue
+
+$grey-color: 	#333;
+
+$body-font-color-grey: #d8d8d8;
 
 // $secondary-color: #e7e7e7; is grey
 // $alert-color: #f04124; is red
@@ -23,10 +27,7 @@ $secondary-color:#bee3ef;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
-$bgcolorlight:		#cccccc;
-$bgcolormedium: 	#333;
-$bgcolordark: 		#232323;
-$body-font-color-grey: #999;
+
 @font-face {
     font-family: 'FontAwesome';
     src: url('/bower_components/font-awesome/fonts/fontawesome-webfont.eot');

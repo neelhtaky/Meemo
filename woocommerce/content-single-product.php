@@ -11,6 +11,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
+
 <?php
 	/**
 	 * woocommerce_before_single_product hook
@@ -30,10 +31,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook
-		 * 			row and full width for flash
+		 *
 		 * @hooked woocommerce_show_product_sale_flash - 10
-		 *         open wrapper excerpt row
-		 *         wrapper for images
 		 * @hooked woocommerce_show_product_images - 20
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
@@ -50,8 +49,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			 * @hooked woocommerce_template_single_price - 10
 			 * @hooked woocommerce_template_single_excerpt - 20
 			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 *         row for each type
-			 *         add to cart wrapper for each type
 			 * @hooked woocommerce_template_single_meta - 40
 			 * @hooked woocommerce_template_single_sharing - 50
 			 */
@@ -60,13 +57,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 	</div><!-- .summary -->
 
-</div><!-- #productID -->
-
 	<?php
 		/**
 		 * woocommerce_after_single_product_summary hook
 		 *
 		 * @hooked woocommerce_output_product_data_tabs - 10
+		 * @hooked woocommerce_upsell_display - 15
 		 * @hooked woocommerce_output_related_products - 20
 		 */
 		do_action( 'woocommerce_after_single_product_summary' );
@@ -74,6 +70,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
-
+</div><!-- #product-<?php the_ID(); ?> -->
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

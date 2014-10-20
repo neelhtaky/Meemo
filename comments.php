@@ -25,22 +25,18 @@ if ($prev_link || $next_link) {
 }
      ?>
 
-    <?php $comments_by_type = &separate_comments($comments); ?>
+ <?php $comments_by_type = &separate_comments($comments); ?>
         <?php if (!empty($comments_by_type['comment'])) { ?>
-            <h3 id="comments">Comments</h3>
+            <h4 id="comments">Comments</h4>
             <ol class="commentlist">
                 <?php wp_list_comments('type=comment&avatar_size=65&callback=mytheme_comment'); ?>
             </ol>
-        <?php } if (!empty($comments_by_type['pingback'])) { ?>
-            <h3 id="pingbacks">Pingbacks</h3>
+        <?php } if (!empty($comments_by_type['pings'])) { ?>
+            <h4 id="pingbacks">Honorable Mentions</h4>
             <ol class="pingbacklist">
-                <?php wp_list_comments('type=pingback'); ?>
+                <?php wp_list_comments('type=pings'); ?>
             </ol>
-        <?php } if (!empty($comments_by_type['trackback'])) { ?>
-            <h3 id="trackbacks">Trackbacks</h3>
-            <ol class="trackbacklist">
-                <?php wp_list_comments('type=trackback'); ?>
-            </ol>
+
     <?php } ?>
 
 <?php else : // this is displayed if there are no comments so far ?>

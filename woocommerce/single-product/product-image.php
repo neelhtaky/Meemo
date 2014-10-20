@@ -13,7 +13,7 @@ global $post, $woocommerce, $product;
 
 ?>
 <div class="row">
-	<div class="images small-12 medium-6 large-6 xlarge-4 xxlarge-4 columns thumbnail">
+<div class="images small-12 medium-6 large-6 xlarge-4 xxlarge-4 columns thumbnail">
 
 	<?php
 		if ( has_post_thumbnail() ) {
@@ -36,11 +36,11 @@ global $post, $woocommerce, $product;
 
 		} else {
 
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="Placeholder" />', wc_placeholder_img_src() ), $post->ID );
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
 
 		}
 	?>
 
 	<?php do_action( 'woocommerce_product_thumbnails' ); ?>
 
-</div><!-- .images -->
+</div>

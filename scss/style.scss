@@ -1,0 +1,347 @@
+/*
+Theme Name: Simply Meemo
+Theme URI: www.quickneed.com
+Author: Kat Skinner
+Author URI: http://katskinner.com
+Description: A simple theme with a focus on content.
+Version: 1.1
+License: Attribution-NonCommercial-NoDerivs. CC BY-NC-ND.
+License URI: http://creativecommons.org/licenses/
+Tags: white, light, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, post-formats
+*/
+@import "mixins";
+@import "app.scss";
+@import "woocommerce";
+
+
+
+
+/******************************************************************
+HEADER
+******************************************************************/
+
+#nav_wrapper{
+	margin:0 !important;
+	padding:1px 0 5px 0;
+	height:3.6rem;
+	background:$primary-color;
+}
+nav.top-bar{
+	height:3rem;
+	background:$primary-color !important;
+	margin: 5px -5px;
+	border-top: 1.5px dashed $secondary-color;
+	border-bottom: 1.5px dashed $secondary-color;
+	ul li{ background:none;
+		a{
+			transition: background-color 0.5s ease;
+			color:darken($primary-color,20%);
+			&:hover{
+				background:darken($primary-color,20%) !important;
+			}
+		}
+	}
+	li.current-menu-item a, .top-bar li.current_page_item a {
+		color:white;
+	}
+}
+
+.top-bar-section .has-form, .top-bar-section li:not(.has-form) a:not(.button){
+	background:none;
+}
+#welcome_user{
+	color:white;
+	font-size:0.8rem;
+	padding:0.7rem 2rem 0 2rem;
+}
+#header_title{
+	padding:1rem 1rem;
+	 #logo img{
+	 	width:77px;
+	 	height:auto;
+	 	float: left;
+	}
+	.site_title h1 a, .site_title h4 a {
+		font-family: $FootlightFont;
+		color:black;
+		font-size: 2.2rem !important;
+		font-weight:bold;
+		margin:0.5rem 0 0 1rem;
+		float: left;
+	}
+	#description p{
+		font-style:italic;
+		font-size:0.9rem !important;
+		float: left;
+		margin:1.1rem 0 0 1rem;
+	}
+}
+#header_menu{
+	ul{
+		list-style:none;
+		li{
+			float:left;
+			margin-right:2rem;
+			a{
+				color:$body-font-color;
+			}
+		}
+		li.current-menu-item a, li.current_page_item a {color:$primary-color; font-style:italic;}
+	}
+}
+.off-canvas-wrap h1.title a{color:white;}
+
+/******************************************************************
+Links
+******************************************************************/
+
+a[href*="quickneed"], a[href*="wordpress"], a[href*="katskinner"], a[href^="/"], a[href^="#"], a[href^="mailto:"], a[href^="javascript:"] {display: inline;}
+a[href*="quickneed"]:after, a[href*="wordpress"]:after,  a[href*="katskinner"]:after, a[href^="/"]:after, a[href^="#"]:after, a[href^="mailto:"]:after, a[href^="javascript:"]:after {content: none;}
+
+
+
+
+
+.postmetadata{font-size:0.9rem;margin-bottom:0.5rem;}
+
+time, .entry_content .author, .entry_content a.comments-link, .entry_content .tags, .entry_content .category, span.course-category, span.posted_in, span.tags {
+	color: lighten($body-font-color-grey, 20%);
+	display: inline;
+	font-weight: normal;
+	font-style: italic;
+	&:before{
+		-webkit-font-smoothing: antialiased;
+		font: normal 16px/1 'FontAwesome';
+		margin-right:0.3rem;
+	}
+}
+
+
+
+a[href]:after {
+	content: '\f08e';
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 10px/1 'FontAwesome';
+	vertical-align: top;}
+
+
+
+time {
+	&:before{content: '\f017';}
+}
+.entry_content .author{
+	&:before{content: '\f182';}
+}
+.entry_content a.comments-link{
+	&:before{content:'\f075';}
+}
+.entry_content .tags{
+	&:before{content:'\f02c';}
+}
+span.tags{
+	color: $body-font-color;
+	&::before{
+		content: '\f02c';
+	}
+}
+.entry_content .category {
+	&:before{content:'\f07c';}
+	a{color: lighten($body-font-color-grey, 20%);
+		&:hover{color:$secondary-color;}
+	}
+}
+span.course-category, span.posted_in{
+	color: $body-font-color;
+	&::before{
+		content: '\f07c';
+	}
+}
+/******************************************************************
+INDEX
+******************************************************************/
+
+.read_more{
+	padding: 0.3rem;
+	background:lighten($secondary-color,10%);
+	border: 1px dashed $secondary-color;
+	text-align: center;
+	transition: background-color 0.5s ease;
+	box-shadow: 0 0 0 4px lighten($secondary-color,10%), 1px 1px 1px 1px grey;
+	cursor:pointer;
+	&:hover{
+		border: 1px dashed darken($secondary-color,20%);
+		background:$secondary-color;
+		box-shadow: 0 0 0 4px $secondary-color, 1px 1px 1px 1px grey;
+		color:darken($primary-color,20%);
+	}
+}
+
+.entry{
+	margin-bottom:1rem;
+}
+.single_content, .entry_content{
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+.pingbacklist {
+	margin-left:0;
+	li{
+		list-style:none;
+	}
+	.comment-author{
+		border:none;
+		margin:0;
+	}
+}
+
+.pingbacklist .comment-content, .pingbacklist .says, .pingbacklist .comment-metadata{
+	display:none;
+}
+/******************************************************************
+IMAGES
+******************************************************************/
+.alignleft, img.alignleft {
+	margin-right: 1.5rem;
+	display: inline;
+	float: left;
+	max-width: 100%;
+	}
+.alignright, img.alignright {
+	margin-left: 1.5rem;
+	display: inline;
+	float: right;
+	max-width: 100%;
+	}
+.aligncenter, img.aligncenter, .alignnone, img.alignnone {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	clear: both;
+	max-width: 100%;
+	}
+
+/******************************************************************
+WOOCOMMERCE
+******************************************************************/
+.tabs li{
+	border:1px solid lighten($grey-color,65%);
+	border-bottom:0;
+}
+
+/******************************************************************
+FOOTER
+******************************************************************/
+#footer_wrap{
+	// font-size:0.85rem;
+	color:white;
+	border-top: 7px solid $secondary-color;
+}
+#footer_widgets{
+	background:$primary-color;
+	padding: 1.5rem 0 1.5rem 0;
+	margin: 5px -5px;
+	border: 1.5px dashed $secondary-color;
+	box-shadow: 0 0 0 4px $primary-color, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+
+	.widget-title{
+		color:white;
+		font-size:1.1rem;
+	}
+	ul li ul{
+		margin-left: 0 !important;
+		font-size:0.85rem;
+	}
+	.children li{margin-left:1.25rem;}
+	a{
+		color: darken($primary-color, 20%);
+	}
+}
+#footer_meta{
+	background: darken($primary-color, 20%);
+	padding:1rem 0 0 0;
+	color:$primary-color;
+	a{color:$secondary-color;}
+	p, ul, a{
+		font-size:0.9rem;
+	}
+}
+
+/******************************************************************
+MEDIA QUERIES
+******************************************************************/
+// Small screens max-width 640px -
+
+ @media only screen and (max-width: 40em) {
+	html{font-size: 0.9rem;}
+	.sidebar_right{
+		column-count:2;
+		-webkit-column-count:2;
+		-moz-column-count:2;
+		padding-top:1rem;
+		padding-bottom:1.5rem;
+	}
+	#copyright{text-align:center;}
+	.nav_footer{margin:0 auto;}
+
+
+}
+// Medium screens min-width 641px,  max-width 1024px -
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	html{font-size: 0.95rem;}
+	.item {width:100%;}
+	#products .product{
+		width:48%;
+		&:nth-child(odd){
+			margin-right: 2%;
+		}
+	}
+	#sidebar .widgets-list-layout img.widgets-list-layout-blavatar{
+		float: none;
+		min-width:130px;
+		max-width:220px;
+	}
+	#sidebar .widgets-list-layout-links{width:100% !important;}
+
+}
+// Large screens min-width 1025px, max-width 1440px
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	.item, #products .product{
+		width:48%;
+		&:nth-child(odd){
+			margin-right: 2%;
+		}
+	}
+	#sidebar .widgets-list-layout img.widgets-list-layout-blavatar{
+		min-width:45px;
+		max-width:70px;
+	}
+
+}
+// XLarge screens
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+	html{font-size: 1rem;}
+	.item, #products .product{
+		width:48%;
+		&:nth-child(odd){
+			margin-right: 2%;
+		}
+	}
+	#sidebar .widgets-list-layout img.widgets-list-layout-blavatar{
+		width:49px;
+	}
+
+}
+// XXLarge screens min-width 1921px
+@media only screen and (min-width: 120.063em) {
+	.item, #products .product{
+		width:48%;
+		&:nth-child(odd){
+			margin-right: 2%;
+		}
+	}
+	.widget_archive ul li{
+		// @include grid-column(6);
+	}
+
+}

@@ -6260,6 +6260,7 @@ nav.top-bar {
   nav.top-bar ul li {
     background: none; }
     nav.top-bar ul li a {
+      transition: background-color 0.5s ease;
       color: #327272; }
       nav.top-bar ul li a:hover {
         background: #327272 !important; }
@@ -6310,19 +6311,32 @@ nav.top-bar {
 /******************************************************************
 Links
 ******************************************************************/
+a[href*="quickneed"], a[href*="wordpress"], a[href*="katskinner"], a[href^="/"], a[href^="#"], a[href^="mailto:"], a[href^="javascript:"] {
+  display: inline; }
+
+a[href*="quickneed"]:after, a[href*="wordpress"]:after, a[href*="katskinner"]:after, a[href^="/"]:after, a[href^="#"]:after, a[href^="mailto:"]:after, a[href^="javascript:"]:after {
+  content: none; }
+
 .postmetadata {
   font-size: 0.9rem;
   margin-bottom: 0.5rem; }
 
-time, .entry_content .author, .entry_content a.comments-link, .entry_content .tags, .entry_content .category {
-  color: #55b4b5;
+time, .entry_content .author, .entry_content a.comments-link, .entry_content .tags, .entry_content .category, span.course-category, span.posted_in, span.tags {
+  color: white;
   display: inline;
   font-weight: normal;
   font-style: italic; }
-  time:before, .entry_content .author:before, .entry_content a.comments-link:before, .entry_content .tags:before, .entry_content .category:before {
+  time:before, .entry_content .author:before, .entry_content a.comments-link:before, .entry_content .tags:before, .entry_content .category:before, span.course-category:before, span.posted_in:before, span.tags:before {
     -webkit-font-smoothing: antialiased;
     font: normal 16px/1 'FontAwesome';
     margin-right: 0.3rem; }
+
+a[href]:after {
+  content: '\f08e';
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font: normal 10px/1 'FontAwesome';
+  vertical-align: top; }
 
 time:before {
   content: '\f017'; }
@@ -6336,8 +6350,86 @@ time:before {
 .entry_content .tags:before {
   content: '\f02c'; }
 
+span.tags {
+  color: #222; }
+  span.tags::before {
+    content: '\f02c'; }
+
 .entry_content .category:before {
   content: '\f07c'; }
+.entry_content .category a {
+  color: white; }
+  .entry_content .category a:hover {
+    color: #bee3ef; }
+
+span.course-category, span.posted_in {
+  color: #222; }
+  span.course-category::before, span.posted_in::before {
+    content: '\f07c'; }
+
+/******************************************************************
+INDEX
+******************************************************************/
+.read_more {
+  padding: 0.3rem;
+  background: #e7f5f9;
+  border: 1px dashed #bee3ef;
+  text-align: center;
+  transition: background-color 0.5s ease;
+  box-shadow: 0 0 0 4px #e7f5f9, 1px 1px 1px 1px grey;
+  cursor: pointer; }
+  .read_more:hover {
+    border: 1px dashed #6cc1db;
+    background: #bee3ef;
+    box-shadow: 0 0 0 4px #bee3ef, 1px 1px 1px 1px grey;
+    color: #327272; }
+
+.entry {
+  margin-bottom: 1rem; }
+
+.single_content, .entry_content {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
+
+.pingbacklist {
+  margin-left: 0; }
+  .pingbacklist li {
+    list-style: none; }
+  .pingbacklist .comment-author {
+    border: none;
+    margin: 0; }
+
+.pingbacklist .comment-content, .pingbacklist .says, .pingbacklist .comment-metadata {
+  display: none; }
+
+/******************************************************************
+IMAGES
+******************************************************************/
+.alignleft, img.alignleft {
+  margin-right: 1.5rem;
+  display: inline;
+  float: left;
+  max-width: 100%; }
+
+.alignright, img.alignright {
+  margin-left: 1.5rem;
+  display: inline;
+  float: right;
+  max-width: 100%; }
+
+.aligncenter, img.aligncenter, .alignnone, img.alignnone {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+  max-width: 100%; }
+
+/******************************************************************
+WOOCOMMERCE
+******************************************************************/
+.tabs li {
+  border: 1px solid #d9d9d9;
+  border-bottom: 0; }
 
 /******************************************************************
 FOOTER
@@ -6371,12 +6463,6 @@ FOOTER
     color: #bee3ef; }
   #footer_meta p, #footer_meta ul, #footer_meta a {
     font-size: 0.9rem; }
-
-/******************************************************************
-INDEX
-******************************************************************/
-.th {
-  margin-left: 0rem; }
 
 /******************************************************************
 MEDIA QUERIES
