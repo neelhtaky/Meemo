@@ -38,7 +38,7 @@
 
 		<div class="content" id="panel2-2">
 			<h2>Register</h2>
-			<p>Register cto get access to some wonderful goodies. It's fast and <em>free!</em></p>
+			<p>Register to get access to some wonderful goodies. It's fast and <em>free!</em></p>
 			<?php $register = $_GET['register']; if($register == true) { echo '<p class="alert-box warning">Check your email for the password!</p>'; } ?>
 
 

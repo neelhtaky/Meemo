@@ -19,7 +19,6 @@ Tags: white, light, right-sidebar, flexible-width, custom-menu, editor-style, fe
 /******************************************************************
 HEADER
 ******************************************************************/
-
 #nav_wrapper{
 	margin:0 !important;
 	padding:1px 0 5px 0;
@@ -98,15 +97,14 @@ Links
 a[href*="quickneed"], a[href*="wordpress"], a[href*="katskinner"], a[href^="/"], a[href^="#"], a[href^="mailto:"], a[href^="javascript:"] {display: inline;}
 a[href*="quickneed"]:after, a[href*="wordpress"]:after,  a[href*="katskinner"]:after, a[href^="/"]:after, a[href^="#"]:after, a[href^="mailto:"]:after, a[href^="javascript:"]:after {content: none;}
 
-
-
-
-
 .postmetadata{font-size:0.9rem;margin-bottom:0.5rem;}
 
-time, .entry_content .author, .entry_content a.comments-link, .entry_content .tags, .entry_content .category, span.course-category, span.posted_in, span.tags {
-	color: lighten($body-font-color-grey, 20%);
+
+time, .entry_content .author, .entry_content a.comments-link, .entry_content .tags, .entry_content .category, span.course-category, span.posted_in, span.tags, .course-container .course-author, .course-container .sensei-course-participants, .course-container .sensei-course-meta span.course-lesson-count {
+	// color: lighten($body-font-color-grey, 20%);
+	color: lighten($body-font-color,60%);
 	display: inline;
+	font-size:0.8rem;
 	font-weight: normal;
 	font-style: italic;
 	&:before{
@@ -118,21 +116,26 @@ time, .entry_content .author, .entry_content a.comments-link, .entry_content .ta
 
 
 
+
+
 a[href]:after {
 	content: '\f08e';
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
 	font: normal 10px/1 'FontAwesome';
-	vertical-align: top;}
-
-
+	vertical-align: top;
+}
 
 time {
 	&:before{content: '\f017';}
 }
-.entry_content .author{
+/******************************************************************
+ICONS
+******************************************************************/
+.entry_content .author, .course-container .course-author{
 	&:before{content: '\f182';}
 }
+
 .entry_content a.comments-link{
 	&:before{content:'\f075';}
 }
@@ -147,16 +150,28 @@ span.tags{
 }
 .entry_content .category {
 	&:before{content:'\f07c';}
-	a{color: lighten($body-font-color-grey, 20%);
+	a{
+		color: lighten($body-font-color, 60%);
 		&:hover{color:$secondary-color;}
 	}
 }
 span.course-category, span.posted_in{
-	color: $body-font-color;
+	color: lighten($body-font-color,60%) !important;
 	&::before{
 		content: '\f07c';
 	}
 }
+.course-container .sensei-course-participants{
+	&:before{
+		content: '\f0c0';
+		vertical-align:text-bottom;
+		padding-right: 0.2rem;
+	}
+}
+.course-container .sensei-course-meta span.course-lesson-count{
+		&:before{
+			content: '\f19c';
+		}}
 /******************************************************************
 INDEX
 ******************************************************************/
@@ -184,6 +199,21 @@ INDEX
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
+
+/******************************************************************
+COMMENTS
+******************************************************************/
+.post_meta_share{
+	border-top:1px dashed $secondary-color;
+	border-bottom:1px dashed $secondary-color;
+	padding:1rem 0;
+	text-align:center;
+}
+#shortlink_url{
+	font-size:0.8rem;
+	color:$primary-color;
+}
+#comment_title{padding-top:1rem;}
 .pingbacklist {
 	margin-left:0;
 	li{
@@ -194,10 +224,70 @@ INDEX
 		margin:0;
 	}
 }
-
 .pingbacklist .comment-content, .pingbacklist .says, .pingbacklist .comment-metadata{
 	display:none;
 }
+
+
+
+/* comments */
+ol.commentlist { list-style:none; margin:0 0 1em; padding:0; text-indent:0; }
+ol.commentlist li { }
+ol.commentlist li.alt { }
+ol.commentlist li.bypostauthor {}
+ol.commentlist li.byuser {}
+ol.commentlist li.comment-author-admin {}
+ol.commentlist li.comment { padding:0.5rem 1rem 0 1rem; }
+ol.commentlist li.comment div.comment-author {}
+ol.commentlist li.comment div.vcard { border:none; padding-bottom:0; margin-bottom:0;}
+ol.commentlist li.comment div.vcard cite.fn { font-style:normal; }
+ol.commentlist li.comment div.vcard cite.fn a.url {color:$body-font-color;}
+ol.commentlist li.comment div.vcard img.avatar { @include thumb;}
+ol.commentlist li.comment div.vcard img.avatar-32 {@include thumb;}
+ol.commentlist li.comment div.vcard img.photo {@include thumb;}
+ol.commentlist li.comment div.commentmetadata {text-align: right;}
+ol.commentlist li.comment div.comment-meta {margin:1em 0 0 0;}
+ol.commentlist li.comment div.comment-meta a { color:$body-font-color;}
+ol.commentlist li.comment p { margin:0 0 1em; }
+ol.commentlist li.comment ul { list-style:square; margin:0 0 1em 2em; }
+ol.commentlist li.comment div.reply { text-align: right;}
+ol.commentlist li.comment div.reply a { @include button; }
+ol.commentlist li.comment ul.children { list-style:none; margin:1em 0 0; text-indent:0; }
+ol.commentlist li.comment ul.children li {}
+ol.commentlist li.comment ul.children li.alt {}
+ol.commentlist li.comment ul.children li.bypostauthor {}
+ol.commentlist li.comment ul.children li.byuser {}
+ol.commentlist li.comment ul.children li.comment {}
+ol.commentlist li.comment ul.children li.comment-author-admin {}
+ol.commentlist li.comment ul.children li.depth-2 { border-left:5px solid lighten(black, 80%); margin:0 0 .25em .25em; }
+ol.commentlist li.comment ul.children li.depth-3 { border-left:5px solid lighten(black, 70%); margin:0 0 .25em .25em; }
+ol.commentlist li.comment ul.children li.depth-4 { border-left:5px solid lighten(black, 60%); margin:0 0 .25em .25em; }
+ol.commentlist li.comment ul.children li.depth-5 {border-left:5px solid lighten(black, 50%); margin:0 0 0 .25em;}
+ol.commentlist li.comment ul.children li.odd {}
+// ol.commentlist li.even { background:#fff; }
+ol.commentlist li.odd { background:#f6f6f6; }
+ol.commentlist li.parent { border-left:5px solid lighten(black, 85%); }
+ol.commentlist li.thread-alt { }
+ol.commentlist li.thread-even {}
+ol.commentlist li.thread-odd {}
+/* pingbacks */
+ol.pingbacklist { list-style:none; margin:0 0 1em; padding:0; text-indent:0; }
+ol.pingbacklist li.pingback { padding:1em 1em 1em 0; }
+ol.pingbacklist li.pingback div.vcard { font:normal 16px georgia,times,serif; border:none; margin-bottom: 0; }
+ol.pingbacklist li.pingback div.vcard span.says {display:none;}
+ol.pingbacklist li.pingback div.commentmetadata {}
+ol.pingbacklist li.pingback div.comment-meta a time {margin-left: 10em; color:$body-font-color;}
+ol.pingbacklist li.pingback div.reply { display:none;}
+ol.pingbacklist li.even { background:#fff; }
+ol.pingbacklist li.odd { background:#f6f6f6; }
+ol.pingbacklist li.pingback ul { list-style:square; margin:0 0 1em 2em; }
+ol.pingbacklist li.pingback div.vcard cite.fn { font-style:normal; }
+ol.pingbacklist li.pingback div.vcard cite.fn a.url {color:$body-font-color;}
+ol.pingbacklist li.pingback p { margin:0 0 1em; }
+ol.pingbacklist li.pingback div.comment-meta { margin-top: 9px;}
+ol.pingbacklist li.pingback p{display:none;}
+ol.pingbacklist li.pingback div.comment-body{}
+
 /******************************************************************
 IMAGES
 ******************************************************************/
@@ -222,11 +312,92 @@ IMAGES
 	}
 
 /******************************************************************
+Courses
+******************************************************************/
+.type-course{
+	a img{
+		margin:1.7rem 1rem 0 0;
+	}
+}
+#main .course  {
+	padding: 0 !important;
+	border-bottom: none !important;
+	}
+
+.course-container .archive-header h1{
+	font-size: $h2-font-size !important;
+	padding-bottom:0 !important;
+	border: none !important;}
+
+.course-container .sensei-course-meta  {
+	margin: 0.5rem 0;
+	span a{
+		color: lighten($body-font-color, 60%) !important;
+		&:hover{color:$secondary-color;}
+	}
+	color:lighten($body-font-color-grey, 20%);
+}
+.course-price, p.course-price, span.course-price {
+		font-weight: normal !important;
+		font-size: 1.2rem;
+		padding:0.25em 0.5em;
+		background:$primary-color;
+		ins {
+			text-decoration: none;
+			font-weight:bold;
+		}
+		del {
+			font-size: 0.67em;
+		}
+	}
+
+
+
+
+
+/******************************************************************
 WOOCOMMERCE
 ******************************************************************/
 .tabs li{
 	border:1px solid lighten($grey-color,65%);
 	border-bottom:0;
+}
+/******************************************************************
+Sidebar
+******************************************************************/
+#sidebar{
+	p, a, li{
+		font-size:0.85rem;
+	}
+	h3{font-size:1.1rem;}
+	.widget{
+		margin-bottom:2rem;
+	}
+	.widget-title{
+		text-transform: uppercase;
+		background: $primary-color;
+		border-top: 1px double white;
+		border-bottom: 1px double white;
+		color:white;
+		padding: 0.5rem 0 0.3rem 0;
+		text-align: center;
+		transition: background-color 0.5s ease;
+		// box-shadow: 0 0 0 4px lighten($secondary-color,10%), 1px 1px 1px 1px grey;
+		box-shadow: 0 0 0 4px $primary-color, 1px 1px 1px 1px grey;
+	}
+}
+#footer_widgets{
+	.widget-title{
+		text-transform: uppercase;
+		background: lighten($primary-color,10%);
+		border: 2px double white;
+		// color:white;
+		padding: 0.3rem;
+		text-align: center;
+		// transition: background-color 0.5s ease;
+		box-shadow: 0 0 0 4px darken($secondary-color,10%), 1px 1px 1px 1px grey;
+		// box-shadow: 0 0 0 4px $secondary-color, 1px 1px 1px 1px grey;
+	}
 }
 
 /******************************************************************

@@ -11,6 +11,10 @@ if(function_exists('add_theme_support')) {
     add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
     $formats = array( 'status', 'quote', 'gallery', 'image', 'video', 'audio', 'link', 'aside', 'chat', );
     add_theme_support( 'post-formats', $formats );}
+    add_action( 'after_setup_theme', 'declare_sensei_support' );
+function declare_sensei_support() {
+    add_theme_support( 'sensei' );
+}
 /* Register Sidebars */
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
@@ -503,8 +507,8 @@ function mytheme_comment($comment, $args, $depth) {
         <?php endif; ?>
         <div id="author_wrap">
           <div class="comment-author vcard small-12 medium-6 large-6 columns">
-          <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-          <?php printf(__('<cite class="fn">%s</cite> <span class="says">said:</span>'), get_comment_author_link()) ?>
+            <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+            <?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?>
           </div>
           <div class="comment-meta commentmetadata small-12 medium-6 large-6 columns"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
             <?php
@@ -564,5 +568,4 @@ function disable_self_trackback( &$links ) {
             unset($links[$l]);
 }
 add_action( 'pre_ping', 'disable_self_trackback' );
-
 ?>

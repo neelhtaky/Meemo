@@ -6321,12 +6321,13 @@ a[href*="quickneed"]:after, a[href*="wordpress"]:after, a[href*="katskinner"]:af
   font-size: 0.9rem;
   margin-bottom: 0.5rem; }
 
-time, .entry_content .author, .entry_content a.comments-link, .entry_content .tags, .entry_content .category, span.course-category, span.posted_in, span.tags {
-  color: white;
+time, .entry_content .author, .entry_content a.comments-link, .entry_content .tags, .entry_content .category, span.course-category, span.posted_in, span.tags, .course-container .course-author, .course-container .sensei-course-participants, .course-container .sensei-course-meta span.course-lesson-count {
+  color: #bbbbbb;
   display: inline;
+  font-size: 0.8rem;
   font-weight: normal;
   font-style: italic; }
-  time:before, .entry_content .author:before, .entry_content a.comments-link:before, .entry_content .tags:before, .entry_content .category:before, span.course-category:before, span.posted_in:before, span.tags:before {
+  time:before, .entry_content .author:before, .entry_content a.comments-link:before, .entry_content .tags:before, .entry_content .category:before, span.course-category:before, span.posted_in:before, span.tags:before, .course-container .course-author:before, .course-container .sensei-course-participants:before, .course-container .sensei-course-meta span.course-lesson-count:before {
     -webkit-font-smoothing: antialiased;
     font: normal 16px/1 'FontAwesome';
     margin-right: 0.3rem; }
@@ -6341,7 +6342,10 @@ a[href]:after {
 time:before {
   content: '\f017'; }
 
-.entry_content .author:before {
+/******************************************************************
+ICONS
+******************************************************************/
+.entry_content .author:before, .course-container .course-author:before {
   content: '\f182'; }
 
 .entry_content a.comments-link:before {
@@ -6358,14 +6362,22 @@ span.tags {
 .entry_content .category:before {
   content: '\f07c'; }
 .entry_content .category a {
-  color: white; }
+  color: #bbbbbb; }
   .entry_content .category a:hover {
     color: #bee3ef; }
 
 span.course-category, span.posted_in {
-  color: #222; }
+  color: #bbbbbb !important; }
   span.course-category::before, span.posted_in::before {
     content: '\f07c'; }
+
+.course-container .sensei-course-participants:before {
+  content: '\f0c0';
+  vertical-align: text-bottom;
+  padding-right: 0.2rem; }
+
+.course-container .sensei-course-meta span.course-lesson-count:before {
+  content: '\f19c'; }
 
 /******************************************************************
 INDEX
@@ -6391,6 +6403,22 @@ INDEX
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
 
+/******************************************************************
+COMMENTS
+******************************************************************/
+.post_meta_share {
+  border-top: 1px dashed #bee3ef;
+  border-bottom: 1px dashed #bee3ef;
+  padding: 1rem 0;
+  text-align: center; }
+
+#shortlink_url {
+  font-size: 0.8rem;
+  color: #55b4b5; }
+
+#comment_title {
+  padding-top: 1rem; }
+
 .pingbacklist {
   margin-left: 0; }
   .pingbacklist li {
@@ -6400,6 +6428,178 @@ INDEX
     margin: 0; }
 
 .pingbacklist .comment-content, .pingbacklist .says, .pingbacklist .comment-metadata {
+  display: none; }
+
+/* comments */
+ol.commentlist {
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0;
+  text-indent: 0; }
+
+ol.commentlist li.comment {
+  padding: 0.5rem 1rem 0 1rem; }
+
+ol.commentlist li.comment div.vcard {
+  border: none;
+  padding-bottom: 0;
+  margin-bottom: 0; }
+
+ol.commentlist li.comment div.vcard cite.fn {
+  font-style: normal; }
+
+ol.commentlist li.comment div.vcard cite.fn a.url {
+  color: #222; }
+
+ol.commentlist li.comment div.vcard img.avatar {
+  line-height: 0;
+  display: inline-block;
+  border: solid 4px #FFFFFF;
+  max-width: 100%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); }
+  ol.commentlist li.comment div.vcard img.avatar:hover, ol.commentlist li.comment div.vcard img.avatar:focus {
+    box-shadow: 0 0 6px 1px rgba(85, 180, 181, 0.5); }
+
+ol.commentlist li.comment div.vcard img.avatar-32 {
+  line-height: 0;
+  display: inline-block;
+  border: solid 4px #FFFFFF;
+  max-width: 100%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); }
+  ol.commentlist li.comment div.vcard img.avatar-32:hover, ol.commentlist li.comment div.vcard img.avatar-32:focus {
+    box-shadow: 0 0 6px 1px rgba(85, 180, 181, 0.5); }
+
+ol.commentlist li.comment div.vcard img.photo {
+  line-height: 0;
+  display: inline-block;
+  border: solid 4px #FFFFFF;
+  max-width: 100%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); }
+  ol.commentlist li.comment div.vcard img.photo:hover, ol.commentlist li.comment div.vcard img.photo:focus {
+    box-shadow: 0 0 6px 1px rgba(85, 180, 181, 0.5); }
+
+ol.commentlist li.comment div.commentmetadata {
+  text-align: right; }
+
+ol.commentlist li.comment div.comment-meta {
+  margin: 1em 0 0 0; }
+
+ol.commentlist li.comment div.comment-meta a {
+  color: #222; }
+
+ol.commentlist li.comment p {
+  margin: 0 0 1em; }
+
+ol.commentlist li.comment ul {
+  list-style: square;
+  margin: 0 0 1em 2em; }
+
+ol.commentlist li.comment div.reply {
+  text-align: right; }
+
+ol.commentlist li.comment div.reply a {
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  background-color: #55b4b5;
+  border-color: #419494;
+  color: #FFFFFF;
+  transition: background-color 300ms ease-out; }
+  ol.commentlist li.comment div.reply a:hover, ol.commentlist li.comment div.reply a:focus {
+    background-color: #419494; }
+  ol.commentlist li.comment div.reply a:hover, ol.commentlist li.comment div.reply a:focus {
+    color: #FFFFFF; }
+
+ol.commentlist li.comment ul.children {
+  list-style: none;
+  margin: 1em 0 0;
+  text-indent: 0; }
+
+ol.commentlist li.comment ul.children li.depth-2 {
+  border-left: 5px solid #cccccc;
+  margin: 0 0 0.25em 0.25em; }
+
+ol.commentlist li.comment ul.children li.depth-3 {
+  border-left: 5px solid #b3b3b3;
+  margin: 0 0 0.25em 0.25em; }
+
+ol.commentlist li.comment ul.children li.depth-4 {
+  border-left: 5px solid #999999;
+  margin: 0 0 0.25em 0.25em; }
+
+ol.commentlist li.comment ul.children li.depth-5 {
+  border-left: 5px solid #808080;
+  margin: 0 0 0 0.25em; }
+
+ol.commentlist li.odd {
+  background: #f6f6f6; }
+
+ol.commentlist li.parent {
+  border-left: 5px solid #d9d9d9; }
+
+/* pingbacks */
+ol.pingbacklist {
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0;
+  text-indent: 0; }
+
+ol.pingbacklist li.pingback {
+  padding: 1em 1em 1em 0; }
+
+ol.pingbacklist li.pingback div.vcard {
+  font: normal 16px georgia, times, serif;
+  border: none;
+  margin-bottom: 0; }
+
+ol.pingbacklist li.pingback div.vcard span.says {
+  display: none; }
+
+ol.pingbacklist li.pingback div.comment-meta a time {
+  margin-left: 10em;
+  color: #222; }
+
+ol.pingbacklist li.pingback div.reply {
+  display: none; }
+
+ol.pingbacklist li.even {
+  background: #fff; }
+
+ol.pingbacklist li.odd {
+  background: #f6f6f6; }
+
+ol.pingbacklist li.pingback ul {
+  list-style: square;
+  margin: 0 0 1em 2em; }
+
+ol.pingbacklist li.pingback div.vcard cite.fn {
+  font-style: normal; }
+
+ol.pingbacklist li.pingback div.vcard cite.fn a.url {
+  color: #222; }
+
+ol.pingbacklist li.pingback p {
+  margin: 0 0 1em; }
+
+ol.pingbacklist li.pingback div.comment-meta {
+  margin-top: 9px; }
+
+ol.pingbacklist li.pingback p {
   display: none; }
 
 /******************************************************************
@@ -6425,11 +6625,73 @@ IMAGES
   max-width: 100%; }
 
 /******************************************************************
+Courses
+******************************************************************/
+.type-course a img {
+  margin: 1.7rem 1rem 0 0; }
+
+#main .course {
+  padding: 0 !important;
+  border-bottom: none !important; }
+
+.course-container .archive-header h1 {
+  font-size: 2.3125rem !important;
+  padding-bottom: 0 !important;
+  border: none !important; }
+
+.course-container .sensei-course-meta {
+  margin: 0.5rem 0;
+  color: white; }
+  .course-container .sensei-course-meta span a {
+    color: #bbbbbb !important; }
+    .course-container .sensei-course-meta span a:hover {
+      color: #bee3ef; }
+
+.course-price, p.course-price, span.course-price {
+  font-weight: normal !important;
+  font-size: 1.2rem;
+  padding: 0.25em 0.5em;
+  background: #55b4b5; }
+  .course-price ins, p.course-price ins, span.course-price ins {
+    text-decoration: none;
+    font-weight: bold; }
+  .course-price del, p.course-price del, span.course-price del {
+    font-size: 0.67em; }
+
+/******************************************************************
 WOOCOMMERCE
 ******************************************************************/
 .tabs li {
   border: 1px solid #d9d9d9;
   border-bottom: 0; }
+
+/******************************************************************
+Sidebar
+******************************************************************/
+#sidebar p, #sidebar a, #sidebar li {
+  font-size: 0.85rem; }
+#sidebar h3 {
+  font-size: 1.1rem; }
+#sidebar .widget {
+  margin-bottom: 2rem; }
+#sidebar .widget-title {
+  text-transform: uppercase;
+  background: #55b4b5;
+  border-top: 1px double white;
+  border-bottom: 1px double white;
+  color: white;
+  padding: 0.5rem 0 0.3rem 0;
+  text-align: center;
+  transition: background-color 0.5s ease;
+  box-shadow: 0 0 0 4px #55b4b5, 1px 1px 1px 1px grey; }
+
+#footer_widgets .widget-title {
+  text-transform: uppercase;
+  background: #79c4c4;
+  border: 2px double white;
+  padding: 0.3rem;
+  text-align: center;
+  box-shadow: 0 0 0 4px #95d2e5, 1px 1px 1px 1px grey; }
 
 /******************************************************************
 FOOTER

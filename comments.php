@@ -9,9 +9,7 @@ die ('Please do not load this page directly. Thanks!'); ?>
 
 <!-- You can start editing here. -->
 <?php if ( have_comments() ) : ?>
-    <div id="comment_count">
-        <h3 id="comments"><?php comments_number('There Are No Responses... Yet.', 'There Is One Response So Far', 'There Are % Responses So Far' );?>. Why Not Leave Yours?</h3>
-    </div>
+    <h3 id="comment_title">We welcome your feedback. Why not leave yours?</h3>
 
     <?php
 if ($prev_link || $next_link) {
