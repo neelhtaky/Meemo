@@ -44,7 +44,8 @@ $row-width: rem-calc(1600);
 // $body-bg: #fff;
 $body-font-color: #222;
 // $body-font-family: "Lato","Helvetica Neue",Helvetica,sans-serif;
-$body-font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $body-font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Lora", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -121,7 +122,8 @@ $body-font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: "font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif";
+// $header-font-family: "font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif";
+$header-font-family: "Alice", Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: #222;

@@ -30,7 +30,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/modernizr/modernizr.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/isotope/dist/isotope.pkgd.min.js"></script>
-
+<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(''); ?>>
@@ -67,18 +68,27 @@
 							if (!empty($fname)) {
 								 ?>
 								<li id="welcome_user">Welcome <?php echo $fname; ?>!</li>
-								<li><a class="button" href="<?php echo get_edit_user_link(); ?>">Your Profile</a></li>
 							<?php } else{ ?>
 								<li id="welcome_user">Welcome <?php echo $dname; ?>!</li>
-								<li><a class="button" href="<?php echo get_page_link(568); ?>">Your Profile</a></li>
 							<?php }
 						} else { ?>
 						<li class="has-form">
 							<a href="#" data-reveal-id="user_logreglost" class="button">Login or Register</a>
 
 							<?php get_template_part( 'login', 'modal' ); ?>
+
+
+
 						</li>
 						<?php } ?>
+						 <?php $options = array(
+								'theme_location' => 'nav_secondary',
+								'container' => false,
+								'depth' => 2,
+								'items_wrap' => '<ul id="%1$s" class="left %2$s">%3$s</ul>',
+								'walker' => new GC_walker_nav_menu()
+								);
+								wp_nav_menu($options); ?>
     			</ul>
 
 			    <!-- Right Nav Section -->
@@ -97,14 +107,10 @@
 		</div>
 
 
-		<div id="header_title" class="row hide-for-small-only">
-			<div id="logo">
-				<a href="<?php echo home_url(); ?>" >
-					<img src="<?php bloginfo('template_directory'); ?>/library/images/Logo.png">
-				</a>
-			</div>
+		<div id="header_title" class=" hide-for-small-only">
 
-			<div class="site_title">
+
+			<div class="site_title small-12 columns">
 				<?php if(is_home()){ ?>
 					<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 				<?php } else { ?>
@@ -112,21 +118,10 @@
 				<?php } ?>
 			</div><!-- #site_title END -->
 
-			<div id="description" >
-				<p><?php bloginfo('description'); ?></p>
-			</div><!-- #description END -->
+
 
 		</div>
-		<div id="header_menu" class="row hide-for-small-only">
-						 <?php $options = array(
-					'theme_location' => 'nav_primary',
-					'container' => false,
-					'depth' => 2,
-					'items_wrap' => '<ul id="%1$s" class="left %2$s">%3$s</ul>',
-					'walker' => new GC_walker_nav_menu()
-					);
-					wp_nav_menu($options); ?>
-		</div>
+
 
 
 

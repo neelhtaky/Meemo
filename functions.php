@@ -47,10 +47,12 @@ if ( function_exists('register_sidebar') ) {
   /* Register Navigation Menus */
     register_nav_menus( array(
 		'nav_primary' => ( 'Primary Navigation'),
-    'nav_sidebar' => ( 'Sidebar Navigation'),
+    'nav_secondary' => ( 'Sidebar Navigation'),
     'nav_footer' => ('Footer Navigation')
 	) );}
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+
 /******************************************************************
 Manipulate the Excerpt
 ******************************************************************/
@@ -250,7 +252,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 /* customise to rename home to shop home */
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_home_text' );
 function jk_change_breadcrumb_home_text( $defaults ) {
-    // Change the breadcrumb home text from 'Home' to 'Appartment'
+    // Change the breadcrumb home text from 'Home' to 'Something Else'
   $defaults['home'] = 'Shop Home';
   return $defaults;}
 
@@ -286,7 +288,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 add_filter('loop_shop_columns', 'loop_columns');
 if (!function_exists('loop_columns')) {
   function loop_columns() {
-    return 3; // 3 products per row
+    return 4; // 3 products per row
   }}
 //
 remove_action('woocommerce_pagination', 'woocommerce_pagination', 10);
@@ -361,6 +363,27 @@ function custom_add_to_cart_message() {
 
     return $message;
 }
+/**
+ * WooCommerce Extra Feature
+ * --------------------------
+ *
+ * Change number of related products on product page
+ * Set your own value for 'posts_per_page'
+ *
+ */
+function woo_related_products_limit() {
+  global $product;
+
+  $args['posts_per_page'] = 4;
+  return $args;
+}
+add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
+  function jk_related_products_args( $args ) {
+
+  $args['posts_per_page'] = 4; // 4 related products
+  $args['columns'] = 1; // arranged in 2 columns
+  return $args;
+}
 /******************************************************************
 Better Pagination Archive Support
 ******************************************************************/
@@ -380,7 +403,9 @@ function kriesi_pagination($pages = '', $range = 2)
      }
      if(1 != $pages)
      {
-         echo "<ul class='pagination'  aria-label='Pagination' role='menubar'>";
+        echo "<ul class='pagination'  aria-label='Pagination' role='menubar'>";
+        echo "<div class='panel small-12 medium-12 large-12 xlarge-12 xxlarge-12 columns text-center'>";
+
          if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link(1)."'>&laquo; First</a></li>";
          if($paged > 1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged - 1)."'>&lsaquo; Previous </a></li>";
 
@@ -393,7 +418,9 @@ function kriesi_pagination($pages = '', $range = 2)
          }
          if ($paged < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged + 1)."'>Next &rsaquo;</a></li>";
          if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($pages)."'>Last &raquo;</a></li>";
+         echo "</div>\n";
          echo "</ul>\n";
+
      }
 }
 /******************************************************************

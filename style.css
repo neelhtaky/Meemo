@@ -81,7 +81,7 @@ body {
   color: #222;
   padding: 0;
   margin: 0;
-  font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
@@ -1574,7 +1574,7 @@ select {
       color: #222222;
       padding: 1rem;
       display: block;
-      font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-family: "Lora", Helvetica, Arial, sans-serif;
       font-size: 1rem; }
       .accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
         background: #e3e3e3; }
@@ -2003,7 +2003,7 @@ button, .button {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
-  font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -3236,7 +3236,7 @@ select {
   border-color: #cccccc;
   padding: 0.5rem;
   font-size: 0.875rem;
-  font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Helvetica, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.75);
   line-height: normal;
   border-radius: 0;
@@ -3643,7 +3643,7 @@ label.error {
 
 .label {
   font-weight: normal;
-  font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Helvetica, Arial, sans-serif;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -4028,7 +4028,7 @@ ul.pagination {
     color: #EEEEEE;
     font-weight: normal;
     font-size: 1rem;
-    font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+    font-family: "Lora", Helvetica, Arial, sans-serif; }
   .pricing-table .price {
     background-color: #F6F6F6;
     padding: 0.9375rem 1.25rem;
@@ -4036,7 +4036,7 @@ ul.pagination {
     color: #333333;
     font-weight: normal;
     font-size: 2rem;
-    font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+    font-family: "Lora", Helvetica, Arial, sans-serif; }
   .pricing-table .description {
     background-color: #FFFFFF;
     padding: 0.9375rem;
@@ -4309,7 +4309,7 @@ dialog {
   padding: 0.875rem 0;
   list-style-type: none;
   list-style-position: outside;
-  font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  font-family: "Lora", Helvetica, Arial, sans-serif; }
   .side-nav li {
     margin: 0 0 0.4375rem 0;
     font-size: 0.875rem;
@@ -4325,7 +4325,7 @@ dialog {
     .side-nav li.active > a:first-child:not(.button) {
       color: #88cacb;
       font-weight: normal;
-      font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+      font-family: "Lora", Helvetica, Arial, sans-serif; }
     .side-nav li.divider {
       border-top: 1px solid;
       height: 0;
@@ -4433,7 +4433,7 @@ dialog {
     display: inline;
     margin-left: 1rem;
     margin-bottom: 0;
-    font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: "Lora", Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-size: 0.875rem;
     color: #999999; }
@@ -4604,7 +4604,7 @@ table {
       background-color: #EFEFEF;
       color: #222222;
       padding: 1rem 2rem;
-      font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-family: "Lora", Helvetica, Arial, sans-serif;
       font-size: 1rem; }
       .tabs dd > a:hover, .tabs .tab-title > a:hover {
         background-color: #e1e1e1; }
@@ -4905,7 +4905,7 @@ meta.foundation-mq-topbar {
       color: #FFFFFF;
       padding: 12px 0 12px 0;
       padding-left: 6.66667px;
-      font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-family: "Lora", Helvetica, Arial, sans-serif;
       font-size: 0.8125rem;
       font-weight: normal;
       text-transform: none; }
@@ -5436,7 +5436,7 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "font-family: Garamond, Baskerville, " Baskerville Old Face ", " Hoefler Text ", " Times New Roman ", serif";
+  font-family: "Alice", Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   font-weight: normal;
   font-style: normal;
   color: #222222;
@@ -6480,7 +6480,7 @@ th.hide-for-touch {
         border-style: solid;
         border-width: 0px;
         cursor: pointer;
-        font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-family: "Lora", Helvetica, Arial, sans-serif;
         font-weight: normal;
         line-height: normal;
         margin: 0 0 1.25rem;
@@ -6757,22 +6757,28 @@ HEADER
 ******************************************************************/
 #nav_wrapper {
   margin: 0 !important;
-  padding: 1px 0 5px 0;
-  background: #ddeaf6; }
+  padding: 1px -10px 5px 0;
+  background: #55b4b5;
+  font-family: "Lora"; }
 
 nav.top-bar {
-  background: #ddeaf6 !important;
-  margin: 5px -5px; }
+  height: 2rem;
+  background: #55b4b5 !important; }
   nav.top-bar ul li {
     background: none;
-    font-size: 0.8rem !important; }
+    font-size: 0.8rem !important;
+    margin-top: 0.4rem; }
     nav.top-bar ul li a {
-      transition: background-color 0.5s ease;
-      color: #327272; }
+      transition: color 0.5s ease;
+      color: white; }
       nav.top-bar ul li a:hover {
-        background: #327272 !important; }
+        background: none !important;
+        color: #327272 !important; }
   nav.top-bar li.current-menu-item a, nav.top-bar .top-bar li.current_page_item a {
     color: white; }
+
+.top-bar-section li a.button {
+  margin-top: -0.8rem; }
 
 .top-bar-section .has-form, .top-bar-section li:not(.has-form) a:not(.button) {
   background: none; }
@@ -6780,26 +6786,20 @@ nav.top-bar {
 #welcome_user {
   color: white;
   font-size: 0.8rem;
-  padding: 0.7rem 2rem 0 2rem; }
+  padding: 0 1.5rem 0 1.5rem; }
 
 #header_title {
-  padding: 1rem 1rem; }
+  margin: 1rem 1rem;
+  text-align: center !important; }
   #header_title #logo img {
+    display: none;
     width: 77px;
     height: auto;
     float: left; }
   #header_title .site_title h1 a, #header_title .site_title h4 a {
-    font-family: "Footlight";
-    color: black;
-    font-size: 2.2rem !important;
-    font-weight: bold;
-    margin: 0.5rem 0 0 1rem;
-    float: left; }
-  #header_title #description p {
-    font-style: italic;
-    font-size: 0.9rem !important;
-    float: left;
-    margin: 1.1rem 0 0 1rem; }
+    color: #55b4b5;
+    font-size: 4.2rem !important;
+    font-weight: bold; }
 
 #header_menu ul {
   list-style: none; }
@@ -6838,13 +6838,6 @@ time, .entry_content .author, .entry_content a.comments-link, .entry_content .ta
     -webkit-font-smoothing: antialiased;
     font: normal 16px/1 'FontAwesome';
     margin-right: 0.3rem; }
-
-a[href]:after {
-  content: '\f08e';
-  display: inline-block;
-  -webkit-font-smoothing: antialiased;
-  font: normal 10px/1 'FontAwesome';
-  vertical-align: top; }
 
 time:before {
   content: '\f017'; }
@@ -6909,6 +6902,9 @@ INDEX
 .single_content, .entry_content {
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
+
+ul.pagination {
+  margin-top: 2rem; }
 
 /******************************************************************
 COMMENTS
@@ -7008,7 +7004,7 @@ ol.commentlist li.comment div.reply a {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
-  font-family: "Proxima N W01 Reg", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -7135,7 +7131,7 @@ IMAGES
 Courses
 ******************************************************************/
 .type-course a img {
-  margin: 1.7rem 1rem 0 0; }
+  margin: 0.5rem 1rem 0 0; }
 
 #main .course {
   padding: 0 !important;
@@ -7165,12 +7161,113 @@ Courses
   .course-price del, p.course-price del, span.course-price del {
     font-size: 0.67em; }
 
+.course .course-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+
+.course .course-video iframe, .course .course-video object, .course .course-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 /******************************************************************
 WOOCOMMERCE
 ******************************************************************/
+.woocommerce, .woocommerce-page {
+  /* Main Loop */ }
+  .woocommerce #products, .woocommerce-page #products {
+    margin-top: 3rem; }
+    .woocommerce #products li, .woocommerce-page #products li {
+      list-style: none; }
+    .woocommerce #products .star-rating, .woocommerce-page #products .star-rating {
+      margin: 0 auto;
+      margin-bottom: 0.25rem; }
+    .woocommerce #products span.price, .woocommerce-page #products span.price {
+      text-align: center; }
+    .woocommerce #products h3, .woocommerce-page #products h3 {
+      text-align: center; }
+    .woocommerce #products img, .woocommerce-page #products img {
+      width: 100%;
+      height: auto; }
+    .woocommerce #products a.button, .woocommerce-page #products a.button {
+      margin: 0 auto;
+      display: block; }
+  .woocommerce #related_products > #products, .woocommerce-page #related_products > #products {
+    margin-top: 0 !important; }
+
+.product {
+  margin-top: 1rem; }
+
+.tabs {
+  margin-top: 1rem; }
+
 .tabs li {
   border: 1px solid #d9d9d9;
   border-bottom: 0; }
+
+/* Star rating */
+.star-rating {
+  overflow: hidden;
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  font-size: 1em;
+  width: 5.4em;
+  font: normal 16px/1 "star"; }
+  .star-rating:before {
+    content: "\73\73\73\73\73";
+    float: left;
+    top: 0;
+    left: 0;
+    position: absolute; }
+  .star-rating span {
+    overflow: hidden;
+    float: left;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding-top: 1.5em;
+    font-family: "star"; }
+    .star-rating span:before {
+      content: "\53\53\53\53\53";
+      top: 0;
+      position: absolute;
+      left: 0;
+      font-family: "star"; }
+
+.woocommerce-product-rating {
+  line-height: 2em;
+  display: block;
+  color: #222; }
+  .woocommerce-product-rating .star-rating {
+    margin: 0.5em 4px 0 0;
+    float: left; }
+  .woocommerce-product-rating a {
+    color: #222; }
+
+/* Single Product Page */
+div.product .sensei-course-meta .course-price, div.product .price, div.product p.price, #content div.product .sensei-course-meta .course-price, #content div.product .price, #content div.product p.price {
+  font-size: 1.4rem;
+  margin: 0.5rem 0 0.5rem 0;
+  color: #55b4b5; }
+  div.product .sensei-course-meta .course-price ins, div.product .price ins, div.product p.price ins, #content div.product .sensei-course-meta .course-price ins, #content div.product .price ins, #content div.product p.price ins {
+    background: inherit;
+    text-decoration: none; }
+  div.product .sensei-course-meta .course-price del, div.product .price del, div.product p.price del, #content div.product .sensei-course-meta .course-price del, #content div.product .price del, #content div.product p.price del {
+    font-size: 0.67em;
+    color: lighten #222, 90%; }
+
+img.attachment-shop_single.wp-post-image {
+  width: 100%; }
+
+.related ul.products li.product img, .upsells.products ul.products li.product img, .related ul li.product img, .upsells.products ul li.product img {
+  height: auto;
+  width: 100%; }
 
 /******************************************************************
 Sidebar
@@ -7191,28 +7288,69 @@ Sidebar
   text-align: center;
   transition: background-color 0.5s ease;
   box-shadow: 0 0 0 4px #55b4b5, 1px 1px 1px 1px grey; }
+#sidebar #searchform input#s {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 58.33333%;
+  float: left; }
+#sidebar #searchform .screen-reader-text {
+  display: none; }
+#sidebar #searchform .search-submit, #sidebar #searchform #searchsubmit {
+  background: #55b4b5;
+  margin: -0.01rem 0;
+  padding: 0.62rem;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 41.66667%;
+  float: left; }
 
 #footer_widgets .widget-title {
   text-transform: uppercase;
-  background: #79c4c4;
-  border: 2px double white;
+  background: #419596;
+  border: 2px double #9cd3d4;
   padding: 0.3rem;
-  text-align: center;
-  box-shadow: 0 0 0 4px #b5d1eb, 1px 1px 1px 1px grey; }
+  text-align: center; }
+
+.widget_sensei_course_component li {
+  padding: 0 !important;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left; }
+  .widget_sensei_course_component li .course-price {
+    padding: 0;
+    background: none;
+    color: #55b4b5; }
+
+.widget_sensei_lesson_component li {
+  padding: 0 !important;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left; }
+
+.widget_sensei_lesson_component li.my-account {
+  margin-top: 1rem; }
+
+#sidebar .jetpack-display-remote-posts h4 a {
+  font-size: 1.3rem; }
+#sidebar .jetpack-display-remote-posts .read_more {
+  margin: 0.5rem 0 1rem 0; }
 
 /******************************************************************
 FOOTER
 ******************************************************************/
-#footer_wrap {
+.footer_wrap {
+  margin-top: 2rem;
   color: white;
-  border-top: 7px solid #ddeaf6; }
+  font-size: 0.8rem; }
 
 #footer_widgets {
   background: #55b4b5;
-  padding: 1.5rem 0 1.5rem 0;
-  margin: 5px -5px;
-  border: 1.5px dashed #ddeaf6;
-  box-shadow: 0 0 0 4px #55b4b5, 2px 1px 6px 4px rgba(10, 10, 0, 0.5); }
+  padding: 1rem 0 1rem 0; }
   #footer_widgets .widget-title {
     color: white;
     font-size: 1.1rem; }
@@ -7226,7 +7364,7 @@ FOOTER
 
 #footer_meta {
   background: #327272;
-  padding: 1rem 0 0 0;
+  padding: 0.8rem 0 0 0;
   color: #55b4b5; }
   #footer_meta a {
     color: #ddeaf6; }
@@ -7261,11 +7399,6 @@ MEDIA QUERIES
   .item {
     width: 100%; }
 
-  #products .product {
-    width: 48%; }
-    #products .product:nth-child(odd) {
-      margin-right: 2%; }
-
   #sidebar .widgets-list-layout img.widgets-list-layout-blavatar {
     float: none;
     min-width: 130px;
@@ -7273,36 +7406,61 @@ MEDIA QUERIES
 
   #sidebar .widgets-list-layout-links {
     width: 100% !important; }
+
+  .widget_sensei_course_component ul, .widget_sensei_lesson_component ul {
+    margin: 0 !important; }
+    .widget_sensei_course_component ul li img, .widget_sensei_lesson_component ul li img {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+      width: 100%;
+      float: left;
+      padding: 0; }
  }
 
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
-  .item, #products .product {
-    width: 48%; }
-    .item:nth-child(odd), #products .product:nth-child(odd) {
-      margin-right: 2%; }
+  .item {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left; }
 
   #sidebar .widgets-list-layout img.widgets-list-layout-blavatar {
     min-width: 45px;
     max-width: 70px; }
+
+  .widget_sensei_course_component ul li, .widget_sensei_lesson_component ul li {
+    margin-bottom: 0.5rem; }
+    .widget_sensei_course_component ul li img, .widget_sensei_lesson_component ul li img {
+      margin: 0 0.5rem 1rem 0; }
  }
 
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
   html {
     font-size: 1rem; }
 
-  .item, #products .product {
-    width: 48%; }
-    .item:nth-child(odd), #products .product:nth-child(odd) {
-      margin-right: 2%; }
+  .item {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left; }
 
   #sidebar .widgets-list-layout img.widgets-list-layout-blavatar {
     width: 49px; }
+
+  .widget_sensei_course_component ul li, .widget_sensei_lesson_component ul li {
+    margin-bottom: 0.5rem; }
+    .widget_sensei_course_component ul li img, .widget_sensei_lesson_component ul li img {
+      margin: 0 0.5rem 1rem 0; }
  }
 
 @media only screen and (min-width: 120.063em) {
-  .item, #products .product {
-    width: 48%; }
-    .item:nth-child(odd), #products .product:nth-child(odd) {
-      margin-right: 2%; }
+  .item {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left; }
 
+
+  .widget_sensei_course_component ul li img, .widget_sensei_lesson_component ul li img {
+    margin: 0 0.5rem 1rem 0; }
  }

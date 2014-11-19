@@ -32,7 +32,7 @@
 		if ($stickyQuery -> have_posts()) :
 			while ( $stickyQuery -> have_posts() ) :
 				$stickyQuery -> the_post(); ?>
-			<article <?php post_class("sticky entry item"); ?> id="post-<?php the_ID(); ?>" role="article">
+			<article <?php post_class("sticky entries item"); ?> id="post-<?php the_ID(); ?>" role="article">
 
 				<?php if (has_post_thumbnail( )): ?>
 					<?php $post_thumbnail_id = get_post_thumbnail_id( $post_id );
@@ -41,11 +41,11 @@
 						//if
 					?>
 						<aside class="thumbnail small-6 columns">
-							<a class="th" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+							<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 						</aside>
 					 <?php } else { ?>
 						<aside class="thumbnail small-12 columns">
-							<a class="th" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+							<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 						</aside>
 					<?php } ?>
 
@@ -108,13 +108,13 @@
 						//vertical image
 					?>
 						<aside class="thumbnail small-12 columns">
-							<a class="th" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+							<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 						</aside>
 					 <?php } else {
 					 	//horizontal image
 					 	?>
 						<aside class="thumbnail small-6 columns">
-							<a class="th" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+							<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 						</aside>
 					<?php } ?>
 				<?php endif ?>
@@ -151,9 +151,7 @@
 	?>
 </div><!-- container -->
 
-<div class="panel small-12 medium-12 large-12 xlarge-12 xxlarge-12 columns text-center">
 	<?php kriesi_pagination($pages = '', $range = 4); ?>
-</div><!-- .navigation -->
 
 <?php wp_reset_query(); ?>
 

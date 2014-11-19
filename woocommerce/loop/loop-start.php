@@ -17,5 +17,4 @@
 	  });
 });
 </script>
-<div id="products">
-
+<div id="products" class="js-isotope">
