@@ -40,11 +40,11 @@
 					if ($imgmeta['width'] > $imgmeta['height']) {
 						//if
 					?>
-						<aside class="thumbnail small-6 columns">
+						<aside class="feature_th_vert small-6 columns">
 							<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 						</aside>
 					 <?php } else { ?>
-						<aside class="thumbnail small-12 columns">
+						<aside class="feature_th_hor small-12 columns">
 							<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 						</aside>
 					<?php } ?>
@@ -107,13 +107,13 @@
 					if ($imgmeta['width'] > $imgmeta['height']) {
 						//vertical image
 					?>
-						<aside class="thumbnail small-12 columns">
+						<aside class="feature_th_hor small-12 columns">
 							<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 						</aside>
 					 <?php } else {
 					 	//horizontal image
 					 	?>
-						<aside class="thumbnail small-6 columns">
+						<aside class="feature_th_vert small-6 columns">
 							<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 						</aside>
 					<?php } ?>

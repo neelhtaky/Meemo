@@ -4,10 +4,10 @@
 
 	<?php if ( is_active_sidebar( 'primary' ) ) : ?>
 
-		<?php if (is_singular('post'))  { ?>
+		<?php if ( is_single() && 'portfolio' != get_post_type() ) { ?>
 			<h3 class="widget-title">About This Post</h3>
 			<?php if ( has_post_thumbnail() ) { ?>
-		        <aside class="thumbnail th">
+		        <aside class="thumbnail">
 		        	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 		        </aside>
 		    <?php } ?>
@@ -33,17 +33,19 @@
 				</div>
 				<div class="postauthor">
 					<h3 class="widget-title">About The Author</h3>
-					<div class="th"><?php echo get_avatar( get_the_author_id() , 95 ); ?></div>
-					<p id="postauthordesc">Hi, I am <?php the_author_meta( 'nickname', $author_id ); ?>.
-					<br>
-					I have written <a href="<?php bloginfo('url'); ?>/?author=<?php the_author_ID(); ?>"><?php the_author_posts(); ?> article<?php
-					$postcnt =(int)get_the_author_posts();
-					if ($postcnt>=2){
-					echo "s";}?>
-					</a> for <?php bloginfo('name'); ?>.
-					<br>
-					<?php the_author_meta( 'description' ); ?>
-					</p>
+					<div class="author_image small-12 large-8 columns"><?php echo get_avatar( get_the_author_id() , 220 ); ?></div>
+					<div id="postauthordesc">
+						<p id="name_count">Hi, I am <?php the_author_meta( 'nickname', $author_id ); ?>.
+						I have written <a href="<?php bloginfo('url'); ?>/?author=<?php the_author_ID(); ?>"><?php the_author_posts(); ?> article<?php
+						$postcnt =(int)get_the_author_posts();
+						if ($postcnt>=2){
+						echo "s";}?>
+						</a> for <?php bloginfo('name'); ?>.</p>
+						<p id="postauthordesc"><?php the_author_meta( 'description' ); ?></p>
+					</div>
+
+
+
 				</div>
 			</aside>
 			<div id="sharing">
