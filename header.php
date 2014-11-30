@@ -29,7 +29,11 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/stylesheets/app.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/modernizr/modernizr.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/bower_components/isotope/dist/isotope.pkgd.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+
+<script src="<?php bloginfo('template_directory'); ?>/bower_components/jquery/dist/jquery.min.js"></script>
+
 <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>

@@ -37,16 +37,24 @@
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation/foundation.abide.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/app.js"></script>
-	<script>
-		// or with jQuery
-		var $container = $('#main_wrapper');
-		// initialize Masonry after all images have loaded
-		$container.imagesLoaded( function() {
-			$container.masonry({
-		  		"itemSelector": ".entry"
-		});
-		});
-	</script>
+
+<script type="text/javascript">
+
+window.onload = function () {
+// alert();
+// $('#container').css('color', 'red');
+var container = document.querySelector('#container');
+var msnry = new Masonry( container, {
+  // options
+  itemSelector: '.item'
+});
+
+}
+
+
+
+
+</script>
 	<?php wp_footer(); ?>
 </body>
 </html>
