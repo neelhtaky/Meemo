@@ -16,24 +16,6 @@
 </div>
 
 
-<script src="<?php bloginfo('template_directory'); ?>/bower_components/isotope/dist/isotope.pkgd.min.js" type="text/javascript">
-
-   window.onload = function () {
-alert();
-$('#container').css('color', 'red');
-var $container = $('#container').isotope({
-  // options
-  itemSelector: '.item'
-});
-
-$container.isotope('layout');
-
-}
-
-
-
-
-</script>
 
 <div id="container" >
 
@@ -47,11 +29,11 @@ if ( have_posts() ) {
 				$imgmeta = wp_get_attachment_metadata( $post_thumbnail_id );
 				if ($imgmeta['width'] > $imgmeta['height']) {
 				?>
-					<aside class="feature_th_vert small-6 columns">
+					<aside class="feature_th_hor small-12 columns">
 						<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 					</aside>
 				 <?php } else { ?>
-					<aside class="feature_th_hor small-12 columns">
+					<aside class="feature_th_vert small-6 columns">
 						<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
 					</aside>
 				<?php } ?>
