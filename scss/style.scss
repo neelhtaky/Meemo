@@ -93,7 +93,7 @@ a[href*="quickneed"]:after, a[href*="wordpress"]:after,  a[href*="katskinner"]:a
 
 
 time, .entry_content .author, .entry_content a.comments-link, .entry_content .tags, .entry_content .category, span.course-category, span.posted_in, span.tags, .course-container .course-author, .course-container .sensei-course-participants, .course-container .sensei-course-meta span.course-lesson-count {
-	// color: lighten($body-font-color-grey, 20%);
+
 	color: lighten($body-font-color,60%);
 	display: inline;
 	font-size:0.8rem;
@@ -101,7 +101,7 @@ time, .entry_content .author, .entry_content a.comments-link, .entry_content .ta
 	font-style: italic;
 	&:before{
 		-webkit-font-smoothing: antialiased;
-		font: normal 16px/1 'FontAwesome';
+		font: normal 16px/1 $fontawesome;
 		margin-right:0.3rem;
 	}
 }
