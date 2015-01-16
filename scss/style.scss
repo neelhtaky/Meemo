@@ -24,10 +24,9 @@ HEADER
 }
 nav.top-bar{
 	height:2rem;
-	background:$primary-color !important;
-	ul li{ background:none;
-		font-size:0.8rem !important;
-		margin-top:0.4rem;
+	// background:$primary-color !important;
+	ul li{
+		background:none;
 		a{
 			transition: color 0.5s ease;
 			color:white;
@@ -41,11 +40,12 @@ nav.top-bar{
 		color:white;
 	}
 }
-.top-bar-section li a.button{margin-top:-0.8rem;}
+// .top-bar-section li a.button{margin-top:-0.8rem;}
 .top-bar-section .has-form, .top-bar-section li:not(.has-form) a:not(.button){
 	background:none;
 }
 #welcome_user{
+	margin-top:0.4rem;
 	color:white;
 	font-size:0.8rem;
 	padding:0 1.5rem 0 1.5rem;
@@ -178,8 +178,8 @@ INDEX
 	}
 }
 
-.entry{
-	margin-bottom:1rem;
+.entries{
+	padding-bottom:2rem;
 }
 .single_content, .entry_content{
 	-ms-word-wrap: break-word;

@@ -6,6 +6,6 @@
     "foundation": "zurb/bower-foundation"
   },
   "resolutions": {
-    "isotope": "~2.1.0"
+    "jquery-placeholder": "~2.1.0"
   }
 }

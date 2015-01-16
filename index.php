@@ -30,11 +30,11 @@ if ( have_posts() ) {
 				if ($imgmeta['width'] > $imgmeta['height']) {
 				?>
 					<aside class="feature_th_hor small-12 columns">
-						<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+						<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail('thumbnail'); ?></a>
 					</aside>
 				 <?php } else { ?>
 					<aside class="feature_th_vert small-6 columns">
-						<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+						<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail('thumbnail');  ?></a>
 					</aside>
 				<?php } ?>
 
