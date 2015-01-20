@@ -6955,7 +6955,7 @@ Sidebar
 #sidebar #searchform input#s {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 58.33333%;
+  width: 91.66667%;
   float: left; }
 #sidebar #searchform .screen-reader-text {
   display: none; }
@@ -6965,11 +6965,7 @@ Sidebar
   padding: 0.62rem;
   border: none;
   color: white;
-  font-size: 0.9rem;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 41.66667%;
-  float: left; }
+  font-size: 0.9rem; }
 
 #footer_widgets .widget-title {
   text-transform: uppercase;

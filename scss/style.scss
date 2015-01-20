@@ -513,7 +513,7 @@ Sidebar
 		box-shadow: 0 0 0 4px $primary-color, 1px 1px 1px 1px grey;
 	}
 	#searchform{
-		input#s{@include grid-column(7);}
+		input#s{@include grid-column(11);}
 		.screen-reader-text{
 			display:none;
 		}
@@ -524,7 +524,7 @@ Sidebar
 			border:none;
 			color:white;
 			font-size: 0.9rem;
-			@include grid-column(5);
+			// @include grid-column(5);
 		}
 	}
 }
@@ -675,8 +675,14 @@ MEDIA QUERIES
 	}
 }
 // XXLarge screens min-width 1921px
+
 @media only screen and (min-width: 120.063em) {
-	.item{@include grid-column(6);}
+	.item{
+
+		@include grid-column(6);
+
+
+	}
 	.widget_archive ul li{
 		// @include grid-column(6);
 	}

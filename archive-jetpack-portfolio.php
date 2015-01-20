@@ -33,11 +33,11 @@
  <!-- Start the Loop. -->
  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article <?php post_class("sticky entries portfolio_item small-6 large-4 xlarge-3"); ?> id="post-<?php the_ID(); ?>" role="article">
+	<article <?php post_class("sticky entries item portfolio_item small-6 large-4 xlarge-3"); ?> id="post-<?php the_ID(); ?>" role="article">
 
 				<?php if (has_post_thumbnail( )): ?>
 					<aside class="thumbnail">
-						<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+						<a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail('medium'); ?></a>
 					</aside>
 
 				<?php endif ?>
