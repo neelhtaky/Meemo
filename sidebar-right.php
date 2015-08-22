@@ -1,4 +1,4 @@
-<aside id="sidebar"  class="sidebar_right small-12 medium-3 large-3 xlarge-2 xxlarge-2 columns" role="complementary">
+<aside id="sidebar"  class="sidebar_right small-12 medium-3 large-3 xlarge-2 xxlarge-2 columns nopin" role="complementary" >
 	<ul class="no-bullet">
 
 
@@ -35,8 +35,10 @@
 					<h3 class="widget-title">About The Author</h3>
 					<div class="author_image small-12 large-8 columns"><?php echo get_avatar( get_the_author_id() , 220 ); ?></div>
 					<div id="postauthordesc">
-						<p id="name_count">Hi, I am <?php the_author_meta( 'nickname', $author_id ); ?>.
-						I have written <a href="<?php bloginfo('url'); ?>/?author=<?php the_author_ID(); ?>"><?php the_author_posts(); ?> article<?php
+
+
+						<p id="name_count">Hi, I am <span itemprop="author"><?php the_author_meta( 'nickname', $author_id ); ?></span>.
+						I have written <a href="<?php bloginfo('url'); ?>/?author=<?php the_author_ID(); ?>" itemprop="url" rel="author"><?php the_author_posts(); ?> article<?php
 						$postcnt =(int)get_the_author_posts();
 						if ($postcnt>=2){
 						echo "s";}?>
@@ -71,8 +73,10 @@
 
 					This post was written by <address class="author"><?php the_author_posts_link(); ?></address>.
 					It was published on a <?php the_time('l'); ?>, which is the <?php the_time('jS'); ?> day in <?php the_time('F, Y'); ?>.
+					<div class="schema_datePublished">
+					<time class="entry-date" datetime="<?php the_date('F jS, Y'); ?>" itemprop="datePublished" pubdate><?php the_date('F jS, Y'); ?></time></div>
 					It was posted under the topic <span class="course-category"><?php the_category(', ') ?></span>.
-					It is tagged with <span class="tags"><?php the_tags('', ', ', '. '); ?></span>
+					It is tagged with <span class="tags"><?php the_tags('<span itemprop="keywords">', ', ', '</span>. '); ?></span>
 					<?php if ( comments_open() ) :
 						echo '<p>';
 						comments_popup_link( 'There are no responses yet. Why not leave a response?','There is 1 response.', 'There are % responses.', 'comments-link', 'Sorry, but comments are closed.');

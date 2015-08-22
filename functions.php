@@ -15,6 +15,11 @@ if(function_exists('add_theme_support')) {
 function declare_sensei_support() {
     add_theme_support( 'sensei' );
 }
+/* Add schema support to images */
+the_post_thumbnail('thumbnail',array('itemprop'=>'image' ));
+the_post_thumbnail('medium',array('itemprop'=>'image' ));
+the_post_thumbnail('large',array('itemprop'=>'image' ));
+the_post_thumbnail('full',array('itemprop'=>'image' ));
 /* Register Sidebars */
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(

@@ -4,17 +4,25 @@
 if (have_posts()) :
 	while (have_posts()) :
 		the_post(); ?>
-	<article <?php post_class("clear single_content"); ?> id="post-<?php the_ID(); ?>" role="article">
-		<?php if ( is_singular() || is_single() || is_404() || is_archive() ) { ?>
-			<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-		<?php } else { ?>
-			<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-		<?php } ?>
-		<p><?php the_content(); ?></p>
 
-		<?php custom_wp_link_pages(); ?>
 
-	</article>
+			<article <?php post_class("clear single_content"); ?> id="post-<?php the_ID(); ?>" role="article">
+				<?php if ( is_singular() || is_single() || is_404() || is_archive() ) { ?>
+					<span itemprop="name">
+						<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+						<?php } else { ?>
+					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+					<?php } ?>
+					</span>
+					<div id="schema_desc"><span itemprop="description"><?php the_excerpt(); ?></span></div>
+
+					<p><?php the_content(); ?></p>
+
+					<?php custom_wp_link_pages(); ?>
+
+			</article>
+
+
 	<?php endwhile;
 	endif; ?>
 

@@ -49,7 +49,7 @@ if ( have_posts() ) {
 							<span class="category"><?php the_category(', ') ?>.</span>
 					<?php } else {} ?>
 					<?php  if(has_tag()){ ?>
-							<span class="tags"><?php the_tags('Tags: ', ', ', '. '); ?>.</span>
+							<span class="tags"><?php the_tags('Tags: ', ', ', '. '); ?></span>
 					<?php } else {} ?>
 				</footer>
 

@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
+	<!-- support for pinterest -->
+	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+	<meta itemprop="url" content="<?php echo get_permalink(); ?>" />
+
 	<title>
 		<?php if (function_exists('is_tag') && is_tag()) {
 			single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
@@ -29,13 +33,20 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/stylesheets/app.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 	<script src="<?php bloginfo('template_directory'); ?>/bower_components/modernizr/modernizr.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/min/app-min.js" type="text/javascript" > </script>
 
-<script src="<?php bloginfo('template_directory'); ?>/bower_components/jquery/dist/jquery.min.js"></script>
 
-<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'>
+
+
+
+	<script src="<?php bloginfo('template_directory'); ?>/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Please call pinit.js only once per page -->
+<script type="text/javascript" async defer  data-pin-color="red" data-pin-height="28" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
+
+	<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(''); ?>>

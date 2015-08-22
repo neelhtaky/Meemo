@@ -4,11 +4,39 @@
 		"selected_items":
 		[
 			[
-				"fon",
-				"font-size"
+				"j",
+				"javascript"
+			],
+			[
+				"sche",
+				"schema_datePublished"
+			],
+			[
+				"schem",
+				"schema_desc"
+			],
+			[
+				"te",
+				"templateBody"
+			],
+			[
+				"cell",
+				"cellpadding"
+			],
+			[
+				"template",
+				"templatePreheader"
+			],
+			[
+				"colum",
+				"columnWidth"
 			],
 			[
 				"font",
+				"fontawesome"
+			],
+			[
+				"fon",
 				"font-size"
 			],
 			[
@@ -99,13 +127,42 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/private/etc/apache2/httpd.conf",
+			"settings":
+			{
+				"buffer_size": 20819,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 127.0,
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"",
+				"Autoprefix CSS"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -123,7 +180,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 485.0
+		"width": 593.0
 	},
 	"console":
 	{
@@ -144,11 +201,43 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo"
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/js",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/js/min",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss"
 	],
 	"file_history":
 	[
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/header.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/functions.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/js/app.js",
+		"/Users/Kat/Sites/QuickNeed/wp-content/plugins/woocommerce/templates/single-product/short-description.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sidebar-left.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/sidebar-right.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/footer.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/page.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/woocommerce/single-product/sale-flash.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/woocommerce/content-product.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/woocommerce/loop/sale-flash.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/plugins/woocommerce/templates/single-product/price.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/single.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss/style.scss",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/index.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/partials/content-containerclose.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/partials/content-containeropen.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/mailchimp.html",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/style.css",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/archive-jetpack-portfolio.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss/_mixins.scss",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/woocommerce/single-product/product-image.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/woocommerce/single-product/related.php",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/bower_components/modernizr/feature-detects/performance.js",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/bower_components/foundation/scss/foundation/components/_inline-lists.scss",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/library/fonts/star.svg",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/bower_components/eventie/package.json",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/bower_components/modernizr/feature-detects/exif-orientation.js",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss/_settings.scss",
+		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Meemo/scss/_settings_back.scss",
 		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/editor-style.css",
 		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/scss/style.scss",
 		"/Users/Kat/Sites/QuickNeed/wp-content/themes/Swirls_Galore_Theme/sass/style.scss",
@@ -246,36 +335,7 @@
 		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/global/wrapper-end.php",
 		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/scss/_mixins.scss",
 		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/scss/_settings.scss",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/search.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/page.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/single-product/product-attributes.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/myaccount/my-account.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/bower_components/jquery/src/selector-sizzle.js",
-		"/Users/Kat/Sites/Wordpress/wp-content/plugins/woothemes-sensei/templates/single-lesson.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/sensei/loop-course.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/sensei/loop-course2.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/sidebar-right.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/loop/loop-start.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/scss/_woocommerce.scss",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/content-product.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/cart/cart.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/bower_components/modernizr/test/js/setup.js",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/loop/price.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/loop/add-to-cart.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/single-product/add-to-cart/external.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/content-widget-product.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/single-product/add-to-cart/simple.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/functions.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/single-product/share.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/loop/loop-end.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/loop/result-count.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/loop/orderby.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/checkout/form-login.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/checkout/review-order.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/cart/mini-cart.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/cart/cart-empty.php",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/stylesheets/woocommerce.scss",
-		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/woocommerce/content-single-product_new.php"
+		"/Users/Kat/Sites/Wordpress/wp-content/themes/Meemo/search.php"
 	],
 	"find":
 	{
@@ -283,9 +343,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"<project>"
 		]
 	},
 	"find_state":
@@ -293,6 +354,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"price",
+			"thumb",
+			"mc",
+			"leftColumn",
+			"white",
+			"ffffff",
+			"fff",
+			"theme",
+			"background-color",
+			"center",
+			"bodyContent",
+			"2",
+			"cmt",
+			"cmtcss",
+			"templatecontainer",
+			"width",
+			"container",
+			"-",
+			"hover",
+			"portfolio",
+			"awesome",
+			".ttf",
+			"search",
+			"awesome",
+			"enque",
 			"h1",
 			"word",
 			"ul",
@@ -352,6 +438,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"2"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -362,8 +449,96 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/private/etc/apache2/httpd.conf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20819,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8907,
+								8907
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2190.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -402,6 +577,7 @@
 	{
 		"height": 0.0
 	},
+	"pinned_build_system": "",
 	"project": "Meemo.sublime-project",
 	"replace":
 	{
@@ -411,8 +587,21 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"hea",
+				"header.php"
+			],
+			[
+				"fun",
+				"functions.php"
+			],
+			[
+				"sty",
+				"scss/style.scss"
+			],
 			[
 				"foo",
 				"footer.php"
@@ -432,10 +621,6 @@
 			[
 				"mix",
 				"scss/_mixins.scss"
-			],
-			[
-				"sty",
-				"scss/style.scss"
 			],
 			[
 				"styl",
@@ -458,10 +643,6 @@
 				"scss/style.scss"
 			],
 			[
-				"fun",
-				"functions.php"
-			],
-			[
 				"sale",
 				"woocommerce/single-product/sale-flash.php"
 			],
@@ -472,10 +653,6 @@
 			[
 				"moda",
 				"login-modal.php"
-			],
-			[
-				"hea",
-				"header.php"
 			],
 			[
 				"app",
@@ -519,6 +696,7 @@
 	"select_project":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -527,6 +705,7 @@
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -540,7 +719,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 218.0,
+	"side_bar_width": 299.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -6503,6 +6503,12 @@ INDEX
     box-shadow: 0 0 0 4px #ddeaf6, 1px 1px 1px 1px grey;
     color: #327272; }
 
+#schema_desc {
+  display: none; }
+
+#schema_datePublished {
+  display: none; }
+
 .entries {
   padding-bottom: 2rem; }
 

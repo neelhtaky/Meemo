@@ -15,7 +15,7 @@ global $post, $product;
 	<div class="small-12 medium-12 large-12 xlarge-12 xxlarge-12 columns">
 		<?php if ( $product->is_on_sale() && $product->is_in_stock() ) : ?>
 
-			<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale alert-box info row">' . __( 'Lucky for you: this product is on sale!', 'woocommerce' ) . '</span>', $post, $product ); ?>
+			<?php echo apply_filters( 'woocommerce_sale_flash', '<span itemprop="offers" class="onsale alert-box info row">' . __( 'Lucky for you: this product is on sale!', 'woocommerce' ) . '</span>', $post, $product ); ?>
 
 		<?php endif; ?>
 	</div>

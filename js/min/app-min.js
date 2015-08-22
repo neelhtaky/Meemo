@@ -1,0 +1,1 @@
+$(document).foundation();for(var nopinimg=document.querySelectorAll(".nopin img"),i=0;nopinimg.length;i++)nopinimg[i].setAttribute("nopin","nopin");
